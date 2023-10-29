@@ -6,6 +6,7 @@ import Layout from '@theme/Layout';
 import CodeBlock from '@theme/CodeBlock';
 
 import styles from './index.module.scss';
+import {UsedBy} from "@site/src/components/UsedBy";
 
 const feature = `@tag
 Feature: Eating too many cucumbers may not be good for you
@@ -64,14 +65,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="container padding-vert--lg">
-                    <ul className={styles.logosList}>
-                        <li><img alt="Brithtcove" src="/img/users/brightcove.svg"/></li>
-                        <li><img alt="EXL" src="/img/users/exl.png"/></li>
-                        <li><img alt="FinanceIt" src="/img/users/financeit.svg"/></li>
-                        <li><img alt="Pendo" src="/img/users/pendo.svg"/></li>
-                        <li><img alt="SproutSocial" src="/img/users/sproutsocial.svg"/></li>
-                        <li><img alt="Trivago" src="/img/users/trivago.svg"/></li>
-                    </ul>
+                    <UsedBy/>
                 </div>
             </main>
         </Layout>

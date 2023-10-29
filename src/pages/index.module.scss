@@ -35,25 +35,6 @@
   margin-bottom: 0;
 }
 
-.logosList {
-  list-style: none;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  color: var(--ifm-font-color-base);
 
-  img {
-    max-width: 120px;
-    max-height: 50px;
-    filter: #{"grayscale()"};
-    opacity: 0.5;
-
-    [data-theme='dark'] & {
-      filter: #{"grayscale() invert()"}
-    }
-  }
-}
 
 
