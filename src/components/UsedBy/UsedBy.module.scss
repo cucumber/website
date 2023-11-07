@@ -1,3 +1,7 @@
+.strapLine {
+  text-align: center;
+}
+
 .logosList {
   list-style: none;
   display: flex;
@@ -5,6 +9,8 @@
   align-items: center;
   justify-content: center;
   gap: 24px;
+  max-width: 100%;
+  overflow-x: hidden;
   color: var(--ifm-font-color-base);
 
   img {
@@ -15,6 +21,11 @@
 
     [data-theme='dark'] & {
       filter: #{"grayscale() invert()"}
+    }
+
+    @media all and (max-width: 600px) {
+      max-width: 80px;
+      max-height: 30px;
     }
   }
 }
