@@ -15,7 +15,7 @@ export const UsedBy: FC = () => {
         <p className={styles.strapLine}>Loved by teams everywhere</p>
         <ul className={styles.logosList}>
             {LOGOS.map(([alt, filename]) => (
-                <li>
+                <li key={filename}>
                     <img alt={alt} src={'/img/users/' + filename}/>
                 </li>
             ))}
