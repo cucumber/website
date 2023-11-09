@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 import clsx from "clsx";
+import Link from "@docusaurus/Link";
 import styles from './Hero.module.scss'
 
 export const Hero: FC = () => {
@@ -11,6 +12,13 @@ export const Hero: FC = () => {
                     lets you write<br/>
                     automated tests in plain language
                 </h1>
+                <div className={styles.ctas}>
+                    <Link
+                        className="button button--primary button--lg"
+                        to="https://cucumber.io/docs/installation">
+                        Get Started
+                    </Link>
+                </div>
             </div>
         </header>
     );

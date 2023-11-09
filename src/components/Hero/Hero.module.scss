@@ -1,15 +1,20 @@
 .backdrop {
-  padding: 4rem 0;
+  padding: 6rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-image: linear-gradient(-45deg, #173647, lighten(#173647, 5%));
-  color: white;
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-weight: 300;
+  line-height: 1em;
+}
+
+.ctas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 996px) {
