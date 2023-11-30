@@ -68,6 +68,11 @@ const config = {
             position: 'left'
           },
           {
+            to: '/sponsors',
+            label: 'Sponsor',
+            position: 'left'
+          },
+          {
             href: 'https://github.com/cucumber',
             label: 'GitHub',
             position: 'right',
