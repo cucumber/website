@@ -1,0 +1,30 @@
+.tiersList {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.tiersItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25%;
+  padding: 2rem;
+  border: 1px solid var(--ifm-color-secondary);
+}
+
+.tiersAmount {
+  font-weight: 300;
+  font-size: 2.5rem;
+  line-height: 1em;
+}
+
+.tiersFrequency {
+  color: var(--ifm-color-secondary-darkest);
+  font-size: 0.875rem;
+  margin-left: 0.25em;
+}
+
+.tiersTitle {
+  margin-top: 0.5rem;
+}
