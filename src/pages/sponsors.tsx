@@ -60,15 +60,17 @@ export default function Sponsors() {
         <main>
             <div className="container readable-blurb text--center padding-vert--lg">
                 <h1>Sponsor Cucumber</h1>
-                <p>The Cucumber project has no full-time staff or big commercial backer &mdash; our tools are mostly maintained by volunteers, in their spare time. Sponsorship from individuals and companies helps keep the project healthy.</p>
+                <p>Cucumber was downloaded over 100 million times in 2023.</p>
+                <p>Thousands of companies rely on Cucumber tests to validate their software. We are a team of volunteers who maintain the core Gherkin parser, the Java, Ruby, JavaScript and Go flavoured implementations of Cucumber. That's a lot of work!</p>
+                <p>Your sponsorship ensures the team can get paid for their time, and ensures Cucumber will remain a reliable and fun way to test your software for years to come.</p>
             </div>
             <div className="container padding-vert--lg">
                 <div className="margin-bottom--lg">
-                    <p className="text--center margin-bottom--sm">If you can, we'd love for you to commit a regular amount to support Cucumber:</p>
+                    <p className="text--center margin-bottom--sm">If you can, we'd love for you to commit a regular amount to support Cucumber</p>
                     <Tiers/>
                 </div>
                 <div className="text--center">
-                    <p className="margin-bottom--sm">Or, you can always make a one-time donation:</p>
+                    <p className="margin-bottom--sm">Or, you can always make a one-time donation</p>
                     <p>
                         <Link className="button button--lg button--secondary" href="https://opencollective.com/cucumber/donate">Donate</Link>
                     </p>
@@ -86,7 +88,7 @@ export default function Sponsors() {
                     <div className="col col--4">
                         <img className={clsx(styles.reasonIllustration, "margin-bottom--md")} alt="" src="/img/illustrations/code.svg"/>
                         <h3>Extensibility</h3>
-                        <p className="padding-horiz--sm">Adapting our architecture so you can extend and augment Cucumber for whatever you need.</p>
+                        <p className="padding-horiz--sm">Adapting our architecture so you - and other tools you love - can extend Cucumber for whatever you need.</p>
                     </div>
                     <div className="col col--4">
                         <img className={clsx(styles.reasonIllustration, "margin-bottom--md")} alt="" src="/img/illustrations/docs.svg"/>
