@@ -56,7 +56,7 @@ There are a few secondary keywords as well:
 - `@` (Tags)
 - `#` (Comments)
 
-:::note Localisation
+:::info Localisation
 Gherkin is localised for many [spoken languages](#spoken-languages); each has their own localised equivalent of these keywords.
 :::
 
@@ -208,7 +208,7 @@ Examples:
 - Invite a friend
 - Withdraw money
 
-:::note Imagine it's 1922
+:::info Imagine it's 1922
 Most software does something people could do manually (just not as efficiently).
 
 Try hard to come up with examples that don't make any assumptions about
