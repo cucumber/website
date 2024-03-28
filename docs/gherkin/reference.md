@@ -461,7 +461,7 @@ Given a blog post named "Random" with Markdown body
 
 This might be familiar for those used to writing with Markdown.
 
-:::caution Tool support for backticks
+:::warning Tool support for backticks
 Whilst all current versions of Cucumber support backticks as the delimiter, many tools like text editors don't (yet).
 :::
 
@@ -478,7 +478,7 @@ Given a blog post named "Random" with Markdown body
   """
 ```
 
-:::caution Tool support for content types
+:::warning Tool support for content types
 Whilst all current versions of Cucumber support content types as the
 delimiter, many tools like text editors don't (yet).
 :::
