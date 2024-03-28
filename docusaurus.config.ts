@@ -1,12 +1,10 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+import {Config} from '@docusaurus/types';
+import {themes} from 'prism-react-renderer';
 
-const { themes } = require('prism-react-renderer');
-const lightCodeTheme = themes.dracula
-const darkCodeTheme = themes.github
+const lightCodeTheme = themes.dracula;
+const darkCodeTheme = themes.github;
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+export default {
   title: 'Cucumber',
   tagline: 'lets you write automated tests in plain language',
   favicon: 'img/logo.svg',
@@ -150,6 +148,4 @@ const config = {
     plugins: [
       'docusaurus-plugin-sass'
     ]
-};
-
-module.exports = config;
+} satisfies Config;
