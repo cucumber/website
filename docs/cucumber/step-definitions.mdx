@@ -1,0 +1,103 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Step Definitions
+
+A Step Definition is a function/method with an [expression](#expressions) that links it to one or more [Gherkin steps](/docs/gherkin/reference#steps).
+When Cucumber executes a [Gherkin step](/docs/gherkin/reference#steps) in a scenario, it will look for a matching *step definition* to execute.
+
+To illustrate how this works, look at the following Gherkin Scenario:
+
+```gherkin
+Scenario: Some cukes
+  Given I have 48 cukes in my belly
+```
+
+The `I have 48 cukes in my belly` part of the step (the text following the `Given` keyword) will match the following step definition:
+
+<Tabs groupId="lang" queryString>
+    <TabItem value="java" label="Java" default>
+
+```java
+package com.example;
+import io.cucumber.java.en.Given;
+
+public class StepDefinitions {
+    @Given("I have {int} cukes in my belly")
+    public void i_have_n_cukes_in_my_belly(int cukes) {
+        System.out.format("Cukes: %n\n", cukes);
+    }
+}
+```
+
+Or, using Java8 lambdas:
+
+```java
+package com.example;
+import io.cucumber.java8.En;
+
+public class StepDefinitions implements En {
+    public StepDefinitions() {
+        Given("I have {int} cukes in my belly", (Integer cukes) -> {
+            System.out.format("Cukes: %n\n", cukes);
+        });
+    }
+}
+```
+
+    </TabItem>
+    <TabItem value="kotlin" label="Kotlin">
+
+```kotlin
+package com.example
+import io.cucumber.java8.En
+
+class StepDefinitions : En {
+
+    init {
+        Given("I have {int} cukes in my belly") { cukes: Int ->
+                println("Cukes: $cukes")
+        }
+    }
+
+}
+```
+
+    </TabItem>
+    <TabItem value="scala" label="Scala">
+
+```scala
+package com.example
+import io.cucumber.scala.{ScalaDsl, EN}
+
+class StepDefinitions extends ScalaDsl with EN {
+
+    Given("I have {int} cukes in my belly") { cukes: Int =>
+        println(s"Cukes: $cukes")
+    }
+
+}
+```
+
+    </TabItem>
+    <TabItem value="ruby" label="Ruby">
+
+```ruby
+Given('I have {int} cukes in my belly') do |cukes|
+  puts "Cukes: #{cukes}"
+end
+```
+
+    </TabItem>
+    <TabItem value="javascript" label="JavaScript">
+
+```javascript
+const { Given } = require('cucumber')
+
+Given('I have {int} cukes in my belly', function (cukes) {
+  console.log(`Cukes: ${cukes}`)
+});
+```
+
+    </TabItem>
+</Tabs>
