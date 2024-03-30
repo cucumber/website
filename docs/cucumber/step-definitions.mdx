@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # Step Definitions
 
-A Step Definition is a function/method with an [expression](#expressions) that links it to one or more [Gherkin steps](/docs/gherkin/reference#steps).
+A Step Definition is a <Term>stepdef-body</Term> with an [expression](#expressions) that links it to one or more [Gherkin steps](/docs/gherkin/reference#steps).
 When Cucumber executes a [Gherkin step](/docs/gherkin/reference#steps) in a scenario, it will look for a matching *step definition* to execute.
 
 To illustrate how this works, look at the following Gherkin Scenario:
@@ -102,12 +102,12 @@ Given('I have {int} cukes in my belly', function (cukes) {
     </TabItem>
 </Tabs>
 
-# Expressions
+## Expressions
 
 A step definition's *expression* can either be a [Regular Expression](https://en.wikipedia.org/wiki/Regular_expression)
 or a [Cucumber Expression](/docs/cucumber/cucumber-expressions). The examples in this section use Cucumber Expressions.
-If you prefer to use Regular Expressions, each EXPRESSION-PARAMETER from the match will be passed as arguments to the step
-definition's STEPDEF-BODY.
+If you prefer to use Regular Expressions, each <Term>expression-parameter</Term> from the match will be passed as arguments to the step
+definition's <Term>stepdef-body</Term>.
 
 <Tabs groupId="lang" queryString>
     <TabItem value="java" label="Java" default>
@@ -155,9 +155,9 @@ Given(/I have {int} cukes in my belly/, function (cukes) {
     </TabItem>
 </Tabs>
 
-If the EXPRESSION-PARAMETER expression is identical to one of the registered
+If the <Term>expression-parameter</Term> expression is identical to one of the registered
 [parameter types](/docs/cucumber/cucumber-expressions#parameter-types)'s `regexp`,
 the captured string will be transformed before it is passed to the
-step definition's STEPDEF-BODY. In the example above, the `cukes`
+step definition's <Term>stepdef-body</Term>. In the example above, the `cukes`
 argument will be an integer, because the built-in `int` parameter type's
 `regexp` is `\d+` .

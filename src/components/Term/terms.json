@@ -1,0 +1,16 @@
+{
+  "stepdef-body": {
+    "java": "method",
+    "kotlin": "function",
+    "scala": "function",
+    "javascript": "function",
+    "ruby": "block"
+  },
+  "expression-parameter": {
+    "java": "capture group",
+    "kotlin": "capture group",
+    "scala": "capture group",
+    "javascript": "output parameter",
+    "ruby": "output parameter"
+  }
+}
