@@ -62,7 +62,7 @@ export default {
         },
         items: [
           {
-            to: 'https://cucumber.io/docs/installation',
+            to: '/docs',
             label: 'Documentation',
             position: 'left'
           },
