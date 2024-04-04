@@ -37,7 +37,7 @@ export default {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/vegetable-specification-society/website/blob/main',
+            'https://github.com/cucumber/website/blob/main',
         },
         blog: {
           showReadingTime: false
