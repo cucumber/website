@@ -8,7 +8,7 @@ type TermProps = { children: keyof typeof terms };
 
 const InternalTerm: FC<TermProps> = ({children}) => {
     const history = useHistory()
-    const lang = new URLSearchParams(history.location.search).get('lang') || localStorage.getItem('docusaurus.tab.lang') || DEFAULT_LANG
+    const lang = new URLSearchParams(history.location.search).get('lang') || localStorage.getItem('docusaurus.tab.lang') || DEFAULT_LANGUAGE
     return <span>{terms[children][lang]}</span>
 }
 
