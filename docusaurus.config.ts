@@ -38,6 +38,8 @@ export default {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/cucumber/website/blob/main',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: false
