@@ -1,10 +1,12 @@
 // Import the original mapper
 import MDXComponents from '@theme-original/MDXComponents';
-import {Term} from '@site/src/components/Term';
+import {Tab, Tabs, Term} from "@site/src/components/Polyglot";
 
 export default {
     // Re-use the default mapping
     ...MDXComponents,
     // Add our custom components
-    Term,
+    Tab,
+    Tabs,
+    Term
 };

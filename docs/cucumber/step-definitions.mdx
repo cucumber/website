@@ -1,7 +1,4 @@
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-# Step Definitions
+# Step definitions
 
 A Step Definition is a <Term>stepdef-body</Term> with an [expression](#expressions) that links it to one or more [Gherkin steps](/docs/gherkin/reference#steps).
 When Cucumber executes a [Gherkin step](/docs/gherkin/reference#steps) in a scenario, it will look for a matching *step definition* to execute.
@@ -15,8 +12,8 @@ Scenario: Some cukes
 
 The `I have 48 cukes in my belly` part of the step (the text following the `Given` keyword) will match the following step definition:
 
-<Tabs groupId="lang" queryString>
-    <TabItem value="java" label="Java" default>
+<Tabs>
+    <Tab value="java">
 
 ```java
 package com.example;
@@ -45,8 +42,8 @@ public class StepDefinitions implements En {
 }
 ```
 
-    </TabItem>
-    <TabItem value="kotlin" label="Kotlin">
+    </Tab>
+    <Tab value="kotlin">
 
 ```kotlin
 package com.example
@@ -63,8 +60,8 @@ class StepDefinitions : En {
 }
 ```
 
-    </TabItem>
-    <TabItem value="scala" label="Scala">
+    </Tab>
+    <Tab value="scala">
 
 ```scala
 package com.example
@@ -79,8 +76,8 @@ class StepDefinitions extends ScalaDsl with EN {
 }
 ```
 
-    </TabItem>
-    <TabItem value="ruby" label="Ruby">
+    </Tab>
+    <Tab value="ruby">
 
 ```ruby
 Given('I have {int} cukes in my belly') do |cukes|
@@ -88,8 +85,8 @@ Given('I have {int} cukes in my belly') do |cukes|
 end
 ```
 
-    </TabItem>
-    <TabItem value="javascript" label="JavaScript">
+    </Tab>
+    <Tab value="javascript">
 
 ```javascript
 const { Given } = require('cucumber')
@@ -99,7 +96,7 @@ Given('I have {int} cukes in my belly', function (cukes) {
 });
 ```
 
-    </TabItem>
+    </Tab>
 </Tabs>
 
 ## Expressions
@@ -109,8 +106,8 @@ or a [Cucumber Expression](/docs/cucumber/cucumber-expressions). The examples in
 If you prefer to use Regular Expressions, each <Term>expression-parameter</Term> from the match will be passed as arguments to the step
 definition's <Term>stepdef-body</Term>.
 
-<Tabs groupId="lang" queryString>
-    <TabItem value="java" label="Java" default>
+<Tabs>
+    <Tab value="java">
 
 ```java
 @Given("I have {int} cukes in my belly")
@@ -118,8 +115,8 @@ public void i_have_n_cukes_in_my_belly(int cukes) {
 }
 ```
 
-    </TabItem>
-    <TabItem value="kotlin" label="Kotlin">
+    </Tab>
+    <Tab value="kotlin">
 
 ```kotlin
 Given("I have {int} cukes in my belly") { cukes: Int ->
@@ -127,8 +124,8 @@ Given("I have {int} cukes in my belly") { cukes: Int ->
 }
 ```
 
-    </TabItem>
-    <TabItem value="scala" label="Scala">
+    </Tab>
+    <Tab value="scala">
 
 ```scala
 Given("I have {int} cukes in my belly") { cukes: Int =>
@@ -136,23 +133,23 @@ Given("I have {int} cukes in my belly") { cukes: Int =>
 }
 ```
 
-    </TabItem>
-    <TabItem value="ruby" label="Ruby">
+    </Tab>
+    <Tab value="ruby">
 
 ```ruby
 Given(/I have {int} cukes in my belly/) do |cukes|
 end
 ```
 
-    </TabItem>
-    <TabItem value="javascript" label="JavaScript">
+    </Tab>
+    <Tab value="javascript">
 
 ```javascript
 Given(/I have {int} cukes in my belly/, function (cukes) {
 });
 ```
 
-    </TabItem>
+    </Tab>
 </Tabs>
 
 If the <Term>expression-parameter</Term> expression is identical to one of the registered
