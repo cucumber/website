@@ -2,3 +2,8 @@
   from = "/tools/cucumber-open/sponsors"
   to = "/sponsors"
   status = 301
+
+[[redirects]]
+  from = "/conduct"
+  to = "https://github.com/cucumber/.github/tree/main?tab=coc-ov-file"
+  status = 302
