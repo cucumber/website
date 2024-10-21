@@ -1,8 +1,30 @@
+# Paths that only made sense on the SmartBear site
+[[redirects]]
+  from = "/tools"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/tools/cucumber-open"
+  to = "/"
+  status = 301
+
+# Paths for SmartBear products
+[[redirects]]
+  from = "/tools/cucumberstudio"
+  to = "https://smartbear.com"
+  status = 301
+[[redirects]]
+  from = "/tools/cucumber-for-jira"
+  to = "https://smartbear.com"
+  status = 301
+
+# Simplified paths
 [[redirects]]
   from = "/tools/cucumber-open/sponsors"
   to = "/sponsors"
   status = 301
 
+# Vanity URLs for external sites/services
 [[redirects]]
   from = "/conduct"
   to = "https://github.com/cucumber/.github/tree/main?tab=coc-ov-file"
