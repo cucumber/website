@@ -5,5 +5,6 @@ export const LANGUAGES = {
     "kotlin": "Kotlin",
     "scala": "Scala",
     "ruby": "Ruby",
-    "javascript": "JavaScript"
+    "javascript": "JavaScript",
+    "golang": "Go",
 }

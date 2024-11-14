@@ -12,5 +12,33 @@
     "scala": "capture group",
     "javascript": "output parameter",
     "ruby": "output parameter"
+  },
+  "file-extension": {
+    "java": ".java",
+    "kotlin": ".kt",
+    "javascript": ".js",
+    "ruby": ".rb",
+    "golang": ".go"
+  },
+  "steps-file-pattern": {
+    "java": "StepDefinitions.java",
+    "kotlin": "StepDefinitions.kt",
+    "javascript": "*_steps.js",
+    "ruby": "*_steps.rb",
+    "golang": "*_steps.go"
+  },
+  "domain-object": {
+    "java": "domain object",
+    "kotlin": "domain object",
+    "javascript": "domain object",
+    "ruby": "model/database table",
+    "golang": "domain object"
+  },
+  "types-of-objects": {
+    "java": "types of objects",
+    "kotlin": "types of objects",
+    "javascript": "types of objects",
+    "ruby": "models",
+    "golang": "types of objects"
   }
 }
