@@ -6,9 +6,13 @@ import {LANGUAGES} from "./constants";
 type TabProps = { value: keyof typeof LANGUAGES, children: ReactNode };
 
 export const Tabs: FC<{children: ReactElement<TabProps>[]}> = ({children}) => {
+    const asArray = Array.isArray(children) ? children : [children]
     return <DocusaurusTabs groupId="lang" queryString>
-        {children.map(child => {
-            return <DocusaurusTabItem key={child.props.value} value={child.props.value} label={LANGUAGES[child.props.value]}>{child.props.children}</DocusaurusTabItem>
+        {asArray.flatMap(child => {
+            const keys = child.props.value.split(',')
+            return keys.map(key => {
+                return <DocusaurusTabItem key={key} value={key} label={LANGUAGES[key]}>{child.props.children}</DocusaurusTabItem>
+            })
         })}
     </DocusaurusTabs>
 }
