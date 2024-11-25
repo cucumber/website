@@ -17,7 +17,7 @@
     "@cucumber/gherkin": "^30.0.0",
     "@docusaurus/core": "3.6.3",
     "@docusaurus/preset-classic": "3.6.3",
-    "@mdx-js/react": "3.0.1",
+    "@mdx-js/react": "3.1.0",
     "clsx": "^2.0.0",
     "docusaurus-plugin-sass": "^0.2.5",
     "prism-react-renderer": "2.3.1",
