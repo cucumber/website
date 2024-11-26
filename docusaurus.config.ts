@@ -138,7 +138,12 @@ export default {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Cucumber. Built with Docusaurus.`,
+        logo: {
+          alt: 'Deploys by Netlify',
+          src: 'https://www.netlify.com/v3/img/components/netlify-color-accent.svg',
+          href: 'https://www.netlify.com',
+        },
+        copyright: `Copyright © ${new Date().getFullYear()} The Cucumber Open Source Project`,
       },
       prism: {
         theme: lightCodeTheme,
