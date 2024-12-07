@@ -733,3 +733,22 @@ end
 
     </Tab>
 </Tabs>
+
+### InstallPlugin
+
+:::warning[Ruby only]
+Only the Ruby implementation of Cucumber supports `InstallPlugin` hooks.
+:::
+
+You may provide an `InstallPlugin` hook that will be run after Cucumber has been configured. The block you provide will be passed on to Cucumber's configuration (an instance of `Cucumber::Cli::Configuration`), and a wrapper to some cucumber internals as a registry.
+
+```ruby
+InstallPlugin do |config, registry|
+  puts "Features dwell in #{config.feature_dirs}"
+end
+```
+
+This hook will run _only once_: after support has been loaded, and before any features are loaded.
+
+You can use this hook to extend Cucumber. For example, you could affect how features are loaded, or register custom formatters programmatically. [cucumber-wire](https://github.com/cucumber/cucumber-ruby-wire) is a good example
+of how to use InstallPlugin and what a Cucumber plugin can do.
