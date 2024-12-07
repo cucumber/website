@@ -126,7 +126,7 @@ The specific preposition/adverb used has **no** significance when Cucumber is re
 
 Also, check out [multiline step arguments](/docs/gherkin/reference#step-arguments) for more info on how to pass entire tables or bigger strings to your step definitions.
 
-### Step Results
+### Step results
 
 Each step can have one of the following results:
 
@@ -550,3 +550,66 @@ end
 
     </Tab>
 </Tabs>
+
+### Conditional hooks
+
+Hooks can be conditionally selected for execution based on the tags of the scenario. To run a particular hook only for certain scenarios, you can associate a hook with a [tag expression](#tag-expressions).
+
+<Tabs>
+    <Tab value="java">
+
+Annotated method style:
+
+```java
+@After("@browser and not @headless")
+public void doSomethingAfter(Scenario scenario){
+}
+```
+
+Lambda style:
+
+```java
+After("@browser and not @headless", (Scenario scenario) -> {
+});
+```
+
+    </Tab>
+    <Tab value="kotlin">
+
+Lambda style:
+
+```kotlin
+After (arrayOf("@browser and not @headless")) { scenario: Scenario ->
+    driver.quit()
+}
+```
+
+    </Tab>
+    <Tab value="scala">
+
+```scala
+After("@browser and not @headless") { scenario: Scenario =>
+
+}
+```
+
+    </Tab>
+    <Tab value="javascript">
+
+```javascript
+Before({tags: '@browser and not @headless'}, async function () {
+})
+```
+
+    </Tab>
+    <Tab value="ruby">
+
+```ruby
+Before('@browser and not @headless') do
+end
+```
+
+    </Tab>
+</Tabs>
+
+See more documentation on [tags](#tags).
