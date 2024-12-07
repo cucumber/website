@@ -752,3 +752,251 @@ This hook will run _only once_: after support has been loaded, and before any fe
 
 You can use this hook to extend Cucumber. For example, you could affect how features are loaded, or register custom formatters programmatically. [cucumber-wire](https://github.com/cucumber/cucumber-ruby-wire) is a good example
 of how to use InstallPlugin and what a Cucumber plugin can do.
+
+## Tags
+
+Tags are a great way to organise your features and scenarios.
+
+They can be used for two purposes:
+
+* [Running a subset of scenarios](#running-a-subset-of-scenarios)
+* [Restricting hooks to a subset of scenarios](#conditional-hooks)
+
+Consider the following example:
+
+```gherkin
+@billing
+Feature: Verify billing
+
+  @important
+  Scenario: Missing product description
+    Given hello
+
+  Scenario: Several products
+    Given hello
+```
+
+A feature or scenario can have as many tags as you like. Separate them with spaces:
+
+```gherkin
+@billing @bicker @annoy
+Feature: Verify billing
+```
+
+Tags can be placed above the following Gherkin elements:
+
+* `Feature`
+* `Rule`
+* `Scenario`
+* `Scenario Outline`
+* `Examples`
+
+In `Scenario Outline`, you can use tags on different sets of examples like below:
+
+```gherkin
+Scenario Outline: Steps will run conditionally if tagged
+  Given user is logged in
+  When user clicks <link>
+  Then user will be logged out
+
+  @mobile
+  Examples:
+    | link                  |
+    | logout link on mobile |
+
+  @desktop
+  Examples:
+    | link                   |
+    | logout link on desktop |
+```
+
+It is *not* possible to place tags above `Background` or steps (`Given`, `When`, `Then`, `And` and `But`).
+
+### Tag inheritance
+
+Tags are inherited by child elements. So, tags that are placed above a `Feature` will be inherited by `Rule`, `Scenario`, `Scenario Outline`, or `Examples`. And similarly tags that are placed above a `Scenario Outline` will be inherited by `Examples`.
+
+### Running a subset of scenarios
+
+You can tell Cucumber to only run scenarios with a particular tag:
+
+<Tabs>
+    <Tab value="java,kotlin,scala">
+
+For JUnit 5 see the [cucumber-junit-platform-engine documentation](https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-junit-platform-engine#tags)
+
+For JUnit 4 and TestNG using a JVM system property:
+
+```shell
+mvn test -Dcucumber.filter.tags="@smoke and @fast"
+```
+
+Or an environment variable:
+
+```shell
+# Linux / OS X:
+CUCUMBER_FILTER_TAGS="@smoke and @fast" mvn test
+
+# Windows:
+set CUCUMBER_FILTER_TAGS="@smoke and @fast"
+mvn test
+```
+
+Or annotating your JUnit 4/TestNG  runner class:
+
+```java
+@CucumberOptions(tags = "@smoke and @fast")
+```
+
+    </Tab>
+    <Tab value="javascript">
+
+```shell
+# You can omit the quotes if the expression is a single tag
+./node_modules/.bin/cucumber.js --tags "@smoke and @fast"
+```
+
+    </Tab>
+    <Tab value="ruby">
+
+```shell
+# You can omit the quotes if the expression is a single tag
+cucumber --tags "@smoke and @fast"
+```
+
+    </Tab>
+</Tabs>
+
+### Ignoring a subset of scenarios
+
+You can tell Cucumber to ignore scenarios with a particular tag:
+
+<Tabs>
+    <Tab value="java,kotlin,scala">
+
+By annotating your JUnit 4/TestNG  runner class:
+
+```java
+@CucumberOptions(tags = "not @smoke")
+```
+
+    </Tab>
+    <Tab value="javascript">
+
+```shell
+# You can omit the quotes if the expression is a single tag
+./node_modules/.bin/cucumber.js --tags "not @smoke"
+```
+
+    </Tab>
+    <Tab value="ruby">
+
+```shell
+# You can omit the quotes if the expression is a single tag
+cucumber --tags "not @smoke"
+```
+
+    </Tab>
+</Tabs>
+
+:::tip[Filtering by line]
+Another way to run a subset of scenarios is to use the `file.feature:line` pattern or the `--scenario` option.
+:::
+
+### Tag expressions
+
+A tag expression is an *infix boolean expression*. Below are some examples:
+
+| Expression           |                                                       Description |
+|----------------------|------------------------------------------------------------------:|
+| `@fast`              |                                     Scenarios tagged with `@fast` |
+| `@wip and not @slow` | Scenarios tagged with `@wip` that aren't also tagged with `@slow` |
+| `@smoke and @fast`   |                   Scenarios tagged with both `@smoke` and `@fast` |
+| `@gui or @database`  |                Scenarios tagged with either `@gui` or `@database` |
+
+For even more advanced tag expressions you can use parenthesis for clarity, or
+to change operator precedence:
+
+```
+(@smoke or @ui) and (not @slow)
+```
+
+### Using tags for documentation
+
+Your imagination is the only limitation when it comes to using tags for documentation.
+
+#### Link to other documents
+
+Tags can refer to IDs in external systems such as requirement management tools, issue trackers or
+test management tools:
+
+```gherkin
+@BJ-x98.77 @BJ-z12.33
+Feature: Convert transaction
+```
+
+You can use a custom Cucumber reporting plugin that will turn tags into links pointing to
+documents in your external tool.
+
+#### Development process
+
+Another creative way to use tags is to keep track of where in the development process a certain feature is:
+
+```gherkin
+@qa_ready
+Feature: Index projects
+```
+
+### `@wip` and Rails
+
+As distributed, Cucumber-Rails builds a Rake task that recognizes the `@wip` tag.
+However, any string may be used as a tag and any scenario or entire feature can have multiple tags associated with it.
+
+The default profile contained in the distributed `config/cucumber.yml` contains these lines:
+
+```yaml
+<%
+.  .  .
+std_opts = "--format #{ENV['CUCUMBER_FORMAT'] || 'progress'} --strict --tags ~@wip"
+%>
+default: <%= std_opts %> features
+.  .  .
+```
+
+Note the trailing option `--tags ~@wip`.  Cucumber provides for negating tags by prefacing the `--tags` argument with a tilde character (**`~`**).
+This tells Cucumber to not process features and scenarios with this tag. If you do not specify a different profile (`cucumber -p profilename`), then the default profile will be used.
+If the default profile is used, then the `--tags ~@wip` will cause Cucumber to skip any scenario with this tag. This will override the `--tags=@authen` option passed in the command line, and so you will see this:
+
+```shell
+cucumber --tags=@authentication
+Using the default profile...
+
+0 scenarios
+0 steps
+0m0.000s
+```
+
+Since version 0.6.0, one can no longer overcome this default setting by adding the `--tags=@wip` to the Cucumber argument
+list on the command line, because now all `--tags` options are combined with "and" logic. Thus, the combination of `--tags @wip` **and** `--tags ~@wip` fails everywhere.
+
+You either must create a special profile in `config/cucumber.yml` to deal with this, or alter the default profile to suit your needs.
+
+The `@wip` tags are a special case. If any scenario tagged as `@wip` passes all of its steps without error, and the
+`--wip` option is also passed, Cucumber reports the run as failing (because Scenarios that are marked as a work in progress are not *supposed* to pass!)
+
+Note as well that the `--strict` and `--wip` options are mutually exclusive.
+
+The number of occurrences of a particular tag in your features may be controlled by appending a colon followed by a
+number to the end of the tag name passed to the `--tags` option, like so:
+
+```shell
+cucumber --tags=@wip:3 features/log\*
+```
+
+The existence of more than the specified number of occurrences of that tag in all the features that are exercised during
+a particular Cucumber run will produce a warning message. If the `--strict` option is passed as well, as is the case with
+the default profile, then instead of a warning the run will fail.
+
+Limiting the number of occurrences is commonly used in conjunction with the `@wip` tag to restrict the number of
+unspecified scenarios to manageable levels. Those following [Kanban](https://en.wikipedia.org/wiki/kanban) or
+[Lean Software Development](https://en.wikipedia.org/wiki/Lean_software_development) based methodologies will find this useful.
