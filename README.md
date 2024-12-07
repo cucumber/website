@@ -1,6 +1,8 @@
 # Website
 
-The (as yet unpublished) new website for Cucumber. Available for preview at <https://cucumber-site-new.netlify.app/>
+The (as yet unpublished) new website for Cucumber. Available for preview at https://cucumber-website-preview.netlify.app
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d1d528ae-1cba-4fe0-9c66-38a904c3a04b/deploy-status)](https://app.netlify.com/sites/cucumber-website-preview/deploys)
 
 ### Installation
 
