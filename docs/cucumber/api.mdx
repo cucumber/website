@@ -161,3 +161,268 @@ Step definitions have to be unique for Cucumber to know what to execute. If more
     <Tab value="javascript">Cucumber will report an AMBIGUOUS result status.</Tab>
     <Tab value="ruby">Cucumber will raise a `Cucumber::Ambiguous` error.</Tab>
 </Tabs>
+
+## Hooks
+
+Hooks are blocks of code that can run at various points in the Cucumber execution cycle.
+They are typically used for setup and teardown of the environment before and after each scenario.
+
+Where a hook is defined has no impact on what scenarios or steps it is run for.
+If you want more fine-grained control, you can use [conditional hooks](#conditional-hooks).
+
+<Tabs>
+    <Tab value="java,kotlin">You can declare hooks in any class.</Tab>
+    <Tab value="scala">You can declare hooks in any class, trait or object.</Tab>
+    <Tab value="javascript">You can declare hooks in your `features/support/env.js` file, or any other file under the `features/support` directory (for example, in a file called `features/support/hooks.js`).</Tab>
+    <Tab value="ruby">You can declare hooks in your `features/support/env.rb` file, or any other file under the `features/support` directory (for example, in a file called `support/hooks.rb`).</Tab>
+</Tabs>
+
+### Scenario hooks
+
+Scenario hooks run for every scenario.
+
+#### Before
+
+`Before` hooks run before the first step of each scenario.
+
+<Tabs>
+    <Tab value="java">
+
+Annotated method style:
+
+```java
+@Before
+public void doSomethingBefore() {
+}
+```
+
+Lambda style:
+
+```java
+Before(() -> {
+});
+```
+
+    </Tab>
+    <Tab value="kotin">
+
+Lambda style:
+
+```kotlin
+Before { scenario: Scenario ->
+    // doSomething
+}
+```
+
+    </Tab>
+    <Tab value="scala">
+
+```scala
+Before { scenario: Scenario =>
+    // doSomething
+}
+```
+
+    </Tab>
+    <Tab value="javascript">
+
+```javascript
+// Import the Before function
+const { Before } = require('@cucumber/cucumber')
+
+Before(async function () {
+})
+```
+
+:::warning[Avoid arrow functions]
+Arrow functions (`() => {}`) bind `this` to the current context, which prevents sharing state between hooks and step definitions.
+:::
+
+    </Tab>
+    <Tab value="ruby">
+
+```ruby
+Before do
+  # Do something before each scenario
+end
+```
+
+    </Tab>
+</Tabs>
+
+:::tip[Think twice before you use `Before`]
+Whatever happens in a `Before` hook is invisible to people who only read the features.
+You should consider using a [background](/docs/gherkin/reference#background) as a more explicit
+alternative, especially if the setup should be readable by non-technical people.
+Only use a `Before` hook for low-level logic such as starting a browser or deleting
+data from a database.
+:::
+
+<Tabs>
+    <Tab value="java">
+
+You can specify an explicit order for hooks if you need to.
+
+Annotated method style:
+
+```java
+@Before(order = 10)
+public void doSomething(){
+    // Do something before each scenario
+}
+```
+
+Lambda style:
+
+```java
+Before(10, () -> {
+    // Do something before each scenario
+});
+```
+
+    </Tab>
+    <Tab value="kotlin">
+
+You can specify an explicit order for hooks if you need to.
+
+```kotlin
+Before(10) { scenario: Scenario ->
+    // Do something before each scenario
+}
+```
+:::warning[Using Kotlin named objects or companion objects]
+
+If `@BeforeAll`, `@AfterAll` etc. are used in Kotlin named objects or companion objects an `io.cucumber.java.InvalidMethodSignatureException`
+will be thrown, as Kotlin will create a class `MyStepDefinitions$Companion` which has non-static methods. [Read more about it here](https://kotlinlang.org/docs/java-to-kotlin-interop.html#static-methods).
+
+The `@JvmStatic` annotation does not prevent this behaviour of Kotlin; it adds the static methods to `MyStepDefinitionsMethod` only.
+
+Consequently, Cucumber will detect the static methods in `MyStepDefinitions` class, as well as the non-static methods in `MyStepDefinitions$Companion` class and will complain about the second one.
+
+As a solution to this problem, use [ package level functions](https://kotlinlang.org/docs/java-to-kotlin-interop.html#package-level-functions) - this is, without companion objects.
+:::
+
+```kotlin
+package io.cucumber.example
+
+import io.cucumber.java.AfterAll
+import io.cucumber.java.BeforeAll
+
+@BeforeAll
+fun beforeAll() {
+   println("before all")
+}
+
+@AfterAll
+fun afterAll() {
+   println("after all")
+}
+```
+
+    </Tab>
+    <Tab value="scala">
+
+You can specify an explicit order for hooks if you need to.
+
+```scala
+Before(10) { scenario: Scenario =>
+    // Do something before each scenario
+}
+```
+
+    </Tab>
+    <Tab value="javascript,ruby">`Before` hooks run in the **same order** in which they are declared.</Tab>
+</Tabs>
+
+#### After
+
+`After` hooks run after the last step of each scenario, even when the step result is `failed`, `undefined`, `pending`, or `skipped`.
+
+<Tabs>
+    <Tab value="java">
+
+        Annotated method style:
+
+        ```java
+        @After
+        public void doSomethingAfter(Scenario scenario){
+        // Do something after after scenario
+    }
+        ```
+
+        Lambda style:
+
+        ```java
+        After((Scenario scenario) -> {
+    });
+        ```
+
+    </Tab>
+    <Tab value="kotlin">
+
+        Lambda style:
+
+        ```kotlin
+        After { scenario: Scenario ->
+        // doSomething
+    }
+        ```
+
+    </Tab>
+    <Tab value="scala">
+
+        ```scala
+        After { scenario: Scenario =>
+        // doSomething
+    }
+        ```
+
+    </Tab>
+    <Tab value="javascript">
+
+        ```javascript
+        After(async function (scenario) {
+    })
+        ```
+
+    </Tab>
+    <Tab value="ruby">
+
+        ```ruby
+        After do |scenario|
+        end
+        ```
+
+        Here is an example in which we exit at the first failure (which could be useful in some cases like [Continuous Integration](/docs/guides/continuous-integration), where fast feedback is important).
+
+        ```ruby
+        After do |s|
+        # Tell Cucumber to quit after this scenario is done - if it failed.
+        Cucumber.wants_to_quit = true if s.failed?
+        end
+        ```
+
+    </Tab>
+</Tabs>
+
+The `scenario` parameter is optional. If you use it, you can inspect the status of the scenario.
+
+For example, you can take a screenshot for failed scenarios and embed them in Cucumber's report(s); see the [browser automation page](/docs/guides/browser-automation/#screenshot-on-failure) for an example on how to do so.
+
+#### Around
+
+:::warning[Ruby only]
+Only the Ruby implementation of Cucumber supports `Around` hooks.
+:::
+
+`Around` hooks will run "around" a scenario. This can be used to wrap the execution of a scenario in a block. The `Around` hook receives a `Scenario` object and a block (`Proc`) object. The scenario will be executed when you invoke `block.call`.
+
+The following example will cause scenarios tagged with `@fast` to fail if the execution takes longer than 0.5 seconds:
+
+```ruby
+Around('@fast') do |scenario, block|
+Timeout.timeout(0.5) do
+block.call
+end
+end
+```
