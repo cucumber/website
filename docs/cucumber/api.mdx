@@ -2,14 +2,14 @@
 
 Cucumber can be used to implement automated tests based on scenarios described in your Gherkin feature files.
 
-## Step Arguments
+## Step arguments
 
 In the example given in [step definitions](/docs/cucumber/step-definitions), Cucumber extracts the text `48` from the step, converts it to an `int`
 and passes it as an argument to the <Term>stepdef-body</Term>.
 
 The number of parameters in the <Term>stepdef-body</Term> has to match the number of <Term>expression-parameter</Term>s in the expression. (If there is a mismatch, Cucumber will throw an error).
 
-## Data Tables
+## Data tables
 
 Data tables from Gherkin can be accessed by using the `DataTable` object as the last parameter in a step definition.
 This conversion can be done either by Cucumber or manually.
