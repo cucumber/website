@@ -95,3 +95,69 @@ For now, Cucumber Scala does not support using Scala collection types, see [this
 </Tabs>
 
 For an example of data tables in JavaScript, go [here](https://github.com/cucumber/cucumber-js/blob/master/src/models/data_table.ts)
+
+## Steps
+
+A step is analogous to a method call or function invocation.
+
+For example:
+
+```gherkin
+Given I have 93 cucumbers in my belly
+```
+
+In this step, you're "calling" the above step definition with one argument: the value `93`.
+
+Steps are declared in your `*.feature` files.
+
+### Matching steps
+
+1. Cucumber matches a step against a step definition's `Regexp`
+2. Cucumber gathers any <Term>expression-parameter</Term>s or variables
+3. Cucumber passes them to the step definition's <Term>stepdef-body</Term> and executes it
+
+Recall that step definitions start with a [preposition](https://www.merriam-webster.com/dictionary/given) or an [adverb](https://www.merriam-webster.com/dictionary/when) (**`Given`**, **`When`**, **`Then`**, **`And`**, **`But`**).
+
+All step definitions are loaded (and defined) before Cucumber starts to execute the plain text in the feature file.
+
+Once execution begins, for each step, Cucumber will look for a registered step definition with a matching `Regexp`. If it finds one, it will execute it, passing all <Term>expression-parameter</Term>s and variables from the Regexp as arguments to the <Term>stepdef-body</Term>.
+
+The specific preposition/adverb used has **no** significance when Cucumber is registering or looking up step definitions.
+
+Also, check out [multiline step arguments](/docs/gherkin/reference#step-arguments) for more info on how to pass entire tables or bigger strings to your step definitions.
+
+### Step Results
+
+Each step can have one of the following results:
+
+#### Success
+
+When Cucumber finds a matching step definition it will execute it. If the block in the step definition doesn't raise an error, the step is marked as successful (green). Anything you `return` from a step definition has no significance whatsoever.
+
+#### Undefined
+
+When Cucumber can't find a matching step definition, the step gets marked as undefined (yellow), and all subsequent steps in the scenario are skipped.
+
+#### Pending
+
+When a step definition's <Term>stepdef-body</Term> invokes the `pending` <Term>stepdef-body</Term>, the step is marked as pending (yellow, as with `undefined` ones), indicating that you have work to do.
+
+#### Failed Steps
+
+When a step definition's <Term>stepdef-body</Term> is executed and raises an error, the step is marked as failed (red). What you return from a step definition has no significance whatsoever.
+
+Returning `null`, `false` or some other falsy value in your programming language will **not** cause a step definition to fail.
+
+#### Skipped
+
+Steps that follow `undefined`, `pending`, or `failed` steps are never executed, even if there is a matching step definition. These steps are marked as skipped (cyan).
+
+#### Ambiguous
+
+Step definitions have to be unique for Cucumber to know what to execute. If more than one step definition is matched for the same step, Cucucmber can't resolve the ambiguity on its own. The behaviour varies a bit between implementations:
+
+<Tabs>
+    <Tab value="java,kotlin,scala">Cucumber will throw an `AmbiguousStepDefinitionsException`.</Tab>
+    <Tab value="javascript">Cucumber will report an AMBIGUOUS result status.</Tab>
+    <Tab value="ruby">Cucumber will raise a `Cucumber::Ambiguous` error.</Tab>
+</Tabs>
