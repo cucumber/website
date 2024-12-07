@@ -1000,3 +1000,90 @@ the default profile, then instead of a warning the run will fail.
 Limiting the number of occurrences is commonly used in conjunction with the `@wip` tag to restrict the number of
 unspecified scenarios to manageable levels. Those following [Kanban](https://en.wikipedia.org/wiki/kanban) or
 [Lean Software Development](https://en.wikipedia.org/wiki/Lean_software_development) based methodologies will find this useful.
+
+## Running Cucumber
+
+<Tabs>
+    <Tab value="java,kotlin,scala">Cucumber is a Java library with extensions for different tools and platforms. It is launched by running JUnit 4, JUnit 5, your build tool, your IDE or the CLI.</Tab>
+    <Tab value="javascript">Cucumber is a command line tool. It is launched by running `cucumber-js` from the command line, or a build script.</Tab>
+    <Tab value="ruby">Cucumber is a command line tool. It is launched by running `cucumber` from the command line, or a build script.</Tab>
+</Tabs>
+
+It is possible to [configure](/docs/cucumber/configuration) how Cucumber should run features.
+
+### From the command line
+
+<Tabs>
+    <Tab value="java,kotlin,scala">
+
+The *Command-Line Interface Runner (CLI Runner)* is an executable Java class that can be run from the command-line.
+
+```
+java io.cucumber.core.cli.Main
+```
+Note that you will need to add the `cucumber-core` jar and all of its transitive dependencies to your classpath, in addition to the location of your compiled .class files. You can find these jars in [Maven Central](https://mvnrepository.com/repos/central).
+
+You will also need to provide the CLI with your step definitions via the `--glue` option followed by its package name, and the filepath of your feature file(s).
+
+For example:
+```shell
+java -cp "path/to/each/jar:path/to/compiled/.class/files" io.cucumber.core.cli.Main /path/to/your/feature/files --glue hellocucumber --glue anotherpackage
+```
+Alternatively if you are using a Maven project, you can run the CLI using the [Exec Maven](https://www.mojohaus.org/exec-maven-plugin/) plugin:
+
+```shell
+mvn exec:java                                  \
+    -Dexec.classpathScope=test                 \
+    -Dexec.mainClass=io.cucumber.core.cli.Main \
+    -Dexec.args="/path/to/your/feature/files --glue hellocucumber --glue anotherpackage"
+```
+
+    </Tab>
+    <Tab value="javascript">
+
+The most common option is to run Cucumber from the command line. By default, Cucumber will treat anything ending in`.js` under the root directory as a step definition file.
+Thus, a step contained in `features/models/entities/step-definitions/anything.js` can be used in a feature file, provided that:
+
+- Cucumber is invoked on a root directory common to both (`./features`, in this example); OR
+- Explicitly required on the command line
+
+Cucumber.js includes an executable file to run the features. After installing Cucumber in a project, you can run it with:
+
+``` shell
+./node_modules/.bin/cucumber.js
+```
+
+:::warning[Global installs]
+Cucumber does not work when installed globally because Cucumber needs to be imported/required in support files and globally installed modules cannot be imported/required.
+:::
+
+
+    </Tab>
+    <Tab value="ruby">
+
+The most common option is to run Cucumber from the command line. By default, Cucumber will treat anything ending in `.rb` under the root library directory as a step definition file.
+Thus, a step contained in `features/models/entities/step_definitions/anything.rb` can be used in a feature file contained in `features/views/entity_new`, provided that:
+
+- Cucumber is invoked on a root directory common to both (`./features`, in this example); OR
+- Explicitly required on the command line
+
+The following command will run the `authenticate_user` feature. Any feature in a subdirectory of `features/` directory must `require` features.
+
+```shell
+cucumber --require features features/authentication/authenticate_user.feature
+```
+
+Note that if the `--require` option is passed, then **ONLY** that directory tree will be searched for step definition matches.
+You may specify the `--require` option multiple times if you need to include step definitions from directories that do not share a convenient root.
+
+Otherwise, to run all features:
+
+```
+cucumber
+```
+
+    </Tab>
+</Tabs>
+
+You can also run features using a [build tool](/docs/tools/general#build-tools) or an [IDE](/docs/tools/general#ides).
+
