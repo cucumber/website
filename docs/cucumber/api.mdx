@@ -158,7 +158,7 @@ Step definitions have to be unique for Cucumber to know what to execute. If more
 
 <Tabs>
     <Tab value="java,kotlin,scala">Cucumber will throw an `AmbiguousStepDefinitionsException`.</Tab>
-    <Tab value="javascript">Cucumber will report an AMBIGUOUS result status.</Tab>
+    <Tab value="javascript">Cucumber will report an `ambiguous` result status.</Tab>
     <Tab value="ruby">Cucumber will raise a `Cucumber::Ambiguous` error.</Tab>
 </Tabs>
 
@@ -1087,3 +1087,155 @@ cucumber
 
 You can also run features using a [build tool](/docs/tools/general#build-tools) or an [IDE](/docs/tools/general#ides).
 
+### With test runners
+
+#### JUnit 5 (for JVM)
+
+See the [cucumber-junit-platform-engine documentation](https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-junit-platform-engine#configuration-options) for more information.
+
+#### JUnit 4 (for JVM)
+
+To use JUnit to execute Cucumber scenarios add the `cucumber-junit` dependency to your pom.
+
+```xml
+<dependencies>
+  [...]
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-junit</artifactId>
+        <version>${cucumber.version}</version>
+        <scope>test</scope>
+    </dependency>
+  [...]
+</dependencies>
+```
+Note that `cucumber-junit` is based on JUnit 4. If you're using JUnit 5, use the [cucumber-junit-platform-engine](https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-junit-platform-engine) or include `junit-vintage-engine` dependency, as well. For more information, please refer to [JUnit 5 documentation](https://junit.org/junit5/docs/current/user-guide/#migrating-from-junit4-running)
+
+Create an empty class that uses the Cucumber JUnit runner:
+
+<Tabs>
+    <Tab value="java">
+
+```java
+package com.example;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+@CucumberOptions()
+public class RunCucumberTest {
+}
+```
+
+    </Tab>
+    <Tab value="kotlin">
+
+```kotlin
+package com.example
+
+import io.cucumber.junit.Cucumber
+import io.cucumber.junit.CucumberOptions
+import org.junit.runner.RunWith
+
+@RunWith(Cucumber::class)
+@CucumberOptions()
+class RunCucumberTest {
+}
+```
+
+    </Tab>
+    <Tab value="scala">
+
+```scala
+package com.example
+
+import io.cucumber.junit.Cucumber
+import io.cucumber.junit.CucumberOptions
+import org.junit.runner.RunWith
+
+@RunWith(classOf[Cucumber])
+@CucumberOptions()
+class RunCucumberTest {
+}
+```
+
+    </Tab>
+</Tabs>
+
+This will execute all scenarios in same package as the runner, by default glue code is also assumed to be in the same
+package.
+
+The `@CucumberOptions` annotation can be used to provide[additional configuration](#list-configuration-options) to the runner.
+
+##### Using plugins
+
+For example if you want to tell Cucumber to use the two formatter plugins `pretty` and `html`, you can specify it like this:
+
+```java
+@CucumberOptions(plugin = {"pretty", "html:target/cucumber.html"})
+```
+
+Or if you want to tell Cucumber to print code snippets for missing step definitions use the `summary` plugin, you can specify it like this:
+
+```java
+@CucumberOptions(plugin = {"pretty", "summary"}, snippets = SnippetType.CAMELCASE)
+```
+
+The default option for `snippets` is `UNDERSCORE`. This settings can be used to specify the way code snippets will be created by Cucumber.
+
+##### Performing a dry-run
+
+For example if you want to check whether all feature file steps have corresponding step definitions, you can specify it like this:
+
+```java
+@CucumberOptions(dryRun=true)
+```
+
+The default option for `dryRun` is `false`.
+
+##### Formatting console output
+
+For example if you want console output from Cucumber in a readable format, you can specify it like this:
+
+
+```java
+@CucumberOptions(monochrome=true)
+```
+
+The default option for `monochrome` is `false`.
+
+##### Select scenarios using tags
+
+For example if you want to tell Cucumber to only run the scenarios specified with specific tags, you can specify it like this:
+
+```java
+@CucumberOptions(tags = "@foo and not @bar")
+```
+
+##### Specify an object factory
+
+For example if you are using Cucumber with a DI framework and want to use a custom object factory, you can specify it like this:
+
+```java
+@CucumberOptions(objectFactory = FooFactory.class)
+```
+
+The default option for `objectFactory` is to use the default object factory.
+Additional information about using custom object factories can be found [here](/docs/cucumber/state/#the-cucumber-object-factory)
+
+There are additional options available in the `@CucumberOptions` annotation.
+
+Usually, the test class will be empty. You can, however, specify several JUnit rules.
+
+:::warning[JUnit annotations]
+Cucumber supports JUnits `@ClassRule`, `@BeforeClass` and `@AfterClass` annotations. These will be executed before and after all scenarios. Using them is not recommended, as it limits the portability between different runners;
+they may not execute correctly when using the command line, [IntelliJ IDEA](https://www.jetbrains.com/help/idea/cucumber.html) or
+[Cucumber-Eclipse](https://github.com/cucumber/cucumber-eclipse) . Instead, it is recommended to use Cucumber's `Before` and `After` [hooks](#hooks).
+:::
+
+The Cucumber runner acts like a suite of a JUnit tests. As such other JUnit features such as Categories, Custom JUnit
+Listeners and Reporters can all be expected to work.
+
+For more information on JUnit, see the [JUnit website](https://www.junit.org)
