@@ -613,3 +613,123 @@ end
 </Tabs>
 
 See more documentation on [tags](#tags).
+
+### Global hooks
+
+Global hooks will run once before any scenario is run or after all scenarios have been run.
+
+#### BeforeAll
+
+Each `BeforeAll` hook will run before any scenario is run.
+
+<Tabs>
+    <Tab value="java">
+
+Annotated method style:
+
+```java
+@BeforeAll
+public static void beforeAll() {
+    // Runs before all scenarios
+}
+```
+
+    </Tab>
+    <Tab value="kotlin">
+
+```kotlin
+BeforeAll {
+    // doSomething
+}
+```
+
+    </Tab>
+    <Tab value="scala">
+
+```scala
+BeforeAll {
+    // doSomething
+}
+```
+
+    </Tab>
+    <Tab value="javascript">
+
+```javascript
+const { BeforeAll } = require('@cucumber/cucumber');
+
+BeforeAll(async function () {
+  // perform some shared setup
+});
+```
+
+    </Tab>
+    <Tab value="ruby">
+
+Put the code at the top-level in your `env.rb` file (or any other file under `features/support` directory).
+
+```ruby
+BeforeAll do
+  # Do something before any scenario is executed
+end
+```
+
+    </Tab>
+</Tabs>
+
+#### AfterAll
+
+Each `AfterAll` hook will run after all scenarios have been executed.
+
+<Tabs>
+    <Tab value="java">
+
+Annotated method style:
+
+```java
+@AfterAll
+public static void afterAll() {
+    // Runs after all scenarios
+}
+```
+
+    </Tab>
+    <Tab value="kotlin">
+
+```kotlin
+AfterAll {
+    // doSomething
+}
+```
+
+    </Tab>
+    <Tab value="scala">
+
+```scala
+AfterAll {
+    // doSomething
+}
+```
+
+    </Tab>
+    <Tab value="javascript">
+
+```javascript
+const { AfterAll } = require('@cucumber/cucumber');
+
+AfterAll(async function () {
+  // perform some shared setup
+});
+```
+
+    </Tab>
+    <Tab value="ruby">
+
+```ruby
+AfterAll do
+  # Do something after all scenarios have been executed
+end
+```
+
+    </Tab>
+</Tabs>
