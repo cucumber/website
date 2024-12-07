@@ -341,66 +341,66 @@ Before(10) { scenario: Scenario =>
 <Tabs>
     <Tab value="java">
 
-        Annotated method style:
+Annotated method style:
 
-        ```java
-        @After
-        public void doSomethingAfter(Scenario scenario){
-        // Do something after after scenario
-    }
-        ```
+```java
+@After
+public void doSomethingAfter(Scenario scenario){
+    // Do something after after scenario
+}
+```
 
-        Lambda style:
+Lambda style:
 
-        ```java
-        After((Scenario scenario) -> {
-    });
-        ```
+```java
+After((Scenario scenario) -> {
+});
+```
 
     </Tab>
     <Tab value="kotlin">
 
-        Lambda style:
+Lambda style:
 
-        ```kotlin
-        After { scenario: Scenario ->
-        // doSomething
-    }
-        ```
+```kotlin
+After { scenario: Scenario ->
+    // doSomething
+}
+```
 
     </Tab>
     <Tab value="scala">
 
-        ```scala
-        After { scenario: Scenario =>
-        // doSomething
-    }
-        ```
+```scala
+After { scenario: Scenario =>
+    // doSomething
+}
+```
 
     </Tab>
     <Tab value="javascript">
 
-        ```javascript
-        After(async function (scenario) {
-    })
-        ```
+```javascript
+After(async function (scenario) {
+})
+```
 
     </Tab>
     <Tab value="ruby">
 
-        ```ruby
-        After do |scenario|
-        end
-        ```
+```ruby
+After do |scenario|
+end
+```
 
-        Here is an example in which we exit at the first failure (which could be useful in some cases like [Continuous Integration](/docs/guides/continuous-integration), where fast feedback is important).
+Here is an example in which we exit at the first failure (which could be useful in some cases like [Continuous Integration](/docs/guides/continuous-integration), where fast feedback is important).
 
-        ```ruby
-        After do |s|
-        # Tell Cucumber to quit after this scenario is done - if it failed.
-        Cucumber.wants_to_quit = true if s.failed?
-        end
-        ```
+```ruby
+After do |s|
+  # Tell Cucumber to quit after this scenario is done - if it failed.
+  Cucumber.wants_to_quit = true if s.failed?
+end
+```
 
     </Tab>
 </Tabs>
@@ -421,8 +421,132 @@ The following example will cause scenarios tagged with `@fast` to fail if the ex
 
 ```ruby
 Around('@fast') do |scenario, block|
-Timeout.timeout(0.5) do
-block.call
-end
+  Timeout.timeout(0.5) do
+    block.call
+  end
 end
 ```
+
+### Step hooks
+
+Step hooks are invoked before and after a step. The hooks have "invoke around" semantics, meaning that if a `BeforeStep`
+hook is executed the `AfterStep` hooks will also be executed regardless of the result of the step. If a step did not
+pass, the following step and its hooks will be skipped.
+
+#### BeforeStep
+
+<Tabs>
+    <Tab value="java">
+
+Annotated method style:
+
+```java
+@BeforeStep
+public void doSomethingBeforeStep(Scenario scenario){
+}
+```
+
+Lambda style:
+
+```java
+BeforeStep((Scenario scenario) -> {
+
+});
+```
+
+    </Tab>
+    <Tab value="kotlin">
+
+Lambda style:
+
+```kotlin
+BeforeStep { scenario: Scenario ->
+    // doSomething
+}
+```
+
+    </Tab>
+    <Tab value="scala">
+
+```scala
+BeforeStep { scenario: Scenario =>
+    // doSomething
+}
+```
+
+    </Tab>
+    <Tab value="javascript">
+
+```javascript
+BeforeStep(async function({pickle, pickleStep, gherkinDocument, testCaseStartedId, testStepId}) {
+    // doSomething
+})
+
+BeforeStep({tags: "@foo"}, async function() {
+    // apply this hook to only specific scenarios
+})
+```
+
+    </Tab>
+    <Tab value="ruby">Cucumber-Ruby does not support `BeforeStep` hooks.</Tab>
+</Tabs>
+
+#### AfterStep
+
+<Tabs>
+    <Tab value="java">
+
+Annotated method style:
+
+```java
+@AfterStep
+public void doSomethingAfterStep(Scenario scenario){
+}
+```
+
+Lambda style:
+
+```java
+AfterStep((Scenario scenario) -> {
+});
+```
+
+    </Tab>
+    <Tab value="kotlin">
+
+Lambda style:
+
+```kotlin
+AfterStep { scenario: Scenario ->
+    // doSomething
+}
+```
+
+    </Tab>
+    <Tab value="scala">
+
+```scala
+AfterStep { scenario: Scenario =>
+    // doSomething
+}
+```
+
+    </Tab>
+    <Tab value="javascript">
+
+```javascript
+AfterStep(async function({pickle, pickleStep, gherkinDocument, result, testCaseStartedId, testStepId}) {
+    // doSomething
+})
+```
+
+    </Tab>
+    <Tab value="ruby">
+
+```ruby
+AfterStep do |scenario|
+end
+```
+
+    </Tab>
+</Tabs>
