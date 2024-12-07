@@ -15,7 +15,7 @@ export const Hero: FC = () => {
                 <div className={styles.ctas}>
                     <Link
                         className="button button--primary button--lg"
-                        to="https://cucumber.io/docs/installation">
+                        to="/docs">
                         Get Started
                     </Link>
                 </div>
