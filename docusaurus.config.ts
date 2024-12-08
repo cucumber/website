@@ -40,9 +40,20 @@ export default {
             'https://github.com/cucumber/website/blob/main',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
+          remarkPlugins: [
+            [require('@docusaurus/remark-plugin-npm2yarn'), {sync: true, converters: ['yarn']}],
+          ],
         },
         blog: {
-          showReadingTime: false
+          showReadingTime: false,
+          remarkPlugins: [
+            [require('@docusaurus/remark-plugin-npm2yarn'), {sync: true, converters: ['yarn']}],
+          ],
+        },
+        pages: {
+          remarkPlugins: [
+            [require('@docusaurus/remark-plugin-npm2yarn'), {sync: true, converters: ['yarn']}],
+          ],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.scss'),

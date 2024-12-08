@@ -17,9 +17,11 @@
     "@cucumber/gherkin": "^30.0.0",
     "@docusaurus/core": "3.6.3",
     "@docusaurus/preset-classic": "3.6.3",
+    "@docusaurus/remark-plugin-npm2yarn": "^3.6.3",
     "@mdx-js/react": "3.1.0",
     "clsx": "^2.0.0",
     "docusaurus-plugin-sass": "^0.2.5",
+    "lodash.sortby": "^4.7.0",
     "prism-react-renderer": "2.4.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
@@ -29,7 +31,8 @@
     "@docusaurus/module-type-aliases": "3.6.3",
     "@docusaurus/tsconfig": "^3.1.1",
     "@docusaurus/types": "^3.1.1",
-    "@tsconfig/docusaurus": "2.0.3"
+    "@tsconfig/docusaurus": "2.0.3",
+    "@types/lodash.sortby": "^4.7.9"
   },
   "browserslist": {
     "production": [
