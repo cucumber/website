@@ -60,7 +60,7 @@ There are a few secondary keywords as well:
 - `@` (Tags)
 - `#` (Comments)
 
-:::info Localisation
+:::info[Localisation]
 Gherkin is localised for many [spoken languages](#spoken-languages); each has their own localised equivalent of these keywords.
 :::
 
@@ -212,7 +212,7 @@ Examples:
 - Invite a friend
 - Withdraw money
 
-:::info Imagine it's 1922
+:::info[Imagine it's 1922]
 Most software does something people could do manually (just not as efficiently).
 
 Try hard to come up with examples that don't make any assumptions about
@@ -467,7 +467,7 @@ Given a blog post named "Random" with Markdown body
 
 This might be familiar for those used to writing with Markdown.
 
-:::warning Tool support for backticks
+:::warning[Tool support for backticks]
 Whilst all current versions of Cucumber support backticks as the delimiter, many tools like text editors don't (yet).
 :::
 
@@ -484,7 +484,7 @@ Given a blog post named "Random" with Markdown body
   """
 ```
 
-:::warning Tool support for content types
+:::warning[Tool support for content types]
 Whilst all current versions of Cucumber support content types as the
 delimiter, many tools like text editors don't (yet).
 :::
