@@ -51,3 +51,14 @@
 .flavour--go {
   background-image: url('/img/flavours/go.svg')
 }
+
+/**
+Nasty hack to avoid showing a long sidebar for the installation category. This way,
+the sidebar items are still generated and can be used to populate the index page.
+ */
+.closed-category-hack {
+  .menu__caret,
+  .menu__list {
+    display: none !important;
+  }
+}
