@@ -156,13 +156,17 @@ export default {
         },
         copyright: `Copyright © ${new Date().getFullYear()} The Cucumber Open Source Project`,
       },
+      docs: {
+        sidebar: {
+          autoCollapseCategories: true,
+        }
+      },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
         additionalLanguages: ['gherkin', 'java', 'ruby', 'scala']
       },
     }),
-
     plugins: [
       'docusaurus-plugin-sass'
     ]
