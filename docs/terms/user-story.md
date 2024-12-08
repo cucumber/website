@@ -80,5 +80,5 @@ Feature: Some important feature
 
 ## Further reading
 
-- https://cucumber.io/docs/gherkin/reference
+- [Gherkin reference](../gherkin/reference.md)
 - https://ronjeffries.com/xprog/articles/expcardconversationconfirmation/
