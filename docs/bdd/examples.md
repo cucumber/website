@@ -10,7 +10,7 @@ problem domain of the software.
 
 Good examples don't mention technical details.
 
-:::info Imagine it's 1922
+:::info[Imagine it's 1922]
 Most software does something people could do manually (just not as efficiently).
 
 Try hard to come up with examples that don't make any assumptions about
