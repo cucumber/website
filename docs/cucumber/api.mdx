@@ -416,8 +416,8 @@ For example, you can take a screenshot for failed scenarios and embed them in Cu
 
 #### Around
 
-:::warning[Ruby only]
-Only the Ruby implementation of Cucumber supports `Around` hooks.
+:::info[Ruby only]
+This section is only applicable to the Ruby implementation of Cucumber.
 :::
 
 `Around` hooks will run "around" a scenario. This can be used to wrap the execution of a scenario in a block. The `Around` hook receives a `Scenario` object and a block (`Proc`) object. The scenario will be executed when you invoke `block.call`.
@@ -741,8 +741,8 @@ end
 
 ### InstallPlugin
 
-:::warning[Ruby only]
-Only the Ruby implementation of Cucumber supports `InstallPlugin` hooks.
+:::info[Ruby only]
+This section is only applicable to the Ruby implementation of Cucumber.
 :::
 
 You may provide an `InstallPlugin` hook that will be run after Cucumber has been configured. The block you provide will be passed on to Cucumber's configuration (an instance of `Cucumber::Cli::Configuration`), and a wrapper to some cucumber internals as a registry.
@@ -952,7 +952,11 @@ Another creative way to use tags is to keep track of where in the development pr
 Feature: Index projects
 ```
 
-### `@wip` and Rails
+### `@wip`
+
+:::info[Rails only]
+This section is only applicable to the Rails implementation of Cucumber.
+:::
 
 As distributed, Cucumber-Rails builds a Rake task that recognizes the `@wip` tag.
 However, any string may be used as a tag and any scenario or entire feature can have multiple tags associated with it.
