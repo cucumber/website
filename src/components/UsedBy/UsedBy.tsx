@@ -1,14 +1,8 @@
 import React, {FC} from 'react';
 import styles from './UsedBy.module.scss';
 
-const LOGOS = [
-    ['Brightcove', 'brightcove.svg'],
-    ['EXL', 'exl.png'],
-    ['FinanceIt', 'financeit.svg'],
-    ['Pendo', 'pendo.svg'],
-    ['SproutSocial', 'sproutsocial.svg'],
-    ['Trivago', 'trivago.svg'],
-]
+// array of pairs being [name, imageUrl] respectively
+const LOGOS: [string, string][] = [] as const
 
 export const UsedBy: FC = () => {
     return <>

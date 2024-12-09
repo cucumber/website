@@ -12,9 +12,9 @@ export default function Home() {
                 <div className="container padding-vert--lg">
                     <Intro/>
                 </div>
-                <div className="container padding-vert--lg">
-                    <UsedBy/>
-                </div>
+                {/*<div className="container padding-vert--lg">*/}
+                {/*    <UsedBy/>*/}
+                {/*</div>*/}
             </main>
         </Layout>
     );
