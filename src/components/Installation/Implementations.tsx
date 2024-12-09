@@ -47,8 +47,7 @@ export const Implementations: FC = () => {
                         <Link href={item.href} className={clsx('card', styles.card)}>
                             <div className={clsx('card__body', styles.body)}>
                                 <div className={styles.logo}>
-                                    <img alt=""
-                                         src={`/img/installation/${item.icon}`}/>
+                                    <img alt="" src={`/img/platforms/${item.icon}`}/>
                                 </div>
                                 <p>
                                     <strong>{item.label}</strong>

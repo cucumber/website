@@ -41,27 +41,27 @@
   }
 
   &--java::before {
-    background-image: url('/img/installation/java.svg')
+    background-image: url('/img/platforms/java.svg')
   }
 
   &--kotlin::before {
-    background-image: url('/img/installation/kotlin.svg')
+    background-image: url('/img/platforms/kotlin.svg')
   }
 
   &--scala::before {
-    background-image: url('/img/installation/scala.svg')
+    background-image: url('/img/platforms/scala.svg')
   }
 
   &--javascript::before {
-    background-image: url('/img/installation/javascript.svg')
+    background-image: url('/img/platforms/javascript.svg')
   }
 
   &--ruby::before {
-    background-image: url('/img/installation/ruby.svg')
+    background-image: url('/img/platforms/ruby.svg')
   }
 
   &--golang::before {
-    background-image: url('/img/installation/go.svg')
+    background-image: url('/img/platforms/go.svg')
   }
 }
 
