@@ -94,31 +94,6 @@ export default {
       footer: {
         links: [
           {
-            title: 'Flavours',
-            items: [
-              {
-                className: 'footer__link-item flavour flavour--ruby',
-                label: 'cucumber-ruby',
-                to: 'https://github.com/cucumber/cucumber-ruby',
-              },
-              {
-                className: 'footer__link-item flavour flavour--jvm',
-                label: 'cucumber-jvm',
-                to: 'https://github.com/cucumber/cucumber-jvm',
-              },
-              {
-                className: 'footer__link-item flavour flavour--js',
-                label: 'cucumber-js',
-                to: 'https://github.com/cucumber/cucumber-js',
-              },
-              {
-                className: 'footer__link-item flavour flavour--go',
-                label: 'godog',
-                to: 'https://github.com/cucumber/godog',
-              },
-            ],
-          },
-          {
             title: 'Community',
             items: [
               {

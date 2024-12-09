@@ -29,27 +29,40 @@
   line-height: 1em;
 }
 
-.flavour {
-  padding-left: 24px;
-  background-position: 0 50%;
-  background-repeat: no-repeat;
-  background-size: 18px;
-}
+.language-tab {
+  &::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    background-size: 18px;
+  }
 
-.flavour--ruby {
-  background-image: url('/img/flavours/ruby.svg')
-}
+  &--java::before {
+    background-image: url('/img/installation/java.svg')
+  }
 
-.flavour--jvm {
-  background-image: url('/img/flavours/jvm.svg')
-}
+  &--kotlin::before {
+    background-image: url('/img/installation/kotlin.svg')
+  }
 
-.flavour--js {
-  background-image: url('/img/flavours/js.svg')
-}
+  &--scala::before {
+    background-image: url('/img/installation/scala.svg')
+  }
 
-.flavour--go {
-  background-image: url('/img/flavours/go.svg')
+  &--javascript::before {
+    background-image: url('/img/installation/javascript.svg')
+  }
+
+  &--ruby::before {
+    background-image: url('/img/installation/ruby.svg')
+  }
+
+  &--golang::before {
+    background-image: url('/img/installation/go.svg')
+  }
 }
 
 /**

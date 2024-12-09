@@ -11,7 +11,7 @@ export const Tabs: FC<{children: ReactElement<TabProps>[]}> = ({children}) => {
         {asArray.flatMap(child => {
             const keys = child.props.value.split(',')
             return keys.map(key => {
-                return <DocusaurusTabItem key={key} value={key} label={LANGUAGES[key]}>{child.props.children}</DocusaurusTabItem>
+                return <DocusaurusTabItem key={key} value={key} label={LANGUAGES[key]} attributes={{className: 'language-tab language-tab--' + key}}>{child.props.children}</DocusaurusTabItem>
             })
         })}
     </DocusaurusTabs>
