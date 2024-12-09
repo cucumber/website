@@ -38,18 +38,24 @@ const tiers = [
 ] as const
 
 const Tiers: FC = () => {
-    return <ol className={styles.tiersList}>
+    return <ol className={clsx('row', styles.list)}>
         {tiers.map(tier => {
-            return <li key={tier.amount} className={styles.tiersItem}>
-                <div>
-                    <b className={styles.tiersAmount}>{numberFormat.format(tier.amount)}</b>
-                    <span className={styles.tiersFrequency}>{tier.from && 'or above, '}monthly</span>
-                    <h3 className={styles.tiersTitle}>{tier.title}</h3>
-                    <p>{tier.description}</p>
+            return <li key={tier.amount} className="col col--3">
+                <div className={clsx('card', styles.card)}>
+                    <div className="card__header">
+                        <h3>{tier.title}</h3>
+                    </div>
+                    <div className="card__body">
+                        <b className={styles.amount}>{numberFormat.format(tier.amount)}</b>
+                        <span className={styles.frequency}>{tier.from && 'or above, '}monthly</span>
+                        <p className="margin-top--md">{tier.description}</p>
+                    </div>
+                    <div className="card__footer">
+                        <Link className="button button--block button--primary" href={tier.url}>
+                            Sponsor
+                        </Link>
+                    </div>
                 </div>
-                <Link className="button button--block button--primary" href={tier.url}>
-                    Sponsor
-                </Link>
             </li>
         })}
     </ol>
