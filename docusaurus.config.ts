@@ -65,6 +65,10 @@ export default {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        disableSwitch: true,
+        respectPrefersColorScheme: true,
+      },
       // social card image
       image: 'img/logo.svg',
       navbar: {
