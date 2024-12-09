@@ -89,9 +89,10 @@ export default {
             position: 'left'
           },
           {
+            'aria-label': 'GitHub',
             href: 'https://github.com/cucumber',
-            label: 'GitHub',
             position: 'right',
+            className: 'header-github-link'
           },
         ],
       },
