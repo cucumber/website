@@ -97,38 +97,7 @@ export default {
         ],
       },
       footer: {
-        links: [
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Slack',
-                href: 'https://communityinviter.com/apps/cucumberbdd/docs-page',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/cucumberbdd',
-              },
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/cucumber',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/cucumber',
-              },
-              {
-                label: 'OpenCollective',
-                href: 'https://opencollective.com/cucumber',
-              },
-            ],
-          },
-        ],
+        links: [],
         logo: {
           alt: 'Deploys by Netlify',
           src: 'https://www.netlify.com/v3/img/components/netlify-color-accent.svg',
