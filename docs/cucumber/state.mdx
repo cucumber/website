@@ -29,7 +29,7 @@ State can make your steps more tightly coupled and harder to reuse.
 :::
 
 <Tabs>
-    <Tab value="java,kotlin,scala">
+    <Tab lang="java,kotlin,scala">
 
 Cucumber will create a new instance of each of your glue code classes before each scenario
 so your steps will not leak state.
@@ -42,13 +42,13 @@ Similarly, when using Guice there is [a scope `ScenarioScoped`](https://github.c
 that should always be used on step definition classes.
 
     </Tab>
-    <Tab value="javascript">
+    <Tab lang="javascript">
 
 Cucumber-JS uses a `World` as an isolated context for each scenario. You can find more information in the
 [docs on GitHub](https://github.com/cucumber/cucumber-js/blob/main/docs/support_files/world.md).
 
     </Tab>
-    <Tab value="ruby">
+    <Tab lang="ruby">
 
 In Ruby, Cucumber runs scenarios in a `World`. By default, the `World` is an instance of `Object`.
 

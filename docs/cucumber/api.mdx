@@ -20,7 +20,7 @@ Data tables from Gherkin can be accessed by using the `DataTable` object as the 
 This conversion can be done either by Cucumber or manually.
 
 <Tabs>
-    <Tab value="java,kotlin,scala">
+    <Tab lang="java,kotlin,scala">
 
 Depending on the table shape as one of the following collections:
 
@@ -45,7 +45,7 @@ Given the following animals:
 ```
 
 <Tabs>
-    <Tab value="java">
+    <Tab lang="java">
 
 Declare the argument as a `List<String>` but don't define any capture group in the expression.
 
@@ -65,7 +65,7 @@ In addition to collections of `String`, `Integer`, `Float`, `BigInteger` and `Bi
 See also [cucumber-jvm data-tables](https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-java#data-tables).
 
     </Tab>
-    <Tab value="kotlin">
+    <Tab lang="kotlin">
 
 Declare the argument as a `List<String>` but don't define any capture group in the expression.
 
@@ -85,7 +85,7 @@ In addition to collections of `String`, `Integer`, `Float`, `BigInteger` and `Bi
 See also [cucumber-jvm data-tables](https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-java#data-tables).
 
     </Tab>
-    <Tab value="scala">
+    <Tab lang="scala">
 
 ```scala
 Given("the following animals:") { animals: java.util.List[String] =>
@@ -162,9 +162,9 @@ Steps that follow `undefined`, `pending`, or `failed` steps are never executed, 
 Step definitions have to be unique for Cucumber to know what to execute. If more than one step definition is matched for the same step, Cucucmber can't resolve the ambiguity on its own. The behaviour varies a bit between implementations:
 
 <Tabs>
-    <Tab value="java,kotlin,scala">Cucumber will throw an `AmbiguousStepDefinitionsException`.</Tab>
-    <Tab value="javascript">Cucumber will report an `ambiguous` result status.</Tab>
-    <Tab value="ruby">Cucumber will raise a `Cucumber::Ambiguous` error.</Tab>
+    <Tab lang="java,kotlin,scala">Cucumber will throw an `AmbiguousStepDefinitionsException`.</Tab>
+    <Tab lang="javascript">Cucumber will report an `ambiguous` result status.</Tab>
+    <Tab lang="ruby">Cucumber will raise a `Cucumber::Ambiguous` error.</Tab>
 </Tabs>
 
 ## Hooks
@@ -176,10 +176,10 @@ Where a hook is defined has no impact on what scenarios or steps it is run for.
 If you want more fine-grained control, you can use [conditional hooks](#conditional-hooks).
 
 <Tabs>
-    <Tab value="java,kotlin">You can declare hooks in any class.</Tab>
-    <Tab value="scala">You can declare hooks in any class, trait or object.</Tab>
-    <Tab value="javascript">You can declare hooks in your `features/support/env.js` file, or any other file under the `features/support` directory (for example, in a file called `features/support/hooks.js`).</Tab>
-    <Tab value="ruby">You can declare hooks in your `features/support/env.rb` file, or any other file under the `features/support` directory (for example, in a file called `support/hooks.rb`).</Tab>
+    <Tab lang="java,kotlin">You can declare hooks in any class.</Tab>
+    <Tab lang="scala">You can declare hooks in any class, trait or object.</Tab>
+    <Tab lang="javascript">You can declare hooks in your `features/support/env.js` file, or any other file under the `features/support` directory (for example, in a file called `features/support/hooks.js`).</Tab>
+    <Tab lang="ruby">You can declare hooks in your `features/support/env.rb` file, or any other file under the `features/support` directory (for example, in a file called `support/hooks.rb`).</Tab>
 </Tabs>
 
 ### Scenario hooks
@@ -191,7 +191,7 @@ Scenario hooks run for every scenario.
 `Before` hooks run before the first step of each scenario.
 
 <Tabs>
-    <Tab value="java">
+    <Tab lang="java">
 
 Annotated method style:
 
@@ -209,7 +209,7 @@ Before(() -> {
 ```
 
     </Tab>
-    <Tab value="kotlin">
+    <Tab lang="kotlin">
 
 Lambda style:
 
@@ -220,7 +220,7 @@ Before { scenario: Scenario ->
 ```
 
     </Tab>
-    <Tab value="scala">
+    <Tab lang="scala">
 
 ```scala
 Before { scenario: Scenario =>
@@ -229,7 +229,7 @@ Before { scenario: Scenario =>
 ```
 
     </Tab>
-    <Tab value="javascript">
+    <Tab lang="javascript">
 
 ```javascript
 // Import the Before function
@@ -244,7 +244,7 @@ Arrow functions (`() => {}`) bind `this` to the current context, which prevents 
 :::
 
     </Tab>
-    <Tab value="ruby">
+    <Tab lang="ruby">
 
 ```ruby
 Before do
@@ -264,7 +264,7 @@ data from a database.
 :::
 
 <Tabs>
-    <Tab value="java">
+    <Tab lang="java">
 
 You can specify an explicit order for hooks if you need to.
 
@@ -286,7 +286,7 @@ Before(10, () -> {
 ```
 
     </Tab>
-    <Tab value="kotlin">
+    <Tab lang="kotlin">
 
 You can specify an explicit order for hooks if you need to.
 
@@ -325,7 +325,7 @@ fun afterAll() {
 ```
 
     </Tab>
-    <Tab value="scala">
+    <Tab lang="scala">
 
 You can specify an explicit order for hooks if you need to.
 
@@ -336,7 +336,7 @@ Before(10) { scenario: Scenario =>
 ```
 
     </Tab>
-    <Tab value="javascript,ruby">`Before` hooks run in the **same order** in which they are declared.</Tab>
+    <Tab lang="javascript,ruby">`Before` hooks run in the **same order** in which they are declared.</Tab>
 </Tabs>
 
 #### After
@@ -344,7 +344,7 @@ Before(10) { scenario: Scenario =>
 `After` hooks run after the last step of each scenario, even when the step result is `failed`, `undefined`, `pending`, or `skipped`.
 
 <Tabs>
-    <Tab value="java">
+    <Tab lang="java">
 
 Annotated method style:
 
@@ -363,7 +363,7 @@ After((Scenario scenario) -> {
 ```
 
     </Tab>
-    <Tab value="kotlin">
+    <Tab lang="kotlin">
 
 Lambda style:
 
@@ -374,7 +374,7 @@ After { scenario: Scenario ->
 ```
 
     </Tab>
-    <Tab value="scala">
+    <Tab lang="scala">
 
 ```scala
 After { scenario: Scenario =>
@@ -383,7 +383,7 @@ After { scenario: Scenario =>
 ```
 
     </Tab>
-    <Tab value="javascript">
+    <Tab lang="javascript">
 
 ```javascript
 After(async function (scenario) {
@@ -391,7 +391,7 @@ After(async function (scenario) {
 ```
 
     </Tab>
-    <Tab value="ruby">
+    <Tab lang="ruby">
 
 ```ruby
 After do |scenario|
@@ -441,7 +441,7 @@ pass, the following step and its hooks will be skipped.
 #### BeforeStep
 
 <Tabs>
-    <Tab value="java">
+    <Tab lang="java">
 
 Annotated method style:
 
@@ -460,7 +460,7 @@ BeforeStep((Scenario scenario) -> {
 ```
 
     </Tab>
-    <Tab value="kotlin">
+    <Tab lang="kotlin">
 
 Lambda style:
 
@@ -471,7 +471,7 @@ BeforeStep { scenario: Scenario ->
 ```
 
     </Tab>
-    <Tab value="scala">
+    <Tab lang="scala">
 
 ```scala
 BeforeStep { scenario: Scenario =>
@@ -480,7 +480,7 @@ BeforeStep { scenario: Scenario =>
 ```
 
     </Tab>
-    <Tab value="javascript">
+    <Tab lang="javascript">
 
 ```javascript
 BeforeStep(async function({pickle, pickleStep, gherkinDocument, testCaseStartedId, testStepId}) {
@@ -493,13 +493,13 @@ BeforeStep({tags: "@foo"}, async function() {
 ```
 
     </Tab>
-    <Tab value="ruby">Cucumber-Ruby does not support `BeforeStep` hooks.</Tab>
+    <Tab lang="ruby">Cucumber-Ruby does not support `BeforeStep` hooks.</Tab>
 </Tabs>
 
 #### AfterStep
 
 <Tabs>
-    <Tab value="java">
+    <Tab lang="java">
 
 Annotated method style:
 
@@ -517,7 +517,7 @@ AfterStep((Scenario scenario) -> {
 ```
 
     </Tab>
-    <Tab value="kotlin">
+    <Tab lang="kotlin">
 
 Lambda style:
 
@@ -528,7 +528,7 @@ AfterStep { scenario: Scenario ->
 ```
 
     </Tab>
-    <Tab value="scala">
+    <Tab lang="scala">
 
 ```scala
 AfterStep { scenario: Scenario =>
@@ -537,7 +537,7 @@ AfterStep { scenario: Scenario =>
 ```
 
     </Tab>
-    <Tab value="javascript">
+    <Tab lang="javascript">
 
 ```javascript
 AfterStep(async function({pickle, pickleStep, gherkinDocument, result, testCaseStartedId, testStepId}) {
@@ -546,7 +546,7 @@ AfterStep(async function({pickle, pickleStep, gherkinDocument, result, testCaseS
 ```
 
     </Tab>
-    <Tab value="ruby">
+    <Tab lang="ruby">
 
 ```ruby
 AfterStep do |scenario|
@@ -561,7 +561,7 @@ end
 Hooks can be conditionally selected for execution based on the tags of the scenario. To run a particular hook only for certain scenarios, you can associate a hook with a [tag expression](#tag-expressions).
 
 <Tabs>
-    <Tab value="java">
+    <Tab lang="java">
 
 Annotated method style:
 
@@ -579,7 +579,7 @@ After("@browser and not @headless", (Scenario scenario) -> {
 ```
 
     </Tab>
-    <Tab value="kotlin">
+    <Tab lang="kotlin">
 
 Lambda style:
 
@@ -590,7 +590,7 @@ After (arrayOf("@browser and not @headless")) { scenario: Scenario ->
 ```
 
     </Tab>
-    <Tab value="scala">
+    <Tab lang="scala">
 
 ```scala
 After("@browser and not @headless") { scenario: Scenario =>
@@ -599,7 +599,7 @@ After("@browser and not @headless") { scenario: Scenario =>
 ```
 
     </Tab>
-    <Tab value="javascript">
+    <Tab lang="javascript">
 
 ```javascript
 Before({tags: '@browser and not @headless'}, async function () {
@@ -607,7 +607,7 @@ Before({tags: '@browser and not @headless'}, async function () {
 ```
 
     </Tab>
-    <Tab value="ruby">
+    <Tab lang="ruby">
 
 ```ruby
 Before('@browser and not @headless') do
@@ -628,7 +628,7 @@ Global hooks will run once before any scenario is run or after all scenarios hav
 Each `BeforeAll` hook will run before any scenario is run.
 
 <Tabs>
-    <Tab value="java">
+    <Tab lang="java">
 
 Annotated method style:
 
@@ -640,7 +640,7 @@ public static void beforeAll() {
 ```
 
     </Tab>
-    <Tab value="kotlin">
+    <Tab lang="kotlin">
 
 ```kotlin
 BeforeAll {
@@ -649,7 +649,7 @@ BeforeAll {
 ```
 
     </Tab>
-    <Tab value="scala">
+    <Tab lang="scala">
 
 ```scala
 BeforeAll {
@@ -658,7 +658,7 @@ BeforeAll {
 ```
 
     </Tab>
-    <Tab value="javascript">
+    <Tab lang="javascript">
 
 ```javascript
 const { BeforeAll } = require('@cucumber/cucumber');
@@ -669,7 +669,7 @@ BeforeAll(async function () {
 ```
 
     </Tab>
-    <Tab value="ruby">
+    <Tab lang="ruby">
 
 Put the code at the top-level in your `env.rb` file (or any other file under `features/support` directory).
 
@@ -687,7 +687,7 @@ end
 Each `AfterAll` hook will run after all scenarios have been executed.
 
 <Tabs>
-    <Tab value="java">
+    <Tab lang="java">
 
 Annotated method style:
 
@@ -699,7 +699,7 @@ public static void afterAll() {
 ```
 
     </Tab>
-    <Tab value="kotlin">
+    <Tab lang="kotlin">
 
 ```kotlin
 AfterAll {
@@ -708,7 +708,7 @@ AfterAll {
 ```
 
     </Tab>
-    <Tab value="scala">
+    <Tab lang="scala">
 
 ```scala
 AfterAll {
@@ -717,7 +717,7 @@ AfterAll {
 ```
 
     </Tab>
-    <Tab value="javascript">
+    <Tab lang="javascript">
 
 ```javascript
 const { AfterAll } = require('@cucumber/cucumber');
@@ -728,7 +728,7 @@ AfterAll(async function () {
 ```
 
     </Tab>
-    <Tab value="ruby">
+    <Tab lang="ruby">
 
 ```ruby
 AfterAll do
@@ -826,7 +826,7 @@ Tags are inherited by child elements. So, tags that are placed above a `Feature`
 You can tell Cucumber to only run scenarios with a particular tag:
 
 <Tabs>
-    <Tab value="java,kotlin,scala">
+    <Tab lang="java,kotlin,scala">
 
 For JUnit 5 see the [cucumber-junit-platform-engine documentation](https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-junit-platform-engine#tags)
 
@@ -854,7 +854,7 @@ Or annotating your JUnit 4/TestNG  runner class:
 ```
 
     </Tab>
-    <Tab value="javascript">
+    <Tab lang="javascript">
 
 ```shell
 # You can omit the quotes if the expression is a single tag
@@ -862,7 +862,7 @@ Or annotating your JUnit 4/TestNG  runner class:
 ```
 
     </Tab>
-    <Tab value="ruby">
+    <Tab lang="ruby">
 
 ```shell
 # You can omit the quotes if the expression is a single tag
@@ -877,7 +877,7 @@ cucumber --tags "@smoke and @fast"
 You can tell Cucumber to ignore scenarios with a particular tag:
 
 <Tabs>
-    <Tab value="java,kotlin,scala">
+    <Tab lang="java,kotlin,scala">
 
 By annotating your JUnit 4/TestNG  runner class:
 
@@ -886,7 +886,7 @@ By annotating your JUnit 4/TestNG  runner class:
 ```
 
     </Tab>
-    <Tab value="javascript">
+    <Tab lang="javascript">
 
 ```shell
 # You can omit the quotes if the expression is a single tag
@@ -894,7 +894,7 @@ By annotating your JUnit 4/TestNG  runner class:
 ```
 
     </Tab>
-    <Tab value="ruby">
+    <Tab lang="ruby">
 
 ```shell
 # You can omit the quotes if the expression is a single tag
@@ -1013,9 +1013,9 @@ unspecified scenarios to manageable levels. Those following [Kanban](https://en.
 ## Running Cucumber
 
 <Tabs>
-    <Tab value="java,kotlin,scala">Cucumber is a Java library with extensions for different tools and platforms. It is launched by running JUnit 4, JUnit 5, your build tool, your IDE or the CLI.</Tab>
-    <Tab value="javascript">Cucumber is a command line tool. It is launched by running `cucumber-js` from the command line, or a build script.</Tab>
-    <Tab value="ruby">Cucumber is a command line tool. It is launched by running `cucumber` from the command line, or a build script.</Tab>
+    <Tab lang="java,kotlin,scala">Cucumber is a Java library with extensions for different tools and platforms. It is launched by running JUnit 4, JUnit 5, your build tool, your IDE or the CLI.</Tab>
+    <Tab lang="javascript">Cucumber is a command line tool. It is launched by running `cucumber-js` from the command line, or a build script.</Tab>
+    <Tab lang="ruby">Cucumber is a command line tool. It is launched by running `cucumber` from the command line, or a build script.</Tab>
 </Tabs>
 
 It is possible to [configure](/docs/cucumber/configuration) how Cucumber should run features.
@@ -1023,7 +1023,7 @@ It is possible to [configure](/docs/cucumber/configuration) how Cucumber should 
 ### From the command line
 
 <Tabs>
-    <Tab value="java,kotlin,scala">
+    <Tab lang="java,kotlin,scala">
 
 The *Command-Line Interface Runner (CLI Runner)* is an executable Java class that can be run from the command-line.
 
@@ -1048,7 +1048,7 @@ mvn exec:java                                  \
 ```
 
     </Tab>
-    <Tab value="javascript">
+    <Tab lang="javascript">
 
 The most common option is to run Cucumber from the command line. By default, Cucumber will treat anything ending in`.js` under the root directory as a step definition file.
 Thus, a step contained in `features/models/entities/step-definitions/anything.js` can be used in a feature file, provided that:
@@ -1068,7 +1068,7 @@ Cucumber does not work when installed globally because Cucumber needs to be impo
 
 
     </Tab>
-    <Tab value="ruby">
+    <Tab lang="ruby">
 
 The most common option is to run Cucumber from the command line. By default, Cucumber will treat anything ending in `.rb` under the root library directory as a step definition file.
 Thus, a step contained in `features/models/entities/step_definitions/anything.rb` can be used in a feature file contained in `features/views/entity_new`, provided that:
@@ -1123,7 +1123,7 @@ Note that `cucumber-junit` is based on JUnit 4. If you're using JUnit 5, use the
 Create an empty class that uses the Cucumber JUnit runner:
 
 <Tabs>
-    <Tab value="java">
+    <Tab lang="java">
 
 ```java
 package com.example;
@@ -1139,7 +1139,7 @@ public class RunCucumberTest {
 ```
 
     </Tab>
-    <Tab value="kotlin">
+    <Tab lang="kotlin">
 
 ```kotlin
 package com.example
@@ -1155,7 +1155,7 @@ class RunCucumberTest {
 ```
 
     </Tab>
-    <Tab value="scala">
+    <Tab lang="scala">
 
 ```scala
 package com.example
@@ -1254,7 +1254,7 @@ For more information on JUnit, see the [JUnit website](https://www.junit.org)
 Cucumber provides several options that can be passed via the command-line or other mechanisms.
 
 <Tabs>
-    <Tab value="java,kotlin,scala">
+    <Tab lang="java,kotlin,scala">
 
 Pass the `--help` option to print out all the available configuration options:
 
@@ -1299,14 +1299,14 @@ cucumber.snippet-type=          # underscore or camelcase. default: underscore
 Note that the filter options `cucumber.filter.name` and `cucumber.filter.tags` are combined using an `and` operation. In other words, both expressions need to match.
 
     </Tab>
-    <Tab value="javascript">
+    <Tab lang="javascript">
 
 Use the `cucumber-js --help` command to see which arguments can be passed to the executable file.
 
 For more information on how to configure options, take a look at the [docs on GitHub](https://github.com/cucumber/cucumber-js/blob/main/docs/configuration.md)
 
     </Tab>
-    <Tab value="ruby">
+    <Tab lang="ruby">
 
 Assuming you've installed Cucumber as a gem, run this at a command prompt to see the options for running features:
 

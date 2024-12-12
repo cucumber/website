@@ -25,7 +25,7 @@ A good rule of thumb is to have one file for each major <Term>domain-object</Ter
 For example, in a Curriculum Vitae application, we might have:
 
 <Tabs>
-    <Tab value="java">
+    <Tab lang="java">
         <ul>
             <li>`EmployeeStepDefinitions.java`</li>
             <li>`EducationStepDefinitions.java`</li>
@@ -33,7 +33,7 @@ For example, in a Curriculum Vitae application, we might have:
             <li>`AuthenticationStepDefinitions.java`</li>
         </ul>
     </Tab>
-    <Tab value="kotlin">
+    <Tab lang="kotlin">
         <ul>
             <li>`EmployeeStepDefinitions.kt`</li>
             <li>`EducationStepDefinitions.kt`</li>
@@ -41,7 +41,7 @@ For example, in a Curriculum Vitae application, we might have:
             <li>`AuthenticationStepDefinitions.kt`</li>
         </ul>
     </Tab>
-    <Tab value="ruby">
+    <Tab lang="ruby">
         <ul>
             <li>`employee_steps.rb`</li>
             <li>`education_steps.rb`</li>
@@ -49,7 +49,7 @@ For example, in a Curriculum Vitae application, we might have:
             <li>`authentication_steps.rb`</li>
         </ul>
     </Tab>
-    <Tab value="javascript">
+    <Tab lang="javascript">
         <ul>
             <li>`employee_steps.js`</li>
             <li>`education_steps.js`</li>
@@ -57,7 +57,7 @@ For example, in a Curriculum Vitae application, we might have:
             <li>`authentication_steps.js`</li>
         </ul>
     </Tab>
-    <Tab value="golang">
+    <Tab lang="golang">
         <ul>
             <li>`employee_steps.go`</li>
             <li>`education_steps.go`</li>
@@ -108,7 +108,7 @@ Given I go to the {} page
 And the following step definition:
 
 <Tabs>
-    <Tab value="java">
+    <Tab lang="java">
 
 ```java
 @Given("I go to the {string} page")
@@ -118,7 +118,7 @@ public void i_want_to_open_page(String webpage) {
 ```
 
     </Tab>
-    <Tab value="kotlin">
+    <Tab lang="kotlin">
 
 ```kotlin
 @Given("I go to the {string} page")
@@ -128,7 +128,7 @@ fun `I want to open page`(webpage: String) {
 ```
 
     </Tab>
-    <Tab value="javascript">
+    <Tab lang="javascript">
 
 ```javascript
 Given("I go to the {string} page", function (webpage) {
@@ -137,7 +137,7 @@ Given("I go to the {string} page", function (webpage) {
 ```
 
     </Tab>
-    <Tab value="ruby">
+    <Tab lang="ruby">
 
 ```ruby
 Given 'I go to the {string} page' do |page|
@@ -146,7 +146,7 @@ end
 ```
 
     </Tab>
-    <Tab value="golang">
+    <Tab lang="golang">
 
 ```golang
 s.Step(`^I go to the "([^"]*)" page$`, goToPage)

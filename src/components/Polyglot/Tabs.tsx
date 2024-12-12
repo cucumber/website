@@ -3,13 +3,13 @@ import DocusaurusTabs from "@theme/Tabs";
 import DocusaurusTabItem from "@theme/TabItem";
 import {LANGUAGES} from "./constants";
 
-type TabProps = { value: keyof typeof LANGUAGES, children: ReactNode };
+type TabProps = { lang: keyof typeof LANGUAGES, children: ReactNode };
 
 export const Tabs: FC<{children: ReactElement<TabProps>[]}> = ({children}) => {
     const asArray = Array.isArray(children) ? children : [children]
     return <DocusaurusTabs groupId="lang" queryString>
         {asArray.flatMap(child => {
-            const keys = child.props.value.split(',')
+            const keys = child.props.lang.split(',')
             return keys.map(key => {
                 return <DocusaurusTabItem key={key} value={key} label={LANGUAGES[key]} attributes={{className: 'language-tab language-tab--' + key}}>{child.props.children}</DocusaurusTabItem>
             })

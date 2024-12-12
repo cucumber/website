@@ -10,7 +10,7 @@ description: "How to configure Cucumber"
 Parameter types let you convert parameters from [Cucumber expressions](./cucumber-expressions.md) to objects.
 
 <Tabs>
-    <Tab value="java">
+    <Tab lang="java">
 
 Data table and doc string types let you convert data tables and doc strings to objects. Like step definitions, type definitions are part of the glue. When placed on the glue path Cucumber will detect them automatically.
 
@@ -177,7 +177,7 @@ public class LambdaStepDefinitions implements En {
 ```
 
     </Tab>
-    <Tab value="kotlin">
+    <Tab lang="kotlin">
 
 Data table and doc string types let you convert data tables and doc strings to objects. Like step definitions, type definitions are part of the glue. When placed on the glue path Cucumber will detect them automatically.
 
@@ -342,7 +342,7 @@ class LambdaStepDefinitions : En {
 ```
 
     </Tab>
-    <Tab value="scala">
+    <Tab lang="scala">
 
 Data table and doc string types let you convert data tables and doc strings to objects. Like step definitions, type definitions are part of the glue. When placed on the glue path Cucumber will detect them automatically.
 
@@ -446,12 +446,12 @@ If you want to, you can use the predefined `JacksonDefaultDataTableEntryTransfor
 See [Default Jackon DataTable Transformer](https://github.com/cucumber/cucumber-jvm-scala/blob/master/docs/default_jackson_datatable_transformer.md).
 
     </Tab>
-    <Tab value="javascript">
+    <Tab lang="javascript">
 
 See the cucumber-js docs on GitHub for more on working with [parameter types](https://github.com/cucumber/cucumber-js/blob/maion/features/parameter_types.feature) and [data tables](https://github.com/cucumber/cucumber-js/blob/main/docs/support_files/data_table_interface.md) in JavaScript.
 
     </Tab>
-    <Tab value="ruby">
+    <Tab lang="ruby">
 
 A parameter type lets you transform an argument from a string to another type before it's passed to the step definition.
 
@@ -485,7 +485,7 @@ The parameter type "person" is not defined.
 ## Profiles
 
 <Tabs>
-    <Tab value="java,kotlin,scala">
+    <Tab lang="java,kotlin,scala">
 
 Cucumber profiles are not available on Cucumber-JVM.  However, it is possible to set configuration options using [Maven profiles](https://maven.apache.org/guides/introduction/introduction-to-profiles.html)
 
@@ -527,8 +527,8 @@ For instance, we can configure separate profiles for scenarios which are to be r
 To mimick similar behavior using Gradle, see the Gradle docs on [Migrating Maven profiles and properties](https://docs.gradle.org/current/userguide/migrating_from_maven.html#migmvn:profiles_and_properties).
 
     </Tab>
-    <Tab value="javascript">See the cucumber-js docs on GitHub for more on how to work with [profiles](https://github.com/cucumber/cucumber-js/blob/main/docs/profiles.md) in JavaScript.</Tab>
-    <Tab value="ruby">
+    <Tab lang="javascript">See the cucumber-js docs on GitHub for more on how to work with [profiles](https://github.com/cucumber/cucumber-js/blob/main/docs/profiles.md) in JavaScript.</Tab>
+    <Tab lang="ruby">
 
 You can specify configuration options for Cucumber in a `cucumber.yml` or `cucumber.yaml` file.
 This file must be in a `.config` directory, or `config` subdirectory of your current working directory.
@@ -617,9 +617,9 @@ So, if you have several profiles with similar values, you might do this:
 ## Environment variables
 
 <Tabs>
-    <Tab value="java,kotlin,scala">Cucumber-JVM does not support configuration with an `env` file.</Tab>
-    <Tab value="javascript">Cucumber-JS does not support configuration with an `env` file.</Tab>
-    <Tab value="ruby">
+    <Tab lang="java,kotlin,scala">Cucumber-JVM does not support configuration with an `env` file.</Tab>
+    <Tab lang="javascript">Cucumber-JS does not support configuration with an `env` file.</Tab>
+    <Tab lang="ruby">
 
 You can use environment variables in the profile argument list, just as you would normally specify them on the command-line.
 
