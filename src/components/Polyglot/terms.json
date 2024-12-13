@@ -1,4 +1,12 @@
 {
+  "language": {
+    "java": "Java",
+    "kotlin": "Kotlin",
+    "scala": "Scala",
+    "javascript": "JavaScript",
+    "ruby": "Ruby",
+    "golang": "Go"
+  },
   "stepdef-body": {
     "java": "method",
     "kotlin": "function",
