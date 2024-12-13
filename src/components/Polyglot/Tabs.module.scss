@@ -2,6 +2,8 @@
   // stick just beneath the nav bar
   position: sticky;
   top: var(--ifm-navbar-height);
+  // ensure we dont hide behind code blocks and other components
+  z-index: 1;
 }
 
 .onceTabs {
