@@ -4,11 +4,13 @@ description: "Get started in 10 minutes"
 
 # 10-minute tutorial
 
+<Tabs once="java,kotlin,javascript,ruby" />
+
 In this quick tutorial you will learn how to:
 
 * Install Cucumber
 * Write your first scenario using the Gherkin syntax
-* Write your first step definition in Java, Kotlin, JavaScript or Ruby
+* Write your first step definition in <Term>language</Term>
 * Run Cucumber
 * Learn the basic workflow of Behaviour-Driven Development (BDD)
 
@@ -25,54 +27,641 @@ This tutorial assumes that you have:
 
 Before we begin, you'll need the following:
 
-<Tabs>
-    <Tab lang="java">
-        - [Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html)
-        - A build tool. You can choose between:
-        - [Maven](https://maven.apache.org/index.html) - version 3.3.1 or higher
-        - [IntelliJ IDEA](https://www.jetbrains.com/idea/) (which will be used in this tutorial)
-        - [IntelliJ IDEA Cucumber for Java plugin](https://plugins.jetbrains.com/plugin/7212-cucumber-for-java)
-        - [Eclipse](https://www.eclipse.org/) (a good alternative if you don't use IntelliJ IDEA)
-        - [Cucumber Eclipse](https://cucumber.github.io/cucumber-eclipse/)
-    </Tab>
-    <Tab lang="kotlin">
-        - [Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html) (Java 9 and higher are not yet supported by Cucumber)
-        - [Maven](https://maven.apache.org/index.html) - version 3.3.1 or higher
-        - [IntelliJ IDEA](https://www.jetbrains.com/idea/) (which will be used in this tutorial)
-        - [IntelliJ IDEA Cucumber for Java plugin](https://plugins.jetbrains.com/plugin/7212-cucumber-for-java)
-        - [IntelliJ IDEA Kotlin plugin](https://plugins.jetbrains.com/plugin/6954-kotlin)
-        - [Eclipse](https://www.eclipse.org/) (a good alternative if you don't use IntelliJ IDEA)
-        - [Cucumber Eclipse](https://cucumber.github.io/cucumber-eclipse/)
-        - [Kotlin Eclipse](https://github.com/JetBrains/kotlin-eclipse)
-    </Tab>
-    <Tab lang="javascript">
-        - [Node.js](https://nodejs.org/)
-        - A text editor
+<Content lang="java">
+    - [Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html)
+    - A build tool. You can choose between:
+    - [Maven](https://maven.apache.org/index.html) - version 3.3.1 or higher
+    - [IntelliJ IDEA](https://www.jetbrains.com/idea/) (which will be used in this tutorial)
+    - [IntelliJ IDEA Cucumber for Java plugin](https://plugins.jetbrains.com/plugin/7212-cucumber-for-java)
+    - [Eclipse](https://www.eclipse.org/) (a good alternative if you don't use IntelliJ IDEA)
+    - [Cucumber Eclipse](https://cucumber.github.io/cucumber-eclipse/)
+</Content>
+<Content lang="kotlin">
+    - [Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html) (Java 9 and higher are not yet supported by Cucumber)
+    - [Maven](https://maven.apache.org/index.html) - version 3.3.1 or higher
+    - [IntelliJ IDEA](https://www.jetbrains.com/idea/) (which will be used in this tutorial)
+    - [IntelliJ IDEA Cucumber for Java plugin](https://plugins.jetbrains.com/plugin/7212-cucumber-for-java)
+    - [IntelliJ IDEA Kotlin plugin](https://plugins.jetbrains.com/plugin/6954-kotlin)
+    - [Eclipse](https://www.eclipse.org/) (a good alternative if you don't use IntelliJ IDEA)
+    - [Cucumber Eclipse](https://cucumber.github.io/cucumber-eclipse/)
+    - [Kotlin Eclipse](https://github.com/JetBrains/kotlin-eclipse)
+</Content>
+<Content lang="javascript">
+    - [Node.js](https://nodejs.org/)
+    - A text editor
 
-        Open a terminal to verify that Node.js is installed properly:
+    Open a terminal to verify that Node.js is installed properly:
 
-        ```shell
-        node -v
-        npm -v
-        ```
+    ```shell
+    node -v
+    npm -v
+    ```
 
-        Both of these commands should print a version number.
-    </Tab>
-    <Tab lang="ruby">
-        - [Ruby](https://www.ruby-lang.org/)
-        - [Bundler](https://bundler.io/)
-        - A text editor
+    Both of these commands should print a version number.
+</Content>
+<Content lang="ruby">
+    - [Ruby](https://www.ruby-lang.org/)
+    - [Bundler](https://bundler.io/)
+    - A text editor
 
-        Open a terminal to verify that Ruby is installed properly:
+    Open a terminal to verify that Ruby is installed properly:
 
-        ```shell
-        ruby -v
-        bundle -v
-        ```
+    ```shell
+    ruby -v
+    bundle -v
+    ```
 
-        Both of these commands should print a version number.
-    </Tab>
-</Tabs>
+    Both of these commands should print a version number.
+</Content>
 
 ## Create an empty Cucumber project
 
+<Content lang="java,kotlin">
+    We'll start by creating a new project directory with the `cucumber-archetype`
+    Maven plugin. Open a terminal, go to the directory where you want to create your project,
+    and run the following command:
+
+    ```shell
+    mvn archetype:generate                      \
+    "-DarchetypeGroupId=io.cucumber"           \
+    "-DarchetypeArtifactId=cucumber-archetype" \
+    "-DarchetypeVersion=<Version>cucumberjvm</Version>"               \
+    "-DgroupId=hellocucumber"                  \
+    "-DartifactId=hellocucumber"               \
+    "-Dpackage=hellocucumber"                  \
+    "-Dversion=1.0.0-SNAPSHOT"                 \
+    "-DinteractiveMode=false"
+    ```
+
+    You should get something like the following result:
+    ```shell
+    [INFO] Project created from Archetype in dir: [directory where you created the project]/cucumber
+    [INFO] ------------------------------------------------------------------------
+    [INFO] BUILD SUCCESS
+    [INFO] ------------------------------------------------------------------------
+    ```
+
+    Change into the directory that was just created by running the following command:
+
+    ```shell
+    cd hellocucumber
+    ```
+
+    Open the project in IntelliJ IDEA:
+
+    * **File -> Open... -> (Select the pom.xml)**
+    * Select **Open as Project**
+</Content>
+<Content lang="kotlin">
+    To use Kotlin, we need to add it to our project:
+
+    * Add a directory named `kotlin` in your `src/test` directory and mark it as `Test Sources Root`.
+    In IntelliJ IDEA, you can do so by right-clicking on the `kotlin` directory and selecting **"Mark Directory as" > "Test Sources Root"**.
+    * Create the `hellocucumber` package inside the `kotlin` directory.
+    * Create a Kotlin class called `RunCucumberTest` inside the `hellocucumber` package. IntelliJ IDEA might tell you that Kotlin is not configured; click **"Configure"**.
+    Your `pom.xml` should now look like this:
+
+    ```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://maven.apache.org/POM/4.0.0"
+             xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+        <modelVersion>4.0.0</modelVersion>
+
+        <groupId>hellocucumber</groupId>
+        <artifactId>hellocucumber</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <packaging>jar</packaging>
+
+        <properties>
+            <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+            <kotlin.version>1.8.10</kotlin.version>
+        </properties>
+
+        <dependencyManagement>
+            <dependencies>
+                <dependency>
+                    <groupId>io.cucumber</groupId>
+                    <artifactId>cucumber-bom</artifactId>
+                    <version>7.11.2</version>
+                    <type>pom</type>
+                    <scope>import</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.junit</groupId>
+                    <artifactId>junit-bom</artifactId>
+                    <version>5.9.2</version>
+                    <type>pom</type>
+                    <scope>import</scope>
+                </dependency>
+            </dependencies>
+        </dependencyManagement>
+
+        <dependencies>
+            <dependency>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-java</artifactId>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-junit-platform-engine</artifactId>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.junit.platform</groupId>
+                <artifactId>junit-platform-suite</artifactId>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-stdlib-jdk8</artifactId>
+                <version>${kotlin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-test</artifactId>
+                <version>${kotlin.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.0.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.jetbrains.kotlin</groupId>
+                    <artifactId>kotlin-maven-plugin</artifactId>
+                    <version>${kotlin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>compile</id>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>compile</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>test-compile</id>
+                            <phase>test-compile</phase>
+                            <goals>
+                                <goal>test-compile</goal>
+                            </goals>
+                            <configuration>
+                                <sourceDirs>
+                                    <source>src/test/java</source>
+                                    <source>src/test/kotlin</source>
+                                </sourceDirs>
+                            </configuration>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <jvmTarget>1.8</jvmTarget>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.11.0</version>
+                    <executions>
+                        <execution>
+                            <id>compile</id>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>compile</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>testCompile</id>
+                            <phase>test-compile</phase>
+                            <goals>
+                                <goal>testCompile</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <encoding>UTF-8</encoding>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </build>
+    </project>
+    ```
+    * Copy the annotations from the `RunCucumberTest.java` class to the `RunCucumberTest.kt` class.
+    If you are using IntelliJ IDEA, it will offer to translate the Java code to Kotlin code. Otherwise, you'll have to write your own.
+
+    Your `RunCucumberTest.kt` class should now look like this:
+    ```kotlin
+    package hellocucumber
+
+    import io.cucumber.junit.platform.engine.Constants
+    import org.junit.platform.suite.api.ConfigurationParameter
+    import org.junit.platform.suite.api.IncludeEngines
+    import org.junit.platform.suite.api.SelectClasspathResource
+    import org.junit.platform.suite.api.Suite
+
+    @Suite
+    @IncludeEngines("cucumber")
+    @SelectClasspathResource("hellocucumber")
+    @ConfigurationParameter(key = Constants.PLUGIN_PROPERTY_NAME, value = "pretty")
+    class RunCucumberTest
+    ```
+
+    * Now you can delete the `RunCucumberTest.java` class.
+    * Create a Kotlin class called `StepDefs` inside the `hellocucumber` package.
+    * Copy the import statements from `StepDefinitions.java` to `StepDefs.kt`; you'll need them later.
+    * Finally, delete the `StepDefinitions.java` class (or even the `java` directory).
+</Content>
+<Content lang="javascript">
+    We'll start by creating a new directory and an empty Node.js project.
+
+    ```shell
+    mkdir hellocucumber
+    cd hellocucumber
+    npm init --yes
+    ```
+
+    Add Cucumber as a development dependency:
+
+    ```shell
+    npm install --save-dev @cucumber/cucumber
+    ```
+
+    Open `package.json` in a text editor and change the `test` section so it looks like this:
+
+    ```json
+    {
+        "name": "hellocucumber",
+        "version": "1.0.0",
+        "description": "",
+        "main": "index.js",
+        "scripts": {
+            "test": "cucumber-js"
+        },
+        "keywords": [],
+        "author": "",
+        "license": "ISC",
+        "devDependencies": {
+            "@cucumber/cucumber": "^11.1.1"
+        }
+    }
+    ```
+
+    Prepare the file structure:
+
+    ```shell
+    mkdir features
+    mkdir features/step_definitions
+    ```
+
+    Create a file called `cucumber.js` at the root of your project and add the following
+    content:
+
+    ```javascript
+    module.exports = {
+        default: `--format-options '{"snippetInterface": "synchronous"}'`
+    }
+    ```
+
+    Also, create a file called `features/step_definitions/stepdefs.js` with the
+    following content:
+
+    ```javascript
+    const assert = require('assert');
+    const { Given, When, Then } = require('@cucumber/cucumber');
+    ```
+</Content>
+<Content lang="ruby">
+    We'll start by creating a new directory and an empty Ruby project.
+
+    ```shell
+    mkdir hellocucumber
+    cd hellocucumber
+    ```
+
+    Create a `Gemfile` with the following content:
+
+    ```ruby
+    source "https://rubygems.org"
+
+    group :test do
+    gem 'cucumber', '~> {{% version "cucumberruby" %}}'
+    gem 'rspec', '~> {{% version "rspec" %}}'
+    end
+    ```
+
+    Install Cucumber and prepare the file structure:
+
+    ```shell
+    bundle install
+    cucumber --init
+    ```
+</Content>
+
+You now have a small project with Cucumber installed.
+
+## Verify your installation
+
+To make sure everything works together correctly, let's run Cucumber.
+
+<Content lang="java,kotlin">
+    ```shell
+    mvn test
+    ```
+</Content>
+<Content lang="javascript">
+    ```shell
+    npm test
+    ```
+</Content>
+<Content lang="ruby">
+    ```shell
+    cucumber
+    ```
+</Content>
+
+You should see something like the following:
+
+<Content lang="java,kotlin">
+    ```shell
+    -------------------------------------------------------
+    T E S T S
+    -------------------------------------------------------
+
+    Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+    Results :
+
+    Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+    [INFO] ------------------------------------------------------------------------
+    [INFO] BUILD SUCCESS
+    [INFO] ------------------------------------------------------------------------
+    ```
+</Content>
+<Content lang="javascript">
+    ```shell
+    0 Scenarios
+    0 steps
+    0m00.000s
+    ```
+</Content>
+<Content lang="ruby">
+    ```shell
+    0 scenarios
+    0 steps
+    0m0.000s
+    ```
+</Content>
+
+Cucumber's output is telling us that it didn't find anything to run.
+
+## Write a scenario
+
+When we do Behaviour-Driven Development with Cucumber we use *concrete examples*
+to specify *what* we want the software to do. Scenarios are written *before*
+production code. They start their life as an *executable specification*. As
+the production code emerges, scenarios take on a role as *living documentation* and
+*automated tests*.
+
+:::tip[Example mapping]
+Try running an [example mapping](/docs/bdd/example-mapping) workshop in your team to
+design examples together.
+:::
+
+In Cucumber, an example is called a [scenario](/docs/gherkin/reference#example).
+Scenarios are defined in `.feature` files, which are stored in the
+<Content lang="java,kotlin">`src/test/resources/hellocucumber`</Content>
+<Content lang="javascript,ruby">`features`</Content>
+directory (or a subdirectory).
+
+One concrete example would be that *Sunday isn't Friday*.
+
+Create an empty file called
+<Content lang="java,kotlin">`src/test/resources/hellocucumber/is_it_friday_yet.feature`</Content>
+<Content lang="javascript,ruby">`features/is_it_friday_yet.feature`</Content>
+with the following content:
+
+```gherkin
+Feature: Is it Friday yet?
+  Everybody wants to know when it's Friday
+
+  Scenario: Sunday isn't Friday
+    Given today is Sunday
+    When I ask whether it's Friday yet
+    Then I should be told "Nope"
+```
+
+The first line of this file starts with the keyword `Feature:` followed by a name.
+It's a good idea to use a name similar to the file name.
+
+The second line is a brief description of the feature. Cucumber does not
+execute this line because it's documentation.
+
+The fourth line, `Scenario: Sunday is not Friday` is a
+[scenario](../gherkin/reference.md#example), which is a *concrete example* illustrating how
+the software should behave.
+
+The last three lines starting with `Given`, `When` and `Then` are the
+[steps](../gherkin/reference.md#steps) of our scenario. This is what Cucumber will execute.
+
+## See scenario reported as undefined
+
+Now that we have a scenario, we can ask Cucumber to execute it.
+
+<Content lang="java,kotlin">
+    ```shell
+    mvn test
+    ```
+</Content>
+<Content lang="javascript">
+    ```shell
+    npm test
+    ```
+</Content>
+<Content lang="ruby">
+    ```shell
+    cucumber
+    ```
+</Content>
+
+Cucumber is telling us we have one `undefined` scenario and three `undefined`
+steps.  It's also suggesting some snippets of code that we can use to
+*define* these steps:
+
+<Content lang="java,kotlin">
+    ```shell
+    -------------------------------------------------------
+     T E S T S
+    -------------------------------------------------------
+    Running hellocucumber.RunCucumberTest
+
+    Scenario: Sunday isn't Friday        # hellocucumber/is_it_friday_yet.feature:4
+      Given today is Sunday
+      When I ask whether it's Friday yet
+      Then I should be told "Nope"
+    ┌───────────────────────────────────────────────────────────────────────────────────┐
+    │ Share your Cucumber Report with your team at https://reports.cucumber.io          │
+    │ Activate publishing with one of the following:                                    │
+    │                                                                                   │
+    │ src/test/resources/cucumber.properties:          cucumber.publish.enabled=true    │
+    │ src/test/resources/junit-platform.properties:    cucumber.publish.enabled=true    │
+    │ Environment variable:                            CUCUMBER_PUBLISH_ENABLED=true    │
+    │ JUnit:                                           @CucumberOptions(publish = true) │
+    │                                                                                   │
+    │ More information at https://cucumber.io/docs/cucumber/environment-variables/      │
+    │                                                                                   │
+    │ Disable this message with one of the following:                                   │
+    │                                                                                   │
+    │ src/test/resources/cucumber.properties:          cucumber.publish.quiet=true      │
+    │ src/test/resources/junit-platform.properties:    cucumber.publish.quiet=true      │
+    └───────────────────────────────────────────────────────────────────────────────────┘
+    [ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.15 s <<< FAILURE! - in hellocucumber.RunCucumberTest
+    [ERROR] Is it Friday yet?.Sunday isn't Friday  Time elapsed: 0.062 s  <<< ERROR!
+    io.cucumber.junit.platform.engine.UndefinedStepException:
+    The step 'today is Sunday' and 2 other step(s) are undefined.
+    You can implement these steps using the snippet(s) below:
+
+    @Given("today is Sunday")
+    public void today_is_sunday() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @When("I ask whether it's Friday yet")
+    public void i_ask_whether_it_s_friday_yet() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @Then("I should be told {string}")
+    public void i_should_be_told(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    ```
+</Content>
+<Content lang="javascript">
+
+    ```shell
+    UUU
+
+    Warnings:
+
+    1) Scenario: Sunday is not Friday # features/is_it_friday_yet.feature:4
+       ? Given today is Sunday
+           Undefined. Implement with the following snippet:
+
+             Given('today is Sunday', function () {
+               // Write code here that turns the phrase above into concrete actions
+               return 'pending';
+             });
+
+       ? When I ask whether it's Friday yet
+           Undefined. Implement with the following snippet:
+
+             When('I ask whether it\'s Friday yet', function () {
+               // Write code here that turns the phrase above into concrete actions
+               return 'pending';
+             });
+
+       ? Then I should be told "Nope"
+           Undefined. Implement with the following snippet:
+
+             Then('I should be told {string}', function (string) {
+               // Write code here that turns the phrase above into concrete actions
+               return 'pending';
+             });
+
+
+    1 scenario (1 undefined)
+    3 steps (3 undefined)
+    0m00.000s
+    ```
+</Content>
+<Content lang="ruby">
+    ```shell
+    Feature: Is it Friday yet?
+    Everybody wants to know when it's Friday
+
+    Scenario: Sunday is not Friday       # features/is_it_friday_yet.feature:4
+    Given today is Sunday              # features/is_it_friday_yet.feature:5
+    When I ask whether it's Friday yet # features/is_it_friday_yet.feature:6
+    Then I should be told "Nope"       # features/is_it_friday_yet.feature:7
+
+    1 scenario (1 undefined)
+    3 steps (3 undefined)
+    0m0.052s
+
+    You can implement step definitions for undefined steps with these snippets:
+
+    Given("today is Sunday") do
+    pending # Write code here that turns the phrase above into concrete actions
+    end
+
+    When("I ask whether it's Friday yet") do
+    pending # Write code here that turns the phrase above into concrete actions
+    end
+
+    Then("I should be told {string}") do |string|
+    pending # Write code here that turns the phrase above into concrete actions
+    end
+    ```
+</Content>
+
+Copy each of the three snippets for the undefined steps and paste them into
+<Content lang="java">`src/test/java/hellocucumber/StepDefinitions.java`</Content>
+<Content lang="kotlin">`src/test/kotlin/hellocucumber/Stepdefs.kt</Content>
+<Content lang="javascript">`features/step_definitions/stepdefs.js`</Content>
+<Content lang="ruby">`features/step_definitions/stepdefs.rb</Content>.
+
+<Content lang="kotlin">
+    Unfortunately, Cucumber does not generate snippets in Kotlin. But fortunately IDEA can convert the Java code to Kotlin code for you. You might need to improve the translated code, to make it more idiomatic.
+    You might also need to add the following import statements (if you hadn't already).
+
+    Your `StepDefs.kt` file should now look like this:
+    ```kotlin
+    package hellocucumber
+
+    import io.cucumber.java.PendingException
+    import io.cucumber.java.en.Given
+    import io.cucumber.java.en.When
+    import io.cucumber.java.en.Then
+    import org.junit.Assert.*
+
+    class StepDefs {
+        @Given("today is Sunday")
+        @Throws(Exception::class)
+        fun today_is_Sunday() {
+            // Write code here that turns the phrase above into concrete actions
+            throw PendingException()
+        }
+
+        @When("I ask whether it's Friday yet")
+        @Throws(Exception::class)
+        fun i_ask_whether_it_s_Friday_yet() {
+            // Write code here that turns the phrase above into concrete actions
+            throw PendingException()
+        }
+
+        @Then("I should be told {string}")
+        @Throws(Exception::class)
+        fun i_should_be_told(arg1: String) {
+            // Write code here that turns the phrase above into concrete actions
+            throw PendingException()
+        }
+    }
+    ```
+</Content>
