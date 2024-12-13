@@ -40,7 +40,7 @@ export default {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/cucumber/website/blob/main',
-          showLastUpdateAuthor: true,
+          showLastUpdateAuthor: false,
           showLastUpdateTime: true,
           remarkPlugins: [
             [require('@docusaurus/remark-plugin-npm2yarn'), {sync: true, converters: ['yarn']}],
