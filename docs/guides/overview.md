@@ -72,5 +72,7 @@ Step definitions can be written in many programming languages. Here is an exampl
 using JavaScript:
 
 ```javascript
-When("{maker} starts a game", maker => maker.startGameWithWord({ word: "whale" }))
+When("{maker} starts a game", maker => {
+  maker.startGameWithWord({ word: "whale" })
+})
 ```
