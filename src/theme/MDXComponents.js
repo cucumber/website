@@ -1,6 +1,6 @@
 // Import the original mapper
 import MDXComponents from '@theme-original/MDXComponents';
-import {Content, Tab, Tabs, Term} from "@site/src/components/Polyglot";
+import {Content, Tab, Tabs, Term, Version} from "@site/src/components/Polyglot";
 
 export default {
     // Re-use the default mapping
@@ -9,5 +9,6 @@ export default {
     Content,
     Tab,
     Tabs,
-    Term
+    Term,
+    Version
 };
