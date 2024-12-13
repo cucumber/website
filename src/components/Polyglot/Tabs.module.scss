@@ -4,6 +4,13 @@
   top: var(--ifm-navbar-height);
   // ensure we dont hide behind code blocks and other components
   z-index: 1;
+  // ensure content doesnt show through behind tabs when scrolling
+  background-color: var(--ifm-background-color);
+  // ensure we have a little whitespace between the tabs and scrolling content
+  padding-bottom: var(--ifm-leading);
+  > * {
+    margin-bottom: 0;
+  }
 }
 
 .onceTabs {
@@ -11,7 +18,4 @@
   & + * {
     display: none;
   }
-
-  // ensure content doesnt show through behind tabs when scrolling
-  background-color: var(--ifm-background-color);
 }
