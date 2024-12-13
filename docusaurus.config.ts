@@ -3,8 +3,8 @@ import {themes} from 'prism-react-renderer';
 import YAML from 'yaml';
 import {readFileSync} from 'node:fs';
 
-const lightCodeTheme = themes.dracula;
-const darkCodeTheme = themes.github;
+const lightCodeTheme = themes.jettwaveLight;
+const darkCodeTheme = themes.jettwaveDark;
 
 export default {
   title: 'Cucumber',
