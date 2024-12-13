@@ -26,6 +26,28 @@ Under the hood, this is leaning on [Docusaurus's Tabs functionality](https://doc
 - Be remembered across different pages
 - Update the URL via the `lang` query parameter, so language-specific URLs are shareable
 
+#### Once
+
+The above works great when you have a large body of platform-agnostic content with a few code/configuration samples sprinkled in. However, sometimes the content varies significantly per language/platform, and the flow would be broken by repeated instances of tabs. In these cases, you can surface the language choice once at the start, and use the selection to vary content at any point in the rest of the document using the `<Content>` component:
+
+```mdx
+# Some detailed topic
+
+<Tabs once="java,javascript,ruby" />
+
+(later)
+
+<Content lang="java">
+    Java-specific content.
+</Content>
+
+<Content lang="javascript,ruby">
+    This applies to both JavaScript and Ruby.
+</Content>
+```
+
+This flavour of the tabs has all the properties mentioned in the previous section, but they'll also stick to the top of the document as you scroll.
+
 ### Term
 
 Sometimes, a bit of specific terminology varies between languages, but we still want to keep the content on one page. For these cases we can use the `<Term>` component which supports a few shorthands that are resolved to the correct language-specific terminology. You can see the available terms in [`terms.json`](./src/components/Polyglot/terms.json)

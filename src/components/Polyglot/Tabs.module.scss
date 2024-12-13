@@ -1,0 +1,15 @@
+.onceScroller {
+  // stick just beneath the nav bar
+  position: sticky;
+  top: var(--ifm-navbar-height);
+}
+
+.onceTabs {
+  // omit the empty content element
+  & + * {
+    display: none;
+  }
+
+  // ensure content doesnt show through behind tabs when scrolling
+  background-color: var(--ifm-background-color);
+}

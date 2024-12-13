@@ -2,13 +2,31 @@ import {FC, ReactElement, ReactNode} from "react";
 import DocusaurusTabs from "@theme/Tabs";
 import DocusaurusTabItem from "@theme/TabItem";
 import {LANGUAGES} from "./constants";
+import styles from './Tabs.module.scss'
 
-type TabProps = { lang: keyof typeof LANGUAGES, children: ReactNode };
+interface TabsProps {
+    once?: string
+    children?: ReactElement<TabProps>[]
+}
 
-export const Tabs: FC<{children: ReactElement<TabProps>[]}> = ({children}) => {
-    const asArray = Array.isArray(children) ? children : [children]
+interface TabProps {
+    lang: string,
+    children: ReactNode
+}
+
+export const Tabs: FC<TabsProps> = ({once, children}) => {
+    if (once) {
+        const keys = once.split(',')
+        return <div className={styles.onceScroller}>
+            <DocusaurusTabs className={styles.onceTabs} groupId="lang" queryString>
+                {keys.map(key => {
+                    return <DocusaurusTabItem key={key} value={key} label={LANGUAGES[key]} attributes={{className: 'language-tab language-tab--' + key}}>&nbsp;</DocusaurusTabItem>
+                })}
+            </DocusaurusTabs>
+        </div>
+    }
     return <DocusaurusTabs groupId="lang" queryString>
-        {asArray.flatMap(child => {
+        {(Array.isArray(children) ? children : [children]).flatMap(child => {
             const keys = child.props.lang.split(',')
             return keys.map(key => {
                 return <DocusaurusTabItem key={key} value={key} label={LANGUAGES[key]} attributes={{className: 'language-tab language-tab--' + key}}>{child.props.children}</DocusaurusTabItem>
