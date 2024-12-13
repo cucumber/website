@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Example mapping
+# Example Mapping
 
 Before you pull a user story into development, it’s crucial to have a conversation to clarify and confirm the acceptance criteria.
 
