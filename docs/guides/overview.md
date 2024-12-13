@@ -1,8 +1,9 @@
 ---
+sidebar_position: 0
 description: "New to Cucumber? Start here!"
 ---
 
-# Overview
+# Introduction
 
 Cucumber is a tool that supports [Behaviour-Driven Development(BDD)](../bdd/index.md).
 If you're new to Behaviour-Driven Development read our [BDD introduction](../bdd/index.md)
