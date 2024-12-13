@@ -324,13 +324,8 @@ end
 
 Cucumber can run your scenarios with different browsers, based on a configuration property loaded at runtime:
 
-```ruby
-Capybara.register_driver :selenium do |app|
-  browser = (ENV['browser'] || 'firefox').to_sym
-  Capybara::Selenium::Driver.new(app, browser: browser)
-end
-```
-
+<Tabs>
+    <Tab lang="java,kotlin">
 ```java
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -351,56 +346,30 @@ public class WebDriverFactory {
 }
 ```
 
-```kotlin
-// TODO: Convert Java example to Kotlin
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class WebDriverFactory {
-    public static WebDriver createWebDriver() {
-        String webdriver = System.getProperty("browser", "firefox");
-        switch(webdriver) {
-            case "firefox":
-                return new FirefoxDriver();
-            case "chrome":
-                return new ChromeDriver();
-            default:
-                throw new RuntimeException("Unsupported webdriver: " + webdriver);
-        }
-    }
-}
-
-```
-
-```javascript
-// TODO
-```
-
 Then, define the `browser` property when you run Cucumber:
 
-RUBY
-
-```
-browser=chrome cucumber
-```
-
-KOTLIN
-
-```
+```shell
 mvn test -Dbrowser=chrome
 ```
 
 If you are using Serenity, pass the `driver` system property (no extra coding required):
 
-```
+```shell
 mvn test -Ddriver=chrome
 ```
-
-
-JS
-
+    </Tab>
+    <Tab lang="ruby">
+```ruby
+Capybara.register_driver :selenium do |app|
+  browser = (ENV['browser'] || 'firefox').to_sym
+  Capybara::Selenium::Driver.new(app, browser: browser)
+end
 ```
-// TODO: How to pass arguments in JavaScript
+
+Then, define the `browser` property when you run Cucumber:
+
+```shell
+browser=chrome cucumber
 ```
+    </Tab>
+</Tabs>
