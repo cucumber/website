@@ -2,6 +2,8 @@
 description: "Running Cucumber on a build server"
 ---
 
+# Continuous Integration
+
 Using Cucumber in a [Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html) (CI) environment is relatively straightforward.
 
 The `cucumber` executable will exit with an [exit status](https://en.wikipedia.org/wiki/Exit_status)
