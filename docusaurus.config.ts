@@ -106,7 +106,7 @@ export default {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['gherkin', 'java', 'ruby', 'scala']
+        additionalLanguages: ['gherkin', 'go', 'groovy', 'java', 'ruby', 'scala']
       },
     }),
     plugins: [
