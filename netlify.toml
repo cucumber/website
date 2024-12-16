@@ -24,11 +24,15 @@
   to = "/sponsors"
   status = 301
 
-# Vanity URLs for external sites/services
+# Vanity URLs for external stuff
 [[redirects]]
   from = "/conduct"
   to = "https://github.com/cucumber/.github/tree/main?tab=coc-ov-file"
   status = 302
+[[redirects]]
+  from = "/docs/contributing-to-documentation"
+  to = "https://github.com/cucumber/website/blob/main/CONTRIBUTING.md"
+  status = 301
 
 # Blog posts with parens in the slug
 [[redirects]]

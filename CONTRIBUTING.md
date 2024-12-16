@@ -1,6 +1,42 @@
 # Contributing
 
-See <https://github.com/cucumber/.github/blob/main/CONTRIBUTING.md> for general advice on contributing to Cucumber. Please also read the [Code of Conduct](https://github.com/cucumber/.github/blob/main/CODE_OF_CONDUCT.md).
+(See <https://github.com/cucumber/.github/blob/main/CONTRIBUTING.md> for general advice on contributing to Cucumber. Please also read the [Code of Conduct](https://github.com/cucumber/.github/blob/main/CODE_OF_CONDUCT.md).)
+
+The Cucumber documentation is open source and anyone is welcome to contribute. In fact, we'd really appreciate your help!
+
+You can make changes to the documentation by forking this repo and making a pull request. The title should explain which docs you are modifying/creating and why. Each pull request should only modify/add a single topic. Please don't lump many unrelated document changes into the same pull request. If you want to modify or add multiple topics, please open one pull request per topic.
+
+Documentation content is written in Markdown.
+
+## Writing style
+
+In general, the documentation should be brief and to the point.
+
+> Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away - Antoine de Saint Exupéry
+
+Some guidelines:
+
+* Every page should start with an informational/motivational paragraph
+* Paragraphs should be short enough to be readable, but long enough to develop an idea
+* Every page should start with a `h1` heading. Sections use `h2`; subsections use `h3`
+* Break long lines. Insert a new line at around column 80. This is important because review comments can only be added to a line.
+* Write in present tense
+* Use neutral language, but try to make it a little entertaining (this is hard!)
+* Write in a platform-neutral way as much as possible. Cucumber is implemented in several languages, and the docs should not assume a particular platform
+* All documents should use [British English](https://en.wikipedia.org/wiki/British_English). Contributions in [American English](https://en.wikipedia.org/wiki/American_English) are fine - editors will do the translation.
+* Use links to external sites sparingly
+* Do not use copyrighted material (images, text or other)
+* Illustrations are great, but please use lo-fi drawings; Cucumber's design team will recreate illustrations according to Cucumber's [brand guidelines](https://github.com/cucumber-ltd/brand)
+* Try to keep your contribution *consistent* with the current documentation. For instance:
+    * Use consistent wording and formatting
+    * Use lower case when referring to concepts in a sentences: e.g. "step definition" instead of "Step Definition"
+
+### Tutorial style
+
+* Assume the reader has little or no knowledge of the topic
+* Use a conversational style
+* Make sure each step in the tutorial is clearly described
+* If needed, describe what the result of each step should be
 
 ## Polyglot content
 
@@ -52,4 +88,29 @@ This flavour of the tabs has all the properties mentioned in the previous sectio
 
 Sometimes, a bit of specific terminology varies between languages, but we still want to keep the content on one page. For these cases we can use the `<Term>` component which supports a few shorthands that are resolved to the correct language-specific terminology. You can see the available terms in [`terms.json`](./src/components/Polyglot/terms.json)
 
+## Media
 
+If you want to embed a YouTube video in a doc or blog post, you can use this (pre-imported) MDX component, passing in the video's identifier as a prop:
+
+```mdx
+Here's a video of what happened:
+
+<YouTubeVideo video="JuWEQsE7Hlo" />
+```
+
+## Small docs edits
+
+If you just want to make a small-ish edit to a doc, you can avoid the overhead of spinning up the site locally by following the "Edit this page" link at the bottom of the doc, which will take you to GitHub where you can propose an edit. Once you raise a pull request, Netlify will comment with a link to a deployed preview so you can see what your change will look like.
+
+Each pull request should only modify/add a single topic. Please don't lump many unrelated document changes into the same pull request. If you want to modify or add multiple topics, please open one pull request per topic.
+
+## Running locally
+
+The site is built with [Docusaurus](https://docusaurus.io/). To work on it locally, you'll need [Node.js](https://nodejs.org/) and npm installed.
+
+```shell
+npm install
+npm start
+```
+
+This starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
