@@ -26,7 +26,7 @@ export default function Community() {
               src="/img/community/discord.svg"
             />
             <p className="padding-horiz--sm">
-              We're now on <strong>Discord</strong> for day-to-day short-form chat about all things Cucumber.
+              We're now on <strong>Discord</strong> for day-to-day chat about all things Cucumber. Drop by and say hello.
             </p>
             <Link className="button button--secondary" to="https://discord.gg/8YXBH8j74w">Join our Server</Link>
           </div>
@@ -59,7 +59,7 @@ export default function Community() {
       </div>
       <div className="container text--center padding-vert--lg">
         <h2>Want to contribute?</h2>
-        <p>There are all kinds of contributions. Read about how you can get involved.</p>
+        <p className="readable-blurb">There are many kinds of contributions, besides just code. <Link to="/docs/contributing">You can get involved</Link>.</p>
       </div>
     </main>
   </Layout>
