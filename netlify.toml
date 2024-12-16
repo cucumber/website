@@ -11,11 +11,19 @@
 # Paths for SmartBear products
 [[redirects]]
   from = "/tools/cucumberstudio"
-  to = "https://smartbear.com"
+  to = "https://smartbear.com/product/cucumberstudio/"
+  status = 301
+[[redirects]]
+  from = "/tools/cucumberstudio/*"
+  to = "https://smartbear.com/product/cucumberstudio/:splat/"
   status = 301
 [[redirects]]
   from = "/tools/cucumber-for-jira"
-  to = "https://smartbear.com"
+  to = "https://smartbear.com/product/cucumber-for-jira/"
+  status = 301
+[[redirects]]
+  from = "/tools/cucumber-for-jira/*"
+  to = "https://smartbear.com/product/cucumber-for-jira/:splat/"
   status = 301
 
 # Simplified paths
