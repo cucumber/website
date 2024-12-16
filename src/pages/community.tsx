@@ -3,6 +3,7 @@ import React from 'react'
 import clsx from 'clsx'
 import styles from './community.module.scss'
 import Link from '@docusaurus/Link'
+import { Subscribe } from '@site/src/components/Newsletter'
 
 export default function Community() {
   return <Layout>
@@ -11,6 +12,7 @@ export default function Community() {
         <h1>The Cucumber Community</h1>
         <p>Cucumber has a thriving community made up of kinds of people, from the project's long-standing maintainers to first-time
           users and everyone in between.</p>
+        <Subscribe />
       </div>
       <div className="container text--center padding-vert--lg">
         <h2>Where to find us</h2>

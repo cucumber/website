@@ -1,0 +1,12 @@
+.field {
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: calc(0.875rem * var(--ifm-button-size-multiplier));
+  line-height: 1.5;
+  width: 15em;
+  padding: calc(var(--ifm-button-padding-vertical) * var(--ifm-button-size-multiplier));
+  border: var(--ifm-button-border-width) solid var(--ifm-color-gray-700);
+  border-radius: var(--ifm-button-border-radius);
+  margin-right: 0.5em;
+}
