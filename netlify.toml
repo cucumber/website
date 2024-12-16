@@ -37,10 +37,6 @@
   from = "/conduct"
   to = "https://github.com/cucumber/.github/tree/main?tab=coc-ov-file"
   status = 302
-[[redirects]]
-  from = "/docs/contributing-to-documentation"
-  to = "https://github.com/cucumber/website/blob/main/CONTRIBUTING.md"
-  status = 301
 
 # Blog posts with parens in the slug
 [[redirects]]
@@ -70,4 +66,18 @@
 [[redirects]]
   from = "/blog/bdd/keep-your-scenarios-brief-(1)"
   to = "/blog/bdd/keep-your-scenarios-brief"
+  status = 301
+
+# Relocated docs
+[[redirects]]
+  from = "/docs/community/get-in-touch"
+  to = "/docs/community"
+  status = 301
+[[redirects]]
+  from = "/docs/community/contributing"
+  to = "/docs/contributing"
+  status = 301
+[[redirects]]
+  from = "/docs/community/contributing-to-documentation"
+  to = "https://github.com/cucumber/website/blob/main/CONTRIBUTING.md"
   status = 301
