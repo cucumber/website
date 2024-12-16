@@ -19,6 +19,9 @@ export default {
 
   onBrokenLinks: 'warn', // TODO change to throw once we start migrating docs
   onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    format: 'detect',
+  },
 
   i18n: {
     defaultLocale: 'en',
@@ -40,7 +43,10 @@ export default {
           ],
         },
         blog: {
+          onInlineAuthors: 'ignore',
           showReadingTime: false,
+          blogSidebarCount: 10,
+          postsPerPage: 10,
           remarkPlugins: [
             [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true, converters: ['yarn'] }],
           ],
@@ -76,6 +82,11 @@ export default {
           {
             to: '/docs',
             label: 'Documentation',
+            position: 'left',
+          },
+          {
+            to: '/blog',
+            label: 'Blog',
             position: 'left',
           },
           {

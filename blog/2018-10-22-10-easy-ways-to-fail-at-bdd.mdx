@@ -1,0 +1,133 @@
+---
+slug: bdd/10-easy-ways-to-fail-at-bdd
+title: 10 easy ways to fail at BDD
+authors:
+  - name: Theo England
+tags:
+  - Beginner
+  - BDD
+---
+
+In my work, I come across many organisations who desperately want to enjoy the benefits of practicing BDD, yet set themselves up for failure.
+
+Growing new practices in your teams is a lot like growing plants: you need to create the right environment for the changes to take root and establish themselves. Did you ever bring one of those basil plants home from the supermarket, and three weeks later it was all limp and brown and, well, a bit dead?
+
+That wasn’t the basil plant’s fault.
+
+<!-- truncate -->
+
+![](/img/blog/4f9c05d3e93bc0bfbeaa8ac5c318b0501b5d05d5a95c5c88be28ee73705335f2.jpeg)
+
+In a similar way, there are some systemic impediments we see organisations put in the way of their teams making a success of BDD. Let’s have a look at some of the most common ones.
+
+## 1. Try to change everything all at once
+
+A really effective way to get nowhere is to try and do everything all at the same time.
+
+This applies at both the organisational and team level.
+
+At the organisational level: push to get all your teams adopting BDD at the same time. The resources you have for training, coaching, and mentoring these teams will be spread paper-thin, meaning that only outlier teams stand any real chance of making a success of it.
+
+At the team level: encourage people to start doing BDD on everything, all the time, immediately. Throw off the training wheels! Get out of the slow lane! This is a great way to alienate your business stakeholders as the team thrash around and get nowhere fast.
+
+## 2. Make it mandatory
+
+A lot of people in your organisation will be skeptical about BDD. Perhaps they’re jaded from previous silver-bullet transformation schemes that have been sold to them. Perhaps they are scared of being pushed out of their comfort zones.
+
+Either way, an excellent way to build solid resistance to change is to force it on people. Let it be known that change is coming and you’d better get on board or get off the train. Don’t, whatever you do, listen to people’s concerns or give them [any way to talk to each other about the change](https://cucumber.io/blog/2017/05/26/unconference-the-rocket-fuel-in-your-agile-transformation). That would only show weakness and you are a powerful leader who knows best!
+
+Ideally, try to introduce BDD as part of several other major changes to people’s working lives all at the same time. Why not change their job title, or the processes and tools they use for their daily work, for example?
+
+## 3. Keep the pressure on
+
+Have you ever seen a mechanic work on a moving car?
+
+Have you ever thought about the proportion of time professional athletes or musicians spend practicing, compared to performing?
+
+Learning new skills will be impossible if your teams are expected to keep delivering features at the same pace. Yes, you must expect an overall improvement in the team’s performance eventually, but you [must also be prepared for an initial dip](https://cucumber.io/blog/2017/04/10/improving-throughput-and-collaboration), while they **slow down to speed up**.
+
+Keep the pressure on the team to deliver, and you’ll guarantee that any aspirations to improve are nipped in the bud.
+
+## 4. Don’t budget for infrastructure & devops
+
+If you’ve not been doing much test automation in the past, you may well not be prepared for the kind of automation of infrastructure that’s also required to have a healthy build pipeline. Excellent!
+
+Ideally a team doing BDD will need to be able to spin up a realistic environment for their application on any developer’s workstation in a few seconds, so that they can run repeatable tests against it.
+
+Similarly, they will need to be able to quickly provision machines to run their tests on checked-in code against a clean, stand-alone environment (fresh copy of the database etc.) as part of their build pipeline.
+
+A great way to stamp out any efforts to implement BDD is to inhibit this kind of activity. Mandate the use of databases with expensive per-server licensing models! Force all teams to share a single build server! Only allow access to cloud VMs to some privileged, central team! Whatever you do, don’t give anyone the time to automate any of this stuff.
+
+## 5. Focus on the tools
+
+You’re reading this blog so you probably know that BDD is [more about collaboration than it is about tooling](https://lizkeogh.com/2011/03/04/step-away-from-the-tools/). The tools are just there to facilitate the collaboration. But your people don’t know that! And they love tools!
+
+Try to ignore those messy, fuzzy, collaborative practices like [example mapping](https://cucumber.io/blog/2015/12/08/example-mapping-introduction) for as long as you can. They’re just for the purists!
+
+Instead, just get people using Cucumber to automate tests. Keep everyone thinking about this as a testing tool, and [never let anyone tell you any different, whoever they are](https://cucumber.io/blog/2014/03/03/the-worlds-most-misunderstood-collaboration-tool)!
+
+## 6. Keep the silos strong
+
+You have a separate QA department for a reason, right? Nobody can remember what that reason is, but that doesn’t necessarily mean it’s a bad idea: that’s the way things have always been around here!
+
+The last thing you need is to have developers and QA people talking to each other. Make sure nobody ever tries anything like a [three amigos meeting](https://johnfergusonsmart.com/three-amigos-requirements-discovery/), or there’s a danger you might start learning about defects before they get written into the code!
+
+Another great reason to keep QA and devs apart is that tests are for testers. If you’re automating tests, it’s not real software development is it? There’s no need to involve engineers who know anything about software development practices. What kind of crazy person would suggest that?
+
+## 7. Have a messy backlog
+
+BDD is a tactical practice. It takes user stories as input, helps you test your understanding of them and tease out small chunks of well-understood work from the complexity of the real-world problem. Then it helps you deliver them.
+
+I often think about the discovery practice of BDD, where we examine the user story and explore our understanding of it, as a filter. We can use it to reject stories that are either poorly-understood, or too big, or both.
+
+So what if your backlog of stories is a hideous jumble of half-baked notions? Perfect! Each and every three amigos meeting will be a disaster! Make sure nobody is accountable for cleaning up your backlog. The product owner is too busy doing their day-job! And anyway nobody ever gave them any training!
+
+## 8. Avoid anyone with experience
+
+People who have used TDD or BDD before have this unswerving confidence that it will be worth it in the end. They’ve seen the benefits of having pushed through that initial pain, and would never go back.
+
+Avoid these people like the plague!
+
+The last thing you need is people like this infiltrating your teams with practical knowledge about how to make these practices work, combined with a confidence that the investment will be worth it. Toxic stuff!
+
+## 9. Keep the features hidden
+
+If you must tolerate people collaborating to express the system’s behaviour using examples, you can at least make sure those examples are as inaccessible as possible.
+
+Once people start getting the idea that these examples are not just tests, but could actually double as a living document that describes the system’s behaviour, all hell will break loose!
+
+Make sure that once the feature files are written, they go into source control and never surface anywhere your non-technical stakeholders might be able to read and refer to them! Anything else would be mayhem!
+
+## 10. Learn on a legacy codebase
+
+Your five-year old Java 5 app is going to be just the ideal place for a team to learn BDD. After all, this codebase we never designed with testability in mind, and probably has hideous dependencies that will make it almost impossible for it to be automated. Excellent!
+
+(Only joking.)
+
+- - -
+
+Instead of changing everything all at once, **start with a single team, and a single user story**. Put that story in the “slow lane” and let it take as long as it needs to for the team to learn how to do this really well. Keep going until the team are confident about applying this on all of their stories, all of the time. Now you have a success story you can tell to the rest of the organisation.
+
+Instead of making it mandatory, **give your explicit support**. Most developers feel guilty about how long their stuff takes — it always takes longer than we expect it to — and they will naturally tend to avoid slowing down to speed up. You need to regularly send them the message that this is OK, that you believe this is the right thing to do, that they have the time.
+
+Instead of keeping the pressure on the team to deliver, put your energy into **selling the benefits** of BDD to business stakeholders. Work with them to see this as an investment. Be clear that the team will need a few months before the return on investment will be visible.
+
+As well as investing in the skills of your people, budget to **invest in the infrastructure** they will use those skills on. To get the benefits of BDD, they will need fast feedback from their tests, and that means automation of infrastructure. This is another great reason for starting with a single team — you can learn from their pain-points and resolve them before scaling out.
+
+Instead of focussing on the tools, **start with the discovery practices** from BDD. Keep banging the drum that automated tests are a secondary benefit from practicing BDD, and that **shared understanding** is the main goal. Coach teams in these collaborative practices, and help them work through the people problems that will inevitably result, just as you’re working through those infrastructure issues too.
+
+Break down silos and have testers get involved in **testing the requirement**, instead of [waiting to scrape off the burnt toast](https://vimeo.com/143941147). Pair QAs and developers so that developers can use their expertise in software engineering, as well as their deep knowledge of the system to build the most reliable, fast tests you can get. Make it clear that **quality is everyone’s responsibility**.
+
+Before trying to introduce BDD, make sure you’ve **got the basics of agile** practice down. Professionalise the product ownership in your organisation, by making it a [recognised role with specific skills](https://cucumber.io/blog/2016/02/01/what-makes-a-great-product-owner), not just a part-time job for someone with knowledge of the business domain. Get training for people if they need it. Keep your backlog short, prioritised and well-refined using other excellent techniques like [story mapping](https://jpattonassociates.com/user-story-mapping/) and [impact mapping](https://jpattonassociates.com/user-story-mapping/).
+
+Embrace people with previous experience of TDD and BDD. These practices are hard to introduce, and having people around with the **confidence that comes from having got to the other side of the hump** will be invaluable.
+
+Instead of burying your feature files in source control, **publish them somewhere everyone on the team will be able to read** them as documentation. Like anything that’s presented, the team will take more pride in their work, and you’ll likely get more feedback on them, meaning you learn about any misunderstandings sooner.
+
+Like starting with a single story on a single team, try to **make this easy on yourselves** by starting a codebase that, while representative of other ones you’ll need to tackle soon, isn’t going to put up significant resistance to being automated by tests. Learning to make TDD a habit is hard enough without the codebase getting in the way. Let your teams get their skills and confidence levels built up a little before trying to tame these older codebases.
+
+There. Those are all the ones I can think of.
+
+[Matt](/blog/authors/matt) flipped this presentation upside down and looked at how you can create the conditions for BDD to succeed in your organisation:
+
+<YouTubeVideo video="fP9BSUejet0" />

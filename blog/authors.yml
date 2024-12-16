@@ -1,17 +1,47 @@
-endi:
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
-  url: https://github.com/endiliey
-  image_url: https://github.com/endiliey.png
-
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
-
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+aslak:
+  name: Aslak Hellesøy
+  title: Creator of Cucumber
+  url: https://www.aslakhellesoy.com
+  image_url: https://github.com/aslakhellesoy.png
+  socials:
+    github: aslakhellesoy
+  page: true
+david:
+  name: David Goss
+  title: Maintainer of Cucumber-JS
+  url: https://davidgoss.co
+  image_url: https://github.com/davidjgoss.png
+  socials:
+    github: davidjgoss
+  page: true
+luke:
+  name: Luke Hill
+  title: Maintainer of Cucumber-Ruby
+  image_url: https://github.com/lukehill.png
+  socials:
+    github: lukehill
+  page: true
+matt:
+  name: Matt Wynne
+  title: Project Lead of Cucumber
+  url: https://mattwynne.net
+  image_url: https://github.com/mattwynne.png
+  socials:
+    github: mattwynne
+  page: true
+mpkorstanje:
+  name: Rien Korstanje
+  title: Maintainer of Cucumber-JVM
+  url: https://logarithmicwhale.com
+  image_url: https://github.com/mpkorstanje.png
+  socials:
+    github: mpkorstanje
+  page: true
+seb:
+  name: Seb Rose
+  title: Co-author of The BDD Books
+  url: https://claysnow.co.uk/
+  image_url: https://github.com/sebrose.png
+  socials:
+    github: sebrose
+  page: true
