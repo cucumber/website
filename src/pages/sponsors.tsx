@@ -102,8 +102,10 @@ export default function Sponsors() {
             <Tiers />
           </div>
           <div className="text--center">
-            <p className="margin-bottom--sm">Or, you can always make a <Link
-              href="https://opencollective.com/cucumber/donate">one-time donation</Link>.</p>
+            <p className="margin-bottom--sm">
+              Or, you can always make a{' '}
+              <Link href="https://opencollective.com/cucumber/donate">one-time donation</Link>.
+            </p>
           </div>
         </div>
         <div className="container text--center padding-vert--lg">
