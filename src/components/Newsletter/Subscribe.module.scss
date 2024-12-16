@@ -1,3 +1,7 @@
+.form {
+  vertical-align: baseline;
+}
+
 .field {
   background-color: transparent;
   color: inherit;
@@ -9,4 +13,10 @@
   border: var(--ifm-button-border-width) solid var(--ifm-color-gray-700);
   border-radius: var(--ifm-button-border-radius);
   margin-right: 0.5em;
+  vertical-align: baseline;
+}
+
+.submit {
+  font-family: inherit;
+  vertical-align: baseline;
 }
