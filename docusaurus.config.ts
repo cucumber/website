@@ -85,6 +85,11 @@ export default {
             position: 'left',
           },
           {
+            to: '/community',
+            label: 'Community',
+            position: 'left',
+          },
+          {
             to: '/blog',
             label: 'Blog',
             position: 'left',
