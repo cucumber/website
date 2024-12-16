@@ -57,7 +57,7 @@ const Tiers: FC = () => {
                 <p className="margin-top--md">{tier.description}</p>
               </div>
               <div className="card__footer">
-                <Link className="button button--block button--primary" href={tier.url}>
+                <Link className="button button--block button--secondary" href={tier.url}>
                   Sponsor
                 </Link>
               </div>
