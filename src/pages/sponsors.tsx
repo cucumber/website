@@ -82,27 +82,28 @@ export default function Sponsors() {
             flavoured implementations of Cucumber. That's a lot of work!
           </p>
           <p>
-            Your sponsorship ensures the team can get paid for their time, and ensures Cucumber will
+            Financial contributions ensure team can get paid for their time, and that Cucumber will
             remain a reliable and fun way to test your software for years to come.
+          </p>
+          <p>
+            <Link
+              className="button button--lg button--primary"
+              href="https://opencollective.com/cucumber/donate"
+            >
+              Donate Now
+            </Link>
           </p>
         </div>
         <div className="container padding-vert--lg">
           <div className="margin-bottom--lg">
-            <p className="text--center margin-bottom--sm">
-              If you can, we'd love for you to commit a regular amount to support Cucumber
+            <p className="text--center">
+              If you can, we'd love for you to commit a regular amount to support Cucumber.
             </p>
             <Tiers />
           </div>
           <div className="text--center">
-            <p className="margin-bottom--sm">Or, you can always make a one-time donation</p>
-            <p>
-              <Link
-                className="button button--lg button--secondary"
-                href="https://opencollective.com/cucumber/donate"
-              >
-                Donate
-              </Link>
-            </p>
+            <p className="margin-bottom--sm">Or, you can always make a <Link
+              href="https://opencollective.com/cucumber/donate">one-time donation</Link>.</p>
           </div>
         </div>
         <div className="container text--center padding-vert--lg">
