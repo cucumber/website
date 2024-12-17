@@ -72,7 +72,6 @@ export default {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
-      metadata: [{ name: 'robots', content: 'noindex' }],
       colorMode: {
         defaultMode: 'light',
       },
