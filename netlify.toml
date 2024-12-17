@@ -37,6 +37,14 @@
   from = "/conduct"
   to = "https://github.com/cucumber/.github/tree/main?tab=coc-ov-file"
   status = 302
+[[redirects]]
+  from = "/school"
+  to = "https://school.cucumber.io"
+  status = 301
+[[redirects]]
+  from = "/school/*"
+  to = "https://school.cucumber.io"
+  status = 301
 
 # Blog posts with parens in the slug
 [[redirects]]
