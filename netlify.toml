@@ -104,14 +104,24 @@
   to = "/blog"
   status = 301
 
+# Community aliases
+[[redirects]]
+  from = "/docs/community/get-in-touch"
+  to = "/docs/community"
+  status = 301
+[[redirects]]
+  from = "/support"
+  to = "/community"
+  status = 301
+[[redirects]]
+  from = "/contact-us"
+  to = "/community"
+  status = 301
+
 # Relocated docs
 [[redirects]]
   from = "/docs/guides/overview"
   to = "/docs"
-  status = 301
-[[redirects]]
-  from = "/docs/community/get-in-touch"
-  to = "/docs/community"
   status = 301
 [[redirects]]
   from = "/docs/community/contributing"
