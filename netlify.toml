@@ -118,6 +118,14 @@
   to = "/docs/contributing"
   status = 301
 [[redirects]]
+  from = "/tools/cucumber-open/contribute"
+  to = "/docs/contributing"
+  status = 301
+[[redirects]]
+  from = "/contribute"
+  to = "/docs/contributing"
+  status = 301
+[[redirects]]
   from = "/docs/community/contributing-to-documentation"
   to = "https://github.com/cucumber/website/blob/main/CONTRIBUTING.md"
   status = 301
