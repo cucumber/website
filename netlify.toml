@@ -70,6 +70,10 @@
 
 # Relocated docs
 [[redirects]]
+  from = "/docs/guides/overview"
+  to = "/docs"
+  status = 301
+[[redirects]]
   from = "/docs/community/get-in-touch"
   to = "/docs/community"
   status = 301

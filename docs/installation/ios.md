@@ -1,6 +1,6 @@
 ---
 pagination_prev: installation/index
-pagination_next: cucumber/index
+pagination_next: guides/index
 sidebar_custom_props:
   language: iOS (Swift/ObjC)
   status: semi-official
