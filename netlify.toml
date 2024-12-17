@@ -117,6 +117,10 @@
   from = "/contact-us"
   to = "/community"
   status = 301
+[[redirects]]
+  from = "/team"
+  to = "/community"
+  status = 302
 
 # Events aliases
 [[redirects]]
