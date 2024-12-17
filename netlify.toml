@@ -76,6 +76,34 @@
   to = "/blog/bdd/keep-your-scenarios-brief"
   status = 301
 
+# Blog tags
+[[redirects]]
+  from = "/blog/news"
+  to = "/blog"
+  status = 301
+[[redirects]]
+  from = "/blog/bdd"
+  to = "/blog/tags/bdd"
+  status = 301
+[[redirects]]
+  from = "/blog/bdd/*"
+  to = "/blog/tags/bdd"
+  status = 301
+[[redirects]]
+  from = "/blog/open-source"
+  to = "/blog/tags/open-source"
+  status = 301
+[[redirects]]
+  from = "/blog/open-source/*"
+  to = "/blog/tags/open-source"
+  status = 301
+
+# Blog catch-all fallback
+[[redirects]]
+  from = "/blog/*"
+  to = "/blog"
+  status = 301
+
 # Relocated docs
 [[redirects]]
   from = "/docs/guides/overview"
