@@ -4,7 +4,13 @@ import YAML from 'yaml'
 import { readFileSync } from 'node:fs'
 
 const lightCodeTheme = themes.jettwaveLight
-const darkCodeTheme = themes.jettwaveDark
+const darkCodeTheme = {
+  ...themes.jettwaveDark,
+  plain: {
+    ...themes.jettwaveDark.plain,
+    backgroundColor: 'var(--ifm-navbar-background-color)'
+  }
+}
 
 export default {
   title: 'Cucumber',
@@ -68,7 +74,7 @@ export default {
     {
       metadata: [{ name: 'robots', content: 'noindex' }],
       colorMode: {
-        disableSwitch: true,
+        // disableSwitch: true,
         respectPrefersColorScheme: true,
       },
       image: 'img/logo.svg',

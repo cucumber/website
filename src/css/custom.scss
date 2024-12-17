@@ -15,7 +15,7 @@
 }
 
 [data-theme='dark'] {
-  --ifm-footer-background-color: #282a36;
+  --ifm-footer-background-color: var(--ifm-navbar-background-color);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
