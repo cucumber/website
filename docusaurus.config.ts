@@ -11,7 +11,7 @@ export default {
   tagline: 'lets you write automated tests in plain language',
   favicon: 'img/logo.svg',
   stylesheets: [
-    '//fonts.googleapis.com/css2?family=Inconsolata&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap',
+    '//fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap',
   ],
 
   url: 'https://cucumber.community',
