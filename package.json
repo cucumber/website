@@ -36,6 +36,7 @@
     "@tsconfig/docusaurus": "2.0.3",
     "@types/lodash.sortby": "^4.7.9",
     "prettier": "^3.4.2",
+    "globby": "^14.0.2",
     "yaml": "^2.6.1"
   },
   "browserslist": {

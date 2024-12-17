@@ -1,28 +1,18 @@
-.backdrop {
-  padding: 6rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.title {
-  font-size: 4.5rem;
-  font-weight: 300;
-  line-height: 1em;
-}
-
 .ctas {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 16px;
 }
 
-@media screen and (max-width: 996px) {
-  .backdrop {
-    padding: 2rem;
-  }
+.platforms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 
-  .title {
-    font-size: 3rem;
+  img {
+    max-width: 24px;
+    max-height: 24px;
   }
 }
