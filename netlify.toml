@@ -118,6 +118,20 @@
   to = "/community"
   status = 301
 
+# Events aliases
+[[redirects]]
+  from = "/resources/events"
+  to = "/events"
+  status = 301
+[[redirects]]
+  from = "/speakers"
+  to = "/events"
+  status = 301
+[[redirects]]
+  from = "/cukenfest"
+  to = "/events"
+  status = 301
+
 # Relocated docs
 [[redirects]]
   from = "/docs/guides/overview"
