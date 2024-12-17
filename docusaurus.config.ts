@@ -8,8 +8,8 @@ const darkCodeTheme = {
   ...themes.jettwaveDark,
   plain: {
     ...themes.jettwaveDark.plain,
-    backgroundColor: 'var(--ifm-navbar-background-color)'
-  }
+    backgroundColor: 'var(--ifm-navbar-background-color)',
+  },
 }
 
 export default {
