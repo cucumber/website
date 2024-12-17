@@ -74,8 +74,7 @@ export default {
     {
       metadata: [{ name: 'robots', content: 'noindex' }],
       colorMode: {
-        disableSwitch: true,
-        respectPrefersColorScheme: true,
+        defaultMode: 'light',
       },
       image: 'img/logo.svg',
       navbar: {
