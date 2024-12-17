@@ -19,6 +19,17 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+[class^=announcementBar] {
+  background: repeating-linear-gradient(
+                  135deg,
+                  #39B54A,
+                  #39B54A 10px,
+                  darken(#39B54A, 5%) 10px,
+                  darken(#39B54A, 5%) 20px
+  );
+  font-weight: bold;
+}
+
 .header-github-link::before {
   content: '';
   width: 24px;

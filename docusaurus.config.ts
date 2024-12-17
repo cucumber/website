@@ -67,6 +67,11 @@ export default {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
       metadata: [{ name: 'robots', content: 'noindex' }],
+      announcementBar: {
+        id: 'december-2024-announcement',
+        content:
+          '📣 We have exciting news - <a href="/blog">read the blog post</a> to learn more!',
+      },
       colorMode: {
         disableSwitch: true,
         respectPrefersColorScheme: true,
