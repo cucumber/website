@@ -20,7 +20,7 @@ export default {
     '//fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap',
   ],
 
-  url: 'https://cucumber.community',
+  url: 'https://cucumber.io',
   baseUrl: '/',
 
   onBrokenLinks: 'warn', // TODO change to throw once we start migrating docs
