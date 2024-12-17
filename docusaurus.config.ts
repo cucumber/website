@@ -74,7 +74,7 @@ export default {
     {
       metadata: [{ name: 'robots', content: 'noindex' }],
       colorMode: {
-        // disableSwitch: true,
+        disableSwitch: true,
         respectPrefersColorScheme: true,
       },
       image: 'img/logo.svg',
