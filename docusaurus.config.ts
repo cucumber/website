@@ -68,6 +68,10 @@ export default {
         theme: {
           customCss: require.resolve('./src/css/custom.scss'),
         },
+        gtag: {
+          trackingID: 'G-YY58V5DFE7',
+          anonymizeIP: true,
+        },
       },
     ],
   ],
