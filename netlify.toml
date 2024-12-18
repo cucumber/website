@@ -171,15 +171,15 @@
 # Community aliases
 [[redirects]]
   from = "/docs/community/get-in-touch"
-  to = "/docs/community"
+  to = "/community"
   status = 301
 [[redirects]]
   from = "/docs/community/*"
-  to = "/docs/community"
+  to = "/community"
   status = 301
 [[redirects]]
   from = "/docs/community"
-  to = "/docs/community"
+  to = "/community"
   status = 301
 [[redirects]]
   from = "/support"
