@@ -101,6 +101,11 @@ export default {
             position: 'left',
           },
           {
+            to: '/learn',
+            label: 'Learn',
+            position: 'left',
+          },
+          {
             to: '/community',
             label: 'Community',
             position: 'left',
