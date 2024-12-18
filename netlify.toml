@@ -111,7 +111,7 @@
   status = 301
 [[redirects]]
   from = "/docs/community/faq"
-  to = "/docs/faqs"
+  to = "/docs/faq"
   status = 301
 [[redirects]]
   from = "/tools/cucumber-open/contribute"
