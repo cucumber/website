@@ -1,0 +1,20 @@
+.schoolStack {
+  display: block;
+  position: relative;
+
+  img:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform-origin: 50% 50%;
+    transform: rotate(4deg);
+  }
+
+  img:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform-origin: 50% 50%;
+    transform: rotate(-3deg);
+  }
+}

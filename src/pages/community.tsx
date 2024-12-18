@@ -9,9 +9,9 @@ export default function Community() {
   return (
     <Layout>
       <main>
-        <div className="container readable-blurb text--center padding-vert--lg">
+        <div className="container text--center padding-vert--lg">
           <h1>The Cucumber Community</h1>
-          <p>
+          <p className="readable-blurb">
             Cucumber has a thriving community made up of kinds of people, from the project's
             long-standing maintainers to first-time users and everyone in between.
           </p>

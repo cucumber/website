@@ -6,9 +6,9 @@ export default function Events() {
   return (
     <Layout>
       <main>
-        <div className="container readable-blurb text--center padding-vert--lg">
+        <div className="container text--center padding-vert--lg">
           <h1>Events</h1>
-          <p>
+          <p className="readable-blurb">
             We don't currently have any Cucumber events lined up. If/when that changes, newsletter
             subscribers will be among the first to know.
           </p>
