@@ -100,6 +100,9 @@ export default {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
+      metadata: [
+        {name: 'description', content: 'Cucumber is a tool for running automated acceptance tests, written in plain language. Because they\'re written in plain language, they can be read by anyone on your team, improving communication, collaboration and trust.'}
+      ],
       colorMode: {
         defaultMode: 'light',
       },
