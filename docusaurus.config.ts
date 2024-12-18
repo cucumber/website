@@ -163,6 +163,13 @@ export default {
         darkTheme: darkCodeTheme,
         additionalLanguages: ['gherkin', 'go', 'groovy', 'java', 'ruby', 'scala'],
       },
+      algolia: {
+        appId: 'KKV75IPBYX',
+        apiKey: 'a705efaaffbb238f98333b0d13b05034',
+        indexName: 'cucumber',
+        contextualSearch: true,
+        searchParameters: {},
+      },
     },
   plugins: ['docusaurus-plugin-sass'],
   customFields: {
