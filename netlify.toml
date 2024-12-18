@@ -154,7 +154,7 @@
   to = "/docs/contributing"
   status = 301
 [[redirects]]
-  from = "/docs/community/faqs"
+  from = "/docs/community/faq"
   to = "/docs/faqs"
   status = 301
 [[redirects]]
