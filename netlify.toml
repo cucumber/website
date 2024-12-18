@@ -90,6 +90,38 @@
   to = "/blog/tags/open-source"
   status = 301
 
+# Events aliases
+[[redirects]]
+  from = "/resources/events"
+  to = "/events"
+  status = 301
+[[redirects]]
+  from = "/speakers"
+  to = "/events"
+  status = 301
+[[redirects]]
+  from = "/cukenfest"
+  to = "/events"
+  status = 301
+
+# Learn aliases
+[[redirects]]
+  from = "/docs/professional"
+  to = "/learn"
+  status = 301
+[[redirects]]
+  from = "/docs/professional/*"
+  to = "/learn"
+  status = 301
+[[redirects]]
+  from = "/resources"
+  to = "/learn"
+  status = 301
+[[redirects]]
+  from = "/resources/*"
+  to = "/learn"
+  status = 301
+
 # Community aliases
 [[redirects]]
   from = "/docs/community/get-in-touch"
@@ -107,20 +139,6 @@
   from = "/team"
   to = "/community"
   status = 302
-
-# Events aliases
-[[redirects]]
-  from = "/resources/events"
-  to = "/events"
-  status = 301
-[[redirects]]
-  from = "/speakers"
-  to = "/events"
-  status = 301
-[[redirects]]
-  from = "/cukenfest"
-  to = "/events"
-  status = 301
 
 # Relocated docs
 [[redirects]]
