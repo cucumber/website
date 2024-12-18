@@ -150,6 +150,10 @@
   to = "/docs/contributing"
   status = 301
 [[redirects]]
+  from = "/docs/community/faqs"
+  to = "/docs/faqs"
+  status = 301
+[[redirects]]
   from = "/tools/cucumber-open/contribute"
   to = "/docs/contributing"
   status = 301
