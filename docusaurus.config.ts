@@ -72,6 +72,7 @@ export default {
           trackingID: 'G-YY58V5DFE7',
           anonymizeIP: true,
         },
+        sitemap: {},
       },
     ],
   ],
