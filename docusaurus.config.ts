@@ -15,6 +15,8 @@ const darkCodeTheme = {
 
 const platformsCount = globbySync('docs/installation/*.md').length
 
+const versions = YAML.parse(readFileSync('./versions.yaml', { encoding: 'utf-8' }))
+
 export default {
   title: 'Cucumber',
   tagline: 'lets you write automated tests in plain language',
@@ -49,6 +51,21 @@ export default {
           showLastUpdateTime: true,
           remarkPlugins: [
             [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true, converters: ['yarn'] }],
+          ],
+          rehypePlugins: [
+            [
+              require('rehype-rewrite'),
+              {
+                rewrite: (node) => {
+                  if (node.type == 'text') {
+                    node.value = node.value?.replaceAll(
+                      /{{% ?version "(\w+)" ?%}}/g,
+                      (match, name) => versions[name]
+                    )
+                  }
+                },
+              },
+            ],
           ],
         },
         blog: {
@@ -151,6 +168,6 @@ export default {
   plugins: ['docusaurus-plugin-sass'],
   customFields: {
     platformsCount,
-    versions: YAML.parse(readFileSync('./versions.yaml', { encoding: 'utf-8' })),
+    versions,
   },
 } satisfies Config
