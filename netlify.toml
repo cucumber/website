@@ -25,6 +25,10 @@
   from = "/tools/cucumber-for-jira/*"
   to = "https://smartbear.com/product/cucumber-for-jira/:splat/"
   status = 301
+[[redirects]]
+  from = "/living-documentation"
+  to = "https://smartbear.com/product/cucumber-for-jira/"
+  status = 301
 
 # Simplified paths
 [[redirects]]
