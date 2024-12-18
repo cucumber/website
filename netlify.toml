@@ -158,6 +158,10 @@
   to = "/docs/faqs"
   status = 301
 [[redirects]]
+  from = "/docs/community/not-cucumber"
+  to = "/docs/faqs"
+  status = 301
+[[redirects]]
   from = "/tools/cucumber-open/contribute"
   to = "/docs/contributing"
   status = 301
