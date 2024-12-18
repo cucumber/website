@@ -3,6 +3,7 @@ import Layout from '@theme/Layout'
 import styles from './learn.module.scss'
 import Link from '@docusaurus/Link'
 import clsx from 'clsx'
+import Head from '@docusaurus/Head'
 
 const Resource: FC<{
   to: string
@@ -31,6 +32,13 @@ const Resource: FC<{
 export default function Learn() {
   return (
     <Layout>
+      <Head>
+        <title>Learn BDD and Cucumber</title>
+        <meta
+          name="description"
+          content="As well as our extensive documentation, there are some other resources we recommend to really accelerate your journey with BDD and Cucumber."
+        />
+      </Head>
       <main>
         <div className="container text--center padding-vert--lg">
           <h1>Learn BDD and Cucumber</h1>

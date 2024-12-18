@@ -3,6 +3,7 @@ import Layout from '@theme/Layout'
 import Link from '@docusaurus/Link'
 import styles from './sponsors.module.scss'
 import clsx from 'clsx'
+import Head from '@docusaurus/Head'
 
 const numberFormat = new Intl.NumberFormat('en', {
   style: 'currency',
@@ -72,6 +73,14 @@ const Tiers: FC = () => {
 export default function Sponsors() {
   return (
     <Layout>
+      <Head>
+        <title>Sponsor Cucumber</title>
+        <meta
+          name="description"
+          content="Cucumber was downloaded over 100 million times in 2023. Financial contributions ensure the team can get paid for their time, and that Cucumber will
+            remain a reliable and fun way to test your software for years to come."
+        />
+      </Head>
       <main>
         <div className="container readable-blurb text--center padding-vert--lg">
           <h1>Sponsor Cucumber</h1>
@@ -82,8 +91,8 @@ export default function Sponsors() {
             flavoured implementations of Cucumber. That's a lot of work!
           </p>
           <p>
-            Financial contributions ensure team can get paid for their time, and that Cucumber will
-            remain a reliable and fun way to test your software for years to come.
+            Financial contributions ensure the team can get paid for their time, and that Cucumber
+            will remain a reliable and fun way to test your software for years to come.
           </p>
           <p>
             <Link

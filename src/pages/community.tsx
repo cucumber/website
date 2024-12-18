@@ -4,10 +4,18 @@ import clsx from 'clsx'
 import styles from './community.module.scss'
 import Link from '@docusaurus/Link'
 import { Subscribe } from '@site/src/components/Newsletter'
+import Head from '@docusaurus/Head'
 
 export default function Community() {
   return (
     <Layout>
+      <Head>
+        <title>The Cucumber Community</title>
+        <meta
+          name="description"
+          content="Cucumber has a thriving community made up of kinds of people, from the project's long-standing maintainers to first-time users and everyone in between."
+        />
+      </Head>
       <main>
         <div className="container text--center padding-vert--lg">
           <h1>The Cucumber Community</h1>
