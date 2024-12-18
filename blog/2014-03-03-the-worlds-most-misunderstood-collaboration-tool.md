@@ -86,8 +86,8 @@ For many teams it isn’t lack of understanding of BDD or Specification by Examp
 
 Programmers and testers are comfortable with development tools. Most business analysts are not. Cucumber is a development tool, and therefore many business analysts won’t touch it with a ten feet pole.
 
-This is part of the reason why I co-founded Cucumber Ltd and our flagship product, [Cucumber Pro](https://cucumber.io/pro). Our goal is to provide a collaboration tool for Cucumber that is as easy to use as a word processor or social networking website.
+This is part of the reason why I co-founded Cucumber Ltd and our flagship product, [Cucumber Pro](/pro). Our goal is to provide a collaboration tool for Cucumber that is as easy to use as a word processor or social networking website.
 
-We also offer [training](https://cucumber.io/training) for teams who want to learn how to apply BDD and Specification by Example.
+We also offer [training](/training) for teams who want to learn how to apply BDD and Specification by Example.
 
 I am very excited about the future of Cucumber. I hope more teams will start to use it the way it was intended to be used.

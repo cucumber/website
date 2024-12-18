@@ -8,11 +8,11 @@ tags: [BDD]
 
 After my talk called “Are BDD and test automation the same thing?” at the [Automation Guild conference](https://guildconferences.com/ag-2021/) in February 2021 there were more questions than I could answer in the available time. This is the second of five posts answering the five most important ones:
 
-1.  [Why should automation be done by the dev team?](https://cucumber.io/blog/bdd/why-should-automation-be-done-by-the-dev-team/)
+1.  [Why should automation be done by the dev team?](/blog/bdd/why-should-automation-be-done-by-the-dev-team/)
 2.  Isn’t the business-readable documentation just extra overhead?
-3.  [What’s wrong with changing the scenarios to enable automation?](https://cucumber.io/blog/bdd/what-s-wrong-with-changing-the-scenarios-to-enabl/)
-4.  [Can all testing be automated?](https://cucumber.io/blog/bdd/can-all-testing-be-automated/)
-5.  [How can Cucumber help us understand the root causes of failure?](https://cucumber.io/blog/bdd/how-can-cucumber-help-us-understand-the-root-cause/)
+3.  [What’s wrong with changing the scenarios to enable automation?](/blog/bdd/what-s-wrong-with-changing-the-scenarios-to-enabl/)
+4.  [Can all testing be automated?](/blog/bdd/can-all-testing-be-automated/)
+5.  [How can Cucumber help us understand the root causes of failure?](/blog/bdd/how-can-cucumber-help-us-understand-the-root-cause/)
 
 ## The question
 
@@ -49,7 +49,7 @@ In the following sections, I’ll outline how adopting these practices can mitig
 
 ### Discovery
 
-[Discovery](http://bddbooks.com/) (aka 3 Amigos and [Example Mapping](https://cucumber.io/blog/bdd/example-mapping-introduction/)) is where the team really begins to understand how a piece of functionality should behave to deliver value to the customer. The product owner/business analyst prepare their understanding of the next small increment and the delivery team test their understanding of it using concrete examples. Through this process, detailed requirements are refined, while misunderstandings and assumptions are surfaced and resolved.
+[Discovery](http://bddbooks.com/) (aka 3 Amigos and [Example Mapping](/blog/bdd/example-mapping-introduction/)) is where the team really begins to understand how a piece of functionality should behave to deliver value to the customer. The product owner/business analyst prepare their understanding of the next small increment and the delivery team test their understanding of it using concrete examples. Through this process, detailed requirements are refined, while misunderstandings and assumptions are surfaced and resolved.
 
 Discovery takes time, but the detailed shared understanding that is achieved needs to be reached **no matter what approach the team takes**. If the team doesn’t learn about this early, before writing code or test scripts, they will learn later and have to rework code and test scripts that they have already created. Quite apart from the time spent doing the rework, there is the huge cost of the associated [context switching](https://calleia.com/2014/05/15/cost-of-context-switching/).
 

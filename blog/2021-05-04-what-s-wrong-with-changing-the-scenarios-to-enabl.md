@@ -8,11 +8,11 @@ tags: [BDD]
 
 I’m continuing to answer questions that were asked during my session [“Are BDD and test automation the same thing?”](https://www.slideshare.net/sebrose/are-bdd-and-test-automation-the-same-thing-automation-guild-2021) at the [Automation Guild conference](https://guildconferences.com/ag-2021/) in February 2021. This is the third of five posts.
 
-1.  [Why should automation be done by the dev team?](https://cucumber.io/blog/bdd/why-should-automation-be-done-by-the-dev-team/)
-2.  [Isn’t the business-readable documentation just extra overhead?](https://cucumber.io/blog/bdd/isn-t-the-business-readable-documentation-just-ove/)
+1.  [Why should automation be done by the dev team?](/blog/bdd/why-should-automation-be-done-by-the-dev-team/)
+2.  [Isn’t the business-readable documentation just extra overhead?](/blog/bdd/isn-t-the-business-readable-documentation-just-ove/)
 3.  What’s wrong with changing the scenarios to enable automation?
-4.  [Can all testing be automated?](https://cucumber.io/blog/bdd/can-all-testing-be-automated/)
-5.  [How can Cucumber help us understand the root causes of failure?](https://cucumber.io/blog/bdd/how-can-cucumber-help-us-understand-the-root-cause/)
+4.  [Can all testing be automated?](/blog/bdd/can-all-testing-be-automated/)
+5.  [How can Cucumber help us understand the root causes of failure?](/blog/bdd/how-can-cucumber-help-us-understand-the-root-cause/)
 
 ## The question
 
@@ -37,7 +37,7 @@ The goal of business-readable specifications is to facilitate and encourage coll
 | F | Focused             | Each scenario should only illustrate a single rule                                |
 |   | Brief               | Shorter scenarios are easier to read, understand and maintain                     |
 
-The benefits of business-readable specifications are numerous (and covered in a [previous post](https://cucumber.io/blog/bdd/isn-t-the-business-readable-documentation-just-ove/)), but two of the BRIEF properties are worth expanding on.
+The benefits of business-readable specifications are numerous (and covered in a [previous post](/blog/bdd/isn-t-the-business-readable-documentation-just-ove/)), but two of the BRIEF properties are worth expanding on.
 
 ### Focused
 
@@ -62,8 +62,8 @@ Once the team has formulated a scenario to conform to the BRIEF properties, it s
 
 Every implementation of Cucumber has a mechanism for passing data between steps.
 
--   Cucumber Ruby and JavaScript [use a World object](https://cucumber.io/docs/cucumber/state/) which each step can interact with to attach or access information. Many other flavours of Cucumber use a similar mechanism.
--   Cucumber Java [uses dependency injection (DI)](https://cucumber.io/docs/cucumber/state/) to share a single instance of an object between different step definition classes.
+-   Cucumber Ruby and JavaScript [use a World object](/docs/cucumber/state/) which each step can interact with to attach or access information. Many other flavours of Cucumber use a similar mechanism.
+-   Cucumber Java [uses dependency injection (DI)](/docs/cucumber/state/) to share a single instance of an object between different step definition classes.
 -   SpecFlow supports [multiple mechanisms for sharing data](https://docs.specflow.org/projects/specflow/en/latest/Bindings/Sharing-Data-between-Bindings.html).
 
 ![](/img/blog/0faf493b12ceb43e0a69d12900b94b7a1fa7742abc17fb2acc4a952d1aacd913.png)
@@ -105,7 +105,7 @@ Aslak Hellesøy and the Cucumber team regularly structure their automation code 
 
 ### Automating at the bottom of the pyramid
 
-The test automation pyramid is a popular metaphor documenting a popular and successful strategy. I recommend you read [this article](https://cucumber.io/blog/bdd/eviscerating-the-test-automation-pyramid/) even if you are fully aware of the metaphor already.
+The test automation pyramid is a popular metaphor documenting a popular and successful strategy. I recommend you read [this article](/blog/bdd/eviscerating-the-test-automation-pyramid/) even if you are fully aware of the metaphor already.
 
 ![](/img/blog/fc9024e12abb89080327fd2de4614b5c534c588d852e9ef17277c046c0d44ba5.png)
 
@@ -137,11 +137,11 @@ Examples of initialisation include:
 -   restoring persistent test data to a known state
 -   creating and injecting test doubles/mocks/stubs
 
-It’s rare that these activities should be included in a scenario. I’d also recommend that they don’t belong in a feature file at all, so should not be part of a [Background](https://cucumber.io/docs/gherkin/reference/#background).
+It’s rare that these activities should be included in a scenario. I’d also recommend that they don’t belong in a feature file at all, so should not be part of a [Background](/docs/gherkin/reference/#background).
 
 Techniques that I’ve found useful are:
 
--   [Cucumber (conditional) hooks](https://cucumber.io/docs/cucumber/api/#hooks)
+-   [Cucumber (conditional) hooks](/docs/cucumber/api/#hooks)
     -   all Cucumber implementations have _Before_ and _After_ hooks that are called before or after a scenario runs
     -   some implementations have additional hooks, such as _BeforeStep/AfterStep_ and _BeforeAll/AfterAll_
     -   hooks can be made conditional on the tags applied to the currently running scenario

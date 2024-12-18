@@ -16,7 +16,7 @@ By the time we get to designing software systems, the complexity is such that re
 
 ## The Road to Nowhere, Glasgow
 
-The evolution of agile ways of delivering software [removed the phased approach](https://www.glasscubes.com/agile-vs-waterfall/) to defining detailed requirements in favour of incremental, just-in-time requirements definition. A side effect was a perceptible decline in enthusiasm for [documentation](http://agilemanifesto.org/) of any kind. Instead, [user stories were misused](https://cucumber.io/blog/bdd/user-stories-are-not-the-same-as-features/) as agile requirements, causing ambiguities that inevitably led to rework and stakeholder dissatisfaction.
+The evolution of agile ways of delivering software [removed the phased approach](https://www.glasscubes.com/agile-vs-waterfall/) to defining detailed requirements in favour of incremental, just-in-time requirements definition. A side effect was a perceptible decline in enthusiasm for [documentation](http://agilemanifesto.org/) of any kind. Instead, [user stories were misused](/blog/bdd/user-stories-are-not-the-same-as-features/) as agile requirements, causing ambiguities that inevitably led to rework and stakeholder dissatisfaction.
 
 What can we do to avoid ambiguous requirements without imposing excessive financial or time costs on our projects?
 
@@ -93,7 +93,7 @@ The concreteness of an example helps us consider how a system should behave in s
 
 ## So many examples
 
-As you can see, it’s easy to generate lots of concrete examples, but more is not necessarily better. Having too many examples can make it hard to see what’s important, as well as imposing a maintenance burden when the business needs change. There are two [common ways of managing the volume of examples](https://cucumber.io/blog/bdd/keep-your-scenarios-brief/).
+As you can see, it’s easy to generate lots of concrete examples, but more is not necessarily better. Having too many examples can make it hard to see what’s important, as well as imposing a maintenance burden when the business needs change. There are two [common ways of managing the volume of examples](/blog/bdd/keep-your-scenarios-brief/).
 
 The first is to ensure that all examples are valuable. If two examples illustrate the same behaviour, then remove one of them. One way of demonstrating the value is by giving each example a name that explains why it exists. From the crosswalk examples, some names could be “Signal is green”, “Signal is solid red” and so on.
 
@@ -118,7 +118,7 @@ They are all requirements, but as we have seen, it is harder to reason about lar
 
 ## Example Mapping
 
-The Cucumber team have been using a technique called Example Mapping for almost ten years to power structured, collaborative conversations in agile teams. It was discovered by Matt Wynne and through his [blog post](https://cucumber.io/blog/bdd/example-mapping-introduction) on the subject, and many consulting engagements, it has gone on to improve requirements for countless teams across the world.
+The Cucumber team have been using a technique called Example Mapping for almost ten years to power structured, collaborative conversations in agile teams. It was discovered by Matt Wynne and through his [blog post](/blog/bdd/example-mapping-introduction) on the subject, and many consulting engagements, it has gone on to improve requirements for countless teams across the world.
 
 ![](/img/blog/5306c10fcdc5bc0fedd43a6acc2c6758e37fc63f9390ae468b8f5f88a7118799.png)
 
@@ -131,7 +131,7 @@ I don’t propose to repeat the whole of Matt’s excellent blog post here. Inst
 
 Originally, example mapping required teams to be collocated, with access to 4 coloured decks of index cards and buckets of Sharpies. Indeed, this may still be the most effective way of running an example mapping session, but with remote working, distributed teams, and electronic project management tools, this approach is no longer generally suitable.
 
-There are many online/virtual ways of running an example mapping session, but you should check out the example mapping tool built into CucumberStudio, which is [demoed in this webinar](https://cucumber.io/resources/webinars/better-requirements-by-harnessing-examples/?ws=a).
+There are many online/virtual ways of running an example mapping session, but you should check out the example mapping tool built into CucumberStudio, which is [demoed in this webinar](/resources/webinars/better-requirements-by-harnessing-examples/?ws=a).
 
 ## Traceability
 
@@ -146,7 +146,7 @@ Simply put, traceability should be able to answer questions like:
 
 The most typical demand for traceability comes from regulated industries, where external auditors demand evidence of compliance. However, traceability has far broader applicability than that. With the continuing shift towards continuous deployment, there’s a growing need for low overhead mechanisms that enable internal processes to automatically assess the fitness of software for release.
 
-Example mapping already provides a link from user story to concrete example. Teams that are using a behaviour-driven development (BDD) approach will then formulate the concrete examples into business-readable, [executable specifications](https://www.amazon.co.uk/Specification-Example-Successful-Deliver-Software/dp/1617290084) that will guide development and provide long-lived, reliable, [living documentation](https://cucumber.io/blog/bdd/the-alternative-to-living-documentation-is-confu/). Automated execution of the specifications extends traceability to test executions and product versions.
+Example mapping already provides a link from user story to concrete example. Teams that are using a behaviour-driven development (BDD) approach will then formulate the concrete examples into business-readable, [executable specifications](https://www.amazon.co.uk/Specification-Example-Successful-Deliver-Software/dp/1617290084) that will guide development and provide long-lived, reliable, [living documentation](/blog/bdd/the-alternative-to-living-documentation-is-confu/). Automated execution of the specifications extends traceability to test executions and product versions.
 
 This is a significant advance when compared to the prevalent forms of requirements traceability in the industry today, such as spreadsheets or links in ALM tools. Even better, there is no overhead incurred. Every activity in the BDD approach delivers intrinsic value. Traceability comes as a secondary outcome.
 

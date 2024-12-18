@@ -16,9 +16,9 @@ We’ve merged similar questions together, so what you see below is a summary of
 
 We have published two BDD books (Discovery & Formulation) that are available from Leanpub (multiple ebook formats) and Amazon (print & Kindle). Visit [http://bddbooks.com](http://bddbooks.com) for full details.
 
-I have previously blogged an excerpt from the Formulation book, describing the BRIEF acronym. [https://cucumber.io/blog/bdd/keep-your-scenarios-brief/](https://cucumber.io/blog/bdd/keep-your-scenarios-brief/)
+I have previously blogged an excerpt from the Formulation book, describing the BRIEF acronym. [https://cucumber.io/blog/bdd/keep-your-scenarios-brief/](/blog/bdd/keep-your-scenarios-brief/)
 
-The Cucumber open source community maintains documentation online. A good place to start is [https://cucumber.io/docs/bdd](https://cucumber.io/docs/bdd)
+The Cucumber open source community maintains documentation online. A good place to start is [https://cucumber.io/docs/bdd](/docs/bdd)
 
 SmartBear provides free training videos that focus on using Cucumber (and Specflow) for C#, Java, JavaScript, and Ruby developers. [https://school.cucumber.io](https://school.cucumber.io) 
 
@@ -49,7 +49,7 @@ Gherkin provides two other keywords that can be used to introduce steps: **And**
 
 ## “Can we pass the total quantity to be reserved?”
 
-Passing parameters is specifically an automation question, and the answer is “YES!”. You can find more details on parameter passing in the [Cucumber Expression documentation](https://cucumber.io/docs/cucumber/cucumber-expressions/).
+Passing parameters is specifically an automation question, and the answer is “YES!”. You can find more details on parameter passing in the [Cucumber Expression documentation](/docs/cucumber/cucumber-expressions/).
 
 ## Why doesn’t your scenario contain more detail?
 
@@ -59,7 +59,7 @@ Details that aren’t essential for one scenario will be essential for others. I
 
 That still leaves the question of how you can illustrate a behaviour in the middle of a customer journey without including **Given** steps that cover all the actions that a user would have to go through to get the system into the necessary state. The answer is to find a way of describing the journey to that state in a single **_intention revealing_** way.This is what the statement, the statement “**Given** Andrew is a library member” does in the sample scenario. It could be expanded with all the steps that Andrew had to go through to join the library, but that would be confusing. Instead, we’ve found a way that describes the intent of all those inessential steps that we’ve omitted.
 
-An additional benefit of this approach to omitting incidental detail is that it gives our developers freedom to choose how to automate the scenario. They could automate this step by manipulating the system’s UI and going through the full sign up process. Or they could search the member database to find a suitable user to use in the scenario. Or the automation could directly insert a new library member into the database at the beginning of the scenario and delete it at the end. The choice is not important from a behavioural viewpoint – all of them would illustrate that reserving a book will cost Andrew $1.00 – but it does mean that we can build an automation suite that conforms to the [test automation pyramid](https://cucumber.io/blog/bdd/eviscerating-the-test-automation-pyramid/), robustly giving us fast feedback and confidence in our application.
+An additional benefit of this approach to omitting incidental detail is that it gives our developers freedom to choose how to automate the scenario. They could automate this step by manipulating the system’s UI and going through the full sign up process. Or they could search the member database to find a suitable user to use in the scenario. Or the automation could directly insert a new library member into the database at the beginning of the scenario and delete it at the end. The choice is not important from a behavioural viewpoint – all of them would illustrate that reserving a book will cost Andrew $1.00 – but it does mean that we can build an automation suite that conforms to the [test automation pyramid](/blog/bdd/eviscerating-the-test-automation-pyramid/), robustly giving us fast feedback and confidence in our application.
 
 ## Shouldn’t scenarios cover a full user journey?
 
@@ -73,7 +73,7 @@ Asynchrony is always hard to reason about. Nonetheless, Gherkin scenarios that f
 
 It’s really important that each scenario should be isolated from every other scenario. This means that scenarios should be able to run in any order and still get the same result. All flavours of Cucumber go to great lengths to help enforce this, but automation engineers need to be aware of this necessity, because there are numerous ways that they can inadvertently break this important rule.
 
-On the other hand, it’s frequently necessary for data to flow between steps within a scenario. Again, all flavours Cucumber provide mechanisms to facilitate this sharing of information – although these mechanisms vary between programming languages. You can find more details in the [open source documentation](https://cucumber.io/docs/cucumber/step-definitions/#state-management).
+On the other hand, it’s frequently necessary for data to flow between steps within a scenario. Again, all flavours Cucumber provide mechanisms to facilitate this sharing of information – although these mechanisms vary between programming languages. You can find more details in the [open source documentation](/docs/cucumber/step-definitions/#state-management).
 
 ## Is this a “good” scenario?
 
@@ -115,7 +115,7 @@ You can see an example of API design and implementation using BDD, Cucumber, and
 
 ## Can I use Selenium when developing using a BDD approach?
 
-BDD and Cucumber don’t force you to use specific automation tools or libraries, so you can certainly use Selnium. However, remember the advice of the [test automation pyramid](https://cucumber.io/blog/bdd/eviscerating-the-test-automation-pyramid/). To paraphrase – build your test strategy on a foundation of small, fast, reliable automated tests. Using Selenium tends to produce end to end tests, at the top of the pyramid – and we want as few of these as we can get away with, because they are typically big, slow, and flaky.
+BDD and Cucumber don’t force you to use specific automation tools or libraries, so you can certainly use Selnium. However, remember the advice of the [test automation pyramid](/blog/bdd/eviscerating-the-test-automation-pyramid/). To paraphrase – build your test strategy on a foundation of small, fast, reliable automated tests. Using Selenium tends to produce end to end tests, at the top of the pyramid – and we want as few of these as we can get away with, because they are typically big, slow, and flaky.
 
 Just because we write the scenarios using **_business readable_** language doesn’t mean that the automation can’t be implemented lower down the pyramid. I [blogged about this](http://claysnow.co.uk/the-testing-iceberg/) some time ago.
 

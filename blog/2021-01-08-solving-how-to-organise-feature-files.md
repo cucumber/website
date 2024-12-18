@@ -115,11 +115,11 @@ _Figure 5 - Separate hierarchy_
 
 _Figure 6 - Interleaved_
 
-There are situations where it is impractical to represent cross-cutting interests hierarchically. In these cases what you need is something like an index that allows you to find all the relevant pieces of documentation. Gherkin has a [feature called tags](https://cucumber.io/docs/cucumber/api/#tags) that can be used for this purpose.
+There are situations where it is impractical to represent cross-cutting interests hierarchically. In these cases what you need is something like an index that allows you to find all the relevant pieces of documentation. Gherkin has a [feature called tags](/docs/cucumber/api/#tags) that can be used for this purpose.
 
 ## Stories aren’t features
 
-It is common to see teams create a new feature file for each user story that they implement. I’ve [written extensively](https://cucumber.io/blog/bdd/user-stories-are-not-the-same-as-features/) about why this is a bad idea.
+It is common to see teams create a new feature file for each user story that they implement. I’ve [written extensively](/blog/bdd/user-stories-are-not-the-same-as-features/) about why this is a bad idea.
 
 TL;DR – User stories are intended to be used to deliver small increments of functionality. If you create a feature file for each story, then you will expend unnecessary effort maintaining existing feature files. Additionally, feature files created this way will not be useful documentation, because each will only describe a thin slice of functionality.
 

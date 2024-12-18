@@ -53,7 +53,7 @@ After all, if they mean basically the same thing, surely there would only be one
 To caricature some of these popular misconceptions:
 
 -   TDD is just for engineers testing system internals; it's got nothing to do with the customer.
--   You're doing BDD as long as you use Given / When / Then ([Gherkin](https://cucumber.io/docs/gherkin/reference/)) scenarios, even if you're not going test-first.
+-   You're doing BDD as long as you use Given / When / Then ([Gherkin](/docs/gherkin/reference/)) scenarios, even if you're not going test-first.
 -   ATDD is just about writing customer-facing acceptance tests.
 -   Specification by Example is only an analysis technique; it's got nothing to do with test automation or programming.
 

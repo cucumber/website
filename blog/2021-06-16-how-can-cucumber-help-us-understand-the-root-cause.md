@@ -8,10 +8,10 @@ tags: [BDD]
 
 I’m continuing to answer questions that were asked during my session [“Are BDD and test automation the same thing?”](https://www.slideshare.net/sebrose/are-bdd-and-test-automation-the-same-thing-automation-guild-2021) at the [Automation Guild conference](https://guildconferences.com/ag-2021/) in February 2021. This is the last of five posts.
 
-1.  [Why should automation be done by the dev team?](https://cucumber.io/blog/bdd/why-should-automation-be-done-by-the-dev-team/)
-2.  [Isn’t the business-readable documentation just extra overhead?](https://cucumber.io/blog/bdd/isn-t-the-business-readable-documentation-just-ove/)
-3.  [What’s wrong with changing the scenarios to enable automation?](https://cucumber.io/blog/bdd/what-s-wrong-with-changing-the-scenarios-to-enabl/)
-4.  [Can all testing be automated?](https://cucumber.io/blog/bdd/can-all-testing-be-automated/)
+1.  [Why should automation be done by the dev team?](/blog/bdd/why-should-automation-be-done-by-the-dev-team/)
+2.  [Isn’t the business-readable documentation just extra overhead?](/blog/bdd/isn-t-the-business-readable-documentation-just-ove/)
+3.  [What’s wrong with changing the scenarios to enable automation?](/blog/bdd/what-s-wrong-with-changing-the-scenarios-to-enabl/)
+4.  [Can all testing be automated?](/blog/bdd/can-all-testing-be-automated/)
 5.  How can Cucumber help us understand the root causes of failure?
 
 ## The question
@@ -30,7 +30,7 @@ The test automation pyramid has been widely discussed in the industry for many y
 
 ![](/img/blog/fc9024e12abb89080327fd2de4614b5c534c588d852e9ef17277c046c0d44ba5.png)
 
-I wrote a [lengthy blog post](https://cucumber.io/blog/bdd/eviscerating-the-test-automation-pyramid/) on the subject a few months ago, which I will not repeat here in its entirety, but there is a section that directly addresses the question:
+I wrote a [lengthy blog post](/blog/bdd/eviscerating-the-test-automation-pyramid/) on the subject a few months ago, which I will not repeat here in its entirety, but there is a section that directly addresses the question:
 
 > \[Tests at the bottom of the pyramid\] should exercise as little of the application as they can. These tests should document the behaviour and validate the correctness of small amounts of code. As we move up the \[pyramid\], we will write fewer tests, but they will exercise progressively more of the application. At the same time, the intent of the tests changes to documenting the interaction between components, the messages they pass between each other, and the protocols that they use. This includes behaviours such as validation and error handling.
 > 
@@ -52,7 +52,7 @@ So, Cucumber scenarios may be implemented to run anywhere in the test automation
 
 ## BRIEF
 
-In the second volume of the [BDD Books series](http://bddbooks.com/), **_Formulation_**, [Gáspár Nagy](https://www.linkedin.com/in/gasparnagy/) and I introduce the [BRIEF acronym](https://cucumber.io/blog/bdd/keep-your-scenarios-brief/). The last letter in the acronym, “F”, stands for “focused” which we describe in this way:
+In the second volume of the [BDD Books series](http://bddbooks.com/), **_Formulation_**, [Gáspár Nagy](https://www.linkedin.com/in/gasparnagy/) and I introduce the [BRIEF acronym](/blog/bdd/keep-your-scenarios-brief/). The last letter in the acronym, “F”, stands for “focused” which we describe in this way:
 
 **_Focused:_** _Most scenarios should be focused on illustrating a single rule._
 

@@ -127,7 +127,7 @@ So, while the term user story is widely used, it can mean very different things 
 
 ## Next time...
 
-In this post, I've given an overview of the evolution of the user story as it is commonly used today. [Next time](https://cucumber.io/blog/bdd/user-stories-and-bdd-\(part-2\)-discovery/), I'll be digging into the BDD practice of _Discovery_, and the uncomfortable metamorphosis that stories undergo in the process.
+In this post, I've given an overview of the evolution of the user story as it is commonly used today. [Next time](/blog/bdd/user-stories-and-bdd-\(part-2\)-discovery/), I'll be digging into the BDD practice of _Discovery_, and the uncomfortable metamorphosis that stories undergo in the process.
 
 ## Other references
 

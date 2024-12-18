@@ -9,7 +9,7 @@ tags:
 image: /img/blog/ec87a38f973aea9caf08f3c09e38a143cf702aafbb660687ccb15cbd94dcaf2a.png
 ---
 
-We recently ran a survey as part of the work to bring [Cucumber into the SmartBear and HipTest family](https://cucumber.io/blog/cucumber-acquired-by-smartbear/). It was a quick sample (189 responses collected in under a week) rather than in-depth research, but it yielded a couple of interesting indicators that I want to share.
+We recently ran a survey as part of the work to bring [Cucumber into the SmartBear and HipTest family](/blog/cucumber-acquired-by-smartbear/). It was a quick sample (189 responses collected in under a week) rather than in-depth research, but it yielded a couple of interesting indicators that I want to share.
 
 <!-- truncate -->
 

@@ -11,10 +11,10 @@ I’ve been writing and talking about test automation and BDD for quite a while 
 The conference organiser, Joe Colantonio, hosted a Q&A session after the talk, but there wasn’t enough time to answer all of the questions. Handily, he provided me with a list of all the questions asked, along with his estimation of their “sentiment” – either neutral or negative. In this series of posts, I am going to address the five unanswered questions that he marked as having a negative sentiment.
 
 -   Why should automation be done by the dev team?
--   [Isn’t the business-readable documentation just extra overhead?](https://cucumber.io/blog/bdd/isn-t-the-business-readable-documentation-just-ove/)
--   [What’s wrong with changing the scenarios to enable automation?](https://cucumber.io/blog/bdd/what-s-wrong-with-changing-the-scenarios-to-enabl/)
--   [Can all testing be automated?](https://cucumber.io/blog/bdd/can-all-testing-be-automated/)
--   [How can Cucumber help us understand the root causes of failure?](https://cucumber.io/blog/bdd/how-can-cucumber-help-us-understand-the-root-cause/)
+-   [Isn’t the business-readable documentation just extra overhead?](/blog/bdd/isn-t-the-business-readable-documentation-just-ove/)
+-   [What’s wrong with changing the scenarios to enable automation?](/blog/bdd/what-s-wrong-with-changing-the-scenarios-to-enabl/)
+-   [Can all testing be automated?](/blog/bdd/can-all-testing-be-automated/)
+-   [How can Cucumber help us understand the root causes of failure?](/blog/bdd/how-can-cucumber-help-us-understand-the-root-cause/)
 
 ## The question
 
@@ -42,7 +42,7 @@ This approach is widespread and valuable but has some drawbacks. If you’d like
 
 ## BDD
 
-Behaviour-driven development (BDD) is an approach that grew out of test-driven development (TDD) and agile software development. [The goals of BDD](https://cucumber.io/docs/bdd/) are:
+Behaviour-driven development (BDD) is an approach that grew out of test-driven development (TDD) and agile software development. [The goals of BDD](/docs/bdd/) are:
 
 -   Encouraging collaboration across roles to build shared understanding of the problem to be solved
 -   Working in rapid, small iterations to increase feedback and the flow of value

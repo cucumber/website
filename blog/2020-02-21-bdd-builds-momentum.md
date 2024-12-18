@@ -30,7 +30,7 @@ During discovery, the team will actively expose ambiguities and assumptions, wor
 
 ## The team breaks the work into small pieces (a couple days of work at most) that still represent incremental business value (even if not user-facing features)
 
-It’s also during discovery that the team begins to explore the scope of a story. More often than not, we discover that the story is more complicated than it had seemed when we first looked at it. Using specific examples, we’re able to [decompose large stories](https://cucumber.io/blog/bdd/user-stories-and-bdd-part-3/) into smaller increments.
+It’s also during discovery that the team begins to explore the scope of a story. More often than not, we discover that the story is more complicated than it had seemed when we first looked at it. Using specific examples, we’re able to [decompose large stories](/blog/bdd/user-stories-and-bdd-part-3/) into smaller increments.
 
 Because they’re regularly collaborating on discovery work to build shared understanding, they have an awareness of  the wider business context, allowing them to collaboratively prioritise each small increment. This regularly allows most of the business value to be delivered in a fraction of the time that it would have taken to deliver the whole story.
 

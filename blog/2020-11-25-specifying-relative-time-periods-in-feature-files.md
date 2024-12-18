@@ -16,7 +16,7 @@ I have a different take to Gojko, that is more in line with the community respon
 
 My colleague, Gáspár Nagy, and I created the BRIEF acronym to capture six principles that we find useful when writing scenarios. I’m going to critique Gojko’s solution using these principles.
 
-We’ve written about BRIEF in the second book in our BDD series, [Formulation](https://leanpub.com/bddbooks-formulation), and there's also a [blog post about it](https://cucumber.io/blog/bdd/keep-your-scenarios-brief/). Here is a high-level summary of the acronym to help you read this article:
+We’ve written about BRIEF in the second book in our BDD series, [Formulation](https://leanpub.com/bddbooks-formulation), and there's also a [blog post about it](/blog/bdd/keep-your-scenarios-brief/). Here is a high-level summary of the acronym to help you read this article:
 
 |   | Name                | Meaning                                                                           |
 |---|---------------------|-----------------------------------------------------------------------------------|
