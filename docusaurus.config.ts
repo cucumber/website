@@ -151,7 +151,7 @@ export default {
           src: 'https://www.netlify.com/v3/img/components/netlify-color-accent.svg',
           href: 'https://www.netlify.com',
         },
-        copyright: `Copyright © ${new Date().getFullYear()} The Cucumber Open Source Project`,
+        copyright: `Copyright © 2014-${new Date().getFullYear()} The Cucumber Open Source Project`,
       },
       docs: {
         sidebar: {
