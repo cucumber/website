@@ -173,7 +173,7 @@ An example using Cucumber expressions:
 ### How do I use lambdas to define step definitions?
 
 To use lambdas to define your step definitions, make sure to use the `cucumber-java8` dependency, instead of the `cucumber-java` dependency.
-You can find the required dependencies [here](https://docs.cucumber.io/installation/java/).
+You can find the required dependencies [here](./installation/java.md).
 
 For an example on how to use them in Java, see this [code example](https://github.com/cucumber/cucumber-jvm/blob/main/examples/calculator-java8-cli/src/test/java/io/cucumber/examples/calculator/RpnCalculatorSteps.java). For Kotlin, see this [code example](https://github.com/cucumber/cucumber-jvm/blob/main/cucumber-kotlin-java8/src/test/kotlin/io/cucumber/kotlin/LambdaStepDefinitions.kt).
 
