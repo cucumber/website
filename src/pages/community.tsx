@@ -22,7 +22,11 @@ export default function Community() {
           <p className="readable-blurb margin-bottom--lg">
             Wherever you interact with the Cucumber community,
             <br />
-            always remember to respect and uphold our <Link to="/conduct">Code of Conduct</Link>.
+            always remember to respect and uphold our{' '}
+            <Link to="https://github.com/cucumber/.github/tree/main?tab=coc-ov-file">
+              Code of Conduct
+            </Link>
+            .
           </p>
           <div className="row text--center">
             <div className="col col--4">
