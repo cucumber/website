@@ -15,7 +15,7 @@ Today is a big day for Cucumber.
 
 ## What is happening today?
 
-What this means technically is that the intellectual property assets (the `cucunber.io` domain where this blog is hosted, the name trademarks and brand etc.) are transitioning from the ownership of SmartBear Software, into the [Open Source Collective](https://oscollective.org/) (OSC).
+What this means technically is that the intellectual property assets (the `cucumber.io` domain where this blog is hosted, the name trademarks and brand etc.) are transitioning from the ownership of SmartBear Software, into the [Open Source Collective](https://oscollective.org/) (OSC).
 
 OSC is a 501(c)(6) non-profit registered in the USA, providing a similar service to open source projects as other foundations like the [Apache Software Foundation](https://www.apache.org/), [Linux Foundation](https://www.linuxfoundation.org/) or [Software Freedom Conservancy](https://sfconservancy.org/). With control of the name and domain back in the hands of the community, we will be able to move the project forward independently, free from the commercial priorities of any single organisation.
 
