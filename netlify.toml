@@ -1,11 +1,15 @@
-# Paths that only made sense on the SmartBear site
+# Vanity URLs for external stuff
 [[redirects]]
-  from = "/tools"
-  to = "/"
+  from = "/conduct"
+  to = "https://github.com/cucumber/.github/tree/main?tab=coc-ov-file"
+  status = 302
+[[redirects]]
+  from = "/school"
+  to = "https://school.cucumber.io"
   status = 301
 [[redirects]]
-  from = "/tools/cucumber-open"
-  to = "/"
+  from = "/school/*"
+  to = "https://school.cucumber.io"
   status = 301
 
 # Paths for SmartBear products
@@ -25,18 +29,32 @@
   from = "/tools/cucumber-for-jira/*"
   to = "https://smartbear.com/product/cucumber-for-jira/:splat/"
   status = 301
-
-# Simplified paths
 [[redirects]]
-  from = "/tools/cucumber-open/sponsors"
-  to = "/sponsors"
+  from = "/living-documentation"
+  to = "https://smartbear.com/product/cucumber-for-jira/"
   status = 301
 
-# Vanity URLs for external stuff
+# Other Tools variants
 [[redirects]]
-  from = "/conduct"
-  to = "https://github.com/cucumber/.github/tree/main?tab=coc-ov-file"
-  status = 302
+  from = "/tools"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/tools/cucumber-open/support"
+  to = "/community"
+  status = 301
+[[redirects]]
+  from = "/tools/cucumber-open/team"
+  to = "/community"
+  status = 301
+[[redirects]]
+  from = "/tools/cucumber-open/*"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/tools/cucumber-open"
+  to = "/"
+  status = 301
 
 # Blog posts with parens in the slug
 [[redirects]]
@@ -68,16 +86,110 @@
   to = "/blog/bdd/keep-your-scenarios-brief"
   status = 301
 
+# Blog tags
+[[redirects]]
+  from = "/blog/news"
+  to = "/blog"
+  status = 301
+[[redirects]]
+  from = "/blog/bdd"
+  to = "/blog/tags/bdd"
+  status = 301
+[[redirects]]
+  from = "/blog/open-source"
+  to = "/blog/tags/open-source"
+  status = 301
+
 # Relocated docs
 [[redirects]]
-  from = "/docs/community/get-in-touch"
-  to = "/docs/community"
+  from = "/docs/guides/overview"
+  to = "/docs"
   status = 301
 [[redirects]]
   from = "/docs/community/contributing"
   to = "/docs/contributing"
   status = 301
 [[redirects]]
+  from = "/docs/community/faq"
+  to = "/docs/faq"
+  status = 301
+[[redirects]]
+  from = "/tools/cucumber-open/contribute"
+  to = "/docs/contributing"
+  status = 301
+[[redirects]]
+  from = "/contribute"
+  to = "/docs/contributing"
+  status = 301
+[[redirects]]
   from = "/docs/community/contributing-to-documentation"
   to = "https://github.com/cucumber/website/blob/main/CONTRIBUTING.md"
+  status = 301
+[[redirects]]
+  from = "/docs/tools/general"
+  to = "/docs/tools"
+  status = 301
+
+# Events aliases
+[[redirects]]
+  from = "/resources/events"
+  to = "/events"
+  status = 301
+[[redirects]]
+  from = "/speakers"
+  to = "/events"
+  status = 301
+[[redirects]]
+  from = "/cukenfest"
+  to = "/events"
+  status = 301
+
+# Sponsor aliases
+[[redirects]]
+  from = "/tools/cucumber-open/sponsors"
+  to = "/sponsors"
+  status = 301
+
+# Learn aliases
+[[redirects]]
+  from = "/docs/professional"
+  to = "/learn"
+  status = 301
+[[redirects]]
+  from = "/docs/professional/*"
+  to = "/learn"
+  status = 301
+[[redirects]]
+  from = "/resources"
+  to = "/learn"
+  status = 301
+[[redirects]]
+  from = "/resources/*"
+  to = "/learn"
+  status = 301
+
+# Community aliases
+[[redirects]]
+  from = "/docs/community/get-in-touch"
+  to = "/community"
+  status = 301
+[[redirects]]
+  from = "/docs/community/*"
+  to = "/community"
+  status = 301
+[[redirects]]
+  from = "/docs/community"
+  to = "/community"
+  status = 301
+[[redirects]]
+  from = "/support"
+  to = "/community"
+  status = 301
+[[redirects]]
+  from = "/team"
+  to = "/community"
+  status = 302
+[[redirects]]
+  from = "/contact-us"
+  to = "/community"
   status = 301

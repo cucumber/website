@@ -82,7 +82,7 @@ Before we begin, you'll need the following:
     mvn archetype:generate                     \
     "-DarchetypeGroupId=io.cucumber"           \
     "-DarchetypeArtifactId=cucumber-archetype" \
-    "-DarchetypeVersion=7.20.1"                \
+    "-DarchetypeVersion={{% version "cucumberjvm" %}}                 \
     "-DgroupId=hellocucumber"                  \
     "-DartifactId=hellocucumber"               \
     "-Dpackage=hellocucumber"                  \
@@ -313,7 +313,7 @@ Before we begin, you'll need the following:
         "author": "",
         "license": "ISC",
         "devDependencies": {
-            "@cucumber/cucumber": "^11.1.1"
+            "@cucumber/cucumber": "^{{% version "cucumberjs" %}}"
         }
     }
     ```
@@ -360,8 +360,8 @@ Before we begin, you'll need the following:
     source "https://rubygems.org"
 
     group :test do
-        gem 'cucumber', '~> 9.2.0'
-        gem 'rspec', '~> 3.13.0'
+        gem 'cucumber', '~> {{% version "cucumberruby" %}}'
+        gem 'rspec', '~> {{% version "rspec" %}}'
     end
     ```
 

@@ -31,7 +31,7 @@ See the [cucumber-junit-platform-engine documentation](https://github.com/cucumb
 
 Cucumber can be executed in parallel using **JUnit and Maven test execution plugins**. In JUnit the **feature files are run in parallel rather than scenarios**, which means **all the scenarios in a feature file will be executed by the same thread**. You can use either Maven Surefire or Failsafe plugin to execute the runners.
 
-- Create a Maven project in your favorite IDE using the [cucumber-archetype](/docs/guides/10-minute-tutorial/#create-an-empty-cucumber-project) or by adding Cucumber dependencies to the POM as detailed [here](https://cucumber.io/docs/installation/java/#maven) and Junit dependencies [here](/docs/cucumber/checking-assertions/#junit).
+- Create a Maven project in your favorite IDE using the [cucumber-archetype](/docs/guides/10-minute-tutorial/#create-an-empty-cucumber-project) or by adding Cucumber dependencies to the POM as detailed [here](../installation/java.md#maven) and Junit dependencies [here](../cucumber/checking-assertions.md#junit).
 - Create a **parallel** folder (or any other name) in `src/test/resources` path and add the two feature files (`scenarios.feature` and `scenario-outlines.feature`) inside it.
 
 ```gherkin
@@ -204,7 +204,7 @@ In case of **multiple runners** one can also set the parallel option to `classes
 
 Cucumber can be executed in parallel using **TestNG and Maven test execution plugins** by setting the **dataprovider parallel option to true**. In TestNG the **scenarios and rows in a scenario outline are executed in multiple threads**. One can use either Maven Surefire or Failsafe plugin for executing the runners.
 
-- Create a Maven project in your favorite IDE adding Cucumber dependencies to the POM as detailed [here](https://cucumber.io/docs/installation/java/#maven) and TestNG dependencies [here](/docs/cucumber/checking-assertions/#testng).
+- Create a Maven project in your favorite IDE adding Cucumber dependencies to the POM as detailed [here](../installation/java.md#maven) and TestNG dependencies [here](/docs/cucumber/checking-assertions/#testng).
 - Add the two feature files (`scenarios.feature` and `scenario-outlines.feature`) and **step definition class** as described in the JUnit section.
 <Content lang="java">
 - Add a cucumber **runner** by **extending** the `AbstractTestNGCucumberTests` class and **overriding the scenarios method** in the `parallel` package (same name as step definition package) in `src/test/java` folder. Set the **parallel option value to true** for the DataProvider annotation.

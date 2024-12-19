@@ -22,7 +22,7 @@ Traceability is a big deal. In regulated industries it’s a legal necessity to 
 
 ## BDD isn’t a methodology
 
-[Behaviour-Driven Development (BDD)](https://cucumber.io/docs/bdd/) is a set of practices (Discovery, Formulation, Automation) that help enable teams to deliver software in an iterative and incremental way. We have seen how BDD can be a game-changer for organisations that aspire to agility (which is most of them), but we realise that there is more to delivering valuable software than the BDD practices.
+[Behaviour-Driven Development (BDD)](/docs/bdd/) is a set of practices (Discovery, Formulation, Automation) that help enable teams to deliver software in an iterative and incremental way. We have seen how BDD can be a game-changer for organisations that aspire to agility (which is most of them), but we realise that there is more to delivering valuable software than the BDD practices.
 
 ![](/img/blog/f0cc3c65859ca842c2d58cd31bd5fa40ee7f5594b4a71dd1dcbd151eb02affce.png)
 
@@ -44,7 +44,7 @@ The first practice of BDD, [Discovery](http://bddbooks.com), starts when the tea
 
 Over time requirements will change. Any approach we have that tracks the progress of requirements from inception to delivery needs to accommodate their dynamic nature. For this approach to be useful we need to be able to traverse and query the relationships to ensure, for example, that every requirement has a sponsor, or that every test has a successful execution.
 
-[Cucumber](https://cucumber.io/docs/installation/) provides a subset of this functionality out-of-the-box. Feature files document the requirements and Cucumber automatically verifies them against them against the software that has been delivered. All divergences between requirements and implementation are reported immediately.
+[Cucumber](/docs/installation/) provides a subset of this functionality out-of-the-box. Feature files document the requirements and Cucumber automatically verifies them against them against the software that has been delivered. All divergences between requirements and implementation are reported immediately.
 
 The limitation is that BDD and Cucumber concern themselves with only a subset of the full software lifecycle, leaving pre-Discovery and post-Automation traceability as an exercise for each organisation to solve. Additionally, while the Cucumber eco-system is relatively well-served with developer tools that can navigate from feature file to code to test result, there is currently no way to easily expose these relationships in a business-friendly way.
 

@@ -1,0 +1,48 @@
+.resource {
+  align-items: center;
+}
+
+.resourceGraphic {
+  display: flex;
+  justify-content: flex-end;
+
+  img {
+    max-height: 175px;
+
+    & + img {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.schoolStack {
+  position: relative;
+  max-width: 300px;
+
+  img:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform-origin: 50% 50%;
+    transform: rotate(3deg);
+  }
+
+  img:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform-origin: 50% 50%;
+    transform: rotate(-2deg);
+  }
+}
+
+// breakpoint for infima grid dropping down to single column
+@media all and (max-width: 996px) {
+  .resource {
+    text-align: center;
+  }
+
+  .resourceGraphic {
+    justify-content: center;
+  }
+}

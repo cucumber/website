@@ -24,7 +24,7 @@ Gherkin had been incredibly stable for almost a decade, but in late 2018 a new k
 
 Matt Wynne discovered example mapping while helping a client’s team. They were struggling to analyse the details of a user story and Matt used a deck of coloured index cards to help teach them a structured way of reaching a shared understanding of what behaviour the story should deliver.
 
-If you’re not familiar with example mapping, then I suggest you spend a few minutes reading Matt’s excellent introductory article, [Introducing Example Mapping](https://cucumber.io/blog/bdd/example-mapping-introduction/). For the purposes of this article, the salient point is that example mapping concerns itself with four concepts, each represented by a coloured card: Story (yellow), Rule (blue), Example (green), and Question (red).
+If you’re not familiar with example mapping, then I suggest you spend a few minutes reading Matt’s excellent introductory article, [Introducing Example Mapping](/blog/bdd/example-mapping-introduction/). For the purposes of this article, the salient point is that example mapping concerns itself with four concepts, each represented by a coloured card: Story (yellow), Rule (blue), Example (green), and Question (red).
 
 Once example mapping is complete, you should have a structure that looks something like this:
 
@@ -42,7 +42,7 @@ Gherkin scenarios are written in _feature_ files. Each feature file describes so
 
 Of the four card types used in example mapping, only two of them should be captured in feature files – the rules and the examples.
 
-The story card should not be reflected in a feature file, because a user story is a transient artefact of prioritisation and planning. [I’ve talked about this at length](https://cucumber.io/blog/bdd/user-stories-are-not-the-same-as-features/).
+The story card should not be reflected in a feature file, because a user story is a transient artefact of prioritisation and planning. [I’ve talked about this at length](/blog/bdd/user-stories-are-not-the-same-as-features/).
 
 Question cards should not be reflected in a feature file, because they should be answered before the example map is formulated as scenarios. The answers to the question cards may well have caused the creation of rules and/or examples which need to be documented in the feature file, but the questions themselves are transient.
 
@@ -54,7 +54,7 @@ Each example in an example map illustrates one (and only one) rule. The relation
 
 You would therefore expect Gherkin to provide a mechanism for documenting the rule that each scenario illustrates, but until Gherkin 6 this was not possible. The root cause is that Matt discovered example mapping **_after_** BDD, Cucumber, and Gherkin were created.
 
-For over five years, the recommendation was to record the rules illustrated in a feature file as part of the [feature file description](https://cucumber.io/docs/gherkin/reference/#feature) – a free text portion following the feature’s name.
+For over five years, the recommendation was to record the rules illustrated in a feature file as part of the [feature file description](/docs/gherkin/reference/#feature) – a free text portion following the feature’s name.
 
 ```gherkin
 Feature: Library changes
@@ -96,7 +96,7 @@ Modern IDEs are able to display scenarios grouped by rule – and results of aut
 
 ## Inconsistent tagging
 
-In the effort to add the Rule keyword to Gherkin, an important piece of functionality was overlooked. Gherkin supports the ability to _tag_ features and scenarios with domain-specific text. The tags can be used for many purposes, including the [creation of documentation subsets and the selective invocation of automation code](https://cucumber.io/docs/cucumber/api/#tags).
+In the effort to add the Rule keyword to Gherkin, an important piece of functionality was overlooked. Gherkin supports the ability to _tag_ features and scenarios with domain-specific text. The tags can be used for many purposes, including the [creation of documentation subsets and the selective invocation of automation code](/docs/cucumber/api/#tags).
 
 Each Gherkin scenario can have a distinct set of tags applied to it, but all scenarios in a feature file also inherit any tags applied at the feature file level. Since scenarios notionally illustrate a rule, it would make sense for them to inherit any tags applied at the rule level as well.
 

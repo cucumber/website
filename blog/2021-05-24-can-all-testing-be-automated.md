@@ -8,11 +8,11 @@ tags: [BDD]
 
 I’m continuing to answer questions that were asked during my session [“Are BDD and test automation the same thing?”](https://www.slideshare.net/sebrose/are-bdd-and-test-automation-the-same-thing-automation-guild-2021) at the [Automation Guild conference](https://guildconferences.com/ag-2021/) in February 2021. This is the fourth of five posts.
 
-1.  [Why should automation be done by the dev team?](https://cucumber.io/blog/bdd/why-should-automation-be-done-by-the-dev-team/)
-2.  [Isn’t the business-readable documentation just extra overhead?](https://cucumber.io/blog/bdd/isn-t-the-business-readable-documentation-just-ove/)
-3.  [What’s wrong with changing the scenarios to enable automation?](https://cucumber.io/blog/bdd/what-s-wrong-with-changing-the-scenarios-to-enabl/)
+1.  [Why should automation be done by the dev team?](/blog/bdd/why-should-automation-be-done-by-the-dev-team/)
+2.  [Isn’t the business-readable documentation just extra overhead?](/blog/bdd/isn-t-the-business-readable-documentation-just-ove/)
+3.  [What’s wrong with changing the scenarios to enable automation?](/blog/bdd/what-s-wrong-with-changing-the-scenarios-to-enabl/)
 4.  Can all testing be automated?
-5.  [How can Cucumber help us understand the root causes of failure?](https://cucumber.io/blog/bdd/how-can-cucumber-help-us-understand-the-root-cause/)
+5.  [How can Cucumber help us understand the root causes of failure?](/blog/bdd/how-can-cucumber-help-us-understand-the-root-cause/)
 
 ## The question
 
@@ -28,7 +28,7 @@ This question hints at the tension between automated tests and confidence in our
 
 ## Repeatability
 
-I’ve written at length about the [test automation pyramid](https://cucumber.io/blog/bdd/eviscerating-the-test-automation-pyramid/), so I’ll not repeat most of that here. There is an important conclusion that I do want to summarise, and it’s this:
+I’ve written at length about the [test automation pyramid](/blog/bdd/eviscerating-the-test-automation-pyramid/), so I’ll not repeat most of that here. There is an important conclusion that I do want to summarise, and it’s this:
 
 _We invest in small, fast, repeatable tests (at the bottom of the pyramid) because they only fail when there’s a problem with **the thing that they were created to test**_
 

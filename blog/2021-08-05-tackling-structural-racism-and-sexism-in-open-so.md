@@ -11,7 +11,7 @@ tags:
   - Sexism
 ---
 
-One of the [goals the Cucumber team have set ourselves this year](https://cucumber.io/blog/open-source/what-are-the-cucumber-open-team-s-goals-for-2021/) is to increase the number of recent, regular contributors who are non-white or non-male from 0 to 2. This post describes **why** we want to do this, **what** we’ve learned so far about the systemic barriers that keep the community of people who contribute to open source so [utterly imbalanced](https://www.wired.com/2017/06/diversity-open-source-even-worse-tech-overall/), and outlines **how** we’ve started tackling the problem in our own project.
+One of the [goals the Cucumber team have set ourselves this year](/blog/open-source/what-are-the-cucumber-open-team-s-goals-for-2021/) is to increase the number of recent, regular contributors who are non-white or non-male from 0 to 2. This post describes **why** we want to do this, **what** we’ve learned so far about the systemic barriers that keep the community of people who contribute to open source so [utterly imbalanced](https://www.wired.com/2017/06/diversity-open-source-even-worse-tech-overall/), and outlines **how** we’ve started tackling the problem in our own project.
 
 <!-- truncate -->
 
@@ -77,6 +77,6 @@ Like a usability test, this is a great way for me to see, in real-time, what get
 
 We’d like to make this a regular event, with lots of people showing up to learn and teach each other about contributing to open source projects, not necessarily Cucumber!
 
-Watch the stream to pick up some tips for yourself about how to get started in open source or, if you’re interested in taking part, get in touch. The easiest way for us would be if you join the [Cucumber Community Slack](https://cucumber.io/community#slack) and find us in the [#new-contributors](https://cucumberbdd.slack.com/archives/C028E2TBDJQ) channel, but you can also [ping me on Twitter](https://twitter.com/mattwynne/), my DMs are open.
+Watch the stream to pick up some tips for yourself about how to get started in open source or, if you’re interested in taking part, get in touch. The easiest way for us would be if you join the [Cucumber Community Slack](/community#slack) and find us in the [#new-contributors](https://cucumberbdd.slack.com/archives/C028E2TBDJQ) channel, but you can also [ping me on Twitter](https://twitter.com/mattwynne/), my DMs are open.
 
 If you have any other ideas or experiences to share about this topic, I'd love to hear from you.

@@ -4,14 +4,22 @@ import clsx from 'clsx'
 import styles from './community.module.scss'
 import Link from '@docusaurus/Link'
 import { Subscribe } from '@site/src/components/Newsletter'
+import Head from '@docusaurus/Head'
 
 export default function Community() {
   return (
     <Layout>
+      <Head>
+        <title>The Cucumber Community</title>
+        <meta
+          name="description"
+          content="Cucumber has a thriving community made up of kinds of people, from the project's long-standing maintainers to first-time users and everyone in between."
+        />
+      </Head>
       <main>
-        <div className="container readable-blurb text--center padding-vert--lg">
+        <div className="container text--center padding-vert--lg">
           <h1>The Cucumber Community</h1>
-          <p>
+          <p className="readable-blurb">
             Cucumber has a thriving community made up of kinds of people, from the project's
             long-standing maintainers to first-time users and everyone in between.
           </p>
@@ -22,7 +30,11 @@ export default function Community() {
           <p className="readable-blurb margin-bottom--lg">
             Wherever you interact with the Cucumber community,
             <br />
-            always remember to respect and uphold our <Link to="/conduct">Code of Conduct</Link>.
+            always remember to respect and uphold our{' '}
+            <Link to="https://github.com/cucumber/.github/tree/main?tab=coc-ov-file">
+              Code of Conduct
+            </Link>
+            .
           </p>
           <div className="row text--center">
             <div className="col col--4">

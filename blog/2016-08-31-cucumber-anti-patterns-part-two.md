@@ -6,9 +6,9 @@ authors:
 tags: []
 ---
 
-If you haven't read our first blog post already, start by doing that [over here](https://cucumber.io/blog/2016/07/01/cucumber-antipatterns-part-one). Some of the examples we use in the first post will be referenced below.
+If you haven't read our first blog post already, start by doing that [over here](/blog/2016/07/01/cucumber-antipatterns-part-one). Some of the examples we use in the first post will be referenced below.
 
-Practicing Cucumber and BDD is often tricky for new teams. There's plenty of information out there, but who to believe? Core to our business is helping teams around the world implement BDD practices into production. In the past few years we've helped hundreds of teams do this successfully through our [in-house](https://cucumber.io/training) and [online training](https://cucumber.io/school).
+Practicing Cucumber and BDD is often tricky for new teams. There's plenty of information out there, but who to believe? Core to our business is helping teams around the world implement BDD practices into production. In the past few years we've helped hundreds of teams do this successfully through our [in-house](/training) and [online training](/school).
 
 This post is an edited conversation between Cucumber's Steve Tooke, Aslak Hellesøy and Matt Wynne.
 

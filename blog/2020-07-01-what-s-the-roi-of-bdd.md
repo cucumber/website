@@ -22,7 +22,7 @@ Changing how we work always incurs a cost, and Behaviour-Driven Development is n
 
 ## BDD is more than fixing defects early
 
-BDD is an approach to delivering software consisting of three core practices: [Discovery, Formulation, and Automation](https://cucumber.io/docs/bdd/). Together they promise to reduce the cost of development, maintenance, and enhancement over the life of a software product.
+BDD is an approach to delivering software consisting of three core practices: [Discovery, Formulation, and Automation](/docs/bdd/). Together they promise to reduce the cost of development, maintenance, and enhancement over the life of a software product.
 
 For many decades, there has been a belief that fixing defects early in the development cycle (e.g. during specification) is orders of magnitude cheaper than fixing them later (e.g. during acceptance testing). This belief is founded in a large part on the work of [Barry Boehm](https://www.amazon.co.uk/Engineering-Economics-Prentice-Hall-Computing-Technology/dp/0138221227) and his Boehm curve \[see below\]. However, this has been effectively debunked by [Bossavit](https://leanpub.com/leprechauns) and other research (notably [Menzies et al](https://link.springer.com/article/10.1007/s10664-016-9469-x)).
 
@@ -52,7 +52,7 @@ Additionally, since the terminology is rooted in the business domain of the busi
 
 ## Automation
 
-There are several tools available (e.g. [Cucumber](https://cucumber.io/tools/cucumber-open/)) that allow teams to automatically validate their business-readable documentation against the software product that they are building. This delivers several major benefits:
+There are several tools available (e.g. [Cucumber](/tools/cucumber-open/)) that allow teams to automatically validate their business-readable documentation against the software product that they are building. This delivers several major benefits:
 
 -   Reliable, _[living documentation](https://leanpub.com/livingdocumentation)_ that automatically informs the team when it is incorrect or out-of-date. This is immediately beneficial, but its value grows over time as the product evolves and the team members change.
 -   Automated, business-readable acceptance tests, enabling business stakeholders to directly observe the progress of development, without the expense of generating additional reports.

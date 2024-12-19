@@ -24,7 +24,7 @@
     "clsx": "^2.0.0",
     "docusaurus-plugin-sass": "^0.2.5",
     "lodash.sortby": "^4.7.0",
-    "prism-react-renderer": "2.4.0",
+    "prism-react-renderer": "2.4.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "sass": "^1.69.3"
@@ -35,7 +35,9 @@
     "@docusaurus/types": "^3.1.1",
     "@tsconfig/docusaurus": "2.0.3",
     "@types/lodash.sortby": "^4.7.9",
+    "globby": "^14.0.2",
     "prettier": "^3.4.2",
+    "rehype-rewrite": "^4.0.2",
     "yaml": "^2.6.1"
   },
   "browserslist": {

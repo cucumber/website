@@ -15,7 +15,7 @@ This is the third in a series of articles digging into user stories, what they'r
 
 ## Previously...
 
-In the [last post](https://cucumber.io/blog/bdd/user-stories-and-bdd-\(part-2\)-discovery/) we followed a user story through the process of [Discovery](http://bddbooks.com/). We saw that the main purpose for a user story was to minimise waste by making decisions at the last responsible moment, that accidental discovery is an unavoidable source of waste, but can be minimised by embracing deliberate discovery. We introduced Example Mapping as a deliberate discovery technique and observed that, through discovery, stories are transformed from a placeholder for a conversation into detailed small increments. Now it's time to talk about what we mean by "small" and why, in the context of user stories, small is beautiful.
+In the [last post](/blog/bdd/user-stories-and-bdd-\(part-2\)-discovery/) we followed a user story through the process of [Discovery](http://bddbooks.com/). We saw that the main purpose for a user story was to minimise waste by making decisions at the last responsible moment, that accidental discovery is an unavoidable source of waste, but can be minimised by embracing deliberate discovery. We introduced Example Mapping as a deliberate discovery technique and observed that, through discovery, stories are transformed from a placeholder for a conversation into detailed small increments. Now it's time to talk about what we mean by "small" and why, in the context of user stories, small is beautiful.
 
 ## Small and valuable
 
@@ -116,7 +116,7 @@ A similar thing happens if you try to populate your entire backlog with tiny sto
 
 ### Example Mapping
 
-[Example Mapping](https://cucumber.io/blog/bdd/example-mapping-introduction/) is a technique that can really help slice a medium story into a set of small stories. It’s well described elsewhere and provides a structured way to collaboratively analyse a problem and generate concrete examples of how the system should actually behave. 
+[Example Mapping](/blog/bdd/example-mapping-introduction/) is a technique that can really help slice a medium story into a set of small stories. It’s well described elsewhere and provides a structured way to collaboratively analyse a problem and generate concrete examples of how the system should actually behave. 
 
 The beauty of this technique is that the example map itself visually communicates whether the story is too big AND gives us a simple mechanism to slice it up. Because the product owner is present during example mapping, this approach has the added benefit that business priorities can be taken into account at a very fine granularity.
 
@@ -140,5 +140,5 @@ Once you set about trying to work with smaller stories, you’ll probably find t
 
 ## Next time
 
-In this post, I've indulgently allowed myself to rant about why stories should be small. Really small. [Next time](https://cucumber.io/blog/bdd/User-stories-and-BDD-features-are-not-stories), I'm going to try to pull this all together to convince you that there’s no place for stories inside your feature files.
+In this post, I've indulgently allowed myself to rant about why stories should be small. Really small. [Next time](/blog/bdd/User-stories-and-BDD-features-are-not-stories), I'm going to try to pull this all together to convince you that there’s no place for stories inside your feature files.
 

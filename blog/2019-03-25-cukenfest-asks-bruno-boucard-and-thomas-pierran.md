@@ -10,7 +10,7 @@ tags:
 
 In the build up to our annual Behaviour-Driven Development conference, [CukenFest London](http://cukenfest.cucumber.io) (April 4th-5th 2019), we've taken some time to chat to a few of our workshop leads and speakers about their experiences delivering software and what people will learn attending their session.
 
-This time we sat down with [Bruno Boucard](https://twitter.com/brunoboucard) and [Thomas Pierrain](https://twitter.com/tpierrain). Bruno and Thomas will run a workshop session on [Event Storming](https://www.eventstorming.com/) and [Example Mapping](https://cucumber.io/blog/example-mapping-introduction/), two techniques which have come to prominence in the last couple of years which help teams build understanding and explore the different routes to delivering value.
+This time we sat down with [Bruno Boucard](https://twitter.com/brunoboucard) and [Thomas Pierrain](https://twitter.com/tpierrain). Bruno and Thomas will run a workshop session on [Event Storming](https://www.eventstorming.com/) and [Example Mapping](/blog/example-mapping-introduction/), two techniques which have come to prominence in the last couple of years which help teams build understanding and explore the different routes to delivering value.
 
 <!-- truncate -->
 

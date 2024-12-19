@@ -12,7 +12,7 @@ This blog post explores the challenges of applying a Behavior-Driven Development
 
 ## What is BDD?
 
-BDD is an agile development approach in which three practices are applied to each story/backlog item: Discovery, Formulation, and Automation. Much has been [**written**](https://bddbooks.com) about BDD and there are many good [**introductory articles**](https://cucumber.io/blog/bdd) available, but here I’d like to stress that these practices must be applied in the correct order. Discovery, then Formulation, then Automation.
+BDD is an agile development approach in which three practices are applied to each story/backlog item: Discovery, Formulation, and Automation. Much has been [**written**](https://bddbooks.com) about BDD and there are many good [**introductory articles**](/blog/bdd) available, but here I’d like to stress that these practices must be applied in the correct order. Discovery, then Formulation, then Automation.
 
 ![](/img/blog/f0cc3c65859ca842c2d58cd31bd5fa40ee7f5594b4a71dd1dcbd151eb02affce.png)
 
@@ -30,7 +30,7 @@ There’s a common misconception that all BDD scenarios will be automated end to
 -   Runtime – end-to-end tests take longer to run than tests that exercise specific areas of the code.
 -   Noise – the more of the code each test exercises, the more likely it is that many tests will all hit the same code paths. So, an error in that code path will cause all the tests that use it to fail, even if that part of the code has nothing to do with the business behavior the scenario was created to specify. In the face of multiple failing scenarios, it’s hard to diagnose which behavior has deviated from specification.
 
-![](/img/blog/909149ef6ed2be5eefa5cc79cb4de1c06b2073038ec653bb21e9b0fb085624c3.png)[https://cucumber.io/blog/bdd/eviscerating-the-test-automation-pyramid/](https://cucumber.io/blog/bdd/eviscerating-the-test-automation-pyramid/)
+![](/img/blog/909149ef6ed2be5eefa5cc79cb4de1c06b2073038ec653bb21e9b0fb085624c3.png)[https://cucumber.io/blog/bdd/eviscerating-the-test-automation-pyramid/](/blog/bdd/eviscerating-the-test-automation-pyramid/)
 
 The **Test Automation Pyramid** is a common metaphor that suggests most tests should not be end to end. Applying this approach to BDD automation means that we should consider the most appropriate automation to ensure that a specific behavior has been implemented as specified.
 

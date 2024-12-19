@@ -1,20 +1,31 @@
 import { Config } from '@docusaurus/types'
 import { themes } from 'prism-react-renderer'
+import { globbySync } from 'globby'
 import YAML from 'yaml'
 import { readFileSync } from 'node:fs'
 
 const lightCodeTheme = themes.jettwaveLight
-const darkCodeTheme = themes.jettwaveDark
+const darkCodeTheme = {
+  ...themes.jettwaveDark,
+  plain: {
+    ...themes.jettwaveDark.plain,
+    backgroundColor: 'var(--ifm-navbar-background-color)',
+  },
+}
+
+const platformsCount = globbySync('docs/installation/*.md').length
+
+const versions = YAML.parse(readFileSync('./versions.yaml', { encoding: 'utf-8' }))
 
 export default {
   title: 'Cucumber',
   tagline: 'lets you write automated tests in plain language',
   favicon: 'img/logo.svg',
   stylesheets: [
-    '//fonts.googleapis.com/css2?family=Inconsolata&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap',
+    '//fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap',
   ],
 
-  url: 'https://cucumber.community',
+  url: 'https://cucumber.io',
   baseUrl: '/',
 
   onBrokenLinks: 'warn', // TODO change to throw once we start migrating docs
@@ -41,6 +52,21 @@ export default {
           remarkPlugins: [
             [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true, converters: ['yarn'] }],
           ],
+          rehypePlugins: [
+            [
+              require('rehype-rewrite'),
+              {
+                rewrite: (node) => {
+                  if (node.type == 'text') {
+                    node.value = node.value?.replaceAll(
+                      /{{% ?version "(\w+)" ?%}}/g,
+                      (match, name) => versions[name]
+                    )
+                  }
+                },
+              },
+            ],
+          ],
         },
         blog: {
           onInlineAuthors: 'ignore',
@@ -59,6 +85,14 @@ export default {
         theme: {
           customCss: require.resolve('./src/css/custom.scss'),
         },
+        gtag: {
+          trackingID: 'G-YY58V5DFE7',
+          anonymizeIP: true,
+        },
+        sitemap: {
+          lastmod: 'datetime',
+          changefreq: 'weekly',
+        },
       },
     ],
   ],
@@ -66,15 +100,20 @@ export default {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
-      metadata: [{ name: 'robots', content: 'noindex' }],
+      metadata: [
+        {
+          name: 'description',
+          content:
+            "Cucumber is a tool for running automated acceptance tests, written in plain language. Because they're written in plain language, they can be read by anyone on your team, improving communication, collaboration and trust.",
+        },
+      ],
       announcementBar: {
         id: 'december-2024-announcement',
         content:
           '📣 We have exciting news - <a href="/blog">read the blog post</a> to learn more!',
       },
       colorMode: {
-        disableSwitch: true,
-        respectPrefersColorScheme: true,
+        defaultMode: 'light',
       },
       image: 'img/logo.svg',
       navbar: {
@@ -87,6 +126,11 @@ export default {
           {
             to: '/docs',
             label: 'Documentation',
+            position: 'left',
+          },
+          {
+            to: '/learn',
+            label: 'Learn',
             position: 'left',
           },
           {
@@ -119,7 +163,7 @@ export default {
           src: 'https://www.netlify.com/v3/img/components/netlify-color-accent.svg',
           href: 'https://www.netlify.com',
         },
-        copyright: `Copyright © ${new Date().getFullYear()} The Cucumber Open Source Project`,
+        copyright: `Copyright © 2014-${new Date().getFullYear()} The Cucumber Open Source Project`,
       },
       docs: {
         sidebar: {
@@ -131,9 +175,17 @@ export default {
         darkTheme: darkCodeTheme,
         additionalLanguages: ['gherkin', 'go', 'groovy', 'java', 'ruby', 'scala'],
       },
+      algolia: {
+        appId: 'KKV75IPBYX',
+        apiKey: 'a705efaaffbb238f98333b0d13b05034',
+        indexName: 'cucumber',
+        contextualSearch: true,
+        searchParameters: {},
+      },
     },
   plugins: ['docusaurus-plugin-sass'],
   customFields: {
-    versions: YAML.parse(readFileSync('./versions.yaml', { encoding: 'utf-8' })),
+    platformsCount,
+    versions,
   },
 } satisfies Config

@@ -42,7 +42,7 @@ So that I can make better informed decisions about my spending
 
 Acceptance Criteria are conditions that a (software) product must satisfy to be accepted by a user, customer or other stakeholder.
 
-These are best written using the Cucumber language and [Gherkin syntax](https://cucumber.io/docs/gherkin/).
+These are best written using the Cucumber language and [Gherkin syntax](../gherkin/index.mdx).
 
 ```gherkin
 Feature: Some important feature

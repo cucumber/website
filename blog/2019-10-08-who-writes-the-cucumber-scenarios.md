@@ -48,7 +48,7 @@ Barbara blushed a little at Carol’s language, but she couldn’t hide her smil
 
 “Instead, use the act of writing the scenarios as __feedback__.
 
-“Start with a conversation including at least the [BA, tester and developer](https://www.agilealliance.org/glossary/three-amigos/#q=~\(filters~\(postType~\(~'page~'post~'aa_book~'aa_event_session~'aa_experience_report~'aa_glossary~'aa_research_paper~'aa_video\)~tags~\(~'three*20amigos\)\)~searchTerm~'~sort~false~sortDirection~'asc~page~1\)), to talk through the scope of the story. You can use [example mapping](https://cucumber.io/blog/2015/12/08/example-mapping-introduction) or some other way to manage that conversation, but keep it quick and focussed.
+“Start with a conversation including at least the [BA, tester and developer](https://www.agilealliance.org/glossary/three-amigos/#q=~\(filters~\(postType~\(~'page~'post~'aa_book~'aa_event_session~'aa_experience_report~'aa_glossary~'aa_research_paper~'aa_video\)~tags~\(~'three*20amigos\)\)~searchTerm~'~sort~false~sortDirection~'asc~page~1\)), to talk through the scope of the story. You can use [example mapping](/blog/2015/12/08/example-mapping-introduction) or some other way to manage that conversation, but keep it quick and focussed.
 
 ![](/img/blog/90c2607877f0684c8a6b7432ab2458a84d3b21e4d8e08de4a8d416ec339f6bec.png)
 
