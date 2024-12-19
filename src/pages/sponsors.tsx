@@ -21,25 +21,33 @@ const tiers = [
   },
   {
     title: 'Bronze',
-    description: 'For small organisations; our most popular tier',
+    description: 'Support the contributors with a monthly donation and, if you want, get your name and a small logo on the Cucumber website with a link to your site.',
     amount: 100,
     url: 'https://opencollective.com/cucumber/contribute/bronze-sponsors-181/checkout',
     from: false,
   },
   {
     title: 'Silver',
-    description: 'For organisations of more than 50 people',
-    amount: 250,
-    url: 'https://opencollective.com/cucumber/contribute/silver-sponsors-3222/checkout',
-    from: false,
-  },
-  {
-    title: 'Gold',
-    description: 'For organisations of more than 100 people',
+    description: 'Support the contributors with a monthly donation and, if you want, get your name and a medium logo on the Cucumber website with a link to your site.',
     amount: 500,
     url: 'https://opencollective.com/cucumber/contribute/gold-sponsors-3224/checkout',
     from: false,
   },
+  {
+    title: 'Gold',
+    description: 'Support the contributors with a monthly donation and, if you want, get your name, large logo, and subtitle on the Cucumber website with a link to your site.',
+    amount: 1000,
+    url: 'https://opencollective.com/cucumber/contribute/gold-82673/checkout',
+    from: false,
+  },
+  {
+    title: 'Platinum',
+    description: 'Support the contributors with a monthly donation and, if you want, get your name, large logo, subtitle and short paragraph on the Cucumber website with a link to your site.',
+    amount: 2500,
+    url: 'https://opencollective.com/cucumber/contribute/platinum-82674/checkout',
+    from: false,
+  },
+
 ] as const
 
 const Tiers: FC = () => {
