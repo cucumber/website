@@ -28,7 +28,7 @@ export default {
   url: 'https://cucumber.io',
   baseUrl: '/',
 
-  onBrokenLinks: 'warn', // TODO change to throw once we start migrating docs
+  onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   markdown: {
     format: 'detect',
