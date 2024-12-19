@@ -109,7 +109,8 @@ export default {
       ],
       announcementBar: {
         id: 'december-2024-announcement',
-        content: '📣 We have exciting news - <a href="/blog">read the blog post</a> to learn more!',
+        content:
+          '📣 We have exciting news - <a href="/blog/open-source/cucumber-is-back-in-community-ownership">read the blog post</a> to learn more!',
       },
       colorMode: {
         defaultMode: 'light',
