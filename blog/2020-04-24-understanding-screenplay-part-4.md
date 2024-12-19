@@ -12,7 +12,7 @@ image: /img/blog/ba888f19f6490ba028eed477d2e04f8fe389eb5426fea6928abe92086eb093f
 
 ![](/img/blog/ba888f19f6490ba028eed477d2e04f8fe389eb5426fea6928abe92086eb093ff.jpg)
 
-[Previously](/blog/bdd/understanding-screenplay-\(part-3\)/ "Understanding Screenplay Part 3"), we extracted our a simple implementation of the screenplay pattern from some existing Cucumber automation code, turning this:
+[Previously](/blog/bdd/understanding-screenplay-part-3 "Understanding Screenplay Part 3"), we extracted our a simple implementation of the screenplay pattern from some existing Cucumber automation code, turning this:
 
 ```javascript
 Given('{word} has created an account', function (name) {
@@ -148,9 +148,7 @@ The separation between tasks and interactions gives us the potential to choose d
 
 ## In the _Understanding Screenplay_ series:
 
-- [Part 1: Myths & Fundamentals](/blog/bdd/understanding-screenplay-\(part-1\)/)
-- [Part 2: Help! Maybe my helpers aren't so helpful after all?](/blog/bdd/understanding-screenplay-\(part-2\)/)
-- [Part 3: Refactoring to Screenplay](/blog/bdd/understanding-screenplay-\(part-3\)/)
-- [Part 4: Composing Tasks from Interactions](/blog/bdd/understanding-screenplay-\(part-4\)/)
-
- 
+- [Part 1: Myths & Fundamentals](/blog/bdd/understanding-screenplay-part-1)
+- [Part 2: Help! Maybe my helpers aren't so helpful after all?](/blog/bdd/understanding-screenplay-part-2)
+- [Part 3: Refactoring to Screenplay](/blog/bdd/understanding-screenplay-part-3)
+- [Part 4: Composing Tasks from Interactions](/blog/bdd/understanding-screenplay-part-4)

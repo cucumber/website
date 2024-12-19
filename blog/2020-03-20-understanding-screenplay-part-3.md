@@ -12,7 +12,7 @@ image: /img/blog/ba888f19f6490ba028eed477d2e04f8fe389eb5426fea6928abe92086eb093f
 
 ![](/img/blog/ba888f19f6490ba028eed477d2e04f8fe389eb5426fea6928abe92086eb093ff.jpg)
 
-In the [previous post](/blog/bdd/understanding-screenplay-\(part-2\)/) in this series, we explored the need for a new kind of pattern for organising our test automation code.
+In the [previous post](/blog/bdd/understanding-screenplay-part-2) in this series, we explored the need for a new kind of pattern for organising our test automation code.
 
 Now we’re going to work with this little codebase to refactor it towards the Screenplay pattern. By taking the existing code and shifting it, step-by-step, towards the pattern, my hope is that you’ll see how you could do this to your own code, should the fancy take you.
 
@@ -86,7 +86,7 @@ Now the code does the same as it did before. We can run `npm test` at this point
 
 ## Actors perform interactions using abilities
 
-Back in the [first part of this series](/blog/bdd/understanding-screenplay-\(part-1\)), we talked about the metaphor for Screenplay being actors on a stage.
+Back in the [first part of this series](/blog/bdd/understanding-screenplay-part-1), we talked about the metaphor for Screenplay being actors on a stage.
 
 In the metaphor, the actor is said to have _abilities_: the things it needs to be able to perform the actions it’s given. In practice, these are the dependencies that the interaction functions will expect to be passed, like a `browser` or a `database` connection. We’ll take these as we construct the `Actor`.
 
@@ -186,13 +186,13 @@ This decoupling enables this pattern to scale really well. We can add new intera
 
 All of this leaves us with step defintions that are much more readable than before, with a clear mapping from the plain English in our Gherkin steps to the code that carries out the step.
 
-The real beauty of the actor-interactions model is that interactions are _composable_: we can build up more interesting actions out of fine-grained interactions, like putting lego pieces together. That’s what we’ll look at [next](/blog/bdd/understanding-screenplay-\(part-4\)/).
+The real beauty of the actor-interactions model is that interactions are _composable_: we can build up more interesting actions out of fine-grained interactions, like putting lego pieces together. That’s what we’ll look at [next](/blog/bdd/understanding-screenplay-part-4).
 
 ## In the _Understanding Screenplay_ series:
 
-- [Part 1: Myths & Fundamentals](/blog/bdd/understanding-screenplay-\(part-1\)/)
-- [Part 2: Help! Maybe my helpers aren't so helpful after all?](/blog/bdd/understanding-screenplay-\(part-2\)/)
-- [Part 3: Refactoring to Screenplay](/blog/bdd/understanding-screenplay-\(part-3\)/)
-- [Part 4: Composing Tasks from Interactions](/blog/bdd/understanding-screenplay-\(part-4\)/)
+- [Part 1: Myths & Fundamentals](/blog/bdd/understanding-screenplay-part-1)
+- [Part 2: Help! Maybe my helpers aren't so helpful after all?](/blog/bdd/understanding-screenplay-part-2)
+- [Part 3: Refactoring to Screenplay](/blog/bdd/understanding-screenplay-part-3)
+- [Part 4: Composing Tasks from Interactions](/blog/bdd/understanding-screenplay-part-4)
 
  
