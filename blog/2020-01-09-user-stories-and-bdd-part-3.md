@@ -140,5 +140,5 @@ Once you set about trying to work with smaller stories, you’ll probably find t
 
 ## Next time
 
-In this post, I've indulgently allowed myself to rant about why stories should be small. Really small. [Next time](/blog/bdd/User-stories-and-BDD-features-are-not-stories), I'm going to try to pull this all together to convince you that there’s no place for stories inside your feature files.
+In this post, I've indulgently allowed myself to rant about why stories should be small. Really small. [Next time](/blog/bdd/user-stories-and-bdd-features-are-not-stories), I'm going to try to pull this all together to convince you that there’s no place for stories inside your feature files.
 

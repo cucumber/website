@@ -12,7 +12,7 @@ This is the second in a series of articles digging into user stories, what they'
 
 ## Previously...
 
-In the [last post](/blog/user-stories-are-not-the-same-as-features/) we traced the origins of the user story. We saw that the term _user story_ was used interchangeably with _story,_ that stories were used as a _placeholder for a conversation_, and that this allowed us to _defer detailed analysis_. Now it's time to dive into the detailed analysis.
+In the [last post](/blog/bdd/user-stories-are-not-the-same-as-features/) we traced the origins of the user story. We saw that the term _user story_ was used interchangeably with _story,_ that stories were used as a _placeholder for a conversation_, and that this allowed us to _defer detailed analysis_. Now it's time to dive into the detailed analysis.
 
 ## Last responsible moment
 
