@@ -59,11 +59,11 @@ By building deliberate discovery into our delivery process we are demonstrating 
 
 Many agile teams will be familiar with _backlog grooming/refinement_ meetings. The intention of these meetings is to refine our understanding of the stories on the backlog, but in my experience, they are often unstructured. Nor do they focus on uncovering what we, as a team, are ignorant of.
 
-One of the most effective techniques for deliberate discovery is called Example Mapping – created and [documented](/blog/example-mapping-introduction/) by my colleague, Matt Wynne. It's an extremely simple, yet extraordinarily powerful way of structuring collaboration between team members, harnessing diverse perspectives to approximate the [wisdom of crowds](https://www.amazon.co.uk/Wisdom-Crowds-Many-Smarter-Than/dp/0349116059).
+One of the most effective techniques for deliberate discovery is called Example Mapping – created and [documented](/blog/bdd/example-mapping-introduction/) by my colleague, Matt Wynne. It's an extremely simple, yet extraordinarily powerful way of structuring collaboration between team members, harnessing diverse perspectives to approximate the [wisdom of crowds](https://www.amazon.co.uk/Wisdom-Crowds-Many-Smarter-Than/dp/0349116059).
 
 ![](/img/blog/78ce02bf0cd965de8805dfaa0583c9ccd773a82a4c100e575395cda5d2652c2a.png)
 
-[https://cucumber.io/blog/example-mapping-introduction/](/blog/example-mapping-introduction/)
+[https://cucumber.io/blog/bdd/example-mapping-introduction/](/blog/bdd/example-mapping-introduction/)
 
 Example maps give us a visual indicator of how big a story is and how well we understand it. Once the story is well understood, we can use the example map to help the team split the story into manageable increments.
 

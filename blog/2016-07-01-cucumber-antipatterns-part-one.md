@@ -8,7 +8,7 @@ tags: []
 
 This post outlines our favourite Cucumber anti-patterns. There are many ways to use tools poorly and, as the core team behind Cucumber, we've picked up our fair share of bumps and bruises. Hopefully by passing on our own experiences, we can help you steer clear of the most common pitfalls.
 
-Along the way we'll also clarify why these patterns can be so damaging and suggest alternatives we've seen work while [training and coaching teams](/training) around the world.
+Along the way we'll also clarify why these patterns can be so damaging and suggest alternatives we've seen work while training and coaching teams around the world.
 
 This is a two-part blog post based on a conversation between Steve Tooke, Aslak Hellesøy and Matt Wynne on [The Cucumber Podcast](https://itunes.apple.com/gb/podcast/cucumber-podcast-rss/id1078896635). You can skip ahead to [part two here](/blog/bdd/cucumber-anti-patterns-part-two).
 
@@ -71,7 +71,7 @@ Going back to the bank/password example, what exactly are we trying to test here
 Often a good place to sum up the essence of a scenario is in the scenario title. But if you miss it off or if you've copied and pasted a scenario from the one below, it can obscure the meaning of the scenario.
 
 Try to avoid boring and non-specific titles such as “Sign Up, Log In, Visit Balance Screen, and Review Balance”.  
-For our own development work on [Cucumber Pro](/pro), we like to use the Friends episode naming convention for thinking about the name of the scenario, where you go, "This is the one where the balance is positive," or, "This is the one where the balance is over my overdraft". And in the Given, When, Then, that's when you go on into exactly how you're going to check for that behaviour.
+For our own development work on Cucumber Pro, we like to use the Friends episode naming convention for thinking about the name of the scenario, where you go, "This is the one where the balance is positive," or, "This is the one where the balance is over my overdraft". And in the Given, When, Then, that's when you go on into exactly how you're going to check for that behaviour.
 
 There’s some useful tips about this in [Matt’s Example Mapping post.](/blog/bdd/example-mapping-introduction)
 

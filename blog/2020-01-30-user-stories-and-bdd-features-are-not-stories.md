@@ -9,7 +9,7 @@ tags: [BDD]
 Previously…
 
 1. [Origins and evolution of the user story](/blog/bdd/user-stories-are-not-the-same-as-features/?utm_source=userstories4&utm_medium=blogpost&utm_campaign=User-stories-4-BP)
-2. [Discovery](/blog/bdd/user-stories-and-bdd-part-2)-discovery/?utm_source=userstories4&utm_medium=blogpost&utm_campaign=User-stories-4-BP)
+2. [Discovery](/blog/bdd/user-stories-and-bdd-part-2-discovery)-discovery/?utm_source=userstories4&utm_medium=blogpost&utm_campaign=User-stories-4-BP)
 3. [Small or far away?](/blog/bdd/user-stories-and-bdd-part-3/?utm_source=userstories4&utm_medium=blogpost&utm_campaign=User-stories-4-BP)
 
 This is the fourth in a series of articles digging into user stories, what they're used for, and how they interact with a BDD approach to software development. This post is the last in this series, but certainly not the last time I'll be talking about user stories. However, since it brings the current narrative arc to a close, [it is perhaps the end of the beginning](https://www.youtube.com/watch?v=pdRH5wzCQQw).

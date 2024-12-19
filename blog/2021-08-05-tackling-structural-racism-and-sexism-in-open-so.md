@@ -11,7 +11,7 @@ tags:
   - Sexism
 ---
 
-One of the [goals the Cucumber team have set ourselves this year](/blog/open-source/what-are-the-cucumber-open-team-s-goals-for-2021/) is to increase the number of recent, regular contributors who are non-white or non-male from 0 to 2. This post describes **why** we want to do this, **what** we’ve learned so far about the systemic barriers that keep the community of people who contribute to open source so [utterly imbalanced](https://www.wired.com/2017/06/diversity-open-source-even-worse-tech-overall/), and outlines **how** we’ve started tackling the problem in our own project.
+One of the goals the Cucumber team have set ourselves this year is to increase the number of recent, regular contributors who are non-white or non-male from 0 to 2. This post describes **why** we want to do this, **what** we’ve learned so far about the systemic barriers that keep the community of people who contribute to open source so [utterly imbalanced](https://www.wired.com/2017/06/diversity-open-source-even-worse-tech-overall/), and outlines **how** we’ve started tackling the problem in our own project.
 
 <!-- truncate -->
 

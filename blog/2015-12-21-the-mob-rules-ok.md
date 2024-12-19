@@ -11,7 +11,7 @@ image: /img/blog/b3353410eecaafbb4d16b8a797c1bb47c77e369901ccb98fd3386e847a35447
 
 _This article was [originally published here](http://tooky.co.uk/the-mob-rules-ok/)._
 
-During the last 6 weeks or so, I've had the pleasure to be working on [Cucumber Pro](/pro) with the team at [Cucumber Limited](/). One of the key thing making this such a good experience has been the way we've been working: Mob Programming.
+During the last 6 weeks or so, I've had the pleasure to be working on Cucumber Pro with the team at [Cucumber Limited](/). One of the key thing making this such a good experience has been the way we've been working: Mob Programming.
 
 <!-- truncate -->
 
@@ -67,7 +67,7 @@ We're currently adding each retrospective at the top of a single file, and maint
 
 Mob programming is a great way to build a team. I feel that we get a real sense that we're working together towards a common goal. We solve problems together. We learn together and we teach each other. By reflecting on each session, we learn more about how each of us likes to work, and how we can all help each other.
 
-The remote working lets us all be comfortable in our surroundings. We've had [Matt](https://twitter.com/mattwynne) join for a few hours while he's been in [Australia](/events/cukeup-australia-2015). The last couple of days [Aslak](https://twitter.com/aslak_hellesoy) has been in the mob, with his new baby nestled in a sling — there is something really calming about hearing contented baby gurgles while your working.
+The remote working lets us all be comfortable in our surroundings. We've had [Matt](https://twitter.com/mattwynne) join for a few hours while he's been in Australia. The last couple of days [Aslak](https://twitter.com/aslak_hellesoy) has been in the mob, with his new baby nestled in a sling — there is something really calming about hearing contented baby gurgles while your working.
 
 Remote collaboration is quite an intense way to work. I've done quite a lot of remote pair programming and it can be quite draining. Keeping the afternoons free really helps to combat this.
 

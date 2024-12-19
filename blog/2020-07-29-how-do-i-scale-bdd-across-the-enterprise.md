@@ -28,7 +28,7 @@ BDD solves a common list of problems affecting nearly all software teams. You mu
 
 ## Use training
 
-Whole team training, such as our [BDD Kickstart](/school/learn-bdd-training-request/?__s=xxxxxxx&utm_source=drip&utm_medium=email&utm_campaign=How+do+I+scale+BDD+across+the+enterprise%3F), can provide a shared baseline of skills on the team that will lead to success. Our training builds a whole team experience that emphasizes everyone’s role. We resolve concerns in a group setting and create excitement around the benefits of BDD. 
+Whole team training, such as our BDD Kickstart, can provide a shared baseline of skills on the team that will lead to success. Our training builds a whole team experience that emphasizes everyone’s role. We resolve concerns in a group setting and create excitement around the benefits of BDD. 
 
 ### Follow up and measure
 

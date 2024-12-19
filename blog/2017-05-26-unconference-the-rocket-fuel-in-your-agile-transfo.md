@@ -10,7 +10,7 @@ tags: []
 
 I absolutely love open space.
 
-Over the last couple of years, we've been privileged to be trusted by some of our best [transformative coaching clients](/training) to run open space events in their organisations. I'm now convinced that these events are crucial in powering the cultural shift towards true agility in software development.
+Over the last couple of years, we've been privileged to be trusted by some of our best transformative coaching clients to run open space events in their organisations. I'm now convinced that these events are crucial in powering the cultural shift towards true agility in software development.
 
 In this post I want give you a sense of what an open space is like and share some practical advice about how to run your own open space event.
 
