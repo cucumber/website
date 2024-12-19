@@ -131,8 +131,6 @@ I don’t propose to repeat the whole of Matt’s excellent blog post here. Inst
 
 Originally, example mapping required teams to be collocated, with access to 4 coloured decks of index cards and buckets of Sharpies. Indeed, this may still be the most effective way of running an example mapping session, but with remote working, distributed teams, and electronic project management tools, this approach is no longer generally suitable.
 
-There are many online/virtual ways of running an example mapping session, but you should check out the example mapping tool built into CucumberStudio, which is [demoed in this webinar](/resources/webinars/better-requirements-by-harnessing-examples/?ws=a).
-
 ## Traceability
 
 One property that many organisations are looking for is requirements traceability – defined as ["the ability to describe and follow the life of a requirement in both a forwards and backwards direction (i.e. from its origins, through its development and specification, to its subsequent deployment and use, and through periods of ongoing refinement an](https://en.wikipedia.org/wiki/Requirements_traceability)[d iteration in any of these phases)"](https://en.wikipedia.org/wiki/Requirements_traceability)
@@ -146,7 +144,7 @@ Simply put, traceability should be able to answer questions like:
 
 The most typical demand for traceability comes from regulated industries, where external auditors demand evidence of compliance. However, traceability has far broader applicability than that. With the continuing shift towards continuous deployment, there’s a growing need for low overhead mechanisms that enable internal processes to automatically assess the fitness of software for release.
 
-Example mapping already provides a link from user story to concrete example. Teams that are using a behaviour-driven development (BDD) approach will then formulate the concrete examples into business-readable, [executable specifications](https://www.amazon.co.uk/Specification-Example-Successful-Deliver-Software/dp/1617290084) that will guide development and provide long-lived, reliable, [living documentation](/blog/bdd/the-alternative-to-living-documentation-is-confu/). Automated execution of the specifications extends traceability to test executions and product versions.
+Example mapping already provides a link from user story to concrete example. Teams that are using a behaviour-driven development (BDD) approach will then formulate the concrete examples into business-readable, [executable specifications](https://www.amazon.co.uk/Specification-Example-Successful-Deliver-Software/dp/1617290084) that will guide development and provide long-lived, reliable, living documentation. Automated execution of the specifications extends traceability to test executions and product versions.
 
 This is a significant advance when compared to the prevalent forms of requirements traceability in the industry today, such as spreadsheets or links in ALM tools. Even better, there is no overhead incurred. Every activity in the BDD approach delivers intrinsic value. Traceability comes as a secondary outcome.
 

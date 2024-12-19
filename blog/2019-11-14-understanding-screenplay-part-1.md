@@ -106,9 +106,9 @@ Over the course of this series of posts, we'll refactor take a typical Cucumber 
 
 ## In the _Understanding Screenplay_ series:
 
-- [Part 1: Myths & Fundamentals](/blog/bdd/understanding-screenplay-\(part-1\)/)
-- [Part 2: Help! Maybe my helpers aren't so helpful after all?](/blog/bdd/understanding-screenplay-\(part-2\)/)
-- [Part 3: Refactoring to Screenplay](/blog/bdd/understanding-screenplay-\(part-3\)/)
-- [Part 4: Composing Tasks from Interactions](/blog/bdd/understanding-screenplay-\(part-4\)/)
+- [Part 1: Myths & Fundamentals](/blog/bdd/understanding-screenplay-part-1)
+- [Part 2: Help! Maybe my helpers aren't so helpful after all?](/blog/bdd/understanding-screenplay-part-2)
+- [Part 3: Refactoring to Screenplay](/blog/bdd/understanding-screenplay-part-3)
+- [Part 4: Composing Tasks from Interactions](/blog/bdd/understanding-screenplay-part-4)
 
  

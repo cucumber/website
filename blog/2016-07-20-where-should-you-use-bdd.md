@@ -99,18 +99,16 @@ now that the system is properly wired and starts.
 
 Cucumber is not slow. Starting a browser is slow. Starting and stopping your application is slow. This is mitigated the more you test at the bottom of the agile testing pyramid. Find a balance where BDD and Cucumber support you rather than hinder you.
 
-Finally, remember that Cucumber is **_not a testing tool_**. It is a [tool for capturing common understanding](/blog/the-worlds-most-misunderstood-collaboration-tool) on how a system should work. A tool that allows you, but doesn't require you, to automate the verification of the behaviour of your system if you find it useful.
+Finally, remember that Cucumber is **_not a testing tool_**. It is a [tool for capturing common understanding](/blog/collaboration/the-worlds-most-misunderstood-collaboration-tool) on how a system should work. A tool that allows you, but doesn't require you, to automate the verification of the behaviour of your system if you find it useful.
 
 ## Acknowledgements
 
 I would like to thank Malin Ekholm and Theo England for proof reading.
 
-Learn how to produce beautiful living documentation and automated tests with Cucumber and Behaviour-Driven Development this September, taught by Thomas Sundberg. Join Thomas for the [BDD Kickstart training](/events/bdd-kickstart-stockholm-17) in Stockholm, November 15th-16th.\*
-
 ## References
 
 -   [Cucumber](/) - A tool for simple, human collaboration
--   [The world's most misunderstood collaboration tool](/blog/2014/03/03/the-worlds-most-misunderstood-collaboration-tool) - A blog post from Aslak Hellesøy, the creator of Cucumber
+-   [The world's most misunderstood collaboration tool](/blog/collaboration/the-worlds-most-misunderstood-collaboration-tool) - A blog post from Aslak Hellesøy, the creator of Cucumber
 -   [BDD](http://www.thinkcode.se/blog/category/BDD) - My other posts about Behaviour-Driven Development
 -   [Cucumber](http://www.thinkcode.se/blog/category/Cucumber) - My other posts about Cucumber
 -   [Thomas Sundberg](http://www.thinkcode.se/blog/about) - The author

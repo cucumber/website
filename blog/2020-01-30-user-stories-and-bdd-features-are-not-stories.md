@@ -9,7 +9,7 @@ tags: [BDD]
 Previously…
 
 1. [Origins and evolution of the user story](/blog/bdd/user-stories-are-not-the-same-as-features/?utm_source=userstories4&utm_medium=blogpost&utm_campaign=User-stories-4-BP)
-2. [Discovery](/blog/bdd/user-stories-and-bdd-\(part-2\)-discovery/?utm_source=userstories4&utm_medium=blogpost&utm_campaign=User-stories-4-BP)
+2. [Discovery](/blog/bdd/user-stories-and-bdd-part-2-discovery)-discovery/?utm_source=userstories4&utm_medium=blogpost&utm_campaign=User-stories-4-BP)
 3. [Small or far away?](/blog/bdd/user-stories-and-bdd-part-3/?utm_source=userstories4&utm_medium=blogpost&utm_campaign=User-stories-4-BP)
 
 This is the fourth in a series of articles digging into user stories, what they're used for, and how they interact with a BDD approach to software development. This post is the last in this series, but certainly not the last time I'll be talking about user stories. However, since it brings the current narrative arc to a close, [it is perhaps the end of the beginning](https://www.youtube.com/watch?v=pdRH5wzCQQw).
@@ -20,7 +20,7 @@ This is the fourth in a series of articles digging into user stories, what they'
 
 **User Stories** start off as [placeholders for a conversation](/blog/bdd/user-stories-are-not-the-same-as-features/?utm_source=userstories4&utm_medium=blogpost&utm_campaign=User-stories-4-BP). They’re ideas, often large, not fully formed. They could be valuable, but they’re not ready for development just yet. 
 
-As we refine them (through [Discovery](/blog/bdd/user-stories-and-bdd-\(part-2\)-discovery/?utm_source=userstories4&utm_medium=blogpost&utm_campaign=User-stories-4-BP)) they become better understood. **Collaboration** ensures that they make sense to the whole team. The business requirements that limit their scope are negotiated and agreed.
+As we refine them (through [Discovery](/blog/bdd/user-stories-and-bdd-part-2-discovery/?utm_source=userstories4&utm_medium=blogpost&utm_campaign=User-stories-4-BP)) they become better understood. **Collaboration** ensures that they make sense to the whole team. The business requirements that limit their scope are negotiated and agreed.
 
 Now it’s possible to see what’s involved in delivering the story, we can split them into smaller chunks. Smaller chunks mean [faster feedback, smoother flow, and less waste](/blog/bdd/user-stories-and-bdd-part-3/?utm_source=userstories4&utm_medium=blogpost&utm_campaign=User-stories-4-BP). They’re no longer placeholders. Now they’re **detailed small increments**, each one carrying a small payload of valuable functionality.
 
@@ -52,7 +52,7 @@ So if we don’t want to capture stories in our **living documentation**, what d
 
 Well, there are many useful things you can capture in a feature file. Written prose that explains the context and need for a feature is still useful for people reading the documentation for the first time. You can add links out to other sources of information like UX wireframes or user research data. But probably the most important thing to document alongside your scenarios are the **rules**.
 
-If you cast your mind back to our [earlier discussion of example mapping](/blog/bdd/user-stories-and-bdd-\(part-2\)-discovery/?utm_source=userstories4&utm_medium=blogpost&utm_campaign=User-stories-4-BP), you’ll remember that requirements are also known as [acceptance criteria](https://lizkeogh.com/2011/06/20/acceptance-criteria-vs-scenarios/) or rules. 
+If you cast your mind back to our [earlier discussion of example mapping](/blog/bdd/user-stories-and-bdd-part-2-discovery/?utm_source=userstories4&utm_medium=blogpost&utm_campaign=User-stories-4-BP), you’ll remember that requirements are also known as [acceptance criteria](https://lizkeogh.com/2011/06/20/acceptance-criteria-vs-scenarios/) or rules. 
 
 Current versions of Gherkin do not provide a defined way to capture rules. Our advice is to document them in the feature description (the block of text between the feature name and the first scenario):
 
@@ -85,4 +85,4 @@ The trouble is that stories are neither definitive nor independent. Their lifecy
 
 Following a link from a story through to the commit(s) that delivered the code and test scripts might give you confidence that the necessary work has been done. And since feature files will be part of those commits, **the resulting behaviour is also documented**. However, since subsequent stories may have been delivered, this means that you cannot infer anything about the current behaviour of the system by traversing links from a story through to commits. 
 
-Tools are currently being [developed](/tools/cucumber-for-jira/?utm_source=userstories4&utm_medium=blogpost&utm_campaign=User-stories-4-BP) that will make it simpler to trace from a specific version of a scenario through to the stories that caused it to be written, which will help with some compliance needs. Nonetheless, it is important to remember that **stories are neither requirements nor deliverables**. They are **transient artefacts** that facilitate delivery, not persistent artefacts that document behaviour.
+Tools are currently being developed that will make it simpler to trace from a specific version of a scenario through to the stories that caused it to be written, which will help with some compliance needs. Nonetheless, it is important to remember that **stories are neither requirements nor deliverables**. They are **transient artefacts** that facilitate delivery, not persistent artefacts that document behaviour.

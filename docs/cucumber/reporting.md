@@ -18,7 +18,7 @@ Available plugins may vary per programming language.
 
 The easiest way to get started with reporting is to use the [Cucumber Reports](https://reports.cucumber.io/) service.
 
-Watch [this video](https://smartbear.wistia.com/medias/nrgptu7825) for a quick introduction or read the introductory [blog post](/blog/open-source/cucumber-reports/) for more details.
+Watch [this video](https://smartbear.wistia.com/medias/nrgptu7825) for a quick introduction.
 
 Publishing to the Cucumber Reports service is currently supported in:
 

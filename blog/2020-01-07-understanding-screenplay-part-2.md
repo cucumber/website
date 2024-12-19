@@ -12,7 +12,7 @@ image: /img/blog/ba888f19f6490ba028eed477d2e04f8fe389eb5426fea6928abe92086eb093f
 
 ![](/img/blog/ba888f19f6490ba028eed477d2e04f8fe389eb5426fea6928abe92086eb093ff.jpg)
 
-In the [first post in this series](/blog/bdd/understanding-screenplay-\(part-1\)) we introduced the concept of the Screenplay pattern and busted a couple of popular myths about it. Now it's time to start digging into some code to give us a real example to demonstrate the pattern on.
+In the [first post in this series](/blog/bdd/understanding-screenplay-part-1) we introduced the concept of the Screenplay pattern and busted a couple of popular myths about it. Now it's time to start digging into some code to give us a real example to demonstrate the pattern on.
 
 The problem with writing this kind of tutorial, always, is finding the right balance between an example that's so complicated it gets in the way of your understanding the thing we're actually trying to learn about, and one that's so simplistic that the need for any kind of software design seems superfluous. If you'll forgive me, we'll err towards the simplistic here, and I'll trust that you've seen enough complex code in the wild to recognise the need for some design work.
 
@@ -232,17 +232,15 @@ What if we were to use page objects? Could they help us?
 
 Certainly, having different objects to represent the sign up form, the login form, and the new project page, would avoid us lumping all our automation code into one World object. However, this doesn't stop the bloat. Page objects that model every button and interaction point on a page can become huge and unwieldy.
 
-A more insidious problem is that page objects are based around the UI. This means there would have to be a leap in translation in our step defintions: we'd jump from a problem-domain concept like _create a project_ to the nitty-gritty interactions with the app that will cause this action to happen. This isn't such a clean separation of concerns, and distracts us from focussing on the _behaviour_ and _intent_ of our users. If we're not careful, these detailed interactions can start to [leak out into the Gherkin](/blog/single-source-of-truth/).
+A more insidious problem is that page objects are based around the UI. This means there would have to be a leap in translation in our step defintions: we'd jump from a problem-domain concept like _create a project_ to the nitty-gritty interactions with the app that will cause this action to happen. This isn't such a clean separation of concerns, and distracts us from focussing on the _behaviour_ and _intent_ of our users. If we're not careful, these detailed interactions can start to [leak out into the Gherkin](/blog/bdd/single-source-of-truth/).
 
 So now we have a sense of some of the problems with the typical approaches to organising acceptance test automation code.
 
-In the [next post](/blog/bdd/understanding-screenplay-\(part-3\)/) we'll have a look at what Screenplay could offer us to solve these problems, and start using it in our example application.
+In the [next post](/blog/bdd/understanding-screenplay-part-3) we'll have a look at what Screenplay could offer us to solve these problems, and start using it in our example application.
 
 ## In the _Understanding Screenplay_ series:
 
-- [Part 1: Myths & Fundamentals](/blog/bdd/understanding-screenplay-\(part-1\)/)
-- [Part 2: Help! Maybe my helpers aren't so helpful after all?](/blog/bdd/understanding-screenplay-\(part-2\)/)
-- [Part 3: Refactoring to Screenplay](/blog/bdd/understanding-screenplay-\(part-3\)/)
-- [Part 4: Composing Tasks from Interactions](/blog/bdd/understanding-screenplay-\(part-4\)/)
-
- 
+- [Part 1: Myths & Fundamentals](/blog/bdd/understanding-screenplay-part-1)
+- [Part 2: Help! Maybe my helpers aren't so helpful after all?](/blog/bdd/understanding-screenplay-part-2)
+- [Part 3: Refactoring to Screenplay](/blog/bdd/understanding-screenplay-part-3)
+- [Part 4: Composing Tasks from Interactions](/blog/bdd/understanding-screenplay-part-4)

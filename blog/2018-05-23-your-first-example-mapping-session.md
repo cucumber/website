@@ -13,9 +13,9 @@ _This was originally posted on [my Medium blog](https://medium.com/@tooky/your-f
 
 Example Mapping is a simple but powerful tool. It can frame the conversations that help your team to build a shared understanding about what you are trying to build. It was discovered and popularised by [Matt Wynne](https://twitter.com/mattwynne).
 
-If you haven’t heard of Example Mapping before, Matt’s post [Introducing Example Mapping](/blog/2015/12/08/example-mapping-introduction) is a great place to start. Alternatively, if you prefer video you can watch [Aslak’s Example Mapping webinar.](/blog/2018/02/27/example-mapping-webinar). Both of those resources, and many others online and at conferences, are a great way to understand how Example Mapping works and why it’s useful.
+If you haven’t heard of Example Mapping before, Matt’s post [Introducing Example Mapping](/blog/bdd/example-mapping-introduction) is a great place to start. Alternatively, if you prefer video you can watch [Aslak’s Example Mapping webinar.](/blog/bdd/example-mapping-webinar). Both of those resources, and many others online and at conferences, are a great way to understand how Example Mapping works and why it’s useful.
 
-But how do you get started with your first Example Mapping session for you team? Having [helped several teams](/training) introduce Example Mapping into their practices I wanted to share my tips for getting started.
+But how do you get started with your first Example Mapping session for you team? Having helped several teams introduce Example Mapping into their practices I wanted to share my tips for getting started.
 
 <!-- truncate -->
 

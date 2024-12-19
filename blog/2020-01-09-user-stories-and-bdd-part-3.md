@@ -15,7 +15,7 @@ This is the third in a series of articles digging into user stories, what they'r
 
 ## Previously...
 
-In the [last post](/blog/bdd/user-stories-and-bdd-\(part-2\)-discovery/) we followed a user story through the process of [Discovery](http://bddbooks.com/). We saw that the main purpose for a user story was to minimise waste by making decisions at the last responsible moment, that accidental discovery is an unavoidable source of waste, but can be minimised by embracing deliberate discovery. We introduced Example Mapping as a deliberate discovery technique and observed that, through discovery, stories are transformed from a placeholder for a conversation into detailed small increments. Now it's time to talk about what we mean by "small" and why, in the context of user stories, small is beautiful.
+In the [last post](/blog/bdd/user-stories-and-bdd-part-2-discovery) we followed a user story through the process of [Discovery](http://bddbooks.com/). We saw that the main purpose for a user story was to minimise waste by making decisions at the last responsible moment, that accidental discovery is an unavoidable source of waste, but can be minimised by embracing deliberate discovery. We introduced Example Mapping as a deliberate discovery technique and observed that, through discovery, stories are transformed from a placeholder for a conversation into detailed small increments. Now it's time to talk about what we mean by "small" and why, in the context of user stories, small is beautiful.
 
 ## Small and valuable
 
@@ -140,5 +140,5 @@ Once you set about trying to work with smaller stories, you’ll probably find t
 
 ## Next time
 
-In this post, I've indulgently allowed myself to rant about why stories should be small. Really small. [Next time](/blog/bdd/User-stories-and-BDD-features-are-not-stories), I'm going to try to pull this all together to convince you that there’s no place for stories inside your feature files.
+In this post, I've indulgently allowed myself to rant about why stories should be small. Really small. [Next time](/blog/bdd/user-stories-and-bdd-features-are-not-stories), I'm going to try to pull this all together to convince you that there’s no place for stories inside your feature files.
 
