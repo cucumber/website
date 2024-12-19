@@ -110,7 +110,7 @@ Learn how to produce beautiful living documentation and automated tests with Cuc
 ## References
 
 -   [Cucumber](/) - A tool for simple, human collaboration
--   [The world's most misunderstood collaboration tool](/blog/2014/03/03/the-worlds-most-misunderstood-collaboration-tool) - A blog post from Aslak Hellesøy, the creator of Cucumber
+-   [The world's most misunderstood collaboration tool](/blog/collaboration/the-worlds-most-misunderstood-collaboration-tool) - A blog post from Aslak Hellesøy, the creator of Cucumber
 -   [BDD](http://www.thinkcode.se/blog/category/BDD) - My other posts about Behaviour-Driven Development
 -   [Cucumber](http://www.thinkcode.se/blog/category/Cucumber) - My other posts about Cucumber
 -   [Thomas Sundberg](http://www.thinkcode.se/blog/about) - The author

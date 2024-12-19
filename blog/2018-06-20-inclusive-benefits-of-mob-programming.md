@@ -39,13 +39,11 @@ Founded by open-source programmers who were based all over the world, Cucumber L
 
 Cucumber is an acceptance-testing tool for agile teams, and almost everyone involved in the company comes from an extreme programming (XP) background. The founders earn money for the company by providing training and consulting in agile, lean and XP practices. Naturally, as they started to develop their own product, they used practices from agile, lean and XP. The team first experimented with Remote Mob Programming in late 2015 [^2] as they started a ground-up rewrite of what had been the first prototype of the Cucumber Pro product.
 
-[^2]: [https://cucumber.io/blog/2015/12/21/the-mob-rules-ok](/blog/2015/12/21/the-mob-rules-ok)
+[^2]: [https://cucumber.io/blog/bdd/the-mob-rules-ok](/blog/bdd/the-mob-rules-ok)
 
 The practice became firmly established in early 2017 after learning from a tough period in late 2016 with work going on in parallel and insufficient communication between the pairs working on different problems. During a retrospective, the team agreed that there would always be a mob, working on the hardest problem.
 
-Even at the time, as a fairly homogeneous group of 35-45 year-old white dads, the team had noticed how family-friendly remote mobbing was [^3]. As the company grew they wanted to make the development team more inclusive, to give them the broadest reach when recruiting new members and to enjoy the other well-documented benefits that more diverse teams have.
-
-[^3]: [https://cucumber.io/blog/2016/05/23/cucumber-ltd-story-so-far](/blog/2016/05/23/cucumber-ltd-story-so-far)
+Even at the time, as a fairly homogeneous group of 35-45 year-old white dads, the team had noticed how family-friendly remote mobbing was. As the company grew they wanted to make the development team more inclusive, to give them the broadest reach when recruiting new members and to enjoy the other well-documented benefits that more diverse teams have.
 
 The team had some concerns [^4] that the combination of their level of experience, and the remote working could be a barrier to adding new team members.
 

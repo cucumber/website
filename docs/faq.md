@@ -192,7 +192,7 @@ An arity mismatch exception (`cucumber.runtime.CucumberException: Arity mismatch
 ### Duplicate step definition
 
 A DuplicateStepDefinitionException indicates that you have defined the same step twice. First of all, Cucumber doesn't
-distinguish between [keywords](docs/gherkin/reference/#keywords) used with a particular step when
+distinguish between [keywords](./gherkin/reference.md#keywords) used with a particular step when
 [matching steps](/docs/cucumber/api/#matching-steps). This means that `Given an order exists` and `Then an order exists`
 will both match "an order exists". When providing arguments using Cucumber expressions and/or regular expressions,
 multiple steps might match the same expression. Finally, this means that you cannot extend a class which defines step

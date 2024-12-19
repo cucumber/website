@@ -10,7 +10,7 @@ This post outlines our favourite Cucumber anti-patterns. There are many ways to 
 
 Along the way we'll also clarify why these patterns can be so damaging and suggest alternatives we've seen work while [training and coaching teams](/training) around the world.
 
-This is a two-part blog post based on a conversation between Steve Tooke, Aslak Hellesøy and Matt Wynne on [The Cucumber Podcast](https://itunes.apple.com/gb/podcast/cucumber-podcast-rss/id1078896635). You can skip ahead to [part two here](/blog/2016/08/31/cucumber-anti-patterns-part-two).
+This is a two-part blog post based on a conversation between Steve Tooke, Aslak Hellesøy and Matt Wynne on [The Cucumber Podcast](https://itunes.apple.com/gb/podcast/cucumber-podcast-rss/id1078896635). You can skip ahead to [part two here](/blog/bdd/cucumber-anti-patterns-part-two).
 
 <!-- truncate -->
 
@@ -73,7 +73,7 @@ Often a good place to sum up the essence of a scenario is in the scenario title.
 Try to avoid boring and non-specific titles such as “Sign Up, Log In, Visit Balance Screen, and Review Balance”.  
 For our own development work on [Cucumber Pro](/pro), we like to use the Friends episode naming convention for thinking about the name of the scenario, where you go, "This is the one where the balance is positive," or, "This is the one where the balance is over my overdraft". And in the Given, When, Then, that's when you go on into exactly how you're going to check for that behaviour.
 
-There’s some useful tips about this in [Matt’s Example Mapping post.](/blog/2015/12/08/example-mapping-introduction)
+There’s some useful tips about this in [Matt’s Example Mapping post.](/blog/bdd/example-mapping-introduction)
 
 ## Adding pointless scenario descriptions
 
@@ -93,4 +93,4 @@ It can be really good to write those down in the front matter as well, and check
 
 Folks out there, if you're doing these anti-patterns, don't worry! We've all done them, you live and learn. Share your anti-patterns stories in the comments below.
 
-[Read part two of this blog post](/blog/2016/08/31/cucumber-anti-patterns-part-two).
+[Read part two of this blog post](/blog/bdd/cucumber-anti-patterns-part-two).
