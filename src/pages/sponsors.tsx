@@ -18,27 +18,43 @@ const tiers = [
     amount: 5,
     url: 'https://opencollective.com/cucumber/contribute/monthly-backers-182/checkout',
     from: true,
+    className: '',
   },
   {
     title: 'Bronze',
-    description: 'For small organisations; our most popular tier',
+    description:
+      'Support the contributors with a monthly donation and, if you want, get your name and a small logo on the Cucumber website with a link to your site.',
     amount: 100,
     url: 'https://opencollective.com/cucumber/contribute/bronze-sponsors-181/checkout',
     from: false,
+    className: '',
   },
   {
     title: 'Silver',
-    description: 'For organisations of more than 50 people',
-    amount: 250,
-    url: 'https://opencollective.com/cucumber/contribute/silver-sponsors-3222/checkout',
-    from: false,
-  },
-  {
-    title: 'Gold',
-    description: 'For organisations of more than 100 people',
+    description:
+      'Support the contributors with a monthly donation and, if you want, get your name and a medium logo on the Cucumber website with a link to your site.',
     amount: 500,
     url: 'https://opencollective.com/cucumber/contribute/gold-sponsors-3224/checkout',
     from: false,
+    className: '',
+  },
+  {
+    title: 'Gold',
+    description:
+      'Support the contributors with a monthly donation and, if you want, get your name, large logo, and subtitle on the Cucumber website with a link to your site.',
+    amount: 1000,
+    url: 'https://opencollective.com/cucumber/contribute/gold-82673/checkout',
+    from: false,
+    className: 'col--offset-2',
+  },
+  {
+    title: 'Platinum',
+    description:
+      'Support the contributors with a monthly donation and, if you want, get your name, large logo, subtitle and short paragraph on the Cucumber website with a link to your site.',
+    amount: 2500,
+    url: 'https://opencollective.com/cucumber/contribute/platinum-82674/checkout',
+    from: false,
+    className: '',
   },
 ] as const
 
@@ -47,7 +63,7 @@ const Tiers: FC = () => {
     <ol className={clsx('row', styles.list)}>
       {tiers.map((tier) => {
         return (
-          <li key={tier.amount} className="col col--3">
+          <li key={tier.amount} className={clsx('col col--4 margin-bottom--lg', tier.className)}>
             <div className={clsx('card', styles.card)}>
               <div className="card__header">
                 <h3>{tier.title}</h3>
@@ -55,7 +71,7 @@ const Tiers: FC = () => {
               <div className="card__body">
                 <b className={styles.amount}>{numberFormat.format(tier.amount)}</b>
                 <span className={styles.frequency}>{tier.from && 'or above, '}monthly</span>
-                <p className="margin-top--md">{tier.description}</p>
+                <p className={clsx('margin-top--md', styles.blurb)}>{tier.description}</p>
               </div>
               <div className="card__footer">
                 <Link className="button button--block button--secondary" href={tier.url}>
@@ -104,12 +120,10 @@ export default function Sponsors() {
           </p>
         </div>
         <div className="container padding-vert--lg">
-          <div className="margin-bottom--lg">
-            <p className="text--center">
-              If you can, we'd love for you to commit a regular amount to support Cucumber.
-            </p>
-            <Tiers />
-          </div>
+          <p className="text--center">
+            If you can, we'd love for you to commit a regular amount to support Cucumber.
+          </p>
+          <Tiers />
           <div className="text--center">
             <p className="margin-bottom--sm">
               Or, you can always make a{' '}
