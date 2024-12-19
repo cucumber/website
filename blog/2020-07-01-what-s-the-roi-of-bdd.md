@@ -52,7 +52,7 @@ Additionally, since the terminology is rooted in the business domain of the busi
 
 ## Automation
 
-There are several tools available (e.g. [Cucumber](/tools/cucumber-open/)) that allow teams to automatically validate their business-readable documentation against the software product that they are building. This delivers several major benefits:
+There are several tools available (e.g. [Cucumber](/)) that allow teams to automatically validate their business-readable documentation against the software product that they are building. This delivers several major benefits:
 
 -   Reliable, _[living documentation](https://leanpub.com/livingdocumentation)_ that automatically informs the team when it is incorrect or out-of-date. This is immediately beneficial, but its value grows over time as the product evolves and the team members change.
 -   Automated, business-readable acceptance tests, enabling business stakeholders to directly observe the progress of development, without the expense of generating additional reports.

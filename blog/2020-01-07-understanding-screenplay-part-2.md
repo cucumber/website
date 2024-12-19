@@ -232,7 +232,7 @@ What if we were to use page objects? Could they help us?
 
 Certainly, having different objects to represent the sign up form, the login form, and the new project page, would avoid us lumping all our automation code into one World object. However, this doesn't stop the bloat. Page objects that model every button and interaction point on a page can become huge and unwieldy.
 
-A more insidious problem is that page objects are based around the UI. This means there would have to be a leap in translation in our step defintions: we'd jump from a problem-domain concept like _create a project_ to the nitty-gritty interactions with the app that will cause this action to happen. This isn't such a clean separation of concerns, and distracts us from focussing on the _behaviour_ and _intent_ of our users. If we're not careful, these detailed interactions can start to [leak out into the Gherkin](/blog/single-source-of-truth/).
+A more insidious problem is that page objects are based around the UI. This means there would have to be a leap in translation in our step defintions: we'd jump from a problem-domain concept like _create a project_ to the nitty-gritty interactions with the app that will cause this action to happen. This isn't such a clean separation of concerns, and distracts us from focussing on the _behaviour_ and _intent_ of our users. If we're not careful, these detailed interactions can start to [leak out into the Gherkin](/blog/bdd/single-source-of-truth/).
 
 So now we have a sense of some of the problems with the typical approaches to organising acceptance test automation code.
 

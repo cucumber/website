@@ -12,7 +12,7 @@ This blog post explores the challenges of applying a Behavior-Driven Development
 
 ## What is BDD?
 
-BDD is an agile development approach in which three practices are applied to each story/backlog item: Discovery, Formulation, and Automation. Much has been [**written**](https://bddbooks.com) about BDD and there are many good [**introductory articles**](/blog/bdd) available, but here I’d like to stress that these practices must be applied in the correct order. Discovery, then Formulation, then Automation.
+BDD is an agile development approach in which three practices are applied to each story/backlog item: Discovery, Formulation, and Automation. Much has been [**written**](https://bddbooks.com) about BDD and there are many good [**introductory articles**](/blog/tags/bdd) available, but here I’d like to stress that these practices must be applied in the correct order. Discovery, then Formulation, then Automation.
 
 ![](/img/blog/f0cc3c65859ca842c2d58cd31bd5fa40ee7f5594b4a71dd1dcbd151eb02affce.png)
 
