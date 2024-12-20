@@ -21,7 +21,7 @@ OSC is a 501(c)(6) non-profit registered in the USA, providing a similar service
 
 ## What does this mean for me?
 
-For those of us closest to the project, things have been uncertain since [SmartBear and I parted ways](https://mattwynne.net/new-beginning) back in February 2023. The core team has been in something of a limbo state since then, unsure of whether we'd be able to continue under the same name while we worked through the legal details with SmartBear. We've continued to make updates and releases, but for some of us this process provided a significant distraction that meant we had little time or energy left to work on the project itself.
+Since February 2023, when SmartBear and I began exploring new paths for the project, the process introduced a period of uncertainty for those of us closest to it. We worked closely with SmartBear to navigate the legal details surrounding the name, and while that process took time, it also reflected a shared commitment to finding the best outcome for the project and its community.
 
 If you're using one of the many open-source flavours of Cucumber like [Cucumber-JVM](https://github.com/cucumber/cucumber-jvm), [Cucumber-JS](https://github.com/cucumber/cucumber-js) or [Cucumber-Ruby](https://github.com/cucumber/cucumber-ruby) you can now be confident knowing that the core team can focus 100% of their time on evolving those products to meet your needs.
 
@@ -35,4 +35,4 @@ Our financials are [completely transparent](https://opencollective.com/cucumber#
 
 ## A note of thanks
 
-I want to acknowledge the support that SmartBear has provided over the years, helping Cucumber grow and reach new audiences. It was brave of them to take a chance on us back in 2019, and although it didn't work out, I'm grateful that their folks have done the work to see this through and transition stewardship back to the community. I think it demonstrates their integrity and appreciation of open source culture.
+I want to acknowledge the support that SmartBear has provided over the years, helping Cucumber grow and reach new audiences. It was brave of them to take a chance on us back in 2019 and I'm grateful that their folks have done the work to see this through and transition stewardship back to the community. I think it demonstrates their integrity and appreciation of open source culture.
