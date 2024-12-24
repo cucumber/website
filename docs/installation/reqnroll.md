@@ -7,6 +7,8 @@ sidebar_custom_props:
   icon: dotnet.svg
 ---
 
-# SpecFlow
+# Reqnroll
 
-Please see the [SpecFlow website](https://specflow.org/).
+Please see the [Reqnroll website](https://reqnroll.net/).
+
+(Reqnroll is a reboot of the now-retired SpecFlow project.)

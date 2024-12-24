@@ -102,6 +102,10 @@
 
 # Relocated docs
 [[redirects]]
+  from = "/docs/installation/specflow"
+  to = "/docs/installation/reqnroll"
+  status = 301
+[[redirects]]
   from = "/docs/guides/overview"
   to = "/docs"
   status = 301
