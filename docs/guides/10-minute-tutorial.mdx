@@ -665,13 +665,13 @@ Run Cucumber again. This time the output is a little different:
       Everybody wants to know when it's Friday
 
       Scenario: Sunday isn't Friday        # hellocucumber/is_it_friday_yet.feature:4
-        Given today is Sunday              # Stepdefs.today_is_Sunday()
+        Given today is Sunday              # StepDefinitions.today_is_Sunday()
           io.cucumber.java.PendingException: TODO: implement me
-        at hellocucumber.Stepdefs.today_is_Sunday(StepDefinitions.java:14)
+        at hellocucumber.StepDefinitions.today_is_Sunday(StepDefinitions.java:14)
         at ?.today is Sunday(classpath:hellocucumber/is_it_friday_yet.feature:5)
 
-        When I ask whether it's Friday yet # Stepdefs.i_ask_whether_it_s_Friday_yet()
-        Then I should be told "Nope"       # Stepdefs.i_should_be_told(String)
+        When I ask whether it's Friday yet # StepDefinitions.i_ask_whether_it_s_Friday_yet()
+        Then I should be told "Nope"       # StepDefinitions.i_should_be_told(String)
 
     Pending scenarios:
     hellocucumber/is_it_friday_yet.feature:4 # Sunday isn't Friday
@@ -681,7 +681,7 @@ Run Cucumber again. This time the output is a little different:
     0m0.188s
 
     io.cucumber.java.PendingException: TODO: implement me
-        at hellocucumber.Stepdefs.today_is_Sunday(StepDefinitions.java:13)
+        at hellocucumber.StepDefinitions.today_is_Sunday(StepDefinitions.java:13)
         at ?.today is Sunday(classpath:hellocucumber/is_it_friday_yet.feature:5)
     ```
 </Content>
@@ -1127,14 +1127,14 @@ When we run this test, it will fail.
       Everybody wants to know when it's Friday
 
       Scenario: Sunday isn't Friday        # hellocucumber/is_it_friday_yet.feature:4
-        Given today is Sunday              # Stepdefs.today_is_Sunday()
-        When I ask whether it's Friday yet # Stepdefs.i_ask_whether_it_s_Friday_yet()
-        Then I should be told "Nope"       # Stepdefs.i_should_be_told(String)
+        Given today is Sunday              # StepDefinitions.today_is_Sunday()
+        When I ask whether it's Friday yet # StepDefinitions.i_ask_whether_it_s_Friday_yet()
+        Then I should be told "Nope"       # StepDefinitions.i_should_be_told(String)
 
       Scenario: Friday is Friday           # hellocucumber/is_it_friday_yet.feature:9
-        Given today is Friday              # Stepdefs.today_is_Friday()
-        When I ask whether it's Friday yet # Stepdefs.i_ask_whether_it_s_Friday_yet()
-        Then I should be told "TGIF"       # Stepdefs.i_should_be_told(String)
+        Given today is Friday              # StepDefinitions.today_is_Friday()
+        When I ask whether it's Friday yet # StepDefinitions.i_ask_whether_it_s_Friday_yet()
+        Then I should be told "TGIF"       # StepDefinitions.i_should_be_told(String)
           org.junit.ComparisonFailure: expected:<[TGIF]> but was:<[Nope]>
         at org.junit.Assert.assertEquals(Assert.java:115)
         at org.junit.Assert.assertEquals(Assert.java:144)
@@ -1152,7 +1152,7 @@ When we run this test, it will fail.
     org.junit.ComparisonFailure: expected:<[TGIF]> but was:<[Nope]>
         at org.junit.Assert.assertEquals(Assert.java:115)
         at org.junit.Assert.assertEquals(Assert.java:144)
-        at hellocucumber.Stepdefs.i_should_be_told(StepDefinitions.java:36)
+        at hellocucumber.StepDefinitions.i_should_be_told(StepDefinitions.java:36)
         at ?.I should be told "TGIF"(classpath:hellocucumber/is_it_friday_yet.feature:12)
     ```
 </Content>
@@ -1509,19 +1509,19 @@ Feature: Is it Friday yet?
     Examples:
 
   Scenario Outline: Today is or is not Friday # hellocucumber/is_it_friday_yet.feature:11
-    Given today is "Friday"                   # Stepdefs.today_is(String)
-    When I ask whether it's Friday yet        # Stepdefs.i_ask_whether_it_s_Friday_yet()
-    Then I should be told "TGIF"              # Stepdefs.i_should_be_told(String)
+    Given today is "Friday"                   # StepDefinitions.today_is(String)
+    When I ask whether it's Friday yet        # StepDefinitions.i_ask_whether_it_s_Friday_yet()
+    Then I should be told "TGIF"              # StepDefinitions.i_should_be_told(String)
 
   Scenario Outline: Today is or is not Friday # hellocucumber/is_it_friday_yet.feature:12
-    Given today is "Sunday"                   # Stepdefs.today_is(String)
-    When I ask whether it's Friday yet        # Stepdefs.i_ask_whether_it_s_Friday_yet()
-    Then I should be told "Nope"              # Stepdefs.i_should_be_told(String)
+    Given today is "Sunday"                   # StepDefinitions.today_is(String)
+    When I ask whether it's Friday yet        # StepDefinitions.i_ask_whether_it_s_Friday_yet()
+    Then I should be told "Nope"              # StepDefinitions.i_should_be_told(String)
 
   Scenario Outline: Today is or is not Friday # hellocucumber/is_it_friday_yet.feature:13
-    Given today is "anything else!"           # Stepdefs.today_is(String)
-    When I ask whether it's Friday yet        # Stepdefs.i_ask_whether_it_s_Friday_yet()
-    Then I should be told "Nope"              # Stepdefs.i_should_be_told(String)
+    Given today is "anything else!"           # StepDefinitions.today_is(String)
+    When I ask whether it's Friday yet        # StepDefinitions.i_ask_whether_it_s_Friday_yet()
+    Then I should be told "Nope"              # StepDefinitions.i_should_be_told(String)
 
 3 Scenarios (3 passed)
 9 Steps (9 passed)
