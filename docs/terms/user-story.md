@@ -1,5 +1,5 @@
 ---
-description: "Small increments of value used in planning agile developent work"
+description: "Small increments of value used in planning agile development work"
 ---
 
 # User story

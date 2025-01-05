@@ -120,7 +120,7 @@ See our [browser automation guide](./guides/browser-automation.mdx).
 
 ### How do I share state between steps?
 
-The JavaScript and Ruby impelmentations of Cucumber have the [world object](/docs/cucumber/state/#world-object) for sharing state between steps.
+The JavaScript and Ruby implementations of Cucumber have the [world object](/docs/cucumber/state/#world-object) for sharing state between steps.
 
 If you are using Cucumber on the JVM, you can use [dependency injection (DI)](/docs/cucumber/state/#dependency-injection) to share state between steps. If your project already uses a dependency framework supported by Cucumber (and/or you are familiar with one of them), it's probably easiest to use that framework. Otherwise, Picocontainer is the most light weight framework you can use.
 
