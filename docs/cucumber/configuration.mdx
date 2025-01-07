@@ -468,8 +468,8 @@ ParameterType(
 Here's an example of how to use this in a step definition:
 
 ```ruby
-Then /^a user {person} should have {int} followers$/ do |person, count|
-  assert(person.is_a?(Person))
+Then('a user {person} should have {int} followers') do |person, count|
+  puts person.is_a?(Person)
 end
 ```
 
