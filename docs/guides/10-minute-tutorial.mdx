@@ -896,15 +896,15 @@ Run Cucumber again:
       Everybody wants to know when it's Friday
 
       Scenario: Sunday isn't Friday        # hellocucumber/is_it_friday_yet.feature:4
-        Given today is Sunday              # Stepdefs.today_is_Sunday()
-        When I ask whether it's Friday yet # Stepdefs.i_ask_whether_it_s_Friday_yet()
-        Then I should be told "Nope"       # Stepdefs.i_should_be_told(String)
+        Given today is Sunday              # StepDefinitions.today_is_Sunday()
+        When I ask whether it's Friday yet # StepDefinitions.i_ask_whether_it_s_Friday_yet()
+        Then I should be told "Nope"       # StepDefinitions.i_should_be_told(String)
           java.lang.AssertionError: expected:<Nope> but was:<null>
         at org.junit.Assert.fail(Assert.java:88)
         at org.junit.Assert.failNotEquals(Assert.java:834)
         at org.junit.Assert.assertEquals(Assert.java:118)
         at org.junit.Assert.assertEquals(Assert.java:144)
-        at hellocucumber.Stepdefs.i_should_be_told(StepDefinitions.java:31)
+        at hellocucumber.StepDefinitions.i_should_be_told(StepDefinitions.java:31)
         at ?.I should be told "Nope"(classpath:hellocucumber/is_it_friday_yet.feature:7)
 
 
@@ -1015,7 +1015,26 @@ Let's do the minimum we need to make the scenario pass. In this case, that means
 
 Run Cucumber again:
 
-<Content lang="java,kotlin">
+<Content lang="java">
+    ```shell
+    -------------------------------------------------------
+     T E S T S
+    -------------------------------------------------------
+    Running hellocucumber.RunCucumberTest
+    Feature: Is it Friday yet?
+      Everybody wants to know when it's Friday
+
+      Scenario: Sunday isn't Friday        # hellocucumber/is_it_friday_yet.feature:4
+        Given today is Sunday              # StepDefinitions.today_is_Sunday()
+        When I ask whether it's Friday yet # StepDefinitions.i_ask_whether_it_s_Friday_yet()
+        Then I should be told "Nope"       # StepDefinitions.i_should_be_told(String)
+
+    1 Scenarios (1 passed)
+    3 Steps (3 passed)
+    0m0.255s
+    ```
+</Content>
+<Content lang="kotlin">
     ```shell
     -------------------------------------------------------
      T E S T S
@@ -1138,7 +1157,7 @@ When we run this test, it will fail.
           org.junit.ComparisonFailure: expected:<[TGIF]> but was:<[Nope]>
         at org.junit.Assert.assertEquals(Assert.java:115)
         at org.junit.Assert.assertEquals(Assert.java:144)
-        at hellocucumber.Stepdefs.i_should_be_told(StepDefinitions.java:36)
+        at hellocucumber.StepDefinitions.i_should_be_told(StepDefinitions.java:36)
         at ?.I should be told "TGIF"(classpath:hellocucumber/is_it_friday_yet.feature:12)
 
 
@@ -1289,7 +1308,31 @@ We should update our statement to actually evaluate whether or not `today` is eq
 
 Run Cucumber again:
 
-<Content lang="java,kotlin">
+<Content lang="java">
+    ```shell
+    -------------------------------------------------------
+     T E S T S
+    -------------------------------------------------------
+    Running hellocucumber.RunCucumberTest
+    Feature: Is it Friday yet?
+      Everybody wants to know when it's Friday
+
+      Scenario: Sunday isn't Friday        # hellocucumber/is_it_friday_yet.feature:4
+        Given today is Sunday              # StepDefinitions.today_is_Sunday()
+        When I ask whether it's Friday yet # StepDefinitions.i_ask_whether_it_s_Friday_yet()
+        Then I should be told "Nope"       # StepDefinitions.i_should_be_told(String)
+
+      Scenario: Friday is Friday           # hellocucumber/is_it_friday_yet.feature:9
+        Given today is Friday              # StepDefinitions.today_is_Friday()
+        When I ask whether it's Friday yet # StepDefinitions.i_ask_whether_it_s_Friday_yet()
+        Then I should be told "TGIF"       # StepDefinitions.i_should_be_told(String)
+
+    2 Scenarios (2 passed)
+    6 Steps (6 passed)
+    0m0.255s
+    ```
+</Content>
+<Content lang="kotlin">
     ```shell
     -------------------------------------------------------
      T E S T S
