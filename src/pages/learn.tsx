@@ -36,16 +36,20 @@ export default function Learn() {
         <title>Learn BDD and Cucumber</title>
         <meta
           name="description"
-          content="As well as our extensive documentation, there are some other resources we recommend to really accelerate your journey with BDD and Cucumber."
+          content="As well as our extensive documentation, there are some other resources you might find helpful on your journey with BDD and Cucumber."
         />
       </Head>
       <main>
         <div className="container text--center padding-vert--lg">
           <h1>Learn BDD and Cucumber</h1>
-          <p className="readable-blurb">
-            As well as our <Link to="/docs">extensive documentation</Link>, there are some other
-            resources we recommend to really accelerate your journey with BDD and Cucumber.
-          </p>
+          <div className="readable-blurb">
+            <p>
+              As well as our <Link to="/docs">extensive documentation</Link>, there are some other
+              resources you might find helpful your journey with BDD and Cucumber. (Note that these
+              resources aren't necessarily endorsed by the Cucumber team &mdash; we just think they
+              might be worth checking out.)
+            </p>
+          </div>
         </div>
         <div className="container padding-vert--lg">
           <Resource to="https://school.cucumber.io" title="Cucumber School" cta="Get Started">
