@@ -132,7 +132,7 @@ Feature: Highlander
 
     Example: Only One -- One alive
       Given there is only 1 ninja alive
-      Then he (or she) will live forever ;-)
+      Then they will live forever ;-)
 
   Rule: There can be Two (in some cases)
 
