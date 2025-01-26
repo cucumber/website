@@ -95,6 +95,13 @@ export default function Learn() {
               integrate it into your existing development process.
             </p>
           </Resource>
+          <Resource to="https://stevenhunt.me/book" title="The Cucumber Field Guide" cta="Buy">
+            <img alt="" src="/img/learn/book-cucumber-field-guide.png" />
+            <p>
+              Steven Hunt provides ideas, recommendations, and advice on utilizing Cucumber to
+              enhance software testing and improve the quality of your software applications.
+            </p>
+          </Resource>
         </div>
       </main>
     </Layout>
