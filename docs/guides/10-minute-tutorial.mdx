@@ -624,7 +624,7 @@ Copy each of the three snippets for the undefined steps and paste them into
     import io.cucumber.java.en.Given
     import io.cucumber.java.en.When
     import io.cucumber.java.en.Then
-    import org.junit.Assert.*
+    import static org.assertj.core.api.Assertions.assertThat;
 
     class StepDefs {
         @Given("today is Sunday")
@@ -777,7 +777,7 @@ Change your step definition code to this:
     import io.cucumber.java.en.Given;
     import io.cucumber.java.en.When;
     import io.cucumber.java.en.Then;
-    import static org.junit.jupiter.api.Assertions.*;
+    import static org.assertj.core.api.Assertions.assertThat;
 
     class IsItFriday {
         static String isItFriday(String today) {
@@ -801,7 +801,7 @@ Change your step definition code to this:
 
         @Then("I should be told {string}")
         public void i_should_be_told(String expectedAnswer) {
-            assertEquals(expectedAnswer, actualAnswer);
+            assertThat(actualAnswer).isEqualTo(expectedAnswer);
         }
     }
     ```
@@ -813,7 +813,7 @@ Change your step definition code to this:
     import io.cucumber.java.en.Then
     import io.cucumber.java.en.Given
     import io.cucumber.java.en.When
-    import junit.framework.Assert.assertEquals
+    import static org.assertj.core.api.Assertions.assertThat;
 
 
     fun isItFriday(today: String) = ""
@@ -835,7 +835,7 @@ Change your step definition code to this:
 
         @Then("I should be told {string}")
         fun i_should_be_told(expectedAnswer: String) {
-            assertEquals(expectedAnswer, actualAnswer)
+            assertThat(actualAnswer).isEqualTo(expectedAnswer)
         }
     }
     ```
@@ -899,13 +899,15 @@ Run Cucumber again:
         Given today is Sunday              # StepDefinitions.today_is_Sunday()
         When I ask whether it's Friday yet # StepDefinitions.i_ask_whether_it_s_Friday_yet()
         Then I should be told "Nope"       # StepDefinitions.i_should_be_told(String)
-          java.lang.AssertionError: expected:<Nope> but was:<null>
-        at org.junit.Assert.fail(Assert.java:88)
-        at org.junit.Assert.failNotEquals(Assert.java:834)
-        at org.junit.Assert.assertEquals(Assert.java:118)
-        at org.junit.Assert.assertEquals(Assert.java:144)
-        at hellocucumber.StepDefinitions.i_should_be_told(StepDefinitions.java:31)
-        at ?.I should be told "Nope"(classpath:hellocucumber/is_it_friday_yet.feature:7)
+          org.opentest4j.AssertionFailedError:
+          expected: "Nope"
+           but was: null
+              at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+              at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+              at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+              at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+              at io.cucumber.skeleton.StepDefinitions.I_have_cukes_in_my_belly(StepDefinitions.java:12)
+              at ✽.I have 42 cukes in my belly(classpath:io/cucumber/skeleton/belly.feature:4)
 
 
     Failed scenarios:
@@ -929,11 +931,15 @@ Run Cucumber again:
         Given today is Sunday              # StepDefs.today_is_Sunday()
         When I ask whether it's Friday yet # StepDefs.i_ask_whether_it_s_Friday_yet()
         Then I should be told "Nope"       # StepDefs.i_should_be_told(String)
-          junit.framework.ComparisonFailure: expected:<[Nope]> but was:<[]>
-            at junit.framework.Assert.assertEquals(Assert.java:100)
-            at junit.framework.Assert.assertEquals(Assert.java:107)
-            at hellocucumber.StepDefs.i_should_be_told(StepDefs.kt:30)
-            at ✽.I should be told "Nope"(hellocucumber/is_it_friday_yet.feature:7)
+          org.opentest4j.AssertionFailedError:
+          expected: "Nope"
+           but was: null
+              at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+              at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+              at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+              at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+              at io.cucumber.skeleton.StepDefinitions.I_have_cukes_in_my_belly(StepDefinitions.java:12)
+              at ✽.I have 42 cukes in my belly(classpath:io/cucumber/skeleton/belly.feature:4)
     ```
 </Content>
 <Content lang="javascript">
@@ -1154,11 +1160,15 @@ When we run this test, it will fail.
         Given today is Friday              # StepDefinitions.today_is_Friday()
         When I ask whether it's Friday yet # StepDefinitions.i_ask_whether_it_s_Friday_yet()
         Then I should be told "TGIF"       # StepDefinitions.i_should_be_told(String)
-          org.junit.ComparisonFailure: expected:<[TGIF]> but was:<[Nope]>
-        at org.junit.Assert.assertEquals(Assert.java:115)
-        at org.junit.Assert.assertEquals(Assert.java:144)
-        at hellocucumber.StepDefinitions.i_should_be_told(StepDefinitions.java:36)
-        at ?.I should be told "TGIF"(classpath:hellocucumber/is_it_friday_yet.feature:12)
+          org.opentest4j.AssertionFailedError:
+            expected: "TGIF"
+             but was: "Nope"
+                at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+                at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+                at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+                at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+                at io.cucumber.skeleton.StepDefinitions.I_have_cukes_in_my_belly(StepDefinitions.java:12)
+                at ✽.I have 42 cukes in my belly(classpath:io/cucumber/skeleton/belly.feature:4)
 
 
     Failed scenarios:
@@ -1168,11 +1178,15 @@ When we run this test, it will fail.
     6 Steps (1 failed, 5 passed)
     0m0.085s
 
-    org.junit.ComparisonFailure: expected:<[TGIF]> but was:<[Nope]>
-        at org.junit.Assert.assertEquals(Assert.java:115)
-        at org.junit.Assert.assertEquals(Assert.java:144)
-        at hellocucumber.StepDefinitions.i_should_be_told(StepDefinitions.java:36)
-        at ?.I should be told "TGIF"(classpath:hellocucumber/is_it_friday_yet.feature:12)
+    org.opentest4j.AssertionFailedError:
+      expected: "TGIF"
+       but was: "Nope"
+          at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+          at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+          at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+          at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+          at io.cucumber.skeleton.StepDefinitions.I_have_cukes_in_my_belly(StepDefinitions.java:12)
+          at ✽.I have 42 cukes in my belly(classpath:io/cucumber/skeleton/belly.feature:4)
     ```
 </Content>
 <Content lang="kotlin">
@@ -1190,12 +1204,15 @@ When we run this test, it will fail.
         Given today is Friday              # StepDefs.today_is_Friday()
         When I ask whether it's Friday yet # StepDefs.i_ask_whether_it_s_Friday_yet()
         Then I should be told "TGIF"       # StepDefs.i_should_be_told(String)
-          org.junit.ComparisonFailure: expected:<[TGIF]> but was:<[Nope]>
-            at org.junit.Assert.assertEquals(Assert.java:115)
-            at org.junit.Assert.assertEquals(Assert.java:144)
-            at hellocucumber.StepDefs.i_should_be_told(StepDefs.kt:40)
-            at ✽.I should be told "TGIF"(hellocucumber/isitfriday.feature:12)
-
+          org.opentest4j.AssertionFailedError:
+            expected: "TGIF"
+             but was: "Nope"
+                at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+                at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+                at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+                at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+                at io.cucumber.skeleton.StepDefinitions.I_have_cukes_in_my_belly(StepDefinitions.java:12)
+                at ✽.I have 42 cukes in my belly(classpath:io/cucumber/skeleton/belly.feature:4)
 
     Failed scenarios:
     hellocucumber/isitfriday.feature:9 # Friday is Friday
@@ -1204,11 +1221,15 @@ When we run this test, it will fail.
     6 Steps (1 failed, 5 passed)
     0m0.100s
 
-    org.junit.ComparisonFailure: expected:<[TGIF]> but was:<[Nope]>
-            at org.junit.Assert.assertEquals(Assert.java:115)
-            at org.junit.Assert.assertEquals(Assert.java:144)
-            at hellocucumber.StepDefs.i_should_be_told(StepDefs.kt:40)
-            at ✽.I should be told "TGIF"(hellocucumber/isitfriday.feature:12)
+    org.opentest4j.AssertionFailedError:
+      expected: "TGIF"
+       but was: "Nope"
+          at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+          at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+          at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+          at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+          at io.cucumber.skeleton.StepDefinitions.I_have_cukes_in_my_belly(StepDefinitions.java:12)
+          at ✽.I have 42 cukes in my belly(classpath:io/cucumber/skeleton/belly.feature:4)
 
     ```
 </Content>
@@ -1417,7 +1438,7 @@ package hellocucumber;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class IsItFriday {
     static String isItFriday(String today) {
@@ -1441,7 +1462,7 @@ public class Stepdefs {
 
     @Then("I should be told {string}")
     public void i_should_be_told(String expectedAnswer) {
-        assertEquals(expectedAnswer, actualAnswer);
+        assertThat(actualAnswer).isEqualTo(expectedAnswer);
     }
 }
 ```
@@ -1453,7 +1474,7 @@ package hellocucumber
 import io.cucumber.java.en.Then
 import io.cucumber.java.en.Given
 import io.cucumber.java.en.When
-import static org.junit.jupiter.api.Assertions.assertEquals
+import static org.assertj.core.api.Assertions.assertThat
 
 fun isItFriday(today: String) = if (today == "Friday") "TGIF" else "Nope"
 
@@ -1474,7 +1495,7 @@ class StepDefs {
 
     @Then("I should be told {string}")
     fun i_should_be_told(expectedAnswer: String) {
-        assertEquals(expectedAnswer, actualAnswer)
+        assertThat(actualAnswer).isEqualTo(expectedAnswer)
     }
 }
 ```
