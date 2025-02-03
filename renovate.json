@@ -9,7 +9,7 @@
         "^versions.yaml"
       ],
       "matchStrings": [
-        ".*?:\\s+\"(?<currentValue>.*)\"\\s+#\\s+renovate: datasource=(?<datasource>.+?) depName=(?<depName>.+?)\\n"
+        ".*?:\\s+'(?<currentValue>.*)'\\s+#\\s+renovate: datasource=(?<datasource>.+?) depName=(?<depName>.+?)\\n"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
