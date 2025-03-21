@@ -49,24 +49,6 @@ repositories {
 
 Similarly, if you want to use Gradle **5.0 or more recent** add the following dependencies to `build.gradle` or `build.gradle.kts`:
 
-<details open>
-<summary>Groovy</summary>
-
-```groovy
-dependencies {
-    testImplementation 'io.cucumber:cucumber-java:{{% version "cucumberjvm" %}}'
-    testImplementation 'io.cucumber:cucumber-junit:{{% version "cucumberjvm" %}}'
-}
-
-repositories {
-    mavenCentral()
-}
-```
-
-</details>
-<details>
-<summary>Kotlin</summary>
-
 ```kotlin
 dependencies {
     testImplementation("io.cucumber:cucumber-java:{{% version "cucumberjvm" %}}")
@@ -77,7 +59,6 @@ repositories {
     mavenCentral()
 }
 ```
-</details>
 
 You can now run Cucumber [from the command line](/docs/cucumber/api/#from-the-command-line) to execute by [adding a cucumber task](/docs/tools/java#gradle) to `build.gradle` or `build.gradle.kts`.
 
