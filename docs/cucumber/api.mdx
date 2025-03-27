@@ -16,13 +16,14 @@ The number of parameters in the <Term>stepdef-body</Term> has to match the numbe
 
 ## Data tables
 
-Data tables from Gherkin can be accessed by using the `DataTable` object as the last parameter in a step definition.
-This conversion can be done either by Cucumber or manually.
+Data tables from Gherkin can be accessed by using the `DataTable` object as the
+last parameter in a step definition.
 
 <Tabs>
     <Tab lang="java,kotlin,scala">
 
-Depending on the table shape as one of the following collections:
+Depending on the table shape, the following collections can be also used as the
+last parameter in a step definition. This conversion is done by Cucumber.
 
 ```java
 List<List<String>> table
@@ -32,20 +33,27 @@ Map<String, List<String>> table
 Map<String, Map<String, String>> table
 ```
 
-    </Tab>
+In addition to collections of `String`, `Integer`, `Float`, `BigInteger` and
+`BigDecimal`, `Byte`, `Short`, `Long` and `Double` are also supported by
+Cucumber. By registering a data table type it is also possible to support other
+types. See [cucumber-jvm data-table-type](https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-java#data-table-type)
+for more.
+  </Tab>
+  <Tab lang="javascript"> 
+    <!-- Intentionally left blank -->
+  </Tab>
 </Tabs>
 
 The simplest way to pass a list of strings to a step definition is to use a data table:
 
 ```gherkin
 Given the following animals:
-  | cow   |
-  | horse |
-  | sheep |
+| cow   |
+| horse |
+| sheep |
 ```
-
 <Tabs>
-    <Tab lang="java">
+  <Tab lang="java">
 
 Declare the argument as a `List<String>` but don't define any capture group in the expression.
 
@@ -58,11 +66,6 @@ public void the_following_animals(List<String> animals) {
 ```
 
 In this case, the `DataTable` is automatically flattened to a list of strings by Cucumber (using `DataTable.asList(String.class)`) before invoking the step definition.
-
-In addition to collections of `String`, `Integer`, `Float`, `BigInteger` and `BigDecimal`, `Byte`,
-`Short`, `Long` and `Double` are also supported.
-
-See also [cucumber-jvm data-tables](https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-java#data-tables).
 
     </Tab>
     <Tab lang="kotlin">
@@ -79,11 +82,6 @@ fun the_following_animals(animals: List<String>) {
 
 In this case, the `DataTable` is automatically flattened to a list of strings by Cucumber (using `DataTable.asList(String.class)`) before invoking the step definition.
 
-In addition to collections of `String`, `Integer`, `Float`, `BigInteger` and `BigDecimal`, `Byte`,
-`Short`, `Long` and `Double` are also supported.
-
-See also [cucumber-jvm data-tables](https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-java#data-tables).
-
     </Tab>
     <Tab lang="scala">
 
@@ -97,9 +95,11 @@ In this case, the `DataTable` is automatically flattened to a list of strings by
 For now, Cucumber Scala does not support using Scala collection types, see [this issue](https://github.com/cucumber/cucumber-jvm-scala/issues/50).
 
     </Tab>
+    <Tab lang="javascript">
+      For an example of using data tables in JavaScript, go [here](https://github.com/cucumber/cucumber-js/blob/main/docs/support_files/data_table_interface.md)
+    </Tab>
 </Tabs>
 
-For an example of data tables in JavaScript, go [here](https://github.com/cucumber/cucumber-js/blob/master/src/models/data_table.ts)
 
 ## Steps
 
