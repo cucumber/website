@@ -13,7 +13,7 @@ type Props = WrapperProps<typeof DesktopType>
 export default function DesktopWrapper(props: Props): ReactNode {
   return (
     <>
-      <ImageAd />
+      <ImageAd target="desktop" />
       <Desktop {...props} />
     </>
   )

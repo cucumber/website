@@ -2,7 +2,7 @@ import React, { FC, useEffect } from 'react'
 import { AdTarget } from './types'
 import { useWindowSize } from '@docusaurus/theme-common'
 
-export const ImageAd: FC<{ target: AdTarget }> = ({ target }) => {
+export const TextAd: FC<{ target: AdTarget }> = ({ target }) => {
   const windowSize = useWindowSize()
   const show = windowSize === target
   useEffect(() => {
@@ -13,5 +13,5 @@ export const ImageAd: FC<{ target: AdTarget }> = ({ target }) => {
   if (!show) {
     return null
   }
-  return <div className="bordered" data-ea-publisher="cucumberio" data-ea-type="image"></div>
+  return <div className="bordered" data-ea-publisher="cucumberio" data-ea-type="text"></div>
 }

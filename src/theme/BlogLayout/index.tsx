@@ -17,7 +17,7 @@ export default function BlogLayoutWrapper(props: Props): ReactNode {
         {...props}
         toc={
           <>
-            <ImageAd />
+            <ImageAd target="desktop" />
             {props.toc}
           </>
         }
