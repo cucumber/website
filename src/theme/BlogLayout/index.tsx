@@ -2,7 +2,7 @@ import React, { type ReactNode } from 'react'
 import BlogLayout from '@theme-original/BlogLayout'
 import type BlogLayoutType from '@theme/BlogLayout'
 import type { WrapperProps } from '@docusaurus/types'
-import { ImageAd } from '@site/src/components/Ads'
+import { ImageAd, TextAd } from '@site/src/components/Ads'
 
 type Props = WrapperProps<typeof BlogLayoutType>
 
@@ -21,7 +21,10 @@ export default function BlogLayoutWrapper(props: Props): ReactNode {
             {props.toc}
           </>
         }
-      />
+      >
+        <TextAd target="mobile" />
+        {props.children}
+      </BlogLayout>
     </>
   )
 }
