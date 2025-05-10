@@ -102,3 +102,20 @@ the sidebar items are still generated and can be used to populate the index page
     display: none !important;
   }
 }
+
+
+@media all and (min-width: 997px) {
+  .navbar__inner {
+    max-width: calc(var(--ifm-container-width) - (var(--ifm-spacing-horizontal) * 2));
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .navbar__inner {
+    max-width: calc(var(--ifm-container-width-xl) - (var(--ifm-spacing-horizontal) * 2));
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
