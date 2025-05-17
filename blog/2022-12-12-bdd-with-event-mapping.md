@@ -91,6 +91,6 @@ The timeline should be detailed enough to contain the precise times of borrowing
 
 For alternate timelines (Jane returns the book late) I draw a parallel timeline which splits off from the main timeline. Events that happen on this timeline effectively become separate scenarios (e.g. the one where Jane is fined).
 
-Finally, we can use different ways to mark or identify different scenarios. Here’s a screenshot from a session I ran at the last [Cukenfest](/events). I later identified the use-cases that can be mapped to scenarios and marked them using different coloured rectangles.
+Finally, we can use different ways to mark or identify different scenarios. Here’s a screenshot from a session I ran at the last [Cukenfest](/community). I later identified the use-cases that can be mapped to scenarios and marked them using different coloured rectangles.
 
 ![](/img/blog/jon-acker-event-mapping-5.webp)

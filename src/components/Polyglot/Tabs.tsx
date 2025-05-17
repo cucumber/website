@@ -3,6 +3,7 @@ import DocusaurusTabs from '@theme/Tabs'
 import DocusaurusTabItem from '@theme/TabItem'
 import { LANGUAGES } from './constants'
 import styles from './Tabs.module.scss'
+import clsx from 'clsx'
 
 interface TabsProps {
   once?: string
@@ -26,7 +27,7 @@ export const Tabs: FC<TabsProps> = ({ once, children }) => {
                 key={key}
                 value={key}
                 label={LANGUAGES[key]}
-                attributes={{ className: 'language-tab language-tab--' + key }}
+                attributes={{ className: clsx(styles.languageTab, styles['languageTab--' + key]) }}
               >
                 &nbsp;
               </DocusaurusTabItem>

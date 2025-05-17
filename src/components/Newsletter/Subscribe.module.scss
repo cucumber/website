@@ -3,7 +3,7 @@
 }
 
 .field {
-  background-color: transparent;
+  background-color: var(--ifm-background-color);
   color: inherit;
   font-family: inherit;
   font-size: calc(0.875rem * var(--ifm-button-size-multiplier));

@@ -4,6 +4,7 @@ import Link from '@docusaurus/Link'
 import styles from './sponsors.module.scss'
 import clsx from 'clsx'
 import Head from '@docusaurus/Head'
+import { Hero } from '@site/src/components/Hero'
 
 const numberFormat = new Intl.NumberFormat('en', {
   style: 'currency',
@@ -74,7 +75,7 @@ const Tiers: FC = () => {
                 <p className={clsx('margin-top--md', styles.blurb)}>{tier.description}</p>
               </div>
               <div className="card__footer">
-                <Link className="button button--block button--secondary" href={tier.url}>
+                <Link className="button button--block button--primary" href={tier.url}>
                   Sponsor
                 </Link>
               </div>
@@ -93,14 +94,27 @@ export default function Sponsors() {
         <title>Sponsor Cucumber</title>
         <meta
           name="description"
-          content="Cucumber was downloaded over 100 million times in 2023. Financial contributions ensure the team can get paid for their time, and that Cucumber will
-            remain a reliable and fun way to test your software for years to come."
+          content="Cucumber is a community-driven project and relies on sponsorship to fund its development. Please consider sponsoring if you can."
         />
       </Head>
+      <Hero>
+        <h1 className="hero__title">
+          <strong>Sponsor</strong> Cucumber
+        </h1>
+        <p className="hero__subtitle">
+          Cucumber is a community-driven project and relies on sponsorship to fund its development.
+          Please consider sponsoring if you can.
+        </p>
+        <Link
+          className="button button--lg button--primary"
+          href="https://opencollective.com/cucumber/donate"
+        >
+          Donate Now
+        </Link>
+      </Hero>
       <main>
-        <div className="container readable-blurb text--center padding-vert--lg">
-          <h1>Sponsor Cucumber</h1>
-          <p>Cucumber was downloaded over 100 million times in 2023.</p>
+        <div className="container margin-vert--xl text--center readable">
+          <h2>Cucumber was downloaded over 100 million times in 2024</h2>
           <p>
             Thousands of companies rely on Cucumber tests to validate their software. We are a team
             of volunteers who maintain the core Gherkin parser, the Java, Ruby, JavaScript and Go
@@ -110,18 +124,11 @@ export default function Sponsors() {
             Financial contributions ensure the team can get paid for their time, and that Cucumber
             will remain a reliable and fun way to test your software for years to come.
           </p>
-          <p>
-            <Link
-              className="button button--lg button--primary"
-              href="https://opencollective.com/cucumber/donate"
-            >
-              Donate Now
-            </Link>
-          </p>
         </div>
-        <div className="container padding-vert--lg">
+        <div className="container margin-vert--xl">
+          <h2 className="text--center">Sponsorship tiers</h2>
           <p className="text--center">
-            If you can, we'd love for you to commit a regular amount to support Cucumber.
+            If you can, we'd love for you to commit a regular monthly amount to support Cucumber.
           </p>
           <Tiers />
           <div className="text--center">
@@ -131,9 +138,9 @@ export default function Sponsors() {
             </p>
           </div>
         </div>
-        <div className="container text--center padding-vert--lg">
+        <div className="container margin-vert--xl text--center">
           <h2>Why sponsor?</h2>
-          <p className="readable-blurb margin-bottom--lg">
+          <p className="margin-bottom--lg">
             Your sponsorship will directly contribute to the core team's most important and
             impactful work:
           </p>

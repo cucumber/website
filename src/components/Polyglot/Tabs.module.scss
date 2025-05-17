@@ -19,3 +19,39 @@
     display: none;
   }
 }
+
+.languageTab {
+  &::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    background-size: 18px;
+  }
+
+  &--java::before {
+    background-image: url('/img/platforms/java.svg');
+  }
+
+  &--kotlin::before {
+    background-image: url('/img/platforms/kotlin.svg');
+  }
+
+  &--scala::before {
+    background-image: url('/img/platforms/scala.svg');
+  }
+
+  &--javascript::before {
+    background-image: url('/img/platforms/javascript.svg');
+  }
+
+  &--ruby::before {
+    background-image: url('/img/platforms/ruby.svg');
+  }
+
+  &--golang::before {
+    background-image: url('/img/platforms/golang.svg');
+  }
+}

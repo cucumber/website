@@ -136,16 +136,20 @@
 
 # Events aliases
 [[redirects]]
+  from = "/events"
+  to = "/community"
+  status = 301
+[[redirects]]
   from = "/resources/events"
-  to = "/events"
+  to = "/community"
   status = 301
 [[redirects]]
   from = "/speakers"
-  to = "/events"
+  to = "/community"
   status = 301
 [[redirects]]
   from = "/cukenfest"
-  to = "/events"
+  to = "/community"
   status = 301
 
 # Sponsor aliases
