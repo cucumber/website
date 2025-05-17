@@ -1,17 +1,14 @@
 import React from 'react'
 import Layout from '@theme/Layout'
-import { Hero } from '@site/src/components/Hero'
+import { Splash } from '@site/src/components/Splash'
 import { Intro } from '@site/src/components/Intro'
-import { UsedBy } from '@site/src/components/UsedBy'
 
 export default function Home() {
   return (
     <Layout>
-      <Hero />
+      <Splash />
       <main>
-        <div className="container padding-vert--lg">
-          <Intro />
-        </div>
+        <Intro />
         {/*<div className="container padding-vert--lg">*/}
         {/*    <UsedBy/>*/}
         {/*</div>*/}

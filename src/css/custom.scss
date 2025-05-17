@@ -1,24 +1,49 @@
+/* Infima light theme */
 :root {
   --ifm-background-color: white;
   --ifm-color-primary: #00a818;
-  --ifm-color-primary-dark: #00a818;
-  --ifm-color-primary-darker: #00a818;
-  --ifm-color-primary-darkest: #00a818;
+  --ifm-color-primary-dark: #{darken(#39b54a, 10%)};
+  --ifm-color-primary-darker: #{darken(#39b54a, 10%)};
+  --ifm-color-primary-darkest: #{darken(#39b54a, 10%)};
   --ifm-color-primary-light: #39b54a;
-  --ifm-color-primary-lighter: #39b54a;
-  --ifm-color-primary-lightest: #39b54a;
-  --ifm-footer-background-color: #f6f8fa;
-  --ifm-code-font-size: 100%;
-  --ifm-font-family-base: 'Lato', sans-serif;
-  --ifm-font-family-monospace: 'JetBrains Mono', monospace;
+  --ifm-color-primary-lighter: #{lighten(#39b54a, 10%)};
+  --ifm-color-primary-lightest: #{lighten(#39b54a, 20%)};
+  --ifm-hero-background-color: var(--ifm-color-secondary-lightest);
+  --ifm-footer-background-color: var(--ifm-color-secondary-lightest);
+  --ifm-font-family-base: 'Lato', 'Inter var', ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --ifm-font-family-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
+/* Infima dark theme */
 [data-theme='dark'] {
+  --ifm-hero-background-color: var(--ifm-navbar-background-color);
   --ifm-footer-background-color: var(--ifm-navbar-background-color);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+/* Typographic tweaks to standard Infima hero component */
+.hero__title {
+  font-weight: 300;
+  font-size: 3.5rem;
+  line-height: 1em;
+  text-wrap: balance;
+}
+
+.hero__subtitle {
+  line-height: 1.25em;
+}
+
+/* Typographic tweaks to standard Infima footer component */
+.footer__copyright {
+  font-size: 0.75rem;
+  line-height: 1em;
+}
+
+/* Custom green/white style for announcement banner */
 [class^='announcementBar'] {
   background: repeating-linear-gradient(
     135deg,
@@ -31,6 +56,7 @@
   font-weight: bold;
 }
 
+/* GitHub link icon (as copied from Docusaurus) */
 .header-github-link::before {
   content: '';
   width: 24px;
@@ -45,54 +71,7 @@
   background-color: var(--ifm-navbar-link-hover-color);
 }
 
-.readable-blurb {
-  max-width: 40rem !important;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.footer__copyright {
-  font-size: 0.75rem;
-  line-height: 1em;
-}
-
-.language-tab {
-  &::before {
-    content: '';
-    display: block;
-    width: 24px;
-    height: 24px;
-    background-position: 0 50%;
-    background-repeat: no-repeat;
-    background-size: 18px;
-  }
-
-  &--java::before {
-    background-image: url('/img/platforms/java.svg');
-  }
-
-  &--kotlin::before {
-    background-image: url('/img/platforms/kotlin.svg');
-  }
-
-  &--scala::before {
-    background-image: url('/img/platforms/scala.svg');
-  }
-
-  &--javascript::before {
-    background-image: url('/img/platforms/javascript.svg');
-  }
-
-  &--ruby::before {
-    background-image: url('/img/platforms/ruby.svg');
-  }
-
-  &--golang::before {
-    background-image: url('/img/platforms/golang.svg');
-  }
-}
-
-/**
+/*
 Nasty hack to avoid showing a long sidebar for the installation category. This way,
 the sidebar items are still generated and can be used to populate the index page.
  */
@@ -101,4 +80,47 @@ the sidebar items are still generated and can be used to populate the index page
   .menu__list {
     display: none !important;
   }
+}
+
+/*
+Set the width of nav bar and docs layout to be based on the standard container width,
+adjusting for padding. This matches what the blog and our custom page layouts already do.
+ */
+@media all and (min-width: 997px) {
+  .navbar__inner {
+    max-width: calc(var(--ifm-container-width) - (var(--ifm-spacing-horizontal) * 2));
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  [class^='docsWrapper'] {
+    max-width: var(--ifm-container-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*
+At the wider breakpoint for the Infima container, re-declare the widths.
+ */
+@media (min-width: 1440px) {
+  .navbar__inner {
+    max-width: calc(var(--ifm-container-width-xl) - (var(--ifm-spacing-horizontal) * 2));
+  }
+
+  [class^='docsWrapper'] {
+    max-width: var(--ifm-container-width-xl);
+  }
+}
+
+/* Utility class to fix alignment in flex containers */
+.items-center {
+  align-items: center;
+}
+
+/* Utility class for reasonable-width centered text */
+.readable {
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -4,6 +4,7 @@ import styles from './learn.module.scss'
 import Link from '@docusaurus/Link'
 import clsx from 'clsx'
 import Head from '@docusaurus/Head'
+import { Hero } from '@site/src/components/Hero'
 
 const Resource: FC<{
   to: string
@@ -39,19 +40,21 @@ export default function Learn() {
           content="As well as our extensive documentation, there are some other resources you might find helpful on your journey with BDD and Cucumber."
         />
       </Head>
+      <Hero>
+        <h1 className="hero__title">
+          <strong>Learn</strong> BDD and Cucumber
+        </h1>
+        <p className="hero__subtitle">
+          As well as our <Link to="/docs">extensive documentation</Link>, there are some other
+          resources you might find helpful your journey with BDD and Cucumber.
+        </p>
+        <p>
+          (Note that these resources aren't necessarily endorsed by the Cucumber team &mdash; we
+          just think they might be worth checking out.)
+        </p>
+      </Hero>
       <main>
-        <div className="container text--center padding-vert--lg">
-          <h1>Learn BDD and Cucumber</h1>
-          <div className="readable-blurb">
-            <p>
-              As well as our <Link to="/docs">extensive documentation</Link>, there are some other
-              resources you might find helpful your journey with BDD and Cucumber. (Note that these
-              resources aren't necessarily endorsed by the Cucumber team &mdash; we just think they
-              might be worth checking out.)
-            </p>
-          </div>
-        </div>
-        <div className="container padding-vert--lg">
+        <div className="container margin-vert--xl">
           <Resource to="https://school.cucumber.io" title="Cucumber School" cta="Get Started">
             <div className={styles.schoolStack}>
               <img alt="" src="/img/learn/school-java.png" />

@@ -4,12 +4,18 @@ import { globbySync } from 'globby'
 import YAML from 'yaml'
 import { readFileSync } from 'node:fs'
 
-const lightCodeTheme = themes.jettwaveLight
+const lightCodeTheme = {
+  ...themes.jettwaveLight,
+  plain: {
+    ...themes.jettwaveLight.plain,
+    backgroundColor: 'var(--ifm-hero-background-color)',
+  },
+}
 const darkCodeTheme = {
   ...themes.jettwaveDark,
   plain: {
     ...themes.jettwaveDark.plain,
-    backgroundColor: 'var(--ifm-navbar-background-color)',
+    backgroundColor: 'var(--ifm-hero-background-color)',
   },
 }
 
@@ -22,7 +28,7 @@ export default {
   tagline: 'lets you write automated tests in plain language',
   favicon: 'img/logo.svg',
   stylesheets: [
-    '//fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap',
+    '//fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap',
   ],
 
   url: 'https://cucumber.io',

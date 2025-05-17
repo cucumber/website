@@ -5,6 +5,7 @@ import styles from './community.module.scss'
 import Link from '@docusaurus/Link'
 import { Subscribe } from '@site/src/components/Newsletter'
 import Head from '@docusaurus/Head'
+import { Hero } from '@site/src/components/Hero'
 
 export default function Community() {
   return (
@@ -16,26 +17,29 @@ export default function Community() {
           content="Cucumber has a thriving community made up of kinds of people, from the project's long-standing maintainers to first-time users and everyone in between."
         />
       </Head>
+      <Hero>
+        <h1 className="hero__title">
+          The Cucumber <strong>Community</strong>
+        </h1>
+        <p className="hero__subtitle">
+          Cucumber has a thriving community made up of kinds of people, from the project's
+          long-standing maintainers to first-time users and everyone in between.
+        </p>
+        <Subscribe />
+      </Hero>
       <main>
-        <div className="container text--center padding-vert--lg">
-          <h1>The Cucumber Community</h1>
-          <p className="readable-blurb">
-            Cucumber has a thriving community made up of kinds of people, from the project's
-            long-standing maintainers to first-time users and everyone in between.
-          </p>
-          <Subscribe />
-        </div>
-        <div className="container text--center padding-vert--lg">
-          <h2>Where to find us</h2>
-          <p className="readable-blurb margin-bottom--lg">
-            Wherever you interact with the Cucumber community,
-            <br />
-            always remember to respect and uphold our{' '}
-            <Link to="https://github.com/cucumber/.github/tree/main?tab=coc-ov-file">
-              Code of Conduct
-            </Link>
-            .
-          </p>
+        <div className="container margin-vert--xl">
+          <div className="text--center readable margin-bottom--lg">
+            <h2>Where to find us</h2>
+            <p>
+              Wherever you interact with the Cucumber community, always remember to respect and
+              uphold our{' '}
+              <Link to="https://github.com/cucumber/.github/tree/main?tab=coc-ov-file">
+                Code of Conduct
+              </Link>
+              .
+            </p>
+          </div>
           <div className="row text--center">
             <div className="col col--4">
               <img
@@ -87,9 +91,9 @@ export default function Community() {
             </div>
           </div>
         </div>
-        <div className="container text--center padding-vert--lg">
+        <div className="container margin-vert--xl text--center readable">
           <h2>Want to contribute?</h2>
-          <p className="readable-blurb">
+          <p className="">
             There are many kinds of contributions, besides just code.{' '}
             <Link to="/docs/contributing">You can get involved</Link>.
           </p>
