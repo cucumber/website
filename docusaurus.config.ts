@@ -30,6 +30,12 @@ export default {
   stylesheets: [
     '//fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap',
   ],
+  scripts: [
+    {
+      src: '//media.ethicalads.io/media/client/ethicalads.min.js',
+      async: true,
+    },
+  ],
 
   url: 'https://cucumber.io',
   baseUrl: '/',
