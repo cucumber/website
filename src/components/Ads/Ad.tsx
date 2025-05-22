@@ -2,6 +2,7 @@ import React, { FC, useEffect } from 'react'
 import { AdTarget } from './types'
 import { useColorMode, useWindowSize } from '@docusaurus/theme-common'
 import clsx from 'clsx'
+import { ErrorBoundary } from 'react-error-boundary'
 
 interface Props {
   target: AdTarget
@@ -9,7 +10,15 @@ interface Props {
   id: string
 }
 
-export const Ad: FC<Props> = ({ target, type, id }) => {
+export const Ad: FC<Props> = (props) => {
+  return (
+    <ErrorBoundary fallback={null}>
+      <AdInternal {...props} />
+    </ErrorBoundary>
+  )
+}
+
+const AdInternal: FC<Props> = ({ target, type, id }) => {
   const { colorMode } = useColorMode()
   const windowSize = useWindowSize()
   const show = windowSize === target
