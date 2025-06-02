@@ -119,11 +119,6 @@ export default {
             "Cucumber is a tool for running automated acceptance tests, written in plain language. Because they're written in plain language, they can be read by anyone on your team, improving communication, collaboration and trust.",
         },
       ],
-      // announcementBar: {
-      //   id: 'december-2024-announcement',
-      //   content:
-      //     '📣 We have exciting news - <a href="/blog/open-source/cucumber-is-back-in-community-ownership">read the blog post</a> to learn more!',
-      // },
       colorMode: {
         defaultMode: 'light',
       },
