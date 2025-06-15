@@ -1,13 +1,37 @@
+/* Define brand colors */
+:root {
+  --color-cucumber-green-pale: #39b54a;
+  --color-cucumber-green-bold: #00a818;
+  --color-slate-50: oklch(98.4% 0.003 247.858);
+  --color-slate-100: oklch(96.8% 0.007 247.896);
+  --color-slate-200: oklch(92.9% 0.013 255.508);
+  --color-slate-300: oklch(86.9% 0.022 252.894);
+  --color-slate-400: oklch(70.4% 0.04 256.788);
+  --color-slate-500: oklch(55.4% 0.046 257.417);
+  --color-slate-600: oklch(44.6% 0.043 257.281);
+  --color-slate-700: oklch(37.2% 0.044 257.287);
+  --color-slate-800: oklch(27.9% 0.041 260.031);
+  --color-slate-900: oklch(20.8% 0.042 265.755);
+  --color-slate-950: oklch(12.9% 0.042 264.695);
+}
+
 /* Infima light theme */
 :root {
   --ifm-background-color: white;
+  --ifm-color-primary-lightest: #{lighten(#39b54a, 10%)};
+  --ifm-color-primary-lighter: #39b54a;
+  --ifm-color-primary-light: #39b54a;
   --ifm-color-primary: #00a818;
   --ifm-color-primary-dark: #{darken(#39b54a, 10%)};
   --ifm-color-primary-darker: #{darken(#39b54a, 10%)};
-  --ifm-color-primary-darkest: #{darken(#39b54a, 10%)};
-  --ifm-color-primary-light: #39b54a;
-  --ifm-color-primary-lighter: #{lighten(#39b54a, 10%)};
-  --ifm-color-primary-lightest: #{lighten(#39b54a, 20%)};
+  --ifm-color-primary-darkest: #{darken(#39b54a, 20%)};
+  --ifm-color-secondary-lightest: var(--color-slate-50);
+  --ifm-color-secondary-lighter: var(--color-slate-100);
+  --ifm-color-secondary-light: var(--color-slate-100);
+  --ifm-color-secondary: var(--color-slate-200);
+  --ifm-color-secondary-dark: var(--color-slate-300);
+  --ifm-color-secondary-darker: var(--color-slate-300);
+  --ifm-color-secondary-darkest: var(--color-slate-400);
   --ifm-hero-background-color: var(--ifm-color-secondary-lightest);
   --ifm-footer-background-color: var(--ifm-color-secondary-lightest);
   --ifm-font-family-base: 'Lato', 'Inter var', ui-sans-serif, system-ui, -apple-system,
