@@ -24,6 +24,7 @@ const AdInternal: FC<Props> = ({ target, type, id }) => {
   const show = windowSize === target
 
   useEffect(() => {
+    throw new Error('test')
     if (show) {
       window.ethicalads?.reload()
     }
