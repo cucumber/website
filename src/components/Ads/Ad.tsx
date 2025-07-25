@@ -11,11 +11,7 @@ interface Props {
 }
 
 export const Ad: FC<Props> = (props) => {
-  return (
-    <ErrorBoundary fallback={null}>
-      <AdInternal {...props} />
-    </ErrorBoundary>
-  )
+  return <AdInternal {...props} />
 }
 
 const AdInternal: FC<Props> = ({ target, type, id }) => {
@@ -24,6 +20,7 @@ const AdInternal: FC<Props> = ({ target, type, id }) => {
   const show = windowSize === target
 
   useEffect(() => {
+    throw new Error('test')
     if (show) {
       window.ethicalads?.reload()
     }
