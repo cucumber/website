@@ -11,7 +11,11 @@ interface Props {
 }
 
 export const Ad: FC<Props> = (props) => {
-  return <AdInternal {...props} />
+  return (
+    <ErrorBoundary fallback={null}>
+      <AdInternal {...props} />
+    </ErrorBoundary>
+  )
 }
 
 const AdInternal: FC<Props> = ({ target, type, id }) => {
