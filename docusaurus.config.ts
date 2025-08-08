@@ -32,7 +32,7 @@ export default {
   ],
   scripts: [
     {
-      src: '//js.sentry-cdn.com/7e4a91f57ef4cd7cea2b9e523246542e.min.js',
+      src: '//js.sentry-cdn.com/35a6440bb6caf088f85e58590038eb45.min.js',
       crossOrigin: 'anonymous',
     },
     {
