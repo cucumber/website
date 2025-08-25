@@ -80,7 +80,7 @@ By writing this executable specification collaboratively, we establish a shared 
 
 Now that we have our executable specification, we can use it to guide our development of the implementation.
 
-Taking one example at a time, we automate it by connecting it to the system as a test. The test fails because we have not implemented the behaviour it describes yet. Now we develop the implementation code, using [lower-level examples of the behaviour of internal system components](https://anarchycreek.com/2009/05/20/theyre-called-microtests/) to guide us as required.
+Taking one example at a time, we automate it by connecting it to the system as a test. The test fails because we have not implemented the behaviour it describes yet. Now we develop the implementation code, using [lower-level examples of the behaviour of internal system components](https://www.geepawhill.org/2020/06/12/microtest-tdd-more-definition/) to guide us as required.
 
 The automated examples work like guide-rails, helping us to keep our development work on track.
 
