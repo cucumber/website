@@ -22,7 +22,7 @@ You can read the history file to learn about the changes in every release, and s
 - Cucumber-JVM
   - Changelog https://github.com/cucumber/cucumber-jvm/blob/main/CHANGELOG.md
   - Release notes https://github.com/cucumber/cucumber-jvm/tree/main/release-notes
-- Cucumber-JVM-Scale
+- Cucumber-JVM-Scala
   - Changelog https://github.com/cucumber/cucumber-jvm-scala/blob/main/CHANGELOG.md
   - Upgrade notes https://github.com/cucumber/cucumber-jvm-scala/tree/main?tab=readme-ov-file#getting-started
 - Cucumber-JS
