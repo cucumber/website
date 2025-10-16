@@ -19,10 +19,9 @@ In general, API's change less frequently than the UI; keeping your automation up
 
 ## For Ruby
 
-- [REST Client](https://github.com/rest-client/rest-client) is a simple HTTP and REST client for Ruby.
 - [HTTParty](https://github.com/jnunemaker/httparty) can be used to make HTTP calls. For more information, see the [HTTParty docs](https://github.com/jnunemaker/httparty/tree/master/docs).
 - [Net::HTTP](https://docs.ruby-lang.org/en/2.0.0/Net/HTTP.html) is an HTTP client API for Ruby.
 - [Faraday](https://github.com/lostisland/faraday) is a HTTP client library for Ruby.
 - [RubyMine](https://www.jetbrains.com/help/ruby/meet-rubymine.html) is a Ruby and Rails IDE providing a range of developer tools for Ruby. RubyMine can be used to [test RESTful Web Services](https://www.jetbrains.com/help/ruby/testing-restful-web-services.html).
-- [curb](https://rubygems.org/gems/curb/versions/0.9.3) provides Ruby-language bindings for the libcurl(3), a fully-featured client-side URL transfer library.
+- [curb](https://rubygems.org/gems/curb) provides Ruby-language bindings for the libcurl(3), a fully-featured client-side URL transfer library.
 - [Typhoeus](https://github.com/typhoeus/typhoeus) is a Ruby tool that wraps libcurl in order to make fast and reliable requests. For more information, see the [Typhoeus Ruby docs](https://www.rubydoc.info/github/typhoeus/typhoeus).
