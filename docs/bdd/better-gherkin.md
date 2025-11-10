@@ -83,3 +83,36 @@ Scenario: Subscriber with a paid subscription can access both free and paid arti
 ``` 
 
 With a declarative style, each step communicates an idea, but the exact values aren't specified. The details of *how* the user interacts with the system, such as which specific articles are free or paid, and the subscription level of different test users, are specified in the step definitions (the automation code that interacts with the system). The subscription packages could change in the future. The business could change what content is available to subscribers on free and paid plans, without having to change this scenario and other scenarios that use the same step definitions. If another subscription level is added later, it's easy to add a scenario for that. By avoiding terms like “click a button” that suggest implementation, the scenario is more resilient to implementation details of the UI. The intent of the scenario remains the same, even if the implementation changes later. In addition, having too many implementation details in a scenario, makes it harder to understand the intended behaviour it illustrates.
+
+## In-Between Imperative and Declarative
+
+There is a style between these two. It demonstrates the logical flow, without the details of the user interface. The data can be used to automate the test the core implementation, as well as used to either manually or automatically test the user interface.
+```gherkin
+    Background: 
+    Given articles are: 
+    | Title           | For Subscription  |
+    | Free Article 1  | Free              |
+    | Paid Article 1  | Paid              |
+    * Domain Term - Subscriptions are 
+    | Free | 
+    | Paid |
+    
+    Scenario: Free subscribers see only the free articles
+    Given user is logged in 
+    | User Name               | Password          | Subscription  |
+    | freeFrieda@example.com  | validPassword123  | Free          |
+    When articles are displayed 
+    Then articles shown are 
+    | Title          |
+    | Free Article 1 | 
+    
+    Scenario: Subscriber with a paid subscription can access both free and paid articles
+    Given user is logged in 
+    | User Name               | Password          | Subscription  |
+    | paidPattya@example.com  | validPassword123  | Paid          |
+    When articles are displayed 
+    Then articles shown are 
+    | Title           | 
+    | Free Article 1  | 
+    | Paid Article 1  |
+```
