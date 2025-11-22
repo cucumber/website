@@ -16,7 +16,7 @@
     "prettier:write": "prettier --write '**/*.{cjs,js,scss,ts,tsx,yaml}'"
   },
   "dependencies": {
-    "@cucumber/gherkin": "^36.0.0",
+    "@cucumber/gherkin": "^37.0.0",
     "@docusaurus/core": "3.9.2",
     "@docusaurus/preset-classic": "3.9.2",
     "@docusaurus/remark-plugin-npm2yarn": "^3.6.3",
