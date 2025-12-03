@@ -768,6 +768,20 @@ If the words in your steps originated from conversations during an
 which we believe is a great way to make your production code and tests more understandable and easier to maintain.
 :::
 
+Have an unimplemented business code first:
+
+<Content lang="java">
+    ```java
+    package com.domain.prod.example;
+
+    public class IsItFriday {
+        static String isItFriday(String today) {
+            return null;
+        }
+    }
+    ```
+</Content>
+
 Change your step definition code to this:
 
 <Content lang="java">
@@ -778,12 +792,7 @@ Change your step definition code to this:
     import io.cucumber.java.en.When;
     import io.cucumber.java.en.Then;
     import static org.assertj.core.api.Assertions.assertThat;
-
-    class IsItFriday {
-        static String isItFriday(String today) {
-            return null;
-        }
-    }
+    import com.domain.prod.example.IsItFriday;
 
     public class StepDefinitions {
         private String today;
@@ -806,6 +815,16 @@ Change your step definition code to this:
     }
     ```
 </Content>
+
+<Content lang="kotlin">
+    ```kotlin
+    package com.domain.prod.example
+
+    fun isItFriday(today: String) = ""
+
+    ```
+</Content>
+
 <Content lang="kotlin">
     ```kotlin
     package hellocucumber
@@ -814,10 +833,7 @@ Change your step definition code to this:
     import io.cucumber.java.en.Given
     import io.cucumber.java.en.When
     import static org.assertj.core.api.Assertions.assertThat;
-
-
-    fun isItFriday(today: String) = ""
-
+    import com.domain.prod.example.isItFriday;
 
     class StepDefs {
         private lateinit var today: String
@@ -840,14 +856,20 @@ Change your step definition code to this:
     }
     ```
 </Content>
+
 <Content lang="javascript">
     ```javascript
-    const assert = require('assert');
-    const { Given, When, Then } = require('@cucumber/cucumber');
 
     function isItFriday(today) {
       // We'll leave the implementation blank for now
     }
+    ```
+</Content>
+
+<Content lang="javascript">
+    ```javascript
+    const assert = require('assert');
+    const { Given, When, Then } = require('@cucumber/cucumber');
 
     Given('today is Sunday', function () {
       this.today = 'Sunday';
@@ -862,12 +884,18 @@ Change your step definition code to this:
     });
     ```
 </Content>
+
 <Content lang="ruby">
     ```ruby
     module FridayStepHelper
       def is_it_friday(day)
       end
     end
+    ```
+</Content>
+
+<Content lang="ruby">
+    ```ruby
     World FridayStepHelper
 
     Given("today is Sunday") do
@@ -990,7 +1018,7 @@ That's progress! The first two steps are passing, but the last one is failing.
 
 ## See scenario reported as passing
 
-Let's do the minimum we need to make the scenario pass. In this case, that means making our <Term>stepdef-body</Term> return `Nope`:
+Now implement the body of the business function to make the scenario pass. In this case, that means making our <Term>stepdef-body</Term> return `Nope`:
 
 <Content lang="java">
     ```java
