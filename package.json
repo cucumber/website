@@ -36,7 +36,7 @@
     "@docusaurus/types": "^3.1.1",
     "@tsconfig/docusaurus": "2.0.7",
     "@types/lodash.sortby": "^4.7.9",
-    "globby": "^14.0.2",
+    "globby": "^16.0.0",
     "prettier": "^3.4.2",
     "rehype-rewrite": "^4.0.2",
     "yaml": "^2.6.1"
