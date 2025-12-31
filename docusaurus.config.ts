@@ -32,6 +32,10 @@ export default {
   ],
   scripts: [
     {
+      src: '//js.sentry-cdn.com/35a6440bb6caf088f85e58590038eb45.min.js',
+      crossOrigin: 'anonymous',
+    },
+    {
       src: '//media.ethicalads.io/media/client/ethicalads.min.js',
       async: true,
     },
