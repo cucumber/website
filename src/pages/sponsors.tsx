@@ -159,7 +159,7 @@ export default function Sponsors() {
             <div className="col col--8">
               <AnimatedCounter target={downloadsPerYear} />
               <p>
-                Cucumber was downloaded over <strong>100 million times</strong> in 2024. Thousands
+                Cucumber was downloaded over <strong>100 million times</strong> in 2025. Thousands
                 of companies rely on Cucumber tests to validate their software. We are a team of
                 volunteers who maintain the core Gherkin parser, the Java, Ruby, JavaScript and Go
                 flavoured implementations of Cucumber. That's a lot of work!
