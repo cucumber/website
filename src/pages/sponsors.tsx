@@ -8,6 +8,7 @@ import { Hero } from '@site/src/components/Hero'
 import goldSponsors from '@site/src/data/gold-sponsors.json'
 import silverSponsors from '@site/src/data/silver-sponsors.json'
 import bronzeSponsors from '@site/src/data/bronze-sponsors.json'
+import { AnimatedCounter } from '@site/src/components/AnimatedCounter'
 
 interface Sponsor {
   name: string
@@ -21,6 +22,8 @@ const numberFormat = new Intl.NumberFormat('en', {
   currency: 'USD',
   maximumFractionDigits: 0,
 })
+
+const downloadsPerYear = 102_868_274
 
 const tiers = [
   {
@@ -154,18 +157,19 @@ export default function Sponsors() {
         <div className="container margin-vert--xl">
           <div className="row">
             <div className="col col--8">
-              <h2>Cucumber was downloaded over 100 million times in 2024</h2>
+              <AnimatedCounter target={downloadsPerYear} />
               <p>
-                Thousands of companies rely on Cucumber tests to validate their software. We are a
-                team of volunteers who maintain the core Gherkin parser, the Java, Ruby, JavaScript
-                and Go flavoured implementations of Cucumber. That's a lot of work!
+                Cucumber was downloaded over <strong>100 million times</strong> in 2024. Thousands
+                of companies rely on Cucumber tests to validate their software. We are a team of
+                volunteers who maintain the core Gherkin parser, the Java, Ruby, JavaScript and Go
+                flavoured implementations of Cucumber. That's a lot of work!
               </p>
               <p>
                 Financial contributions ensure the team can get paid for their time, and that
                 Cucumber will remain a reliable and fun way to test your software for years to come.
               </p>
             </div>
-            <div className="col col--4">
+            <div className="col col--3 col--offset-1">
               {goldSponsors.length > 0 && (
                 <>
                   <h3>Gold Sponsors</h3>
