@@ -5,6 +5,7 @@ import styles from './sponsors.module.scss'
 import clsx from 'clsx'
 import Head from '@docusaurus/Head'
 import { Hero } from '@site/src/components/Hero'
+import goldSponsors from '@site/src/data/gold-sponsors.json'
 import silverSponsors from '@site/src/data/silver-sponsors.json'
 import bronzeSponsors from '@site/src/data/bronze-sponsors.json'
 
@@ -165,10 +166,24 @@ export default function Sponsors() {
               </p>
             </div>
             <div className="col col--4">
-              <h3>Silver Sponsors</h3>
-              <SponsorsList sponsors={silverSponsors as Sponsor[]} size="xl" />
-              <h3>Bronze Sponsors</h3>
-              <SponsorsList sponsors={bronzeSponsors as Sponsor[]} size="sm" />
+              {goldSponsors.length > 0 && (
+                <>
+                  <h3>Gold Sponsors</h3>
+                  <SponsorsList sponsors={goldSponsors} size="xl" />
+                </>
+              )}
+              {silverSponsors.length > 0 && (
+                <>
+                  <h3>Silver Sponsors</h3>
+                  <SponsorsList sponsors={silverSponsors} size="lg" />
+                </>
+              )}
+              {bronzeSponsors.length > 0 && (
+                <>
+                  <h3>Bronze Sponsors</h3>
+                  <SponsorsList sponsors={bronzeSponsors} size="sm" />
+                </>
+              )}
             </div>
           </div>
         </div>
