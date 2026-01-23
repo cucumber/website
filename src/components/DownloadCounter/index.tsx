@@ -32,9 +32,5 @@ export const DownloadCounter: FC = () => {
 
   const formatted = Math.floor(count).toString().padStart(targetLength, '0')
 
-  return (
-    <span className={styles.counter}>
-      {formatted}
-    </span>
-  )
+  return <span className={styles.counter}>{formatted}</span>
 }

@@ -109,7 +109,11 @@ const SponsorsList: FC<SponsorsListProps> = ({ sponsors, size = 'lg' }) => {
     <ul className={styles.list}>
       {sponsors.map((sponsor) => (
         <li key={sponsor.name} className="margin-bottom--md">
-          <Link href={sponsor.url} rel="noopener noreferrer nofollow" className={`avatar ${styles.sponsor}`}>
+          <Link
+            href={sponsor.url}
+            rel="noopener noreferrer nofollow"
+            className={`avatar ${styles.sponsor}`}
+          >
             <img
               className={`avatar__photo avatar__photo--${size} ${styles.sponsorLogo}`}
               src={sponsor.logo}
