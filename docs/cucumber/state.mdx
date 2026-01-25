@@ -145,6 +145,7 @@ The available dependency injection modules are:
 - [OpenEJB](#openejb)
 - [Weld](#weld)
 - [Needle](#needle)
+- [Quarkus](#quarkus)
 
 ### PicoContainer
 
@@ -347,6 +348,21 @@ public final class ServiceModule extends AbstractModule {
 The actual injector is then created like this: `injector = Guice.createInjector( new ServiceModule() );`
 
 This means we need to create our own injector and tell Cucumber to use it.
+
+### Quarkus
+
+To use Quarkus, add the following dependency to your `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>io.quarkiverse.cucumber</groupId>
+    <artifactId>quarkus-cucumber</artifactId>
+    <version>{quarkus-cucumber-version}</version>
+    <scope>test</scope>
+</dependency>
+```
+
+The quarkus-cucumber extension provides a `@ScenarioScope` annotation which is documented on [Quarkiverse](https://docs.quarkiverse.io/quarkus-cucumber/dev/index.html#_scenarioscope).
 
 #### The Cucumber object factory
 
