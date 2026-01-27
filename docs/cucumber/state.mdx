@@ -145,6 +145,7 @@ The available dependency injection modules are:
 - [OpenEJB](#openejb)
 - [Weld](#weld)
 - [Needle](#needle)
+- [Quarkus](#quarkus)
 
 ### PicoContainer
 
@@ -273,6 +274,22 @@ testImplementation("io.cucumber:cucumber-needle:{{% version "cucumberjvm" %}}")
 ```
 
 There is no documentation yet, but the code is on [GitHub](https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-needle).
+
+
+### Quarkus
+
+To use Quarkus, add the following dependency to your `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>io.quarkiverse.cucumber</groupId>
+    <artifactId>quarkus-cucumber</artifactId>
+    <version>{quarkus-cucumber.version}</version>
+    <scope>test</scope>
+</dependency>
+```
+
+The documentation can be found on [Quarkiverse - Cucumber](https://docs.quarkiverse.io/quarkus-cucumber/dev/index.html).
 
 ### How to use DI
 
