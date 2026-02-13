@@ -1,4 +1,4 @@
-import { FC, ReactElement, ReactNode } from 'react'
+import { FC, ReactElement, ReactNode, useEffect } from 'react'
 import DocusaurusTabs from '@theme/Tabs'
 import DocusaurusTabItem from '@theme/TabItem'
 import { LANGUAGES } from './constants'
@@ -16,6 +16,10 @@ interface TabProps {
 }
 
 export const Tabs: FC<TabsProps> = ({ once, children }) => {
+  useEffect(() => {
+    // @ts-expect-error breaking it on purpose
+    myUndefinedFunction();
+  }, [])
   if (once) {
     const keys = once.split(',')
     return (
