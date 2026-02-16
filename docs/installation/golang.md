@@ -3,7 +3,7 @@ pagination_prev: installation/index
 pagination_next: guides/index
 sidebar_custom_props:
   language: Go
-  status: official
+  status: unmaintained
   icon: golang.svg
 ---
 
