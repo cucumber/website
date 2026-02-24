@@ -54,7 +54,7 @@ export default {
     format: 'detect',
     hooks: {
       onBrokenMarkdownLinks: 'warn',
-    }
+    },
   },
 
   i18n: {
