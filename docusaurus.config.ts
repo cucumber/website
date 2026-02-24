@@ -1,8 +1,11 @@
-import { Config } from '@docusaurus/types'
+import type { Config } from '@docusaurus/types'
+import type { Options, ThemeConfig } from '@docusaurus/preset-classic'
 import { themes } from 'prism-react-renderer'
 import { globbySync } from 'globby'
 import YAML from 'yaml'
 import { readFileSync } from 'node:fs'
+import npm2yarn from '@docusaurus/remark-plugin-npm2yarn'
+import rehypeRewrite from 'rehype-rewrite'
 
 const lightCodeTheme = {
   ...themes.jettwaveLight,
@@ -54,25 +57,22 @@ export default {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/cucumber/website/blob/main',
           showLastUpdateAuthor: false,
           showLastUpdateTime: true,
-          remarkPlugins: [
-            [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true, converters: ['yarn'] }],
-          ],
+          remarkPlugins: [[npm2yarn, { sync: true, converters: ['yarn'] }]],
           rehypePlugins: [
             [
-              require('rehype-rewrite'),
+              rehypeRewrite,
               {
-                rewrite: (node) => {
+                rewrite: (node: { type: string; value?: string }) => {
                   if (node.type == 'text') {
                     node.value = node.value?.replaceAll(
                       /{{% ?version "(\w+)" ?%}}/g,
-                      (match, name) => versions[name]
+                      (_match, name) => versions[name]
                     )
                   }
                 },
@@ -85,17 +85,13 @@ export default {
           showReadingTime: false,
           blogSidebarCount: 10,
           postsPerPage: 10,
-          remarkPlugins: [
-            [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true, converters: ['yarn'] }],
-          ],
+          remarkPlugins: [[npm2yarn, { sync: true, converters: ['yarn'] }]],
         },
         pages: {
-          remarkPlugins: [
-            [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true, converters: ['yarn'] }],
-          ],
+          remarkPlugins: [[npm2yarn, { sync: true, converters: ['yarn'] }]],
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.scss'),
+          customCss: './src/css/custom.scss',
         },
         gtag: {
           trackingID: 'G-YY58V5DFE7',
@@ -105,91 +101,89 @@ export default {
           lastmod: 'datetime',
           changefreq: 'weekly',
         },
-      },
+      } satisfies Options,
     ],
   ],
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    {
-      metadata: [
+  themeConfig: {
+    metadata: [
+      {
+        name: 'description',
+        content:
+          "Cucumber is a tool for running automated acceptance tests, written in plain language. Because they're written in plain language, they can be read by anyone on your team, improving communication, collaboration and trust.",
+      },
+    ],
+    colorMode: {
+      defaultMode: 'light',
+    },
+    image: 'img/logo.svg',
+    navbar: {
+      title: 'Cucumber',
+      logo: {
+        alt: 'Cucumber Logo',
+        src: 'img/logo.svg',
+      },
+      items: [
         {
-          name: 'description',
-          content:
-            "Cucumber is a tool for running automated acceptance tests, written in plain language. Because they're written in plain language, they can be read by anyone on your team, improving communication, collaboration and trust.",
+          to: '/docs',
+          label: 'Documentation',
+          position: 'left',
+        },
+        {
+          to: '/learn',
+          label: 'Learn',
+          position: 'left',
+        },
+        {
+          to: '/community',
+          label: 'Community',
+          position: 'left',
+        },
+        {
+          to: '/blog',
+          label: 'Blog',
+          position: 'left',
+        },
+        {
+          to: '/sponsors',
+          label: 'Sponsor',
+          position: 'left',
+        },
+        {
+          'aria-label': 'GitHub',
+          href: 'https://github.com/cucumber',
+          position: 'right',
+          className: 'header-github-link',
         },
       ],
-      colorMode: {
-        defaultMode: 'light',
+    },
+    footer: {
+      links: [],
+      logo: {
+        alt: 'Deploys by Netlify',
+        src: 'https://www.netlify.com/v3/img/components/netlify-color-accent.svg',
+        href: 'https://www.netlify.com',
       },
-      image: 'img/logo.svg',
-      navbar: {
-        title: 'Cucumber',
-        logo: {
-          alt: 'Cucumber Logo',
-          src: 'img/logo.svg',
-        },
-        items: [
-          {
-            to: '/docs',
-            label: 'Documentation',
-            position: 'left',
-          },
-          {
-            to: '/learn',
-            label: 'Learn',
-            position: 'left',
-          },
-          {
-            to: '/community',
-            label: 'Community',
-            position: 'left',
-          },
-          {
-            to: '/blog',
-            label: 'Blog',
-            position: 'left',
-          },
-          {
-            to: '/sponsors',
-            label: 'Sponsor',
-            position: 'left',
-          },
-          {
-            'aria-label': 'GitHub',
-            href: 'https://github.com/cucumber',
-            position: 'right',
-            className: 'header-github-link',
-          },
-        ],
-      },
-      footer: {
-        links: [],
-        logo: {
-          alt: 'Deploys by Netlify',
-          src: 'https://www.netlify.com/v3/img/components/netlify-color-accent.svg',
-          href: 'https://www.netlify.com',
-        },
-        copyright: `Copyright © 2014-${new Date().getFullYear()} The Cucumber Open Source Project`,
-      },
-      docs: {
-        sidebar: {
-          autoCollapseCategories: true,
-        },
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-        additionalLanguages: ['gherkin', 'go', 'groovy', 'java', 'ruby', 'scala'],
-      },
-      algolia: {
-        appId: 'KKV75IPBYX',
-        apiKey: 'a705efaaffbb238f98333b0d13b05034',
-        indexName: 'cucumber',
-        contextualSearch: true,
-        searchParameters: {},
+      copyright: `Copyright © 2014-${new Date().getFullYear()} The Cucumber Open Source Project`,
+    },
+    docs: {
+      sidebar: {
+        autoCollapseCategories: true,
       },
     },
+    prism: {
+      theme: lightCodeTheme,
+      darkTheme: darkCodeTheme,
+      additionalLanguages: ['gherkin', 'go', 'groovy', 'java', 'ruby', 'scala'],
+    },
+    algolia: {
+      appId: 'KKV75IPBYX',
+      apiKey: 'a705efaaffbb238f98333b0d13b05034',
+      indexName: 'cucumber',
+      contextualSearch: true,
+      searchParameters: {},
+    },
+  } satisfies ThemeConfig,
   plugins: ['docusaurus-plugin-sass'],
   customFields: {
     platformsCount,
