@@ -22,7 +22,13 @@ const darkCodeTheme = {
   },
 }
 
-const platformsCount = globbySync('docs/installation/*.md').length
+let platformsCount = 0
+for (const installationPath of globbySync('docs/installation/*.md')) {
+  const content = readFileSync(installationPath, { encoding: 'utf-8' })
+  if (!content.includes('status: unmaintained')) {
+    platformsCount++
+  }
+}
 
 const versions = YAML.parse(readFileSync('./versions.yaml', { encoding: 'utf-8' }))
 
