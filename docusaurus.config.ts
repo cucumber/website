@@ -193,6 +193,7 @@ export default {
     },
   } satisfies ThemeConfig,
   plugins: ['docusaurus-plugin-sass'],
+  clientModules: ['./src/sentryInit.ts'],
   customFields: {
     platformsCount,
     versions,
