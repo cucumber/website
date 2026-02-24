@@ -1,0 +1,59 @@
+---
+slug: open-source/cucumber-in-2025-year-in-review
+title: "Cucumber in 2025, year in review"
+authors:
+  - mpkorstanje
+tags:
+  - Open Source
+  - Year in Review
+---
+
+A year ago, Cucumber [returned to community ownership](https://cucumber.io/blog/open-source/cucumber-is-back-in-community-ownership).
+I'd like to take a moment to reflect on what we have been up to.
+
+<!-- truncate -->
+
+_Caveat emptor_: Cucumber is a collection of different implementations. Each
+moves at the speed of its contributors and maintainers.
+
+## Notable new features
+
+
+## Cucumber Messages
+
+[Cucumber Messages](https://github.com/cucumber/messages) is a schema to
+describe test results and other information from Cucumber in a new line
+delimited JSON format. The first commit was done in 2018, and we are now at the
+point that we can dogfood our own implementation and build up the documentation
+and tooling through that.
+
+For users the first results can be seen in the
+[pretty formatter](https://github.com/cucumber/pretty-formatter)
+and [HTML formatter](https://github.com/cucumber/html-formatter) which now
+create reports with more fidelity.
+
+### Cucumber JSON Report in maintenance-mode
+
+With the internal adoption of messages now in progress we have now also
+officially put the Cucumber JSON report in maintenance mode. The format is still
+supported but will not receive any changes. We don't expect this will any
+significant impact, in practice the format had already been ossified.
+
+Putting the format in maintenance mode meant that we had finally pin down the
+exact format of the report in the form of the [cucumber-json-schema](https://github.com/cucumber/cucumber-json-schema).
+Unfortunately there been a significant drift between implementations and each
+flavor will need its own schema. So this is very much a work in progress, but for
+Cucumber-JVM that work is now completed. 
+
+
+## Collaboration
+
+## Newsletter
+
+## Finances
+
+## Downloads
+
+## Get involved
+
+## Thanks
