@@ -5,6 +5,17 @@ import styles from './sponsors.module.scss'
 import clsx from 'clsx'
 import Head from '@docusaurus/Head'
 import { Hero } from '@site/src/components/Hero'
+import goldSponsors from '@site/src/data/gold-sponsors.json'
+import silverSponsors from '@site/src/data/silver-sponsors.json'
+import bronzeSponsors from '@site/src/data/bronze-sponsors.json'
+import { DownloadCounter } from '@site/src/components/DownloadCounter'
+
+interface Sponsor {
+  name: string
+  logo: string
+  url: string
+  blurb?: string
+}
 
 const numberFormat = new Intl.NumberFormat('en', {
   style: 'currency',
@@ -87,6 +98,38 @@ const Tiers: FC = () => {
   )
 }
 
+interface SponsorsListProps {
+  sponsors: Sponsor[]
+  size?: 'sm' | 'md' | 'lg' | 'xl'
+}
+
+const SponsorsList: FC<SponsorsListProps> = ({ sponsors, size = 'lg' }) => {
+  if (sponsors.length === 0) return null
+  return (
+    <ul className={styles.list}>
+      {sponsors.map((sponsor) => (
+        <li key={sponsor.name} className="margin-bottom--md">
+          <Link
+            href={sponsor.url}
+            rel="noopener noreferrer"
+            className={`avatar ${styles.sponsor}`}
+          >
+            <img
+              className={`avatar__photo avatar__photo--${size} ${styles.sponsorLogo}`}
+              src={sponsor.logo}
+              alt={`${sponsor.name} logo`}
+            />
+            <div className="avatar__intro">
+              <div className="avatar__name">{sponsor.name}</div>
+              {sponsor.blurb && <small className="avatar__subtitle">{sponsor.blurb}</small>}
+            </div>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
 export default function Sponsors() {
   return (
     <Layout>
@@ -113,17 +156,44 @@ export default function Sponsors() {
         </Link>
       </Hero>
       <main>
-        <div className="container margin-vert--xl text--center readable">
-          <h2>Cucumber was downloaded over 100 million times in 2024</h2>
-          <p>
-            Thousands of companies rely on Cucumber tests to validate their software. We are a team
-            of volunteers who maintain the core Gherkin parser, the Java, Ruby, JavaScript and Go
-            flavoured implementations of Cucumber. That's a lot of work!
-          </p>
-          <p>
-            Financial contributions ensure the team can get paid for their time, and that Cucumber
-            will remain a reliable and fun way to test your software for years to come.
-          </p>
+        <div className="container margin-vert--xl">
+          <div className="row">
+            <div className="col col--8">
+              <div className="margin-bottom--md">
+                <DownloadCounter />
+              </div>
+              <p>
+                Cucumber was downloaded over <strong>200 million times</strong> in 2025. Thousands
+                of companies rely on Cucumber tests to validate their software. We are a team of
+                volunteers who maintain the core Gherkin parser, the Java, Ruby, JavaScript and Go
+                flavoured implementations of Cucumber. That's a lot of work!
+              </p>
+              <p>
+                Financial contributions ensure the team can get paid for their time, and that
+                Cucumber will remain a reliable and fun way to test your software for years to come.
+              </p>
+            </div>
+            <div className="col col--3 col--offset-1">
+              {goldSponsors.length > 0 && (
+                <>
+                  <h3>Gold Sponsors</h3>
+                  <SponsorsList sponsors={goldSponsors} size="xl" />
+                </>
+              )}
+              {silverSponsors.length > 0 && (
+                <>
+                  <h3>Silver Sponsors</h3>
+                  <SponsorsList sponsors={silverSponsors} size="lg" />
+                </>
+              )}
+              {bronzeSponsors.length > 0 && (
+                <>
+                  <h3>Bronze Sponsors</h3>
+                  <SponsorsList sponsors={bronzeSponsors} size="sm" />
+                </>
+              )}
+            </div>
+          </div>
         </div>
         <div className="container margin-vert--xl">
           <h2 className="text--center">Sponsorship tiers</h2>
