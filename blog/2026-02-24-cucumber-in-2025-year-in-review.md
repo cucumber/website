@@ -13,14 +13,35 @@ I'd like to take a moment to reflect on what we have been up to.
 
 <!-- truncate -->
 
-_Caveat emptor_: Cucumber is a collection of different implementations. Each
-moves at the speed of its contributors and maintainers.
-
 ## Notable new features
+
+Cucumber is a collection of different implementations. Each moves at the speed
+of its contributors and maintainers. So we start by highlight some changes from
+the individual projects.
 
 ### Cucumber JVM
 
-https://discord.com/channels/1260995505018765393/1264635611994652744/1451201167001518141
+In 2025, we've had 20 releases for Cucumber-JVM. These were mostly bug fixes
+and dependency updates. But I'd like to highlight: 
+
+* We had [a contribution](https://github.com/cucumber/cucumber-jvm/pull/3124)
+  from Stefan Gasterstädt to make it possible to create locale sensitive
+  parameter transformers. This looked quite complicated at the start, but the
+  actual implementation turned out to be incredibly elegant.
+
+* Julien Kronegg contributed several<sup>
+  [1](https://github.com/cucumber/gherkin/pull/372),
+  [2](https://github.com/cucumber/cucumber-jvm/pull/2971),
+  [3](https://github.com/cucumber/cucumber-jvm/pull/2703),
+  [4](https://github.com/cucumber/gherkin/pull/445)</sup> performance
+  improvements.
+
+* The Cucumber JUnit Platform Engine now [supports rerun files](https://github.com/cucumber/cucumber-jvm/pull/3057).
+  While the solution comes with a bunch of jankiness, it should smooth out the
+  upgrade path from JUnit 4 to Junit 5+.
+
+* With JUnit 4 entering maintenance mode [cucumber-junit](https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-junit)
+  has been deprecated in favor of [cucumber-junit-platform-engine](https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-junit-platform-engine).
 
 ### Cucumber JS
 
