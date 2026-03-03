@@ -19,6 +19,7 @@ moves at the speed of its contributors and maintainers.
 ## Notable new features
 
 
+
 ## Cucumber Messages
 
 [Cucumber Messages](https://github.com/cucumber/messages) is a schema to
@@ -45,14 +46,20 @@ Unfortunately there been a significant drift between implementations and each
 flavor will need its own schema. So this is very much a work in progress, but for
 Cucumber-JVM that work is now completed. 
 
-### Cucumber-Ruby turns sweet 16
+### Cucumber-Ruby turns Seventeen!
 
-Cucumber-Ruby, the which is now [old enough to buy alchohol](https://github.com/cucumber/cucumber-ruby/commits/f3292f4023a707099d02602b2bd6c4ca3cec6820) in some parts of the world, added support for Ruby 3.5+, and began the work of moving towards our more modern
-message-based patterns, to enable joining the effort to produce cross-platform polyglot formatters.
+Cucumber-Ruby, the which is now [old enough to drive](https://github.com/cucumber/cucumber-ruby/commits/f3292f4023a707099d02602b2bd6c4ca3cec6820) in some parts of the world, added support for Ruby 3.5+, and we began the work of moving it
+towards our more modern message-based patterns, to enable joining the effort 
+to produce cross-platform polyglot formatters.
 
 ## Collaboration
 
 ## Newsletter
+
+We're finally reviving our mailing list. If you're reading this in your email
+client, that means we've got it all working again.
+
+If not, you can subscribe [here](https://cucumber.io/community).
 
 ## Finances
 
