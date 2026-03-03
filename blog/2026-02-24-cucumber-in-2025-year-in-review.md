@@ -18,7 +18,14 @@ moves at the speed of its contributors and maintainers.
 
 ## Notable new features
 
+https://discord.com/channels/1260995505018765393/1264635611994652744/1451201167001518141
 
+https://discord.com/channels/1260995505018765393/1264635611994652744/1451241874491965461
+
+Our https://reports.cucumber.io/ service is back up and running after the 
+transition from SmartBear. David Goss, who leads the Cucumber-JS project, 
+has been hard at work transitioning the infrastructure and getting the costs
+managable.
 
 ## Cucumber Messages
 
@@ -54,6 +61,11 @@ to produce cross-platform polyglot formatters.
 
 ## Collaboration
 
+- governance?
+
+## Security
+
+
 ## Newsletter
 
 We're finally reviving our mailing list. If you're reading this in your email
@@ -63,7 +75,13 @@ If not, you can subscribe [here](https://cucumber.io/community).
 
 ## Finances
 
+..
+
+- https://cucumber.io/sponsors
+
 ## Downloads
+
+- https://docs.google.com/spreadsheets/d/1n_TqnHwxl4N-tb7RXqe-Em41nOa0adISd2ECbTXvDY4/edit?gid=1953938148#gid=1953938148
 
 ## Get involved
 
@@ -77,3 +95,5 @@ robots on [Stack Overflow](https://stackoverflow.com/questions/tagged/cucumber).
 We have a regular meeting on [Thursdays](https://cucumber.github.io/community-calendar/calendar.ics) at 4pm London time.
 
 ## Thanks
+
+Thanks for being part of this community. It's an amazing privelege to be part of such a vibrant, popular open source project.
