@@ -18,14 +18,24 @@ moves at the speed of its contributors and maintainers.
 
 ## Notable new features
 
+### Cucumber JVM
+
 https://discord.com/channels/1260995505018765393/1264635611994652744/1451201167001518141
 
+### Cucumber JS
+
 https://discord.com/channels/1260995505018765393/1264635611994652744/1451241874491965461
+
+### Cucumber Ruby
+
+https://discord.com/channels/1260995505018765393/1264635611994652744/1452073302221918249
+
+### Cucumber Reports
 
 Our https://reports.cucumber.io/ service is back up and running after the 
 transition from SmartBear. David Goss, who leads the Cucumber-JS project, 
 has been hard at work transitioning the infrastructure and getting the costs
-managable.
+manageable.
 
 ## Cucumber Messages
 
@@ -40,7 +50,7 @@ For users the first results can be seen in the
 and [HTML formatter](https://github.com/cucumber/html-formatter) which now
 create reports with more fidelity.
 
-### Cucumber JSON Report in maintenance-mode
+## Cucumber JSON Report in maintenance-mode
 
 With the internal adoption of messages now in progress we have now also
 officially put the Cucumber JSON report in maintenance mode. The format is still
@@ -50,14 +60,15 @@ significant impact, in practice the format had already been ossified.
 Putting the format in maintenance mode meant that we had finally pin down the
 exact format of the report in the form of the [cucumber-json-schema](https://github.com/cucumber/cucumber-json-schema).
 Unfortunately there been a significant drift between implementations and each
-flavor will need its own schema. So this is very much a work in progress, but for
-Cucumber-JVM that work is now completed. 
+flavor will need its own schema. So this is very much a work in progress, but
+for Cucumber-JVM that work is now completed. 
 
 ### Cucumber-Ruby turns Seventeen!
 
-Cucumber-Ruby, the which is now [old enough to drive](https://github.com/cucumber/cucumber-ruby/commits/f3292f4023a707099d02602b2bd6c4ca3cec6820) in some parts of the world, added support for Ruby 3.5+, and we began the work of moving it
-towards our more modern message-based patterns, to enable joining the effort 
-to produce cross-platform polyglot formatters.
+Cucumber-Ruby, the which is now [old enough to drive](https://github.com/cucumber/cucumber-ruby/commits/f3292f4023a707099d02602b2bd6c4ca3cec6820)
+in some parts of the world, added support for Ruby 3.5+, and we began the work
+of moving it towards our more modern message-based patterns, to enable joining
+the effort to produce cross-platform polyglot formatters.
 
 ## Collaboration
 
@@ -96,4 +107,5 @@ We have a regular meeting on [Thursdays](https://cucumber.github.io/community-ca
 
 ## Thanks
 
-Thanks for being part of this community. It's an amazing privelege to be part of such a vibrant, popular open source project.
+Thanks for being part of this community. It's an amazing privilege to be part
+of such a vibrant, popular open source project.
