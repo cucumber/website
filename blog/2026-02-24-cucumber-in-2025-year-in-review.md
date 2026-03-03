@@ -61,7 +61,7 @@ manageable.
 ## Cucumber Messages
 
 [Cucumber Messages](https://github.com/cucumber/messages) is a schema to
-describe test results and other information from Cucumber in a new line
+describe test results and other information from Cucumber in a new-line
 delimited JSON format. The first commit was done in 2018, and we are now at the
 point that we can dogfood our own implementation and build up the documentation
 and tooling through that.
@@ -78,11 +78,11 @@ officially put the Cucumber JSON report in maintenance mode. The format is still
 supported but will not receive any changes. We don't expect this will any
 significant impact, in practice the format had already been ossified.
 
-Putting the format in maintenance mode meant that we had finally pin down the
+Putting the format in maintenance mode meant that we had to pin down the
 exact format of the report in the form of the [cucumber-json-schema](https://github.com/cucumber/cucumber-json-schema).
 Unfortunately there been a significant drift between implementations and each
 flavor will need its own schema. So this is very much a work in progress, but
-for Cucumber-JVM that work is now completed. 
+for Cucumber-JVM at least that work is now completed. 
 
 ### Cucumber-Ruby turns Seventeen!
 
