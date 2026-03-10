@@ -22,7 +22,7 @@ the individual projects.
 ### Cucumber JVM
 
 In 2025, we've had 20 releases for Cucumber-JVM. These were mostly bug fixes
-and dependency updates. But I'd like to highlight: 
+and dependency updates. But I'd like to highlight a few notable changes. 
 
 * We had [a contribution](https://github.com/cucumber/cucumber-jvm/pull/3124)
   from Stefan Gasterstädt to make it possible to create locale sensitive
