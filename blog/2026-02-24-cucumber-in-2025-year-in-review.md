@@ -168,7 +168,7 @@ We like to think Cucumber is a warm and friendly community where you can make
 friends and learn, building software that thousands of people rely on every day.
 
 You can find us on [Discord](https://discord.gg/8YXBH8j74w), 
-[Github Discussions](https://github.com/orgs/cucumber/discussions) or feed the 
+[GitHub Discussions](https://github.com/orgs/cucumber/discussions) or feed the 
 robots on [Stack Overflow](https://stackoverflow.com/questions/tagged/cucumber).
 
 We have a regular meeting on [Thursdays](https://cucumber.github.io/community-calendar/calendar.ics) at 4pm London time.
