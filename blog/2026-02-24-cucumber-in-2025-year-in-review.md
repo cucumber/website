@@ -13,7 +13,7 @@ I'd like to take a moment to reflect on what we have been up to.
 
 <!-- truncate -->
 
-## Notable new features
+## Notable changes
 
 Cucumber is a collection of different implementations. Each moves at the speed
 of its contributors and maintainers. So we start by highlight some changes from
@@ -85,7 +85,7 @@ In related news, the [reports.cucumber.io](https://reports.cucumber.io) service
 is back up and running after the transition from SmartBear. We're still figuring
 out where to take this next.
 
-## Cucumber JSON Report in maintenance-mode
+### Cucumber JSON Report in maintenance-mode
 
 With the internal adoption of messages now in progress we have now also
 officially put the Cucumber JSON report in maintenance mode. The format is still
