@@ -66,13 +66,6 @@ In 2025 Cucumber-Ruby turned Seventeen! Which means it is now [old enough to dri
 in some parts of the world. It also saw 5 releases including v10 which adds
 support for Ruby 3.5+.
 
-## Cucumber Reports
-
-Our https://reports.cucumber.io/ service is back up and running after the 
-transition from SmartBear. David Goss, who leads the Cucumber-JS project, 
-has been hard at work transitioning the infrastructure and getting the costs
-manageable.
-
 ## Cucumber Messages
 
 [Cucumber Messages](https://github.com/cucumber/messages) is a schema to
@@ -85,6 +78,12 @@ For users the first results can be seen in the
 [pretty formatter](https://github.com/cucumber/pretty-formatter)
 and [HTML formatter](https://github.com/cucumber/html-formatter) which now
 create reports with more fidelity.
+
+<!-- TODO: Do we want to include this? -->
+
+In related news, the [reports.cucumber.io](https://reports.cucumber.io) service
+is back up and running after the transition from SmartBear. We're still figuring
+out where to take this next.
 
 ## Cucumber JSON Report in maintenance-mode
 
