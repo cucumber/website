@@ -64,7 +64,7 @@ canonical implementation of Cucumber for JavaScript continues to be
 
 
 
-### Cucumber Reports
+## Cucumber Reports
 
 Our https://reports.cucumber.io/ service is back up and running after the 
 transition from SmartBear. David Goss, who leads the Cucumber-JS project, 
