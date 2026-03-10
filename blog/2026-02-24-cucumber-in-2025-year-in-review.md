@@ -45,11 +45,24 @@ and dependency updates. But I'd like to highlight a few notable changes.
 
 ### Cucumber JS
 
-https://discord.com/channels/1260995505018765393/1264635611994652744/1451241874491965461
+In 2025, we've made 8 releases for Cucumber-JS. These were mostly bug fixes,
+and small features. Other than that, lots of architectural Tetris to unblock
+things. Some notable changes:
+
+* Alexandru Gologan contributed [support for execution sharding](https://github.com/cucumber/cucumber-js/pull/2600).
+* Configuration files [can be written in TypeScript](https://github.com/cucumber/cucumber-js/pull/2709).
+
+We're also working on a [`cucumber-node`](https://github.com/cucumber/cucumber-node)
+built around the [Node.js test runner](https://nodejs.org/api/test.html). It's
+still in the pre-1.0.0 phase, so APIs and behaviour might change. The stable
+canonical implementation of Cucumber for JavaScript continues to be
+[@cucumber/cucumber](https://github.com/cucumber/cucumber-js) for now.
+
+<!-- TODO: What about user author plugins -->
 
 ### Cucumber Ruby
 
-https://discord.com/channels/1260995505018765393/1264635611994652744/1452073302221918249
+
 
 ### Cucumber Reports
 
