@@ -98,11 +98,14 @@ Unfortunately there been a significant drift between implementations and each
 flavor will need its own schema. So this is very much a work in progress, but
 for Cucumber-JVM at least that work is now completed. 
 
-## Collaboration
+## Organizational stuff
 
-- governance?
+We created a [governance repository](https://github.com/cucumber/governance/) to
+describe who we are and how we are organized and operate. This was rather boring
+to do but also essential to acquire funding.
 
-## Security
+Additionally, we have set up a [security policy](https://github.com/cucumber/.github/blob/main/SECURITY.md)
+to let people know how to contact us in case of security issues.
 
 ## Newsletter
 
