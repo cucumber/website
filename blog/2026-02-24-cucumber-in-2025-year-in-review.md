@@ -66,7 +66,7 @@ In 2025 Cucumber-Ruby turned Seventeen! Which means it is now [old enough to dri
 in some parts of the world. It also saw 5 releases including v10 which adds
 support for Ruby 3.5+.
 
-## Cucumber Messages
+### Cucumber Messages
 
 [Cucumber Messages](https://github.com/cucumber/messages) is a schema to
 describe test results and other information from Cucumber in a new-line
