@@ -98,6 +98,11 @@ Unfortunately there been a significant drift between implementations and each
 flavor will need its own schema. So this is very much a work in progress, but
 for Cucumber-JVM at least that work is now completed. 
 
+## Collaborations
+
+- .Net?
+- Python?
+
 ## Organizational stuff
 
 We created a [governance repository](https://github.com/cucumber/governance/) to
@@ -116,7 +121,40 @@ If not, you can subscribe [here](https://cucumber.io/community).
 
 ## Finances
 
-..
+Cucumber is currently funded through donations from Open Collective, GitHub
+Sponsors, and Thanks.dev. We have partnered with Tidelift and collect some add
+revenue through Ethical Ads. In total, we received $65,545.63 with the majority
+coming from Tidelift.
+
+| Source          | 2025 Income |
+|-----------------|------------:|
+| Tidelift        |  $52,900.00 |
+| Open Collective |   $7,784.50 |
+| GitHub Sponors  |   $4,047.96 |
+| Ethical Ads     |     $768.50 |
+| Thanks.dev      |      $44.67 |
+|                 | --------- + |
+| Total           |  $65,545.63 |
+
+On the expense side we spend $69.960,28 resulting in a small loss of $4,414.65
+Fortunately we already build up some buffer in 2024 to absorb the loss. 
+
+The biggest expense was the maintenance and development of Cucumber. We try to
+pay our developers fairly for their time. 
+
+| Destination                 | 2025 Expenses |
+|-----------------------------|--------------:|
+| Maintenance and Development |    $67,842.15 |
+| Payment Processor Fees      |     $1,588.31 |
+| Hosting and Subscriptions   |       $529.82 |
+|                             | ----------- + |
+| Total                       |    $69.960,28 |
+
+This is the first year we're tracking this information, so we can't comment on
+any change in the financials.
+
+<!-- TODO: Call to action! -->
+
 
 - https://cucumber.io/sponsors
 
