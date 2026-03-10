@@ -62,7 +62,9 @@ canonical implementation of Cucumber for JavaScript continues to be
 
 ### Cucumber Ruby
 
-
+In 2025 Cucumber-Ruby turned Seventeen! Which means it is now [old enough to drive](https://github.com/cucumber/cucumber-ruby/commits/f3292f4023a707099d02602b2bd6c4ca3cec6820)
+in some parts of the world. It also saw 5 releases including v10 which adds
+support for Ruby 3.5+.
 
 ## Cucumber Reports
 
@@ -97,19 +99,11 @@ Unfortunately there been a significant drift between implementations and each
 flavor will need its own schema. So this is very much a work in progress, but
 for Cucumber-JVM at least that work is now completed. 
 
-### Cucumber-Ruby turns Seventeen!
-
-Cucumber-Ruby, the which is now [old enough to drive](https://github.com/cucumber/cucumber-ruby/commits/f3292f4023a707099d02602b2bd6c4ca3cec6820)
-in some parts of the world, added support for Ruby 3.5+, and we began the work
-of moving it towards our more modern message-based patterns, to enable joining
-the effort to produce cross-platform polyglot formatters.
-
 ## Collaboration
 
 - governance?
 
 ## Security
-
 
 ## Newsletter
 
