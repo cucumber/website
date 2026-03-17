@@ -182,5 +182,6 @@ at 4pm London time.
 
 ## Thanks
 
-Thanks for being part of this community. It's an amazing privilege to be part
-of such a vibrant, popular open source project.
+One year later on I'm elated to see the Cucumber project is still alive, active
+and developing. Thanks for being part of this community. It's an amazing
+privilege to be part of such a vibrant, popular open source project.
