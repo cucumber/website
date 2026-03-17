@@ -99,6 +99,15 @@ Unfortunately there been a significant drift between implementations and each
 flavor will need its own schema. So this is very much a work in progress, but
 for Cucumber-JVM at least that work is now completed. 
 
+### Reqnroll
+
+While [Reqnroll](https://reqnroll.net/) isn't under Cucumber umbrella, I would
+be amiss if I didn't find a way to highlight Chris Rudolphi contributions.
+
+Chris has been driving the adoption of Cucumber messages in Reqnroll and as part
+of that made numerous contributions to Cucumber. Including .Net implementations
+of tag-expressions, html-formatter and compatibility-kit.
+
 ## Organizational stuff
 
 We created a [governance repository](https://github.com/cucumber/governance/) to
