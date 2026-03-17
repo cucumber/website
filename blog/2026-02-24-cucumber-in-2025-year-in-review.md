@@ -62,7 +62,8 @@ canonical implementation of Cucumber for JavaScript continues to be
 
 ### Cucumber Ruby
 
-In 2025 Cucumber-Ruby turned Seventeen! Which means it is now [old enough to drive](https://github.com/cucumber/cucumber-ruby/commits/f3292f4023a707099d02602b2bd6c4ca3cec6820)
+In 2025 Cucumber-Ruby turned Seventeen! Which means it is now
+[old enough to drive](https://github.com/cucumber/cucumber-ruby/commits/f3292f4023a707099d02602b2bd6c4ca3cec6820)
 in some parts of the world. It also saw 5 releases including v10 which adds
 support for Ruby 3.5+.
 
@@ -107,7 +108,7 @@ for Cucumber-JVM at least that work is now completed.
 
 We created a [governance repository](https://github.com/cucumber/governance/) to
 describe who we are and how we are organized and operate. This was rather boring
-to do but also essential to acquire funding.
+to do but also essential to acquire funding and sponsorships.
 
 Additionally, we have set up a [security policy](https://github.com/cucumber/.github/blob/main/SECURITY.md)
 to let people know how to contact us in case of security issues.
@@ -122,9 +123,9 @@ If not, you can subscribe [here](https://cucumber.io/community).
 ## Finances
 
 Cucumber is currently funded through donations from Open Collective, GitHub
-Sponsors, and Thanks.dev. We have partnered with Tidelift and collect some add
-revenue through Ethical Ads. In total, we received $65,545.63 with the majority
-coming from Tidelift.
+Sponsors, and Thanks.dev. We have also partnered with Tidelift and collect some
+add revenue through Ethical Ads. In total, we received $65,545.63 with the
+majority coming from Tidelift.
 
 | Source          | 2025 Income |
 |-----------------|------------:|
@@ -139,9 +140,6 @@ coming from Tidelift.
 On the expense side we spend $69.960,28 resulting in a small loss of $4,414.65
 Fortunately we already build up some buffer in 2024 to absorb the loss. 
 
-The biggest expense was the maintenance and development of Cucumber. We try to
-pay our developers fairly for their time. 
-
 | Destination                 | 2025 Expenses |
 |-----------------------------|--------------:|
 | Maintenance and Development |    $67,842.15 |
@@ -150,17 +148,21 @@ pay our developers fairly for their time.
 |                             | ----------- + |
 | Total                       |    $69.960,28 |
 
-This is the first year we're tracking this information, so we can't comment on
-any change in the financials.
+The biggest expense was the maintenance and development of Cucumber. While
+number looks big in absolute terms, we try to compensate our maintainers fairly.
+So at market rates this comes down to about a cumulative 13-16 hours a week.
 
-<!-- TODO: Call to action! -->
+## Sponsor Cucumber!
 
+The development of Cucumber is made possible by you - our users. We try to
+handle pull- and feature-requests, keep up to date with the latest versions, 
+and respond to bugs and issues. And all of that in a timely manner.
 
-- https://cucumber.io/sponsors
+Your support would enable us to do this with more focus and consistency rather
+than weekends and our spare time.
 
-## Downloads
-
-- https://docs.google.com/spreadsheets/d/1n_TqnHwxl4N-tb7RXqe-Em41nOa0adISd2ECbTXvDY4/edit?gid=1953938148#gid=1953938148
+You can sponsor us through [Open Collective](https://cucumber.io/sponsors) or
+[GitHub Sponsors](https://github.com/sponsors/cucumber).
 
 ## Get involved
 
