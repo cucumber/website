@@ -83,8 +83,8 @@ create reports with more fidelity.
 <!-- TODO: Do we want to include this? -->
 
 In related news, the [reports.cucumber.io](https://reports.cucumber.io) service
-is back up and running after the transition from SmartBear. We're still figuring
-out where to take this next.
+is back up and running after the transition from SmartBear. For now without
+permanent storage. We're still figuring out where to take this next.
 
 ### Cucumber JSON Report in maintenance-mode
 
