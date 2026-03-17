@@ -168,7 +168,8 @@ You can find us on [Discord](https://discord.gg/8YXBH8j74w),
 [GitHub Discussions](https://github.com/orgs/cucumber/discussions) or feed the 
 robots on [Stack Overflow](https://stackoverflow.com/questions/tagged/cucumber).
 
-We have a regular meeting on [Thursdays](https://cucumber.github.io/community-calendar/calendar.ics) at 4pm London time.
+We have a regular meeting on [Thursdays](https://cucumber.github.io/community-calendar/calendar.ics)
+at 4pm London time.
 
 ## Thanks
 
