@@ -99,11 +99,6 @@ Unfortunately there been a significant drift between implementations and each
 flavor will need its own schema. So this is very much a work in progress, but
 for Cucumber-JVM at least that work is now completed. 
 
-## Collaborations
-
-- .Net?
-- Python?
-
 ## Organizational stuff
 
 We created a [governance repository](https://github.com/cucumber/governance/) to
