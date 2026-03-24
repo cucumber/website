@@ -47,19 +47,19 @@ and dependency updates. But I'd like to highlight a few notable changes.
 ### Cucumber JS
 
 In 2025, we've made 8 releases for Cucumber-JS. These were mostly bug fixes,
-and small features. Other than that, lots of architectural Tetris to unblock
+and small features, but we did make some architectural moves to enable bigger
 things. Some notable changes:
 
 * Alexandru Gologan contributed [support for execution sharding](https://github.com/cucumber/cucumber-js/pull/2600).
 * Configuration files [can be written in TypeScript](https://github.com/cucumber/cucumber-js/pull/2709).
+* You can now write [plugins to augment built-in behaviour](https://github.com/cucumber/cucumber-js/blob/main/docs/plugins.md)
 
-We're also working on a [`cucumber-node`](https://github.com/cucumber/cucumber-node)
+We're also working on [`@cucumber/node`](https://github.com/cucumber/cucumber-node)
 built around the [Node.js test runner](https://nodejs.org/api/test.html). It's
 still in the pre-1.0.0 phase, so APIs and behaviour might change. The stable
 canonical implementation of Cucumber for JavaScript continues to be
 [@cucumber/cucumber](https://github.com/cucumber/cucumber-js) for now.
 
-<!-- TODO: What about user author plugins -->
 
 ### Cucumber Ruby
 
@@ -81,17 +81,12 @@ For users the first results can be seen in the
 and [HTML formatter](https://github.com/cucumber/html-formatter) which now
 create reports with more fidelity.
 
-<!-- TODO: Do we want to include this? -->
-
-In related news, the [reports.cucumber.io](https://reports.cucumber.io) service
-is back up and running after the transition from SmartBear. For now without
-permanent storage. We're still figuring out where to take this next.
 
 ### Cucumber JSON Report in maintenance-mode
 
 With the internal adoption of messages now in progress we have now also
 officially put the Cucumber JSON report in maintenance mode. The format is still
-supported but will not receive any changes. We don't expect this will any
+supported but will not receive any changes. We don't expect this will have any
 significant impact, in practice the format had already been ossified.
 
 Putting the format in maintenance mode meant that we had to pin down the
@@ -103,10 +98,10 @@ for Cucumber-JVM at least that work is now completed.
 ### Reqnroll
 
 While [Reqnroll](https://reqnroll.net/) isn't under Cucumber umbrella, I would
-be amiss if I didn't find a way to highlight Chris Rudolphi contributions.
+be amiss if I didn't find a way to highlight Chris Rudolphi's contributions.
 
 Chris has been driving the adoption of Cucumber messages in Reqnroll and as part
-of that made numerous contributions to Cucumber. Including .Net implementations
+of that made numerous contributions to Cucumber. Including .NET implementations
 of tag-expressions, html-formatter and compatibility-kit.
 
 ## Organizational stuff
@@ -129,21 +124,21 @@ If not, you can subscribe [here](https://cucumber.io/community).
 
 Cucumber is currently funded through donations from Open Collective, GitHub
 Sponsors, and Thanks.dev. We have also partnered with Tidelift and collect some
-add revenue through Ethical Ads. In total, we received $65,545.63 with the
+ad revenue through Ethical Ads. In total, we received $65,545.63 with the
 majority coming from Tidelift.
 
 | Source          | 2025 Income |
 |-----------------|------------:|
 | Tidelift        |  $52,900.00 |
 | Open Collective |   $7,784.50 |
-| GitHub Sponors  |   $4,047.96 |
+| GitHub Sponsors |   $4,047.96 |
 | Ethical Ads     |     $768.50 |
 | Thanks.dev      |      $44.67 |
 |                 | --------- + |
 | Total           |  $65,545.63 |
 
-On the expense side we spend $69.960,28 resulting in a small loss of $4,414.65
-Fortunately we already build up some buffer in 2024 to absorb the loss. 
+On the expense side we spent $69.960,28 resulting in a small loss of $4,414.65
+Fortunately we already built up some buffer in 2024 to absorb the loss. 
 
 | Destination                 | 2025 Expenses |
 |-----------------------------|--------------:|
