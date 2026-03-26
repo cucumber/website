@@ -30,7 +30,7 @@ To run Cucumber with [Maven](https://maven.apache.org/), make sure that:
 - The environment variable `MAVEN_HOME` is correctly configured
 - The IDE is configured with the latest Maven installation
 
-Clone the [cucumber-java-skeleton](https://github.com/cucumber/cucumber-java-skeleton) to get started.
+Clone the [cucumber-jvm-starter-maven-java](https://github.com/cucumber/cucumber-jvm-starter-maven-java) to get started.
 
 ### Gradle
 
@@ -40,4 +40,4 @@ To run Cucumber with [Gradle](https://gradle.org/), make sure that:
 - The environment variable `GRADLE_HOME` is correctly configured
 - The IDE is configured with the latest Gradle installation
 
-Clone the [cucumber-java-skeleton](https://github.com/cucumber/cucumber-java-skeleton) to get started.
+Clone the [cucumber-jvm-starter-gradle-java](https://github.com/cucumber/cucumber-jvm-starter-gradle-java) to get started.
