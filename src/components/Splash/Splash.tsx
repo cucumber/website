@@ -17,9 +17,8 @@ export const Splash: FC = () => {
         <img alt="" src="/img/platforms/java.svg" />
         <img alt="" src="/img/platforms/javascript.svg" />
         <img alt="" src="/img/platforms/ruby.svg" />
-        <img alt="" src="/img/platforms/golang.svg" />
         <img alt="" src="/img/platforms/dotnet.svg" />
-        <small className="margin-left--sm">+{platformsCount - 5} more platforms</small>
+        <small className="margin-left--sm">+{platformsCount - 4} more platforms</small>
       </p>
       <div className={styles.ctas}>
         <Link className="button button--primary button--lg" to="/docs">
