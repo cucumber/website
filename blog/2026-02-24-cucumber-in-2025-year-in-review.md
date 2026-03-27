@@ -65,8 +65,15 @@ canonical implementation of Cucumber for JavaScript continues to be
 
 In 2025 Cucumber-Ruby turned Seventeen! Which means it is now
 [old enough to drive](https://github.com/cucumber/cucumber-ruby/commits/f3292f4023a707099d02602b2bd6c4ca3cec6820)
-in some parts of the world. It also saw 5 releases including v10 which adds
-support for Ruby 3.5+.
+in some parts of the world. It also saw 5 releases including v10.0.0 which
+lays some of the groundwork for upcoming architectural changes. 
+
+More visibly, support for Ruby 2.7 and 3.0 was removed and support for Ruby 4.0+
+was added. The minimum supported Ruby version is now 3.1.
+
+Thanks to Jérôme Lipowicz dependencies on default gems in stdlib are
+now explicitly declared. Backtrace filtering is now much more robust to handle
+a lot of the internal ruby changes, but ideally you won't see any of that.
 
 ### Cucumber Messages
 
