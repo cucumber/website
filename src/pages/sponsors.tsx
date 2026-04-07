@@ -30,7 +30,6 @@ const tiers = [
     amount: 5,
     url: 'https://opencollective.com/cucumber/contribute/monthly-backers-182/checkout',
     from: true,
-    className: '',
   },
   {
     title: 'Bronze',
@@ -39,7 +38,6 @@ const tiers = [
     amount: 100,
     url: 'https://opencollective.com/cucumber/contribute/bronze-sponsors-181/checkout',
     from: false,
-    className: '',
   },
   {
     title: 'Silver',
@@ -48,7 +46,6 @@ const tiers = [
     amount: 500,
     url: 'https://opencollective.com/cucumber/contribute/gold-sponsors-3224/checkout',
     from: false,
-    className: '',
   },
   {
     title: 'Gold',
@@ -57,7 +54,6 @@ const tiers = [
     amount: 1000,
     url: 'https://opencollective.com/cucumber/contribute/gold-82673/checkout',
     from: false,
-    className: 'col--offset-2',
   },
   {
     title: 'Platinum',
@@ -66,7 +62,6 @@ const tiers = [
     amount: 2500,
     url: 'https://opencollective.com/cucumber/contribute/platinum-82674/checkout',
     from: false,
-    className: '',
   },
 ] as const
 
@@ -75,7 +70,7 @@ const Tiers: FC = () => {
     <ol className={clsx('row', styles.list)}>
       {tiers.map((tier) => {
         return (
-          <li key={tier.amount} className={clsx('col col--4 margin-bottom--lg', tier.className)}>
+          <li key={tier.amount} className={clsx('col margin-bottom--lg', styles.tier)}>
             <div className={clsx('card', styles.card)}>
               <div className="card__header">
                 <h3>{tier.title}</h3>
@@ -83,7 +78,7 @@ const Tiers: FC = () => {
               <div className="card__body">
                 <b className={styles.amount}>{numberFormat.format(tier.amount)}</b>
                 <span className={styles.frequency}>{tier.from && 'or above, '}monthly</span>
-                <p className={clsx('margin-top--md', styles.blurb)}>{tier.description}</p>
+                <p className={clsx('margin-vert--md', styles.blurb)}>{tier.description}</p>
               </div>
               <div className="card__footer">
                 <Link className="button button--block button--primary" href={tier.url}>

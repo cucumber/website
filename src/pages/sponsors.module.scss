@@ -4,7 +4,14 @@
   margin: 0;
 }
 
+.tier {
+  width: 20%;
+}
+
 .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   box-shadow: 0 1.5px 3px 0 rgb(0 0 0 / 15%);
   border: 1px solid var(--ifm-color-emphasis-200);
 }
@@ -23,13 +30,13 @@
 }
 
 .blurb {
-  height: 9rem;
+  flex: 1;
 }
 
 // breakpoint for infima grid dropping down to single column
 @media all and (max-width: 996px) {
-  .blurb {
-    height: auto;
+  .tier {
+    width: 100%;
   }
 }
 
