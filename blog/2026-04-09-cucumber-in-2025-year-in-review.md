@@ -10,7 +10,7 @@ tags:
 ---
 
 A year ago, Cucumber [returned to community ownership](https://cucumber.io/blog/open-source/cucumber-is-back-in-community-ownership).
-I'd like to take a moment to reflect on what we have been up to.
+We'd like to take a moment to reflect on what we have been up to.
 
 <!-- truncate -->
 
@@ -22,8 +22,8 @@ the individual projects.
 
 ### Cucumber JVM
 
-In 2025, we've had 20 releases for Cucumber-JVM. These were mostly bug fixes
-and dependency updates. But I'd like to highlight a few notable changes. 
+In 2025, we've made 20 releases for Cucumber-JVM. These were mostly bug fixes
+and dependency updates. But we'd like to highlight a few notable changes. 
 
 * We had [a contribution](https://github.com/cucumber/cucumber-jvm/pull/3124)
   from Stefan Gasterstädt to make it possible to create locale sensitive
@@ -104,8 +104,8 @@ for Cucumber-JVM at least that work is now completed.
 
 ### Reqnroll
 
-While [Reqnroll](https://reqnroll.net/) isn't under Cucumber umbrella, I would
-be amiss if I didn't find a way to highlight Chris Rudolphi's contributions.
+While [Reqnroll](https://reqnroll.net/) isn't under Cucumber umbrella, we would
+be amiss if we didn't find a way to highlight Chris Rudolphi's contributions.
 
 Chris has been driving the adoption of Cucumber messages in Reqnroll and as part
 of that made numerous contributions to Cucumber. Including .NET implementations
@@ -185,6 +185,6 @@ at 4pm London time.
 
 ## Thanks
 
-One year later on I'm elated to see the Cucumber project is still alive, active
+One year later on we elated to see the Cucumber project is still alive, active
 and developing. Thanks for being part of this community. It's an amazing
 privilege to be part of such a vibrant, popular open source project.
