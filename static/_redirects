@@ -1,0 +1,63 @@
+# Vanity URLs for external stuff
+/conduct  https://github.com/cucumber/.github/tree/main?tab=coc-ov-file  302
+/school  https://school.cucumber.io  301
+/school/*  https://school.cucumber.io  301
+
+# Paths for SmartBear products
+/tools/cucumberstudio  https://smartbear.com/product/cucumberstudio/  301
+/tools/cucumberstudio/*  https://smartbear.com/product/cucumberstudio/:splat/  301
+/tools/cucumber-for-jira  https://smartbear.com/product/cucumber-for-jira/  301
+/tools/cucumber-for-jira/*  https://smartbear.com/product/cucumber-for-jira/:splat/  301
+/living-documentation  https://smartbear.com/product/cucumber-for-jira/  301
+
+# Other Tools variants
+/tools  /  301
+/tools/cucumber-open/support  /community  301
+/tools/cucumber-open/team  /community  301
+/tools/cucumber-open/contribute  /docs/contributing  301
+/tools/cucumber-open/sponsors  /sponsors  301
+/tools/cucumber-open/*  /  301
+/tools/cucumber-open  /  301
+
+# Blog posts with parens in the slug
+/blog/bdd/understanding-screenplay-(part-4)  /blog/bdd/understanding-screenplay-part-4  301
+/blog/bdd/understanding-screenplay-(part-3)  /blog/bdd/understanding-screenplay-part-3  301
+/blog/bdd/understanding-screenplay-(part-2)  /blog/bdd/understanding-screenplay-part-2  301
+/blog/bdd/understanding-screenplay-(part-1)  /blog/bdd/understanding-screenplay-part-1  301
+/blog/bdd/user-stories-and-bdd-(part-2)-discovery  /blog/bdd/user-stories-and-bdd-part-2-discovery  301
+/blog/bdd/what-is-good-code-(1)  /blog/bdd/what-is-good-code  301
+/blog/bdd/keep-your-scenarios-brief-(1)  /blog/bdd/keep-your-scenarios-brief  301
+
+# Blog tags
+/blog/news  /blog  301
+/blog/bdd  /blog/tags/bdd  301
+/blog/open-source  /blog/tags/open-source  301
+
+# Relocated docs
+/docs/installation/specflow  /docs/installation/reqnroll  301
+/docs/guides/overview  /docs  301
+/docs/community/contributing  /docs/contributing  301
+/docs/community/faq  /docs/faq  301
+/contribute  /docs/contributing  301
+/docs/community/contributing-to-documentation  https://github.com/cucumber/website/blob/main/CONTRIBUTING.md  301
+/docs/tools/general  /docs/tools  301
+
+# Events aliases
+/events  /community  301
+/resources/events  /community  301
+/speakers  /community  301
+/cukenfest  /community  301
+
+# Learn aliases
+/docs/professional  /learn  301
+/docs/professional/*  /learn  301
+/resources  /learn  301
+/resources/*  /learn  301
+
+# Community aliases
+/docs/community/get-in-touch  /community  301
+/docs/community/*  /community  301
+/docs/community  /community  301
+/support  /community  301
+/team  /community  302
+/contact-us  /community  301
