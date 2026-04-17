@@ -101,10 +101,6 @@ export default {
         theme: {
           customCss: './src/css/custom.scss',
         },
-        gtag: {
-          trackingID: 'G-YY58V5DFE7',
-          anonymizeIP: true,
-        },
         sitemap: {
           lastmod: 'datetime',
           changefreq: 'weekly',
