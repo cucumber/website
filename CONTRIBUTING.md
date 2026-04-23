@@ -100,7 +100,7 @@ Here's a video of what happened:
 
 ## Small docs edits
 
-If you just want to make a small-ish edit to a doc, you can avoid the overhead of spinning up the site locally by following the "Edit this page" link at the bottom of the doc, which will take you to GitHub where you can propose an edit. Once you raise a pull request, Netlify will comment with a link to a deployed preview so you can see what your change will look like.
+If you just want to make a small-ish edit to a doc, you can avoid the overhead of spinning up the site locally by following the "Edit this page" link at the bottom of the doc, which will take you to GitHub where you can propose an edit. Once you raise a pull request, a comment will be added with a link to a deployed preview so you can see what your change will look like.
 
 Each pull request should only modify/add a single topic. Please don't lump many unrelated document changes into the same pull request. If you want to modify or add multiple topics, please open one pull request per topic.
 
