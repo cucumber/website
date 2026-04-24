@@ -1,5 +1,5 @@
 import * as Sentry from '@sentry/react'
 
 Sentry.init({
-  dsn: 'https://35a6440bb6caf088f85e58590038eb45@o4509553056546816.ingest.us.sentry.io/4509620960624640',
+  dsn: 'https://f975a1494e48eecbacb4781af5696dc5@o4511275537334272.ingest.de.sentry.io/4511275564531792',
 })
