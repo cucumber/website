@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Individual",
+    "description": "For individuals who want to support the project",
+    "amount": 5,
+    "url": "https://opencollective.com/cucumber/contribute/monthly-backers-182/checkout",
+    "from": true
+  },
+  {
+    "title": "Bronze",
+    "description": "Support the contributors with a monthly donation and, if you want, get your name and a small logo on the Cucumber website with a link to your site.",
+    "amount": 100,
+    "url": "https://opencollective.com/cucumber/contribute/bronze-sponsors-181/checkout",
+    "from": false
+  },
+  {
+    "title": "Silver",
+    "description": "Support the contributors with a monthly donation and, if you want, get your name and a medium logo on the Cucumber website with a link to your site.",
+    "amount": 500,
+    "url": "https://opencollective.com/cucumber/contribute/gold-sponsors-3224/checkout",
+    "from": false
+  },
+  {
+    "title": "Gold",
+    "description": "Support the contributors with a monthly donation and, if you want, get your name, large logo, and subtitle on the Cucumber website with a link to your site.",
+    "amount": 1000,
+    "url": "https://opencollective.com/cucumber/contribute/gold-82673/checkout",
+    "from": false
+  },
+  {
+    "title": "Platinum",
+    "description": "Support the contributors with a monthly donation and, if you want, get your name, large logo, subtitle and short paragraph on the Cucumber website with a link to your site.",
+    "amount": 2500,
+    "url": "https://opencollective.com/cucumber/contribute/platinum-82674/checkout",
+    "from": false
+  }
+]
