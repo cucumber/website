@@ -79,7 +79,10 @@ export default function Sponsors() {
               {inKindSponsors.length > 0 && (
                 <>
                   <h3>In-Kind Sponsors</h3>
-                  <p>Our thanks to these companies for supporting open source with free/subsidised plans.</p>
+                  <p>
+                    Our thanks to these companies for supporting open source with free/subsidised
+                    plans.
+                  </p>
                   <SponsorIcons sponsors={inKindSponsors} />
                 </>
               )}
