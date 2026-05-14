@@ -1,9 +1,8 @@
 import type { Config } from '@docusaurus/types'
 import type { Options, ThemeConfig } from '@docusaurus/preset-classic'
 import { themes } from 'prism-react-renderer'
-import { globbySync } from 'globby'
 import YAML from 'yaml'
-import { readFileSync } from 'node:fs'
+import { readdirSync, readFileSync } from 'node:fs'
 import npm2yarn from '@docusaurus/remark-plugin-npm2yarn'
 import rehypeRewrite from 'rehype-rewrite'
 
@@ -23,8 +22,11 @@ const darkCodeTheme = {
 }
 
 let platformsCount = 0
-for (const installationPath of globbySync('docs/installation/*.md')) {
-  const content = readFileSync(installationPath, { encoding: 'utf-8' })
+for (const file of readdirSync('docs/installation')) {
+  if (!file.endsWith('.md')) {
+    continue
+  }
+  const content = readFileSync(`docs/installation/${file}`, { encoding: 'utf-8' })
   if (!content.includes('status: unmaintained')) {
     platformsCount++
   }
