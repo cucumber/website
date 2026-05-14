@@ -1,4 +1,4 @@
-import { useTabs, TabsProps } from '@docusaurus/theme-common/internal'
+import { useTabsContextValue, TabsProps } from '@docusaurus/theme-common/internal'
 import DocusaurusTabItem from '@theme/TabItem'
 
 const DOCUSAURUS_TABS_PROPS: TabsProps = {
@@ -15,5 +15,5 @@ const DOCUSAURUS_TABS_PROPS: TabsProps = {
 }
 
 export function useLang() {
-  return useTabs(DOCUSAURUS_TABS_PROPS).selectedValue
+  return useTabsContextValue(DOCUSAURUS_TABS_PROPS).selectedValue
 }
