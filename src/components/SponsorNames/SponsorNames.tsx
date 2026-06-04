@@ -11,7 +11,7 @@ interface Sponsor {
 
 interface SponsorNamesProps {
   sponsors: ReadonlyArray<Sponsor>
-  size?: 'sm' | 'md' | 'lg' | 'xl'
+  size?: 'sm' | 'default' | 'lg' | 'xl'
 }
 
 export const SponsorNames: FC<SponsorNamesProps> = ({ sponsors, size = 'lg' }) => {

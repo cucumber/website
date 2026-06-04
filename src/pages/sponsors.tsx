@@ -42,7 +42,7 @@ export default function Sponsors() {
       <main>
         <div className="container margin-vert--xl">
           <div className="row">
-            <div className="col col--8">
+            <div className="col col--7">
               <div className="margin-bottom--md">
                 <DownloadCounter />
               </div>
@@ -56,8 +56,6 @@ export default function Sponsors() {
                 Financial contributions ensure the team can get paid for their time, and that
                 Cucumber will remain a reliable and fun way to test your software for years to come.
               </p>
-            </div>
-            <div className="col col--3 col--offset-1">
               {goldSponsors.length > 0 && (
                 <>
                   <h3>Gold Sponsors</h3>
@@ -76,14 +74,16 @@ export default function Sponsors() {
                   <SponsorNames sponsors={bronzeSponsors} size="sm" />
                 </>
               )}
+            </div>
+            <div className="col col--4 col--offset-1">
               {inKindSponsors.length > 0 && (
                 <>
-                  <h3>In-Kind Sponsors</h3>
+                  <h3>Thank you</h3>
                   <p>
-                    Our thanks to these companies for supporting open source with free/subsidised
+                    Our thanks to these companies for supporting open source with free or subsidised
                     plans.
                   </p>
-                  <SponsorIcons sponsors={inKindSponsors} />
+                  <SponsorNames sponsors={inKindSponsors} size="default" />
                 </>
               )}
             </div>
