@@ -3,12 +3,12 @@ sidebar_position: 4
 description: "Using variables in your step definitions"
 ---
 
+import { ExpressionsSandbox } from '@site/src/components/ExpressionsSandbox'
+
 # Cucumber Expressions
 
 Cucumber Expressions is an alternative to [Regular Expressions](https://en.wikipedia.org/wiki/Regular_expression)
 with a more intuitive syntax.
-
-[Try Cucumber Expressions in your browser](https://cucumber.github.io/try-cucumber-expressions/).
 
 Cucumber supports both Cucumber Expressions and Regular Expressions for defining
 [Step Definitions](/docs/cucumber/step-definitions), but you cannot
@@ -282,3 +282,7 @@ I have 42 \{what} cucumbers in my belly \(amazing!)
 ```
 
 The `/` character will always be interpreted as an alternative, unless escaped, such as with `\/`.
+
+## Try it out
+
+<ExpressionsSandbox/>
