@@ -10,7 +10,6 @@ import silverSponsors from '@site/src/data/silver-sponsors.json'
 import bronzeSponsors from '@site/src/data/bronze-sponsors.json'
 import inKindSponsors from '@site/src/data/in-kind-sponsors.json'
 import { DownloadCounter } from '@site/src/components/DownloadCounter'
-import { SponsorIcons } from '@site/src/components/SponsorIcons'
 import { SponsorNames } from '@site/src/components/SponsorNames'
 import { SponsorTiers } from '@site/src/components/SponsorTiers'
 
