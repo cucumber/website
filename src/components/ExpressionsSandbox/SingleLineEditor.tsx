@@ -3,12 +3,9 @@ import { Argument } from '@cucumber/cucumber-expressions'
 import CodeMirror, { BasicSetupOptions } from '@uiw/react-codemirror'
 import React, { useMemo } from 'react'
 
-import {
-  argTooltipExtension,
-  highlightArgsExtension,
-  sandboxTheme,
-  singleLineExtension,
-} from './extensions'
+import { highlightArgsExtension } from './highlightArgsExtension'
+import { sandboxTheme } from './sandboxTheme'
+import { singleLineExtension } from './singleLineExtension'
 
 // strip the editor down to something that behaves like a plain text input
 const basicSetup: BasicSetupOptions = {
@@ -31,7 +28,7 @@ export const SingleLineEditor: React.FunctionComponent<{
   const extensions = useMemo<Extension[]>(() => {
     const base = [singleLineExtension, sandboxTheme]
     if (args === undefined) return base
-    return [...base, highlightArgsExtension(args), argTooltipExtension(args)]
+    return [...base, highlightArgsExtension(args)]
   }, [args])
 
   return (
