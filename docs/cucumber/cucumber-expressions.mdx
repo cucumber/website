@@ -11,7 +11,7 @@ Cucumber Expressions is an alternative to [Regular Expressions](https://en.wikip
 with a more intuitive syntax.
 
 Cucumber supports both Cucumber Expressions and Regular Expressions for defining
-[Step Definitions](/docs/cucumber/step-definitions), but you cannot
+[step definitions](/docs/cucumber/step-definitions), but you cannot
 mix Cucumber Expression syntax with Regular Expression syntax in the same expression.
 
 On platforms that don't have a literal syntax for regular expressions (such as Java),
@@ -54,7 +54,7 @@ Now the expression will match the text, and the float `42.5` is extracted.
 
 ## Parameter types
 
-Text between curly braces reference a *parameter type*. Cucumber comes with
+Text between curly braces references a *parameter type*. Cucumber comes with
 the following built-in parameter types:
 
 | Parameter Type  | Description |
@@ -76,26 +76,26 @@ the following built-in parameter types:
 #### The anonymous parameter
 
 The *anonymous* parameter type will be converted to the parameter type of the step definition using an object mapper.
-Cucumber comes with a built-in object mapper that can handle all numeric types as well as. `Enum`.
+Cucumber comes with a built-in object mapper that can handle all numeric types as well as `Enum`.
 
 To automatically convert to other types it is recommended to install an object mapper. See [cucumber-java - Default Transformers](https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-java#default-transformers)
 to learn how.
 
 #### Number formats
 
-Java supports parsing localised numbers. I.e. in your English feature file you
+Java supports parsing localised numbers. For example, in your English feature file you
 can format a-thousand-and-one-tenth as '1,000.1; while in French you would format it
 as '1.000,1'. 
 
-Parsing is facilitated by Javas [`DecimalFormat`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/text/DecimalFormat.html)
+Parsing is facilitated by Java's [`DecimalFormat`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/text/DecimalFormat.html)
 and includes support for the scientific notation. Unfortunately the default
-localisation include symbols that can not be easily written on a regular
+localisation includes symbols that can't be easily written on a regular
 keyboard. So a few substitutions are made:
 
- * The minus sign is always hyphen-minus - (ascii 45).
- * If the decimal separator is a period (. ascii 46) the thousands separator is a comma (, ascii 44).
+ * The minus sign is always hyphen-minus `-` (ascii 45).
+ * If the decimal separator is a period `.` (ascii 46) the thousand separator is a comma `,` (ascii 44).
    So '1 000.1' and '1’000.1' should always be written as '1,000.1'. 
- * If the decimal separator is a comma (, ascii 44) the thousands separator is a period (. ascii 46).
+ * If the decimal separator is a comma `,` (ascii 44) the thousand separator is a period `.` (ascii 46).
    So '1 000,1' or '1’000,1' should always be written as '1.000,1'.
 
 If support for your preferred language could be improved, please create an issue!
@@ -229,8 +229,10 @@ It would also match this text:
 I have 42 cucumbers in my belly
 ```
 
+:::info
 In Regular Expressions, parentheses indicate a capture group, but in Cucumber Expressions
 they mean *optional text*.
+:::
 
 ## Alternative text
 

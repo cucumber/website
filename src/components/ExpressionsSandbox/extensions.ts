@@ -84,21 +84,45 @@ export function argTooltipExtension(args: readonly Argument[] | null | undefined
   }
 }
 
-// minimal styling so the argument highlight and tooltip are visible; adapts to light/dark via Infima vars
-export const replBaseTheme = EditorView.baseTheme({
+// input-like theme; colors come from Infima vars so it tracks the site's light/dark mode
+// (pair with theme="none" on the editor to drop @uiw's hardcoded white background)
+export const sandboxTheme = EditorView.theme({
   '&': {
+    backgroundColor: 'var(--ifm-background-color)',
+    color: 'var(--ifm-font-color-base)',
     border: '1px solid var(--ifm-color-emphasis-300)',
     borderRadius: 'var(--ifm-global-radius)',
+    fontSize: 'var(--ifm-code-font-size)',
+  },
+  '&.cm-focused': {
+    outline: 'none',
+    borderColor: 'var(--ifm-color-primary)',
+  },
+  '.cm-content': {
+    padding: '8px',
+    fontFamily: 'var(--ifm-font-family-monospace)',
+    caretColor: 'var(--ifm-font-color-base)',
+  },
+  '.cm-line': {
+    padding: '0',
+  },
+  '.cm-cursor, .cm-dropCursor': {
+    borderLeftColor: 'var(--ifm-font-color-base)',
+  },
+  '&.cm-focused .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection': {
+    backgroundColor: 'var(--ifm-color-emphasis-200)',
   },
   '.cm-arg': {
     backgroundColor: 'var(--ifm-color-warning-contrast-background)',
     borderRadius: '2px',
+  },
+  '.cm-tooltip': {
+    border: 'none',
   },
   '.cm-tooltip.cm-cursor-tooltip': {
     backgroundColor: 'var(--ifm-color-emphasis-800)',
     color: 'var(--ifm-color-emphasis-0)',
     padding: '2px 8px',
     borderRadius: '10px',
-    border: 'none',
   },
 })

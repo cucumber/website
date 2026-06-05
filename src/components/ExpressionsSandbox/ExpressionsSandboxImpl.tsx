@@ -1,7 +1,6 @@
 import { CucumberExpression, ParameterTypeRegistry } from '@cucumber/cucumber-expressions'
 import React, { useMemo, useState } from 'react'
 
-import { Field } from './Field'
 import { SingleLineEditor } from './SingleLineEditor'
 import type { ExpressionResult, ExpressionsSandboxProps } from './types'
 
@@ -29,13 +28,15 @@ const ExpressionsSandboxImpl: React.FunctionComponent<ExpressionsSandboxProps> =
 
   return (
     <div>
-      <Field label="Cucumber Expression">
+      <label style={{ display: 'block', marginBottom: '1rem' }}>
+        <div style={{ marginBottom: '0.25rem' }}>Cucumber Expression</div>
         <SingleLineEditor value={expressionText} onChange={setExpressionText} />
-      </Field>
+      </label>
       {expressionResult.error && <pre>{expressionResult.error.message}</pre>}
-      <Field label="Text">
+      <label style={{ display: 'block', marginBottom: '1rem' }}>
+        <div style={{ marginBottom: '0.25rem' }}>Text</div>
         <SingleLineEditor value={stepText} onChange={setStepText} args={args} />
-      </Field>
+      </label>
     </div>
   )
 }

@@ -6,7 +6,7 @@ import React, { useMemo } from 'react'
 import {
   argTooltipExtension,
   highlightArgsExtension,
-  replBaseTheme,
+  sandboxTheme,
   singleLineExtension,
 } from './extensions'
 
@@ -29,12 +29,19 @@ export const SingleLineEditor: React.FunctionComponent<{
   args?: readonly Argument[] | null
 }> = ({ value, onChange, args }) => {
   const extensions = useMemo<Extension[]>(() => {
-    const base = [singleLineExtension, replBaseTheme]
+    const base = [singleLineExtension, sandboxTheme]
     if (args === undefined) return base
     return [...base, highlightArgsExtension(args), argTooltipExtension(args)]
   }, [args])
 
   return (
-    <CodeMirror value={value} onChange={onChange} extensions={extensions} basicSetup={basicSetup} />
+    <CodeMirror
+      value={value}
+      onChange={onChange}
+      extensions={extensions}
+      basicSetup={basicSetup}
+      theme="none"
+      indentWithTab={false}
+    />
   )
 }
