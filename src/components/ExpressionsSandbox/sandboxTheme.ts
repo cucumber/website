@@ -28,9 +28,7 @@ export const sandboxTheme = EditorView.theme({
   '&.cm-focused .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection': {
     backgroundColor: 'var(--ifm-color-emphasis-200)',
   },
-  // TODO make this blue like in react-components
   '.cm-arg': {
-    backgroundColor: 'var(--ifm-color-warning-contrast-background)',
-    borderRadius: '2px',
+    color: 'var(--cucumber-expressions-argument-color)',
   },
 })
