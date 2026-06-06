@@ -18,6 +18,10 @@ On platforms that don't have a literal syntax for regular expressions (such as J
 Cucumber will create a Cucumber Expression by default. To use Regular Expressions, add anchors (starting with `^` and ending with `$`) or forward slashes (`/`). For more information, see
 [Cucumber Expression - Java Heuristics](https://github.com/cucumber/cucumber-expressions/blob/main/java/heuristics.adoc).
 
+## Try it out
+
+<ExpressionsSandbox/>
+
 ## Introduction
 
 Let's write a Cucumber Expression that matches the following Gherkin step (the `Given`
@@ -284,7 +288,3 @@ I have 42 \{what} cucumbers in my belly \(amazing!)
 ```
 
 The `/` character will always be interpreted as an alternative, unless escaped, such as with `\/`.
-
-## Try it out
-
-<ExpressionsSandbox/>
