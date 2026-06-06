@@ -1,8 +1,7 @@
-import { Argument } from '@cucumber/cucumber-expressions'
 import { Decoration, DecorationSet, ViewPlugin } from '@codemirror/view'
 
-// highlights the part of the text matched by each argument
-export function highlightArgsExtension(args: readonly Argument[] | null | undefined) {
+// highlights the text ranges matched by each argument
+export function highlightArgsExtension(args: ReadonlyArray<[number, number]>) {
   return ViewPlugin.define(
     () => ({
       decorations: createArgDecorations(args),
@@ -18,13 +17,10 @@ export function highlightArgsExtension(args: readonly Argument[] | null | undefi
   )
 }
 
-function createArgDecorations(args: readonly Argument[] | null | undefined): DecorationSet {
+function createArgDecorations(args: ReadonlyArray<[number, number]>): DecorationSet {
   return Decoration.set(
-    (args || []).map((arg) =>
-      Decoration.mark({ attributes: { class: 'cm-arg' } }).range(
-        arg.group.start || 0,
-        arg.group.end || 0
-      )
+    args.map(([start, end]) =>
+      Decoration.mark({ attributes: { class: 'cm-arg' } }).range(start, end)
     ),
     true
   )

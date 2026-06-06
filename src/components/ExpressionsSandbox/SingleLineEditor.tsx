@@ -1,5 +1,4 @@
 import { Extension } from '@codemirror/state'
-import { Argument } from '@cucumber/cucumber-expressions'
 import CodeMirror, { BasicSetupOptions } from '@uiw/react-codemirror'
 import React, { useMemo } from 'react'
 
@@ -22,14 +21,15 @@ const basicSetup: BasicSetupOptions = {
 export const SingleLineEditor: React.FunctionComponent<{
   value: string
   onChange: (value: string) => void
-  // when provided, the matched arguments are highlighted and given tooltips
-  args?: readonly Argument[] | null
-}> = ({ value, onChange, args }) => {
+  argRanges?: ReadonlyArray<[number, number]>
+}> = ({ value, onChange, argRanges }) => {
   const extensions = useMemo<Extension[]>(() => {
     const base = [singleLineExtension, sandboxTheme]
-    if (args === undefined) return base
-    return [...base, highlightArgsExtension(args)]
-  }, [args])
+    if (!argRanges || argRanges.length === 0) {
+      return base
+    }
+    return [...base, highlightArgsExtension(argRanges)]
+  }, [argRanges])
 
   return (
     <CodeMirror

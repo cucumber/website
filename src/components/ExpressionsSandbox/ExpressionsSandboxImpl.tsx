@@ -21,8 +21,11 @@ const ExpressionsSandboxImpl: React.FunctionComponent<ExpressionsSandboxProps> =
     }
   }, [expressionText, registry])
 
-  const args = useMemo(
-    () => expressionResult.expression?.match(stepText),
+  const argRanges: ReadonlyArray<[number, number]> | undefined = useMemo(
+    () =>
+      expressionResult.expression
+        ?.match(stepText)
+        ?.map<[number, number]>((arg) => [arg.group.start ?? 0, arg.group.end ?? 0]),
     [expressionResult, stepText]
   )
 
@@ -35,7 +38,7 @@ const ExpressionsSandboxImpl: React.FunctionComponent<ExpressionsSandboxProps> =
       {expressionResult.error && <pre>{expressionResult.error.message}</pre>}
       <label style={{ display: 'block', marginBottom: '1rem' }}>
         <div style={{ marginBottom: '0.25rem' }}>Text</div>
-        <SingleLineEditor value={stepText} onChange={setStepText} args={args} />
+        <SingleLineEditor value={stepText} onChange={setStepText} argRanges={argRanges} />
       </label>
     </div>
   )
