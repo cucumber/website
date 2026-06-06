@@ -2,9 +2,10 @@ import { Extension } from '@codemirror/state'
 import CodeMirror, { BasicSetupOptions } from '@uiw/react-codemirror'
 import React, { useMemo } from 'react'
 
-import { highlightArgsExtension } from './highlightArgsExtension'
-import { sandboxTheme } from './sandboxTheme'
+import { highlightsExtension } from './highlightsExtension'
+import { theme } from './theme'
 import { singleLineExtension } from './singleLineExtension'
+import { ExpressionHighlight } from '@site/src/components/ExpressionsSandbox/types'
 
 // strip the editor down to something that behaves like a plain text input
 const basicSetup: BasicSetupOptions = {
@@ -21,15 +22,15 @@ const basicSetup: BasicSetupOptions = {
 export const SingleLineEditor: React.FunctionComponent<{
   value: string
   onChange: (value: string) => void
-  argRanges?: ReadonlyArray<[number, number]>
-}> = ({ value, onChange, argRanges }) => {
+  highlights?: ReadonlyArray<ExpressionHighlight>
+}> = ({ value, onChange, highlights }) => {
   const extensions = useMemo<Extension[]>(() => {
-    const base = [singleLineExtension, sandboxTheme]
-    if (!argRanges || argRanges.length === 0) {
+    const base = [singleLineExtension, theme]
+    if (!highlights || highlights.length === 0) {
       return base
     }
-    return [...base, highlightArgsExtension(argRanges)]
-  }, [argRanges])
+    return [...base, highlightsExtension(highlights)]
+  }, [highlights])
 
   return (
     <CodeMirror

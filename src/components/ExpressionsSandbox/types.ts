@@ -9,3 +9,9 @@ export type ExpressionsSandboxProps = {
   defaultExpression?: string
   defaultText?: string
 }
+
+export type ExpressionHighlight = {
+  type: 'parameter' | 'optional'
+  start: number
+  end: number
+}

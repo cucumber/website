@@ -1,8 +1,7 @@
 import { EditorView } from '@codemirror/view'
 
-// input-like theme; colors come from Infima vars so it tracks the site's light/dark mode
-// (pair with theme="none" on the editor to drop @uiw's hardcoded white background)
-export const sandboxTheme = EditorView.theme({
+// use css vars to match our site's styling
+export const theme = EditorView.theme({
   '&': {
     backgroundColor: 'var(--ifm-background-color)',
     color: 'inherit',
@@ -22,7 +21,10 @@ export const sandboxTheme = EditorView.theme({
   '.cm-line': {
     padding: '0',
   },
-  '.cm-arg': {
+  '.cm-expression-parameter': {
     color: 'var(--cucumber-expressions-argument-color)',
+  },
+  '.cm-expression-optional': {
+    color: 'var(--ifm-color-secondary-darkest)',
   },
 })

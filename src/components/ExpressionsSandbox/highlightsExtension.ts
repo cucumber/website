@@ -1,7 +1,8 @@
 import { Decoration, DecorationSet, ViewPlugin } from '@codemirror/view'
+import { ExpressionHighlight } from '@site/src/components/ExpressionsSandbox/types'
 
 // highlights the text ranges matched by each argument
-export function highlightArgsExtension(args: ReadonlyArray<[number, number]>) {
+export function highlightsExtension(args: ReadonlyArray<ExpressionHighlight>) {
   return ViewPlugin.define(
     () => ({
       decorations: createArgDecorations(args),
@@ -17,10 +18,10 @@ export function highlightArgsExtension(args: ReadonlyArray<[number, number]>) {
   )
 }
 
-function createArgDecorations(args: ReadonlyArray<[number, number]>): DecorationSet {
+function createArgDecorations(args: ReadonlyArray<ExpressionHighlight>): DecorationSet {
   return Decoration.set(
-    args.map(([start, end]) =>
-      Decoration.mark({ attributes: { class: 'cm-arg' } }).range(start, end)
+    args.map(({ type, start, end }) =>
+      Decoration.mark({ attributes: { class: `cm-expression-${type}` } }).range(start, end)
     ),
     true
   )
