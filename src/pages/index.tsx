@@ -9,9 +9,6 @@ export default function Home() {
       <Splash />
       <main>
         <Intro />
-        {/*<div className="container padding-vert--lg">*/}
-        {/*    <UsedBy/>*/}
-        {/*</div>*/}
       </main>
     </Layout>
   )
