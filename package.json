@@ -17,8 +17,8 @@
   },
   "dependencies": {
     "@cucumber/gherkin": "^39.0.0",
-    "@docusaurus/core": "3.9.2",
-    "@docusaurus/preset-classic": "3.9.2",
+    "@docusaurus/core": "3.10.1",
+    "@docusaurus/preset-classic": "3.10.1",
     "@docusaurus/remark-plugin-npm2yarn": "^3.6.3",
     "@mdx-js/react": "3.1.1",
     "@sentry/react": "^10.40.0",
@@ -26,18 +26,17 @@
     "docusaurus-plugin-sass": "^0.2.5",
     "lodash.sortby": "^4.7.0",
     "prism-react-renderer": "2.4.1",
-    "react": "19.2.5",
-    "react-dom": "19.2.5",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
     "react-error-boundary": "^6.0.0",
     "sass": "^1.69.3"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.9.2",
+    "@docusaurus/module-type-aliases": "3.10.1",
     "@docusaurus/tsconfig": "^3.1.1",
     "@docusaurus/types": "^3.1.1",
     "@tsconfig/docusaurus": "2.0.9",
     "@types/lodash.sortby": "^4.7.9",
-    "globby": "^14.0.2",
     "prettier": "^3.4.2",
     "rehype-rewrite": "^4.0.2",
     "yaml": "^2.6.1"

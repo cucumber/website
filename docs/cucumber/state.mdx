@@ -219,7 +219,7 @@ To use OpenEJB, add the following dependency to your `pom.xml`:
 ```xml
 <dependency>
     <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-openejb</artifactId>
+    <artifactId>cucumber-jakarta-openejb</artifactId>
     <version>{{% version "cucumberjvm" %}}</version>
     <scope>test</scope>
 </dependency>
@@ -228,19 +228,19 @@ To use OpenEJB, add the following dependency to your `pom.xml`:
 Or, if you are using Gradle, add:
 
 ```kotlin
-testImplementation("io.cucumber:cucumber-openejb:{{% version "cucumberjvm" %}}")
+testImplementation("io.cucumber:cucumber-jakarta-openejb:{{% version "cucumberjvm" %}}")
 ```
 
-There is no documentation yet, but the code is on [GitHub](https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-openejb).
+There is no documentation yet, but the code is on [GitHub](https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-jakarta-openejb).
 
-### Weld
+### CDI
 
-To use Weld, add the following dependency to your `pom.xml`:
+To use CDI, add the following dependency to your `pom.xml`:
 
 ```xml
 <dependency>
     <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-weld</artifactId>
+    <artifactId>cucumber-jakarta-cdi</artifactId>
     <version>{{% version "cucumberjvm" %}}</version>
     <scope>test</scope>
 </dependency>
@@ -249,32 +249,10 @@ To use Weld, add the following dependency to your `pom.xml`:
 Or, if you are using Gradle, add:
 
 ```kotlin
-testImplementation("io.cucumber:cucumber-weld:{{% version "cucumberjvm" %}}")
+testImplementation("io.cucumber:cucumber-jakarta-cdi:{{% version "cucumberjvm" %}}")
 ```
 
-There is no documentation yet, but the code is on [GitHub](https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-weld).
-
-### Needle
-
-To use Needle, add the following dependency to your `pom.xml`:
-
-```xml
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-needle</artifactId>
-    <version>{{% version "cucumberjvm" %}}</version>
-    <scope>test</scope>
-</dependency>
-```
-
-Or, if you are using Gradle, add:
-
-```kotlin
-testImplementation("io.cucumber:cucumber-needle:{{% version "cucumberjvm" %}}")
-```
-
-There is no documentation yet, but the code is on [GitHub](https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-needle).
-
+There is no documentation yet, but the code is on [GitHub](https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-jakarta-cdi).
 
 ### Quarkus
 
