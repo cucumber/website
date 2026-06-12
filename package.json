@@ -19,7 +19,7 @@
     "@codemirror/state": "^6.6.0",
     "@codemirror/view": "^6.43.0",
     "@cucumber/cucumber-expressions": "^19.0.1",
-    "@cucumber/gherkin": "^39.0.0",
+    "@cucumber/gherkin": "^40.0.0",
     "@docusaurus/core": "3.10.1",
     "@docusaurus/preset-classic": "3.10.1",
     "@docusaurus/remark-plugin-npm2yarn": "^3.6.3",

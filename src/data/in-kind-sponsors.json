@@ -1,0 +1,26 @@
+[
+  {
+    "name": "1Password",
+    "logo": "/img/sponsors/1password.svg",
+    "url": "https://1password.com",
+    "blurb": "For password and secret management"
+  },
+  {
+    "name": "Algolia",
+    "logo": "/img/sponsors/algolia.svg",
+    "url": "https://www.algolia.com",
+    "blurb": "For fast indexed search across our documentation"
+  },
+  {
+    "name": "Buttondown",
+    "logo": "/img/sponsors/buttondown.svg",
+    "url": "https://buttondown.com",
+    "blurb": "For community newsletter distribution"
+  },
+  {
+    "name": "GitHub",
+    "logo": "/img/sponsors/github.svg",
+    "url": "https://github.com",
+    "blurb": "For securely hosting and building our code"
+  }
+]
