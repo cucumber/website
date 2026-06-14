@@ -1,4 +1,3 @@
-import Admonition from '@theme/Admonition'
 import { CucumberExpression, NodeType, ParameterTypeRegistry } from '@cucumber/cucumber-expressions'
 import React, { useMemo, useState } from 'react'
 import styles from './ExpressionsPlayground.module.scss'
@@ -71,9 +70,9 @@ const ExpressionsPlayground: React.FunctionComponent<ExpressionsPlaygroundProps>
       </div>
 
       {expressionResult.error && (
-        <Admonition type="danger" title="Error">
+        <div className="alert alert--danger margin-bottom--md" role="alert">
           <pre className={styles.message}>{expressionResult.error.message}</pre>
-        </Admonition>
+        </div>
       )}
 
       <div className={styles.field}>
