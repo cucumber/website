@@ -5,7 +5,7 @@ export type ExpressionResult = {
   error?: Error
 }
 
-export type ExpressionsSandboxProps = {
+export type ExpressionsPlaygroundProps = {
   defaultExpression?: string
   defaultText?: string
 }

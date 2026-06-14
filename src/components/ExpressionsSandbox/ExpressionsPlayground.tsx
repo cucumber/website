@@ -1,12 +1,12 @@
 import Admonition from '@theme/Admonition'
 import { CucumberExpression, NodeType, ParameterTypeRegistry } from '@cucumber/cucumber-expressions'
 import React, { useMemo, useState } from 'react'
-import styles from './ExpressionsSandbox.module.scss'
+import styles from './ExpressionsPlayground.module.scss'
 
 import { SingleLineEditor } from './SingleLineEditor'
-import type { ExpressionHighlight, ExpressionResult, ExpressionsSandboxProps } from './types'
+import type { ExpressionHighlight, ExpressionResult, ExpressionsPlaygroundProps } from './types'
 
-const ExpressionsSandbox: React.FunctionComponent<ExpressionsSandboxProps> = ({
+const ExpressionsPlayground: React.FunctionComponent<ExpressionsPlaygroundProps> = ({
   defaultExpression = 'I have {int} cucumber(s) in my belly',
   defaultText = 'I have 42 cucumbers in my belly',
 }) => {
@@ -25,36 +25,36 @@ const ExpressionsSandbox: React.FunctionComponent<ExpressionsSandboxProps> = ({
 
   const expressionHighlights: ReadonlyArray<ExpressionHighlight> | undefined = useMemo(
     () =>
-      expressionResult.expression?.ast?.nodes?.map<ExpressionHighlight | undefined>(node => {
-        switch (node.type) {
-          case NodeType.parameter:
-            return {
-              type: 'parameter',
-              start: node.start,
-              end: node.end
-            }
-          case NodeType.optional:
-            return {
-              type: 'optional',
-              start: node.start,
-              end: node.end,
-            }
-          default:
-            return undefined
-        }
-      })?.filter(Boolean),
+      expressionResult.expression?.ast?.nodes
+        ?.map<ExpressionHighlight | undefined>((node) => {
+          switch (node.type) {
+            case NodeType.parameter:
+              return {
+                type: 'parameter',
+                start: node.start,
+                end: node.end,
+              }
+            case NodeType.optional:
+              return {
+                type: 'optional',
+                start: node.start,
+                end: node.end,
+              }
+            default:
+              return undefined
+          }
+        })
+        ?.filter(Boolean),
     [expressionResult, stepText]
   )
 
   const stepHighlights: ReadonlyArray<ExpressionHighlight> | undefined = useMemo(
     () =>
-      expressionResult.expression
-        ?.match(stepText)
-        ?.map((arg) => ({
-          type: 'parameter',
-          start: arg.group.start,
-          end: arg.group.end,
-        })),
+      expressionResult.expression?.match(stepText)?.map((arg) => ({
+        type: 'parameter',
+        start: arg.group.start,
+        end: arg.group.end,
+      })),
     [expressionResult, stepText]
   )
 
@@ -76,11 +76,12 @@ const ExpressionsSandbox: React.FunctionComponent<ExpressionsSandboxProps> = ({
         </Admonition>
       )}
       <p>
-        Step Text<br/>
+        Step Text
+        <br />
         <SingleLineEditor value={stepText} onChange={setStepText} highlights={stepHighlights} />
       </p>
     </>
   )
 }
 
-export default ExpressionsSandbox
+export default ExpressionsPlayground
