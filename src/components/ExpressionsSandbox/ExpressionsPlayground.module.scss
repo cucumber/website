@@ -2,3 +2,21 @@
   background-color: transparent;
   padding: 0;
 }
+
+.field {
+  margin: 0 0 var(--ifm-paragraph-margin-bottom);
+}
+
+.annotated {
+  position: relative;
+
+  [class*='cm-editor'] {
+    padding-right: 6em;
+  }
+}
+
+.matched {
+  position: absolute;
+  top: 0.875em;
+  right: 0.875em;
+}

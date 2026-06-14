@@ -60,7 +60,7 @@ const ExpressionsPlayground: React.FunctionComponent<ExpressionsPlaygroundProps>
 
   return (
     <>
-      <p>
+      <div className={styles.field}>
         Cucumber Expression
         <br />
         <SingleLineEditor
@@ -68,18 +68,31 @@ const ExpressionsPlayground: React.FunctionComponent<ExpressionsPlaygroundProps>
           onChange={setExpressionText}
           highlights={expressionHighlights}
         />
-      </p>
+      </div>
 
       {expressionResult.error && (
         <Admonition type="danger" title="Error">
           <pre className={styles.message}>{expressionResult.error.message}</pre>
         </Admonition>
       )}
-      <p>
+
+      <div className={styles.field}>
         Step Text
         <br />
-        <SingleLineEditor value={stepText} onChange={setStepText} highlights={stepHighlights} />
-      </p>
+        <div className={styles.annotated}>
+          <SingleLineEditor
+            value={stepText}
+            onChange={setStepText}
+            highlights={stepHighlights}
+          ></SingleLineEditor>
+          {expressionResult.expression && stepHighlights && (
+            <span className={`${styles.matched} badge badge--success`}>Matched</span>
+          )}
+          {expressionResult.expression && !stepHighlights && (
+            <span className={`${styles.matched} badge badge--warning`}>Unmatched</span>
+          )}
+        </div>
+      </div>
     </>
   )
 }
