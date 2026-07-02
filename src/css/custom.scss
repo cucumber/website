@@ -40,6 +40,7 @@
   --ifm-font-family-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --cucumber-expressions-argument-color: oklch(62.3% 0.214 259.815);
 }
 
 /* Infima dark theme */
@@ -47,6 +48,7 @@
   --ifm-hero-background-color: var(--ifm-navbar-background-color);
   --ifm-footer-background-color: var(--ifm-navbar-background-color);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --cucumber-expressions-argument-color: #4caaee;
 }
 
 /* Typographic tweaks to standard Infima hero component */

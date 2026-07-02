@@ -7,4 +7,6 @@ export const LANGUAGES = {
   ruby: 'Ruby',
   javascript: 'JavaScript',
   golang: 'Go',
+  python: 'Python',
+  dotnet: '.NET',
 }

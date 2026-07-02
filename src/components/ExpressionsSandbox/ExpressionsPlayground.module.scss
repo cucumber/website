@@ -1,0 +1,66 @@
+.message {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.field {
+  margin: 0 0 var(--ifm-paragraph-margin-bottom);
+}
+
+.annotated {
+  position: relative;
+
+  [class*='cm-editor'] {
+    padding-right: 6em;
+  }
+}
+
+.status {
+  position: absolute;
+  top: 0.875em;
+  right: 0.875em;
+}
+
+.parameterTypes {
+  summary {
+    cursor: pointer;
+    color: var(--ifm-color-emphasis-700);
+  }
+}
+
+.parameterTypeForm {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+
+.parameterTypeName,
+.parameterTypeRegexp {
+  --ifm-button-size-multiplier: 0.8;
+  background-color: var(--ifm-background-color);
+  color: inherit;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: calc(1em * var(--ifm-button-size-multiplier));
+  line-height: 1.25;
+  padding: calc(var(--ifm-button-padding-vertical) * var(--ifm-button-size-multiplier))
+    calc(var(--ifm-button-padding-vertical) * var(--ifm-button-size-multiplier) * 2);
+  border: var(--ifm-button-border-width) solid var(--ifm-color-gray-700);
+  border-radius: var(--ifm-button-border-radius);
+  margin-right: 0.5em;
+  vertical-align: baseline;
+}
+
+.parameterTypeName {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.parameterTypeRegexp {
+  flex: 2 1 0;
+  min-width: 0;
+}
+
+.parameterTypeRemove {
+  flex: 0 0 auto;
+}
