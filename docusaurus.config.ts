@@ -175,7 +175,7 @@ export default {
     prism: {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
-      additionalLanguages: ['gherkin', 'go', 'groovy', 'java', 'ruby', 'scala'],
+      additionalLanguages: ['csharp', 'gherkin', 'go', 'groovy', 'java', 'python', 'ruby', 'scala'],
     },
     algolia: {
       appId: 'KKV75IPBYX',

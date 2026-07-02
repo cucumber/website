@@ -11,6 +11,8 @@ const DOCUSAURUS_TABS_PROPS: TabsProps = {
     <DocusaurusTabItem value="javascript">&nbsp;</DocusaurusTabItem>,
     <DocusaurusTabItem value="ruby">&nbsp;</DocusaurusTabItem>,
     <DocusaurusTabItem value="golang">&nbsp;</DocusaurusTabItem>,
+    <DocusaurusTabItem value="python">&nbsp;</DocusaurusTabItem>,
+    <DocusaurusTabItem value="dotnet">&nbsp;</DocusaurusTabItem>,
   ],
 }
 
