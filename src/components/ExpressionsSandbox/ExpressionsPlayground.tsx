@@ -24,9 +24,9 @@ type PlaygroundState = {
 type PlaygroundAction =
   | { type: 'setExpression'; value: string }
   | { type: 'setText'; value: string }
-  | { type: 'add' }
-  | { type: 'update'; id: string; patch: Partial<CustomParameterType> }
-  | { type: 'remove'; id: string }
+  | { type: 'addParameterType' }
+  | { type: 'updateParameterType'; id: string; patch: Partial<CustomParameterType> }
+  | { type: 'removeParameterType'; id: string }
 
 const ExpressionsPlayground: React.FunctionComponent<ExpressionsPlaygroundProps> = ({
   defaultExpression = 'I have {int} cucumber(s) in my belly',
@@ -39,7 +39,7 @@ const ExpressionsPlayground: React.FunctionComponent<ExpressionsPlaygroundProps>
           return { ...state, expression: action.value }
         case 'setText':
           return { ...state, text: action.value }
-        case 'add':
+        case 'addParameterType':
           return {
             ...state,
             parameterTypes: [
@@ -47,14 +47,14 @@ const ExpressionsPlayground: React.FunctionComponent<ExpressionsPlaygroundProps>
               { id: crypto.randomUUID(), name: '', regexp: '' },
             ],
           }
-        case 'update':
+        case 'updateParameterType':
           return {
             ...state,
             parameterTypes: state.parameterTypes.map((pt) =>
               pt.id === action.id ? { ...pt, ...action.patch } : pt
             ),
           }
-        case 'remove':
+        case 'removeParameterType':
           return {
             ...state,
             parameterTypes: state.parameterTypes.filter((pt) => pt.id !== action.id),
@@ -182,7 +182,11 @@ const ExpressionsPlayground: React.FunctionComponent<ExpressionsPlaygroundProps>
                 placeholder="Name"
                 value={pt.name}
                 onChange={(event) =>
-                  dispatch({ type: 'update', id: pt.id, patch: { name: event.target.value } })
+                  dispatch({
+                    type: 'updateParameterType',
+                    id: pt.id,
+                    patch: { name: event.target.value },
+                  })
                 }
               />
               <input
@@ -191,13 +195,17 @@ const ExpressionsPlayground: React.FunctionComponent<ExpressionsPlaygroundProps>
                 placeholder="Regular expression"
                 value={pt.regexp}
                 onChange={(event) =>
-                  dispatch({ type: 'update', id: pt.id, patch: { regexp: event.target.value } })
+                  dispatch({
+                    type: 'updateParameterType',
+                    id: pt.id,
+                    patch: { regexp: event.target.value },
+                  })
                 }
               />
               <button
                 type="button"
                 className={`${styles.parameterTypeRemove} button button--sm button--outline button--danger`}
-                onClick={() => dispatch({ type: 'remove', id: pt.id })}
+                onClick={() => dispatch({ type: 'removeParameterType', id: pt.id })}
               >
                 Remove
               </button>
@@ -212,7 +220,7 @@ const ExpressionsPlayground: React.FunctionComponent<ExpressionsPlaygroundProps>
         <button
           type="button"
           className="button button--sm button--secondary"
-          onClick={() => dispatch({ type: 'add' })}
+          onClick={() => dispatch({ type: 'addParameterType' })}
         >
           Add another
         </button>
