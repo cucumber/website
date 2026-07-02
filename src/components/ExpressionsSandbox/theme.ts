@@ -13,7 +13,7 @@ export const theme = EditorView.theme({
   },
   '.cm-content': {
     fontFamily: 'var(--ifm-font-family-monospace)',
-    fontSize: 'calc(0.875rem * 1.25)',
+    fontSize: '1em',
     lineHeight: '1.5',
     padding: 'calc(var(--ifm-button-padding-vertical) * 1.25)',
     verticalAlign: 'baseline',
