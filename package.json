@@ -32,7 +32,7 @@
     "lodash.sortby": "^4.7.0",
     "prism-react-renderer": "2.4.1",
     "react": "19.2.7",
-    "react-dom": "19.2.7",
+    "react-dom": "19.2.8",
     "react-error-boundary": "^6.0.0",
     "sass": "^1.69.3"
   },
