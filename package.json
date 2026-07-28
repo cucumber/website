@@ -21,8 +21,8 @@
     "@codemirror/view": "^6.43.0",
     "@cucumber/cucumber-expressions": "^20.0.0",
     "@cucumber/gherkin": "^42.0.0",
-    "@docusaurus/core": "3.10.1",
-    "@docusaurus/preset-classic": "3.10.1",
+    "@docusaurus/core": "3.10.2",
+    "@docusaurus/preset-classic": "3.10.2",
     "@docusaurus/remark-plugin-npm2yarn": "^3.6.3",
     "@mdx-js/react": "3.1.1",
     "@sentry/react": "^10.40.0",
@@ -37,7 +37,7 @@
     "sass": "^1.69.3"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.10.1",
+    "@docusaurus/module-type-aliases": "3.10.2",
     "@docusaurus/tsconfig": "^3.1.1",
     "@docusaurus/types": "^3.1.1",
     "@testing-library/jest-dom": "^7.0.0",
