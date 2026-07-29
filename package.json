@@ -46,7 +46,7 @@
     "@tsconfig/docusaurus": "2.0.9",
     "@types/lodash.sortby": "^4.7.9",
     "@vitejs/plugin-react-swc": "^4.3.1",
-    "jsdom": "^29.1.1",
+    "jsdom": "^30.0.0",
     "prettier": "^3.4.2",
     "rehype-rewrite": "^4.0.2",
     "vitest": "^4.1.9",
