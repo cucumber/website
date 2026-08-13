@@ -2,7 +2,7 @@
 slug: open-source/cucumber-in-github-sosf
 title: "Cucumber completes GitHub Secure Open Source Fund - Session 4"
 authors:
-  - luke-hill
+  - luke
 tags:
   - Open Source
   - Security
