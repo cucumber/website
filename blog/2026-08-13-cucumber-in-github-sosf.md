@@ -8,7 +8,7 @@ tags:
   - Security
 ---
 
-📢 Cucumber participated in the Session 4 of the GitHub Secure Open Source Fund, a program that brought together 50 open source projects across to level up security practices 🔒
+📢 Cucumber participated in [Session 4 of the GitHub Secure Open Source Fund](https://github.blog/open-source/maintainers/what-50-open-source-projects-taught-us-about-security-in-the-ai-era/#h-core-programming-languages-runtimes-and-foundational-libraries), a program that brought together 50 open source projects across to level up security practices 🔒
 
 <!-- truncate -->
 
@@ -26,7 +26,7 @@ We were able to utilise things like CodeQL and secret scanning to automate the g
 unrealistic to keep up with. Thanks to the program's training, configuring these across all our repositories has been an immense improvement to the security and
 general health of all our varied codebases.
 
-### What were the highlights from the Secure Open Source Fund - Session 4?
+### What were the highlights from Session 4 of the GitHub Secure Open Source Fund?
 
 Beyond all of the automated configurations and fixes mentioned above, we've also made some other notable changes:
 
@@ -40,4 +40,4 @@ Well if anything, it would simply be more of the same. A special thank you from 
 dedicated specific seminars showcasing a wide variety of attack patterns as well as Microsoft for Startups for helping provide us with Azure credits.
 
 The impact? More robust security and trustworthiness for thousands of businesses who use Cucumber in their daily life, from e-commerce to government, sport to news, the charity
-sector to booking holidays - Cucumber is now more secure thanks to the GitHub Secure Open Source Fund - Session 4 🚀
+sector to booking holidays - Cucumber is now more secure thanks to Session 4 of the GitHub Secure Open Source Fund 🚀
