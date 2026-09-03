@@ -64,7 +64,7 @@ the following built-in parameter types:
 | Parameter Type  | Description |
 | --------------- | ----------- |
 | `{int}`         | Matches integers, for example `71` or `-19`. Converts to a 32-bit signed integer if the platform supports it.|
-| `{float}`       | Matches floats, for example `3.6`, `.8` or `-9.2`. Converts to a 32 bit float if the platform supports it. |
+| `{float}`       | Matches floats, for example `3.6`, `.8`, `-9.2` or `1.5E+3` (see [scientific notation](#scientific-notation)). Converts to a 32 bit float if the platform supports it. |
 | `{word}`        | Matches words without whitespace, for example `banana` (but not `banana split`). |
 | `{string}`      | Matches single-quoted or double-quoted strings, for example `"banana split"` or `'banana split'` (but not `banana split`). Only the text between the quotes will be extracted. The quotes themselves are discarded. Empty pairs of quotes are valid and will be matched and passed to step code as empty strings. |
 | `{}` anonymous  | Matches anything (`/.*/`). |
@@ -74,6 +74,22 @@ the following built-in parameter types:
 | `{byte}`        | Matches the same as `{int}`, but converts to an 8 bit signed integer if the platform supports it. |
 | `{short}`       | Matches the same as `{int}`, but converts to a 16 bit signed integer if the platform supports it. |
 | `{long}`        | Matches the same as `{int}`, but converts to a 64 bit signed integer if the platform supports it. |
+
+### Scientific notation
+
+`{float}`, `{double}` and `{bigdecimal}` also match numbers written in scientific
+notation, using an uppercase `E` to separate the mantissa from the exponent:
+
+```
+I have 1.5E3 cucumbers in my belly
+I have 1.5E-3 cucumbers in my belly
+I have 1.5E+3 cucumbers in my belly
+```
+
+The exponent may optionally have a leading `+` or `-` sign. `1.5E3` and `1.5E+3`
+are equivalent, and both are parsed as `1500`.
+
+A lowercase `e` is **not** matched, so `1.5e3` will not be recognised as a float.
 
 ### Java
 
