@@ -34,11 +34,13 @@
   --ifm-color-secondary-darkest: var(--color-slate-400);
   --ifm-hero-background-color: var(--ifm-color-secondary-lightest);
   --ifm-footer-background-color: var(--ifm-color-secondary-lightest);
-  --ifm-font-family-base: 'Lato', 'Inter var', ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --ifm-font-family-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    'Liberation Mono', 'Courier New', monospace;
+  --ifm-font-family-base:
+    'Lato', 'Inter var', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  --ifm-font-family-monospace:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --cucumber-expressions-argument-color: oklch(62.3% 0.214 259.815);
 }
