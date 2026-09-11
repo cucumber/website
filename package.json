@@ -49,7 +49,7 @@
     "jsdom": "^30.0.0",
     "prettier": "^3.4.2",
     "rehype-rewrite": "^4.0.2",
-    "vitest": "^4.1.9",
+    "vitest": "^5.0.0",
     "yaml": "^2.6.1"
   },
   "browserslist": {
