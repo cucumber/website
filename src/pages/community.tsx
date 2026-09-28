@@ -95,9 +95,7 @@ export default function Community() {
                 alt=""
                 src="/img/community/bluesky.svg"
               />
-              <p className="padding-horiz--sm">
-                Announcements, updates, ect.
-              </p>
+              <p className="padding-horiz--sm">Announcements, updates, ect.</p>
               <Link
                 className="button button--secondary"
                 to="https://bsky.app/profile/cucumberbdd.bsky.social"
