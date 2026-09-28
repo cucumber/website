@@ -41,9 +41,9 @@ export default function Community() {
             </p>
           </div>
           <div className="row text--center">
-            <div className="col col--4">
+            <div className="col">
               <img
-                className={clsx(styles.platformLogo, 'margin-bottom--md')}
+                className={clsx(styles.platformLogo, 'margin--md')}
                 alt=""
                 src="/img/community/discord.svg"
               />
@@ -55,9 +55,9 @@ export default function Community() {
                 Join our Server
               </Link>
             </div>
-            <div className="col col--4">
+            <div className="col">
               <img
-                className={clsx(styles.platformLogo, 'margin-bottom--md')}
+                className={clsx(styles.platformLogo, 'margin--md')}
                 alt=""
                 src="/img/community/github.svg"
               />
@@ -72,9 +72,9 @@ export default function Community() {
                 Browse Discussions
               </Link>
             </div>
-            <div className="col col--4">
+            <div className="col">
               <img
-                className={clsx(styles.platformLogo, 'margin-bottom--md')}
+                className={clsx(styles.platformLogo, 'margin--md')}
                 alt=""
                 src="/img/community/stackoverflow.svg"
               />
@@ -89,13 +89,15 @@ export default function Community() {
                 Find Answers
               </Link>
             </div>
-            <div className="col col--4">
+            <div className="col">
               <img
-                className={clsx(styles.platformLogo, 'margin-bottom--md')}
+                className={clsx(styles.platformLogo, 'margin--md')}
                 alt=""
                 src="/img/community/bluesky.svg"
               />
-              <p className="padding-horiz--sm">Announcements, updates, ect.</p>
+              <p className="padding-horiz--sm">
+                Announcements, updates, ect. Mostly when we write a new blog post.
+              </p>
               <Link
                 className="button button--secondary"
                 to="https://bsky.app/profile/cucumberbdd.bsky.social"
