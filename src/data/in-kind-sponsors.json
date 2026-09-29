@@ -22,5 +22,11 @@
     "logo": "/img/sponsors/github.svg",
     "url": "https://github.com",
     "blurb": "For securely hosting and building our code"
+  },
+  {
+    "name": "Mend",
+    "logo": "/img/sponsors/mend.svg",
+    "url": "https://mend.io/",
+    "blurb": "For automatically updating our dependencies with Renovate"
   }
 ]
