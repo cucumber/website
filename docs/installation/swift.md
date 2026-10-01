@@ -18,6 +18,8 @@ and UI test targets.
 
 CucumberSwift is maintained by the [cucumberswift](https://github.com/cucumberswift)
 organisation, separately from the Cucumber project.
+It uses Cucumber's Gherkin language definitions and test data; its parser
+and Cucumber Expressions are its own implementation.
 
 ## Swift Package Manager
 
