@@ -4,12 +4,10 @@ pagination_next: guides/index
 sidebar_custom_props:
   language: Swift
   status: unofficial
-  icon: cucumberswift.png
+  icon: swift.svg
 ---
 
 # CucumberSwift
-
-<img src="/img/platforms/cucumberswift.png" alt="CucumberSwift logo" width="120" />
 
 [CucumberSwift](https://cucumberswift.org/) is a lightweight, Swift-only
 implementation of Cucumber for iOS, tvOS and macOS.
