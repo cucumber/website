@@ -102,7 +102,20 @@ export default function Community() {
                 className="button button--secondary"
                 to="https://bsky.app/profile/cucumberbdd.bsky.social"
               >
-                Stay up to date!
+                Keep in touch
+              </Link>
+            </div>
+            <div className="col">
+              <img
+                className={clsx(styles.platformLogo, 'margin--md')}
+                alt=""
+                src="/img/community/mastodon.svg"
+              />
+              <p className="padding-horiz--sm">
+                Updates, announcements, ect. Usually when we we've written a new blog post.
+              </p>
+              <Link className="button button--secondary" to="https://fosstodon.org/@cucumber">
+                Follow us
               </Link>
             </div>
           </div>
